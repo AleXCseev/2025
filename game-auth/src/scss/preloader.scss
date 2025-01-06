@@ -41,7 +41,7 @@
 .character__icon {
     position: absolute;
     height: auto;
-    transition: 4s ease-out;
+    transition: 5s ease-out;
     border-radius: 100%;
     // animation: character 2s ease infinite;
 }
@@ -95,6 +95,8 @@
     align-items: center;
     gap: 0.8vw;
     margin-top: 3.2vw;
+    position: relative;
+    z-index: 2;
 }
 
 .preloader__title {

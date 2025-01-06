@@ -3155,9 +3155,9 @@ html, body, .modal__section {
 .character__icon {
   position: absolute;
   height: auto;
-  -webkit-transition: 4s ease-out;
-  -o-transition: 4s ease-out;
-  transition: 4s ease-out;
+  -webkit-transition: 5s ease-out;
+  -o-transition: 5s ease-out;
+  transition: 5s ease-out;
   border-radius: 100%;
 }
 
@@ -3212,6 +3212,8 @@ html, body, .modal__section {
           align-items: center;
   gap: 0.8vw;
   margin-top: 3.2vw;
+  position: relative;
+  z-index: 2;
 }
 
 .preloader__title {
@@ -4181,6 +4183,24 @@ html, body, .modal__section {
     max-width: 3vw;
     max-height: 4vw;
   }
+  .autorization__section, .preload__section {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    overflow: hidden;
+  }
+  .test__btns {
+    width: 32%;
+  }
+  .tg-fullscreen .btn__settings {
+    top: 7vw;
+  }
+  .tg-fullscreen .btn__statistic {
+    top: 7vw;
+  }
+  .tg-fullscreen .modal__section {
+    padding: 8vw 0;
+  }
 }
 @media (max-width: 430px) {
   .main {
@@ -5070,16 +5090,26 @@ html, body, .modal__section {
   .game__chat-send .input {
     font-size: 2.6vw;
   }
-  .autorization__section {
+  .autorization__section, .preload__section {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
             justify-content: center;
+    overflow: hidden;
   }
   .autorization__section .preloader__center {
     max-width: 100%;
-    gap: 2vw;
+    gap: 4vw;
   }
   .autorization__info {
-    font-size: 4vw;
+    font-size: 5vw;
+  }
+  .tg-fullscreen .btn__settings {
+    top: 19vw;
+  }
+  .tg-fullscreen .btn__statistic {
+    top: 19vw;
+  }
+  .tg-fullscreen .modal__section {
+    padding: 22vw 0 8vw;
   }
 }

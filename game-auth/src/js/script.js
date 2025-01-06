@@ -246,7 +246,7 @@ var landingFunctions = {
 			$(".autorization__section .character__icon").each(function() {
 				moveRandomlyWithTransform($(this), 0);
 			})
-		}, 5000);
+		}, 6000);
 
 		$(".preloader__section .character__icon").each(function() {
 			moveRandomlyWithTransform($(this), 0);
