@@ -1,0 +1,70 @@
+.review__section {
+}
+
+.review__section-wrapper {
+    padding: 64px 0 30px;
+}
+
+.review__section-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+    color: #222;
+    margin-bottom: 35px;
+}
+
+.review {
+    margin-bottom: 50px;
+}
+
+.review__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review__photo {
+    width: 38px;
+    height: auto;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.review__name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #222;
+    width: 100%;
+}
+
+.review__date {
+    width: auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: right;
+    color: #444;
+}
+
+.review__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.review__img {
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    max-width: 100%;
+}
