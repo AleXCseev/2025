@@ -686,9 +686,9 @@ html, body, .modal__section {
         width: 40vw;
         // height: 30vw;
     }
-    .exit__block-wrapper {
-        padding: 4vw 1vw 2vw
-    }
+    // .exit__block-wrapper {
+    //     padding: 4vw 1vw 2vw
+    // }
     .btn__modal-exit span {
         font-size: 2vw;
     }
@@ -1108,7 +1108,7 @@ html, body, .modal__section {
     }
     .exit__block-wrapper {
         border-radius: 0.4vw;
-        padding: 3vw 1vw 2vw;
+        // padding: 3vw 1vw 2vw;
     }
     .exit__block-text {
         font-size: 1.4vw;
@@ -1822,7 +1822,7 @@ html, body, .modal__section {
         top: 19vw;
     }
     .exit__block-wrapper {
-        padding: 7vw 1vw 4vw;
+        padding: 4vw 1vw;
     }
     .btn__exit-disabled {
         top: -5.6vw;
@@ -2146,6 +2146,9 @@ html, body, .modal__section {
         }
         .exit__score {
             bottom: 14vw
+        }
+        .exit__timer-big {
+            margin-bottom: 4vw;
         }
     }
     #clear-button {

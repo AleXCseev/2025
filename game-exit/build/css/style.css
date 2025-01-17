@@ -2872,6 +2872,12 @@ html, body, .modal__section {
   height: auto;
 }
 
+.exit__timer-big {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1vw;
+}
+
 .components__page {
   height: auto;
   min-height: 100vh;
@@ -3714,9 +3720,6 @@ html, body, .modal__section {
   .exit__block {
     width: 40vw;
   }
-  .exit__block-wrapper {
-    padding: 4vw 1vw 2vw;
-  }
   .btn__modal-exit span {
     font-size: 2vw;
   }
@@ -4133,7 +4136,6 @@ html, body, .modal__section {
   }
   .exit__block-wrapper {
     border-radius: 0.4vw;
-    padding: 3vw 1vw 2vw;
   }
   .exit__block-text {
     font-size: 1.4vw;
@@ -4874,7 +4876,7 @@ html, body, .modal__section {
     top: 19vw;
   }
   .exit__block-wrapper {
-    padding: 7vw 1vw 4vw;
+    padding: 4vw 1vw;
   }
   .btn__exit-disabled {
     top: -5.6vw;
@@ -5190,6 +5192,9 @@ html, body, .modal__section {
   }
   .tg-fullscreen .exit__score {
     bottom: 14vw;
+  }
+  .tg-fullscreen .exit__timer-big {
+    margin-bottom: 4vw;
   }
   #clear-button {
     min-width: auto;
