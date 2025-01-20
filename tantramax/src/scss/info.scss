@@ -26,3 +26,16 @@
 .red {
     color: #f00;
 }
+
+@media (max-width: 540px) {
+    .info__img-1 {
+        margin-top: -26vw !important;
+    }
+    .info__img {
+        margin: 5vw 0;
+    }
+    .info__text {
+        font-size: 4.5vw;
+        margin-bottom: 3.5vw;
+    }
+}

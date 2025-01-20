@@ -10,12 +10,13 @@ var landingFunctions = {
 		
 		$('[href*="#"]').on('click', function (e) {
 			var fixedOffset = 0;
-			// var cardHeight = $(".card").outerHeight(false)
-			// var windowHeight = $(window).height()
+
+			// if($(window).width() <= 540) {
+			// 	fixedOffset = 140;
+			// }
 
 			$('html, body')
 			.stop()
-			// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
 			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
 			e.preventDefault();
 		})
@@ -42,10 +43,10 @@ var landingFunctions = {
 					$('.bar__block').slideUp(1000);
 					$('.card__block').slideDown(1000);
 					start_timer();
-				}, 10000);
+				}, 8000);
 				setTimeout(function () {
 					$(".card__decor img").addClass("active")
-				}, 11000);
+				}, 9000);
 				wheel.classList.add('rotated');
 			}
 		});

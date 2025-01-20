@@ -92,3 +92,62 @@
     color: #fff;
     padding-right: 20px;
 }
+
+
+
+
+
+@media (max-width: 1080px) {
+    .container {
+        width: 700px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .header__order {
+        position: static;
+    }
+    .header__nav {
+        justify-content: space-between;
+    }
+    .header__nav-link {
+        margin: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .header__logo {
+        margin-bottom: 3.5vw;
+    }
+    .header__nav-link {
+        font-size: 4.8vw;
+    }
+    .header__order {
+        font-size: 4.8vw;
+        padding: 2vw 3vw;
+        border-radius: 1.4vw;
+    }
+    .header__nav {
+        padding-bottom: 3.5vw;
+        margin-bottom: 6vw;
+    }
+    .header__title {
+        font-size: 7vw;
+        margin-bottom: 3vw;
+    }
+    .header__subtitle {
+        font-size: 7vw;
+        margin-bottom: 2vw;
+    }
+    .header__date {
+        font-size: 4.5vw;
+        padding-right: 0;
+    }
+    .header__section-wrapper {
+        padding-bottom: 30vw;
+    }
+}

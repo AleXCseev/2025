@@ -105,3 +105,59 @@
         margin-bottom: 0;
     }
 }
+
+
+
+@media (max-width: 1080px) {
+    .answer__imgs img {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 540px) {
+    .question {
+        font-size: 4.5vw;
+        margin-bottom: 3.5vw;
+    }
+    .answer {
+        padding: 4.8vw 0;
+        margin-bottom: 3.5vw;
+    }
+    .answer__text {
+        font-size: 4.5vw;
+    }
+    .answer__img {
+        margin-top: 3.5vw;
+    }
+    .answer__imgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 2vw;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .mt__23 {
+        margin-top: 3.5vw;
+    }
+    .answer__list-item {
+        padding-left: 4vw;
+        margin-bottom: 1vw;
+        font-size: 4.5vw;
+    }
+    .answer__list {
+        margin-bottom: 4vw;
+    }
+    .mb__15 {
+        margin-bottom: 4vw;
+    }
+}
+

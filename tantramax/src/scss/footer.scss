@@ -57,3 +57,25 @@
     text-align: center;
     color: #b3b3b3;
 }
+
+@media (max-width: 540px) {
+    .footer__section-wrapper {
+        padding: 5.5vw 4.8vw 3.5vw;
+    }
+    .footer__title {
+        font-size: 4.8vw;
+        margin-bottom: 3vw;
+    }
+    .footer__text {
+        margin-bottom: 5vw;
+        font-size: 4.8vw;
+    }
+    .footer__order {
+        font-size: 5.5vw;
+        padding: 4.5vw;
+        margin-bottom: 10vw;
+    }
+    .footer__copyright {
+        font-size: 4vw;
+    }
+}

@@ -68,3 +68,35 @@
     border-radius: 10px;
     max-width: 100%;
 }
+
+
+@media (max-width: 540px) {
+    .review__section-wrapper {
+        padding: 8vw 0 2vw;
+    }
+    .review__section-title {
+        font-size: 8vw;
+        margin-bottom: 8vw;
+    }
+    .review {
+        margin-bottom: 9.8vw;
+    }
+    .review__photo {
+        margin-right: 3vw;
+    }
+    .review__name {
+        font-size: 4.8vw;
+    }
+    .review__date {
+        font-size: 3.8vw;
+    }
+    .review__header {
+        margin-bottom: 4vw;
+    }
+    .review__text {
+        font-size: 4.5vw;
+    }
+    .review__img {
+        margin-top: 3.5vw;
+    }
+}
