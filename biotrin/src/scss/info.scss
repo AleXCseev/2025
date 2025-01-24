@@ -1,0 +1,125 @@
+.info__section-wrapper {
+    padding: 60px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info__section-title {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: #ff3d00;
+    margin-bottom: 20px;
+}
+
+.info__img {
+    width: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 19px;
+}
+
+.info__title {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: #092862;
+    margin-bottom: 33px;
+}
+
+.info__comment {
+    border-bottom: 2px solid #ececec;
+    padding-bottom: 30px;
+    margin-bottom: 23px;
+
+    &:last-of-type {
+        padding: 0;
+        margin-bottom: 69px;
+        border: none; 
+
+        .info__comment-img {
+            border: 1px solid #ececec;
+        }
+    }
+}
+
+.info__comment-text {
+    font-weight: 400;
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 23px;
+}
+
+.info__comment-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .info__comment-text {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.info__comment-img {
+    width: 194px;
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.info__quote {
+    width: 26px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.info__list {
+    width: 100%;
+    height: auto;
+}
+
+.info__list-1 {
+    margin-bottom: 69px;
+
+    .info__list-item {
+        align-items: center;
+    }
+}
+
+.info__list-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 22px;
+        height: auto;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+
+    span {
+        font-size: 24px;
+        line-height: 1.5;
+        color: #222;
+    }
+}
+
+
+.info__list-2 {
+    margin-bottom: 21px;
+
+    .info__list-item img {
+        margin-top: 8px;
+    }
+}
