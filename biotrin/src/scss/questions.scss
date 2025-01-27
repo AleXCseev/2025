@@ -76,3 +76,39 @@
 }
 
 
+@media (max-width: 700px) {
+    .question__img {
+        max-width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 540px) {
+    .question__text {
+        padding-left: 4vw;
+        font-size: 4.5vw;
+    }
+    .question__img {
+        max-width: calc(100% - 4vw);
+        margin-top: 3vw;
+        margin-left: 4vw;
+    }
+    .answer {
+        padding: 4vw;
+        margin-top: 4vw;
+    }
+    .answer__text {
+        font-size: 4.5vw;
+    }
+    .question__block {
+        margin-bottom: 9vw;
+    }
+    .answer__title {
+        font-size: 5vw;
+        margin-top: 1vw;
+    }
+    .answer__info {
+        margin-top: 2.5vw;
+        padding: 3vw 4vw;
+        font-size: 4.5vw;
+    }
+}

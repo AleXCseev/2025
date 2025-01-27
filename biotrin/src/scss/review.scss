@@ -92,5 +92,46 @@
     margin-bottom: 20px;
 }
 
-.date-1 {
+
+@media (max-width: 540px) {
+    .review__section-wrapper {
+        padding: 12vw 0 0;
+    }
+    .review__section-title {
+        font-size: 8vw;
+        margin-bottom: 6vw;
+    }
+    .review__block {
+        margin-bottom: 10vw;
+        padding-bottom: 4.5vw;
+    }
+    .review__text {
+        font-size: 5vw;
+        margin-bottom: 3vw;
+    }
+    .review__photo {
+        width: 12vw;
+        margin-right: 3vw;
+    }
+    .review__quote {
+        width: 5vw;
+        margin-right: 4vw;
+    }
+    .review .review__text {
+        font-size: 4.5vw;
+        margin-bottom: 3vw;
+    }
+    .review__img {
+        border-radius: 10px;
+        margin-bottom: 4.5vw;
+    }
+    .review__like {
+        width: 3vw;
+        margin-right: 1vw;
+        font-size: 4vw;
+    }
+    .date {
+        margin-left: 2vw;
+        padding-left: 2vw;
+    }
 }

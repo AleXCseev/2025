@@ -55,3 +55,34 @@
     color: #fff;
     padding: 9px;
 }
+
+@media (max-width: 700px) {
+    .footer__links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        margin-bottom: 0;
+    }
+    .footer__order {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer__section-wrapper {
+        padding: 7vw 3vw 6vw;
+    }
+    .footer__order {
+        font-size: 4.5vw;
+        padding: 4vw 6vw;
+        margin-bottom: 4.5vw;
+    }
+    .footer__link {
+        font-size: 4.5vw;
+    }
+    .footer__line {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+}

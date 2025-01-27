@@ -136,3 +136,105 @@
 .bold {
     font-weight: 600;
 }
+
+
+@media (max-width: 1080px) {
+    .container {
+        width: 700px;
+    }
+    .header__link {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .order__nav {
+        font-size: 18px;
+        padding: 8px 10px;
+        margin-left: 40px;
+    }
+    .header__nav-title {
+        font-size: 16px;
+    }
+    .header__nav-title span {
+        padding: 15px 0 15px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .header__nav .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+    }
+    .header__nav-title {
+        justify-content: center;
+    }
+    .header__nav-links {
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+    .header__logo img {
+        width: 20vw;
+        margin-right: 3vw;
+    }
+    .header__logo-wrapper h2 {
+        font-size: 4.5vw;
+    }
+    .header__logo-wrapper h3 {
+        font-size: 5.2vw;
+    }
+}
+
+@media (max-width: 540px) {
+    .header__nav-title {
+        font-size: 4vw;
+    }
+    .header__nav-title span {
+        padding: 2vw 0 2vw 2vw;
+        font-size: 3.6vw;
+        margin-left: 2vw;
+    }
+    .header__nav-links {
+        justify-content: space-between;
+    }
+    .header__link {
+        margin: 0;
+        font-size: 4vw;
+    }
+    .order__nav {
+        margin: 0;
+        font-size: 4.5vw;
+        padding: 2vw 2.5vw;
+    }
+    .header__nav .container {
+        padding: 10px 15px;
+    }
+    .header__logo {
+        margin-bottom: 9vw;
+    }
+    .header__title {
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }   
+    .header__subtitle {
+        font-size: 6vw;
+        margin-bottom: 7vw;
+
+        br {
+            display: none;
+        }
+    } 
+    .heder__img {
+        margin-bottom: 6vw;
+    }
+    .header__text {
+        font-size: 4.5vw;
+        margin-bottom: 4vw;
+        text-indent: 4.5vw;
+    }
+}
