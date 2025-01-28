@@ -1,4 +1,4 @@
-<div class="modal__section shop__section active" id="shop">
+<div class="modal__section shop__section" id="shop">
     <h2 class="main__title">
         GramZone
     </h2>
@@ -17,15 +17,15 @@
         <hr class="modal__divider">
         <div class="modal__block">
             <div class="shop__nav">
-                <button type="button" data-shop="1" class="shop__nav-item">
+                <button type="button" data-shop="1" class="shop__nav-item shop__nav-item-1 active">
                     Покупка
                 </button>
-                <button type="button" data-shop="2" class="shop__nav-item active">
+                <button type="button" data-shop="2" class="shop__nav-item">
                     Аватары
                 </button>
             </div>
             <div class="shop__items">
-                <div class="shop__item shop__item-1">
+                <div class="shop__item shop__item-1 active">
                     <div class="shop__item-left">
                         <h3 class="shop__item-title">
                             Покупка Gram
@@ -34,14 +34,14 @@
                             <button type="button" class="btn btn__price">
                                 <div class="btn__wrapper">
                                     <img src="img/icon-cart-add.png" alt="">
-                                        <span>10</span>
+                                        <span>100</span>
                                     <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
                                 </div>
                             </button>
                             <button type="button" class="btn btn__price">
                                 <div class="btn__wrapper">
                                     <img src="img/icon-cart-add.png" alt="">
-                                        <span>100</span>
+                                        <span>500</span>
                                     <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
                                 </div>
                             </button>
@@ -78,10 +78,10 @@
                             <p class="shop__buy-info">
                                 Введите произвольную сумму  GRAM для покупки
                                 <span>
-                                    * не мениее 100 gram 
+                                    * не менее 100 gram 
                                 </span>
                             </p>
-                            <input id="buy-gram" min="300" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  type="number" value="100" placeholder="введите сумму" class="input">
+                            <input id="buy-gram" min="100" onchange="if(this.value < 100) this.value=100" type="number" value="100" placeholder="введите сумму" class="input">
                             <button type="button" class="btn btn__price buy__gram">
                                 <div class="btn__wrapper">
                                     <span>Купить</span>
@@ -109,11 +109,11 @@
                             </p>
                             <div class="exchange__input-wrapper exchange__input-stars">
                                 <span>Telegram Stars</span>
-                                <input id="exchange-stars" min="100" type="number" value="100"  placeholder="введите сумму" class="input">
+                                <input id="exchange-stars" min="" type="number" value="100"  placeholder="введите сумму" class="input">
                             </div>
                             <div class="exchange__input-wrapper exchange__input-gram">
                                 <span>Gram</span>
-                                <input id="exchange-gram" min="10" type="number" value="10"  placeholder="введите сумму" class="input">
+                                <input id="exchange-gram" min="" type="number" value="10"  placeholder="введите сумму" class="input">
                             </div>
                         </div>
                         <button type="button" class="btn btn__price exchange__btn">
@@ -123,403 +123,247 @@
                         </button>
                     </div>
                 </div>
-                <div class="shop__item shop__item-2 active">
+                <div class="shop__item shop__item-2">
                     
                     <div class="shop__item-left">
                         <h3 class="shop__item-title">
                             Покупка Аватаров
                         </h3>
-                        <div class="shop__slider owl-carousel">
-                            <div class="modal__avatar-slide avatar__slide-1">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-mars.png" alt="">
-                                </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                        <div class="shop__slider-wrapper">
+                            <div class="shop__slider owl-carousel">
+                                <div class="modal__avatar-slide avatar__slide-1">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-mars.png" alt="">
                                     </div>
-                                </button>
-                            </div>
-                            <div class="modal__avatar-slide avatar__slide-2">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-black-gram.png" alt="">
+                                    <p class="avatar__name">
+                                        Аресет Нергал
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Суммунивийский Страж)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
                                 </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                <div class="modal__avatar-slide avatar__slide-2">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-black-gram.png" alt="">
                                     </div>
-                                </button>
-                            </div>
-                            <div class="modal__avatar-slide avatar__slide-3">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-black-marble.png" alt="">
+                                    <p class="avatar__name">
+                                        Вортекс Блэк
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Сумрачный Страж)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
                                 </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                <div class="modal__avatar-slide avatar__slide-3">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-black-marble.png" alt="">
                                     </div>
-                                </button>
-                            </div>
-                            <div class="modal__avatar-slide avatar__slide-4">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-blue-marble.png" alt="">
+                                    <p class="avatar__name">
+                                        Вантаблэк Неро
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Графитовый Страж)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
                                 </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                <div class="modal__avatar-slide avatar__slide-4">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-blue-marble.png" alt="">
                                     </div>
-                                </button>
-                            </div>
-                            <div class="modal__avatar-slide avatar__slide-5">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-gold-gram.png" alt="">
+                                    <p class="avatar__name">
+                                        Мунстон Кламор
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Аквамариновый Алхимик)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
                                 </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                <div class="modal__avatar-slide avatar__slide-5">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-gold-gram.png" alt="">
                                     </div>
-                                </button>
-                            </div>
-                            <div class="modal__avatar-slide avatar__slide-6">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-green-marble.png" alt="">
+                                    <p class="avatar__name">
+                                        Аурумбрик Грамм
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Золотой Страж)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
                                 </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                <div class="modal__avatar-slide avatar__slide-6">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-green-marble.png" alt="">
                                     </div>
-                                </button>
-                            </div>
-                            <div class="modal__avatar-slide avatar__slide-7">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-pink-marble.png" alt="">
+                                    <p class="avatar__name">
+                                        Фульгурия Хайвольт
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Виридиевая Сирена)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
                                 </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                <div class="modal__avatar-slide avatar__slide-7">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-pink-marble.png" alt="">
                                     </div>
-                                </button>
-                            </div>
-                            <div class="modal__avatar-slide avatar__slide-8">
-                                <div class="modal__avatar">
-                                    <img src="img/shop/avatar-white-marble.png" alt="">
+                                    <p class="avatar__name">
+                                        Лактиона Роуз
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Пинкитональная Сирена)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
                                 </div>
-                                <p class="avatar__name">
-                                    Марс
-                                </p>
-                                <p class="modal__avatar-text">
-                                    (Фуксиевая Сирена)
-                                </p>
-                                <button type="button" class="btn btn__price">
-                                    <div class="btn__wrapper">
-                                        <img src="img/icon-cart-add.png" alt="">
-                                            <span>100</span>
-                                        <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                <div class="modal__avatar-slide avatar__slide-8">
+                                    <div class="modal__avatar">
+                                        <img src="img/shop/avatar-white-marble.png" alt="">
                                     </div>
-                                </button>
+                                    <p class="avatar__name">
+                                        Мармориус Стронг
+                                    </p>
+                                    <p class="modal__avatar-text">
+                                        (Мраморный Алхимик)
+                                    </p>
+                                    <button type="button" class="btn btn__price">
+                                        <div class="btn__wrapper">
+                                            <img src="img/icon-cart-add.png" alt="">
+                                                <span>100</span>
+                                            <img src="img/shop/gram-btn-icon.svg" alt="" class="btn__price-gram">
+                                        </div>
+                                    </button>
+                                </div>
                             </div>
+                            <button type="button" class="owl__nav-btn owl__nav-next"></button>
+                            <button type="button" class="owl__nav-btn owl__nav-prev"></button>
                         </div>
+                        
+                        <button type="button" class="btn btn__rounded btn__rounded-small shop__buy-main">
+                            <div class="btn__wrapper">
+                                <span>Купить</span>
+                            </div>
+                        </button>
                     </div>
                     <div class="shop__item-right">
                         <div class="shop__slider-info owl-carousel">
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    black
+                                    Суммунивийский Страж
                                 </h4>
-                                <img src="img/shop/avatar-black-gram-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-mars-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Лаймус</span> - защитник природы, использует свои силы для создания зелёных барьеров, которые отражают вирусные атаки и превращают их в био энергию для усиления своих навыков.
+                                    <span>Аресет Нергал</span> - хлопком ладоней вызывает резонанс, разрушающий вирусы изнутри на квантовом уровне. Высвобождающиеся ценные ресурсы и био энергию поглощает, усиливая способности.
                                 </p>
                             </div>
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    black marble
+                                    Сумрачный Страж
                                 </h4>
-                                <img src="img/shop/avatar-black-marble-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-black-gram-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Астра Пинк</span> - её яркий цвет фуксии 
-                                    позволяет ей ослеплять вирусы, 
-                                    делая их уязвимыми для атак. Астра
-                                    Пинк использует свои способности
-                                    для создания энергетических волн,
-                                    которые очищают выбранную
-                                    территорию от вирусов и
-                                    превращают их в крипто-монеты,
-                                    усиливая своих союзников.
+                                    <span>Вортекс Блэк</span> - способен создавать управляемые торнадо, попадая в эпицентр которых, вирусы буквально разрывает изнутри из-за перепадов давления. Выделяющиеся в результате ценные ресурсы и био энергию использует для апгрейда способностей.
                                 </p>
                             </div>
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    Аметистовый Страж
+                                    Графитовый Страж
                                 </h4>
-                                <img src="img/shop/avatar-blue-marble-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-black-marble-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Пурпурион</span> - мастер молекулярного разрушения, он использует плазменный неоновый усилитель, чтобы очистить свою территорию от вирусов, превращая их в крипто-монеты, которые  можно использовать для улучшения своих способностей.
+                                    <span>Вантаблэк Неро</span> - погружает вирусы в непроницаемое для солнечного света облако из наночастиц, в котором они гибнут, разлагаясь на полезные для улучшения способностей ресурсы.
                                 </p>
                             </div>
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    Лавовый страж
+                                    Аквамариновый Алхимик
                                 </h4>
-                                <img src="img/shop/avatar-gold-gram-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-blue-marble-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Инфернус</span> - мастер огненной энергии, он использует плазменные волны, чтобы испепелять вирусы и собирать крипто-монеты, которые можно использовать для улучшения своих способностей.
+                                    <span>Мунстон Кламор</span> - способен заключать вирусы в непроницаемую энергетическую сферу, внутри которой их число утраивается и достигает критической массы. Затем происходит взрыв, при котором вирусы распадаются на полезные ресурсы и выделяют био энергию.
                                 </p>
                             </div>
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    Янтарный Страж
+                                    Золотой Страж
                                 </h4>
-                                <img src="img/shop/avatar-green-marble-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-gold-gram-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Соларис</span> - галактический специалист по световой флхимии, превращает вредоносные вирусы в ценные ресурсы и монеты, используя свои уникальные способности для создания мощных артефактов.
+                                    <span>Аурумбрик Грамм</span> - владеет “Проклятием крипто-Мидаса” - все, к чему прикасается этот боец, превращается в крипто-монеты. Осторожнее, его дар опасен не только для вирусов!
                                 </p>
                             </div>
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    Янтарный Страж
+                                    Виридиевая Сирена
                                 </h4>
-                                <img src="img/shop/avatar-pink-marble-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-green-marble-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Соларис</span> - галактический специалист по световой флхимии, превращает вредоносные вирусы в ценные ресурсы и монеты, используя свои уникальные способности для создания мощных артефактов.
+                                    <span>Фульгурия Хайвольт</span> - уничтожает вирусы высокоэнергетическими разрядами. Высвобождающиеся в процессе био энергию и ценные ресурсы впитывает, увеличивая способности.
                                 </p>
                             </div>
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    Янтарный Страж
+                                    Пинкитональная Сирена
                                 </h4>
-                                <img src="img/shop/avatar-white-marble-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-pink-marble-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Соларис</span> - галактический специалист по световой флхимии, превращает вредоносные вирусы в ценные ресурсы и монеты, используя свои уникальные способности для создания мощных артефактов.
+                                    <span>Лактиона Роуз</span> - атакует вирусы мелкодисперсной смесью из наноботов и криогенной жидкости. Сверхнизкие температуры парализуют вирусы, а наноботы перерабатывают их в ценные ресурсы и крипто-монеты.
                                 </p>
                             </div>
                             <div class="modal__info-slide">
                                 <h4 class="modal__info-title">
-                                    Азурный Страж
+                                    Мраморный Алхимик
                                 </h4>
-                                <img src="img/shop/avatar-mars-img.png" alt="" class="modal__info-img">
+                                <img src="img/shop/avatar-white-marble-img.jpg" alt="" class="modal__info-img">
                                 <p class="modal__info-text">
-                                    <span>Акварион</span> - обладая квантовыми вычислительными способностями, этот азурный страж может проходить сквозь вирусные базы, как свет через воду, и создавать иллюзии, которые дезориентируют вирусы и позволяют собирать ценные ресурсы для повышения своих навыков. 
+                                    <span>Мармориус Стронг</span> - возводит вокруг вирусов непроницаемые для них барьеры, которые, схлопываясь, спрессовывают их в крипто-монеты для буста навыков.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="modal__main">
-                <h4 class="modal__main-title">
-                    Выбор скинов
-                </h4>
-                <div class="modal__avatar-slider owl-carousel">
-                    <div class="modal__avatar-slide avatar__slide-1" data-color="blue">
-                        <div class="modal__avatar">
-                            <img src="img/avatar-blue.png" alt="">
-                        </div>
-                        <p class="modal__avatar-text">
-                            Расса
-                        </p>
-                        <p class="avatar__name">
-                            Акварион
-                        </p>
-                        <p class="modal__avatar-text">
-                            (Азурный Страж)
-                        </p>
-                    </div>
-                    <div class="modal__avatar-slide avatar__slide-2" data-color="green">
-                        <div class="modal__avatar">
-                            <img src="img/avatar-green.png" alt="">
-                        </div>
-                        <p class="modal__avatar-text">
-                            Расса
-                        </p>
-                        <p class="avatar__name">
-                            Лаймус
-                        </p>
-                        <p class="modal__avatar-text">
-                            (Зеленый Алхимик)
-                        </p>
-                    </div>
-                    <div class="modal__avatar-slide avatar__slide-3" data-color="pink">
-                        <div class="modal__avatar">
-                            <img src="img/avatar-pink.png" alt="">
-                        </div>
-                        <p class="modal__avatar-text">
-                            Расса
-                        </p>
-                        <p class="avatar__name">
-                            Астра Пинк
-                        </p>
-                        <p class="modal__avatar-text">
-                            (Фуксиевая Сирена)
-                        </p>
-                    </div>
-                    <div class="modal__avatar-slide avatar__slide-4" data-color="purple">
-                        <div class="modal__avatar">
-                            <img src="img/avatar-purple.png" alt="">
-                        </div>
-                        <p class="modal__avatar-text">
-                            Расса
-                        </p>
-                        <p class="avatar__name">
-                            Пурпурион
-                        </p>
-                        <p class="modal__avatar-text">
-                            (Аметистовый Страж)
-                        </p>
-                    </div>
-                    <div class="modal__avatar-slide avatar__slide-5" data-color="red">
-                        <div class="modal__avatar">
-                            <img src="img/avatar-red.png" alt="">
-                        </div>
-                        <p class="modal__avatar-text">
-                            Расса
-                        </p>
-                        <p class="avatar__name">
-                            Инфернус
-                        </p>
-                        <p class="modal__avatar-text">
-                            (Лавовый страж)
-                        </p>
-                    </div>
-                    <div class="modal__avatar-slide avatar__slide-6" data-color="yellow">
-                        <div class="modal__avatar">
-                            <img src="img/avatar-yellow.png" alt="">
-                        </div>
-                        <p class="modal__avatar-text">
-                            Расса
-                        </p>
-                        <p class="avatar__name">
-                            Соларис
-                        </p>
-                        <p class="modal__avatar-text">
-                            (Янтарный Страж)
-                        </p>
-                    </div>
-                </div>
-                <button type="button" class="btn btn__price">
-                    <div class="btn__wrapper">
-                        <img src="img/icon-cart-add.png" alt="">
-                        <span>1.99 $</span>
-                    </div>
-                </button>
-            </div>
-            <div class="shop__amplifiers">
-                <h3 class="amplifiers__title">
-                    Усилители
-                </h3>
-                <div class="amplifiers__wrapper">
-                    <div class="amplifire__item">
-                        <div class="amplifire__info"></div>
-                        <button type="button" class="btn btn__price">
-                            <div class="btn__wrapper">
-                                <img src="img/icon-cart-add.png" alt="">
-                                <span>0.99 $</span>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="amplifire__item">
-                        <div class="amplifire__info"></div>
-                        <button type="button" class="btn btn__price">
-                            <div class="btn__wrapper">
-                                <img src="img/icon-cart-add.png" alt="">
-                                <span>0.98 $</span>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="amplifire__item">
-                        <div class="amplifire__info"></div>
-                        <button type="button" class="btn btn__price">
-                            <div class="btn__wrapper">
-                                <img src="img/icon-cart-add.png" alt="">
-                                <span>0.97 $</span>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="amplifire__item">
-                        <div class="amplifire__info"></div>
-                        <button type="button" class="btn btn__price">
-                            <div class="btn__wrapper">
-                                <img src="img/icon-cart-add.png" alt="">
-                                <span>0.96 $</span>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="amplifire__item">
-                        <div class="amplifire__info"></div>
-                        <button type="button" class="btn btn__price">
-                            <div class="btn__wrapper">
-                                <img src="img/icon-cart-add.png" alt="">
-                                <span>0.95 $</span>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="amplifire__item">
-                        <div class="amplifire__info"></div>
-                        <button type="button" class="btn btn__price">
-                            <div class="btn__wrapper">
-                                <img src="img/icon-cart-add.png" alt="">
-                                <span>0.94 $</span>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>

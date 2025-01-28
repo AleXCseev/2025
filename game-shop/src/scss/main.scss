@@ -10,10 +10,29 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: 1s ease;
+	pointer-events: none;
 
 	&.active {
 		opacity: 1;
 		visibility: visible;
+		pointer-events: auto;
+	}
+
+	.main__title {
+		position: relative;
+	}
+
+	.main__title:before {
+		content: "alpha v3";
+		position: absolute;
+		top: -1.3vw;
+		right: 0;
+		background-color: #e9b93be6;
+		color: #fff;
+		font-size: 1vw;
+		font-family: "Relawey", sans-serif;
+		padding: 0.1vw 0.6vw;
+		border-radius: 0.3vw;
 	}
 }
 

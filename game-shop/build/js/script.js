@@ -119,8 +119,8 @@ var landingFunctions = {
 	preloader: function() {
 		setTimeout(function() {
 			$(".preload__section").hide();
-			// $(".main__page").addClass("active");
-		}, 0);
+			$(".main__page").addClass("active");
+		}, 5000);
 
 		setTimeout(function() {
 			$(".bg__light").addClass("show");
@@ -128,43 +128,6 @@ var landingFunctions = {
 	},
 
 	carousel: function() {
-		// function initialize(){
-		// 	if($(window).width() < 500) {
-		// 	  	$(".amplifiers__wrapper").addClass("owl-carousel").owlCarousel({
-		// 			items: 1,
-		// 			margin: 0,
-		// 			dots: false,
-		// 			dotsEach: false,
-		// 			nav: true,
-		// 			loop: true,
-		// 			mouseDrag: false,
-		// 			touchDrag: false,
-		// 			animateOut: 'fadeOut',
-		// 			responsive: {
-		// 				0: {
-		// 					mouseDrag: true,
-		// 					touchDrag: true,
-		// 				},
-		// 				1025: {
-		// 					mouseDrag: false,
-		// 					touchDrag: false,
-		// 				}
-		// 			}
-		// 		});
-		// 	} else {
-		// 		$(".amplifiers__wrapper").owlCarousel('destroy');
-		// 	}
-		// }
-
-		// var id;
-
-		// $(window).resize( function() {
-		// 	clearTimeout(id);
-		// 	id = setTimeout(initialize, 500);
-		// });
-
-		// initialize();
-		
 		const owl = $('.modal__avatar-slider').owlCarousel({
 			items: 1,
 			margin: 0,
@@ -199,6 +162,7 @@ var landingFunctions = {
 			animateOut: 'fadeOut'
 		});
 
+
 		owl.on('changed.owl.carousel', function(event) {
 			const index = event.relatedTarget.relative(event.item.index);
 			owlInfo.trigger("to.owl.carousel", [index, 300])
@@ -222,10 +186,14 @@ var landingFunctions = {
 			animateOut: 'fadeOut',
 			responsive: {
 				0: {
+					items: 1,
+					center: false,
 					mouseDrag: true,
 					touchDrag: true,
 				},
-				1025: {
+				431: {
+					items: 3,
+					center: true,
 					mouseDrag: false,
 					touchDrag: false,
 				}
@@ -244,18 +212,34 @@ var landingFunctions = {
 			animateOut: 'fadeOut',
 		});
 
+		$(".owl__nav-prev").click(function() {
+			shopOwl.trigger('prev.owl')
+		})
+
+		$(".owl__nav-next").click(function() {
+			shopOwl.trigger('next.owl')
+		})
+
 		shopOwl.on('changed.owl.carousel', function(event) {
 			const index = event.relatedTarget.relative(event.item.index);
-			owlShop.trigger("to.owl.carousel", [index + 1, 300])
+			owlShop.trigger("to.owl.carousel", [index, 300])
 		})	
 		
 		$(document).on("keydown", function(e) {
-			if($("#profile").hasClass("active") || $("#shop").hasClass("active")) {
+			if($("#profile").hasClass("active")) {
 				if(e.keyCode == 37) {
 					owl.trigger('prev.owl.carousel');
 				};
 				if(e.keyCode == 39) {
 					owl.trigger('next.owl.carousel');
+				};
+			}
+			if($("#shop").hasClass("active")) {
+				if(e.keyCode == 37) {
+					shopOwl.trigger('prev.owl.carousel');
+				};
+				if(e.keyCode == 39) {
+					shopOwl.trigger('next.owl.carousel');
 				};
 			}
 		});
@@ -442,8 +426,7 @@ var landingFunctions = {
 
 		$(".shop__item-btns .btn__price").click(function() {
 			const val = $(this).find("span").text()
-			const valInput = $("#buy-gram").val()
-			$("#buy-gram").val(Number(valInput) + Number(val))
+			$("#buy-gram").val(val)
 		})
 
 		const cftStarsToGram = 0.1;
