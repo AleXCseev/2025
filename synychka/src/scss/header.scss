@@ -15,6 +15,14 @@
     position: relative;
 }
 
+.header__nav-mobile {
+    display: none;
+}
+
+.mobile__menu-open {
+    display: none;
+}
+
 .header__nav {
     width: 100%;
     margin-bottom: 160px;
@@ -292,5 +300,203 @@
     .header__decor-2 {
         right: -650px;
         height: 160px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .container {
+        width: 700px;
+    }
+    .header__nav-links {
+        display: none;
+    }
+    .order__nav-btn {
+        display: none;
+    }
+    .mobile__menu-open {
+        display: block;
+        width: 32px;
+        height: auto;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .header__nav {
+        margin-bottom: 107px;
+    }
+    .header__content {
+        width: 100%;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__prod {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+    }
+    .header__next {
+        display: none;
+    }
+    .header__decor-2 {
+        display: none;
+    }
+    .header__name-logo {
+        width: 80%;
+    }
+    .header__text {
+        font-size: 28px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .header__nav-mobile {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 100;
+        background: #23251d;
+        padding: 80px 0 75px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        pointer-events: none;
+        transition: 0.5s ease;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            pointer-events: auto; 
+        }
+
+        .header__nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 42px;
+        }
+
+        .order__nav-btn {
+            display: block;
+        }
+        
+    }
+    .nav__mobile-close {
+        position: absolute;
+        top: 23px;
+        right: 23px;
+        width: 32px;
+        height: auto;
+        cursor: pointer;
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .header__nav-link {
+        margin-right: 0;
+        margin-bottom: 30px;
+        font-size: 24px;
+
+        &:before {
+            width: 0;
+        }
+
+        &:hover {
+            &:before {
+                width: 100% !important;
+                background-color: #fff;
+            }
+        }
+
+        &.active {
+            &:before {
+                width: 0;
+                background-color: #fff;
+            }
+        }
+    }
+    .header__nav-logo {
+        width: 180px;
+    }
+    .order__nav-btn {
+        padding: 20px 60px;
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    .header__section-wrapper {
+        padding: 7vw 0 12vw;
+    }
+    .header__nav {
+        margin-bottom: 24vw;
+    }
+    .header__nav-logo {
+        width: 45vw;
+    }
+    .header__name-logo {
+        width: 80.5%;
+        margin-bottom: 4.8vw;
+    }
+    .header__text {
+        font-size: 5.8vw;
+        margin-bottom: 25vw;
+    }
+    .header__prod {
+        width: 120%;
+        margin-bottom: 12vw;
+    }
+    .header__section {
+        background-position: 65% top;
+    }
+    .order__btn {
+        padding: 4.8vw 21vw;
+        font-size: 4.5vw;
+    }
+    .header__nav-mobile {
+        padding: 19vw 0 18vw;
+    }
+    .header__nav-mobile {
+        padding: 19vw 0 18vw;
+    }
+    .header__nav-link {
+        margin-bottom: 7vw;
+        font-size: 5.8vw;
+    }
+    .order__nav-btn {
+        padding: 4.8vw 14vw;
+        font-size: 4.5vw;
+    }
+    .header__decor-1 {
+        width: 100vw;
+        height: 24vw;
+        top: -8vw;
+        left: -55vw;
+    }
+    .header__decor:before {
+        top: -8.5vw;
+        right: -8.5vw;
+        width: 8.5vw;
+        height: 8.5vw;
     }
 }
