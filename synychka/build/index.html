@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="libs/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/owl.carousel.min.css">
-    <!-- <link rel="stylesheet" href="libs/animations.css"> -->
+    <link rel="stylesheet" href="libs/animations.css">
     <link rel="stylesheet" href="libs/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <title>N-TECH</title>
@@ -16,10 +16,13 @@
         <header class="header__section">
     <div class="container">
         <div class="header__section-wrapper">
-            <div class="header__nav">
-                <img src="img/logo.png" alt="" class="header__nav-logo">
+            <div class="header__nav-mobile">
+                <button class="nav__mobile-close">
+                    <img src="img/close.png" alt="">
+                </button>
+                <img src="img/logo-white.png" alt="" class="header__nav-logo">
                 <nav class="header__nav-links">
-                    <a href="#" class="header__nav-link active">
+                    <a href="#" class="header__nav-link">
                         Функціонал
                     </a>
                     <a href="#" class="header__nav-link">
@@ -38,6 +41,32 @@
                 <a href="#order" class="order__nav-btn">
                     Детальніше
                 </a>
+            </div>
+            <div class="header__nav">
+                <img src="img/logo.png" alt="" class="header__nav-logo">
+                <nav class="header__nav-links">
+                    <a href="#" class="header__nav-link">
+                        Функціонал
+                    </a>
+                    <a href="#" class="header__nav-link">
+                        Каталог
+                    </a>
+                    <a href="#" class="header__nav-link">
+                        Галерея
+                    </a>
+                    <a href="#" class="header__nav-link">
+                        Відгуки
+                    </a>
+                    <a href="#" class="header__nav-link">
+                        Контакти
+                    </a>
+                </nav>
+                <a href="#order" class="order__nav-btn">
+                    Детальніше
+                </a>
+                <button type="button" class="mobile__menu-open">
+                    <img src="img/burger.png" alt="">
+                </button>
             </div>
             <div class="header__content">
                 <div class="header__decor header__decor-1"></div>
@@ -61,8 +90,151 @@
         </div>
     </div>
 </header>
-        
-        
+        <section class="info__section">
+    <div class="container">
+        <div class="info__section-wrapper">
+            <div class="info__block">
+                <div class="info__left">
+                    <h2 class="info__title">
+                        Технічна реалізація та унікальність виробу:
+                    </h2>
+                    <img src="img/info-img.jpg" alt="" class="info__img">
+                    <div class="info__text">
+                        <p>Розробка базується на поєднанні сучасних апаратних та програмних рішень, які забезпечують ефективність і автономність роботи дрона-ретранслятора.</p>
+                        <p>Весь процес роботи забезпечує можливість гнучкого управління і стабільної передачі даних навіть у складних умовах.</p>
+                    </div>
+                </div>
+                <div class="info__right">
+                    <div class="info__item">
+                        <div class="info__item-decor">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="info__item-wrapper">
+                            <h3 class="info__item-title">Промисловий комп'ютер:</h3>
+                            <p class="info__item-text">одноплатний пристрій із цифровою камерою, який через польотний контролер керує дроном-ретранслятором.</p>
+                        </div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__item-decor">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="info__item-wrapper">
+                            <h3 class="info__item-title">Програмне забезпечення</h3>
+                            <p class="info__item-text">алгоритм утримання позиції дрона за візуальним оріє нтиром.</p>
+                        </div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__item-decor">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="info__item-wrapper">
+                            <h3 class="info__item-title">Утримання азимуту</h3>
+                            <p class="info__item-text">автономна фіксація позиції з можливістю коригування азимуту.</p>
+                        </div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__item-decor">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="info__item-wrapper">
+                            <h3 class="info__item-title">Ретрансляція відеозв’язку</h3>
+                            <p class="info__item-text">передача відеосигналу через відеопередавач дрона-ретранслятора.</p>
+                        </div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__item-decor">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="info__item-wrapper">
+                            <h3 class="info__item-title">Ретрансляція керування:</h3>
+                            <p class="info__item-text">автоматичний перехід до передачі сигналів управління іншою безпілотною системою.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info__bottom">
+                <a href="#order" class="order__btn">
+                    Торгова пропозиція
+                </a>
+                <a href="#order" class="order__nav-btn">
+                    Презентація
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="card__section">
+    <div class="container">
+        <div class="card__section-wrapper">
+            <div class="card__block">
+                <div class="card__decor card__decor-1"></div>
+                <div class="card__left">
+                    <h2 class="card__title">
+                        Особливості рішення:
+                    </h2>
+                    <div class="card__item">
+                        <div class="card__item-top">
+                            <span class="card__item-number">1.</span>
+                            <h3 class="card__item-title">FPV-дрон:</h3>
+                        </div>
+                        <p class="card__item-text">
+                            Оснащений програмним забезпеченням <span>Betaflight</span> для максимальної стабільності та точності керування.  
+                        </p>
+                    </div>
+                    <div class="card__item">
+                        <div class="card__item-top">
+                            <span class="card__item-number">2.</span>
+                            <h3 class="card__item-title">ACK:</h3>
+                        </div>
+                        <p class="card__item-text">
+                            АСК використовує машинний зір, що дозволяє працювати <span>без GPS</span> і забезпечує захист від засобів радіоелектронної боротьби (РЕБ).    
+                        </p>
+                    </div>
+                    <div class="card__item">
+                        <div class="card__item-top">
+                            <span class="card__item-number">3.</span>
+                            <h3 class="card__item-title">Адаптивність інтеграції:</h3>
+                        </div>
+                        <p class="card__item-text">
+                            Підтримує різні <span>модулі для ретрансляції</span> керування та відео, що забезпечує гнучкість у використанні.  
+                        </p>
+                    </div>
+                    <div class="card__item">
+                        <div class="card__item-top">
+                            <span class="card__item-number">4.</span>
+                            <h3 class="card__item-title">Ретрансляція протоколу управління:</h3>
+                        </div>
+                        <p class="card__item-text">
+                            Підтримує передачу протоколу Crossfire через модулі <span>ELRS і TBS</span> для безперебійного управління дронами.  
+                        </p>
+                    </div>
+                </div>
+                <div class="card__right">
+                    <div class="card">
+                        <img src="img/prod.png" alt="" class="card__prod floating">
+                        <img src="img/logo-name.png" alt="" class="card__name-logo">
+                        <p class="card__text">
+                            Інноваційний дрон-ретранслятор з унікальною технічною реалізацією: оснащений промисловим комп’ютером, алгоритмами автономного утримання позиції та азимуту, системою ретрансляції відеозв’язку й управління. 
+                        </p>
+                        <a href="#order" class="order__btn">
+                            Замовити
+                        </a>
+                        <a href="#" class="card__info">
+                            Презентація
+                        </a>
+                        <div class="card__elems">
+                            <span class="card__elem"></span>
+                            <span class="card__elem"></span>
+                            <span class="card__elem"></span>
+                            <span class="card__elem"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card__decor card__decor-2"></div>
+        </div>
+    </div>
+</section>
         
         
         

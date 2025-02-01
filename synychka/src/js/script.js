@@ -1,23 +1,23 @@
 var landingFunctions = {
 	init: function() {
-		this.initLibraris()
-		this.card()
+		this.initLibraries()
+		// this.card()
 		this.time()
 	}, 
 
-	initLibraris: function() {
+	initLibraries: function() {
 		
-		$('[href*="#"]').on('click', function (e) {
-			var fixedOffset = 0;
-			// var cardHeight = $(".card").outerHeight(false)
-			// var windowHeight = $(window).height()
+		// $('[href*="#"]').on('click', function (e) {
+		// 	var fixedOffset = 0;
+		// 	// var cardHeight = $(".card").outerHeight(false)
+		// 	// var windowHeight = $(window).height()
 
-			$('html, body')
-			.stop()
-			// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
-			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
-			e.preventDefault();
-		})
+		// 	$('html, body')
+		// 	.stop()
+		// 	// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
+		// 	.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
+		// 	e.preventDefault();
+		// })
 
 		// $(".header__section").on("mousemove", function(e) {
 		// 	const x = e.pageX / $(window).width();
@@ -28,6 +28,21 @@ var landingFunctions = {
 		// 		'translate(' + x * 20 + 'px, ' + y * 20 + 'px)'
 		// 	);
 		// })
+
+		function toggleClassByInterval (className, elements, delay) {
+			const $divs = $(elements)
+			let currentPosition = 0
+			const timer = setInterval(function () {
+				(currentPosition == $divs.length) && (currentPosition = 0)
+			   $divs.removeClass(className).eq(currentPosition++).addClass(className)
+			}, delay)
+		}
+
+		toggleClassByInterval("active", ".card__elem", 1000)
+
+		$(".card__elem").each(function() {
+
+		})
 
 		// $('.review__slider').owlCarousel({
 		// 	items: 1,
@@ -46,6 +61,25 @@ var landingFunctions = {
 		// 		}
 		// 	}
 		// });
+
+		function menu() {
+			$(".mobile__menu-open").click(function() {
+				$(".header__nav-mobile").addClass("active");
+				$("body").css("overflow", "hidden");
+			})
+
+			$(".nav__mobile-close").click(function() {
+				$(".header__nav-mobile").removeClass("active");
+				$("body").css("overflow", "auto");
+			})
+
+			$(".header__nav-mobile a").click(function() {
+				$(".header__nav-mobile").removeClass("active");
+				$("body").css("overflow", "auto");
+			})
+		}
+
+		menu()
 
 	
 		AOS.init({
