@@ -1,0 +1,147 @@
+.advantage__section {
+}
+
+.advantage__section-wrapper {
+    padding: 100px 0 120px;
+}
+
+.advantage__section-title {
+    font-weight: 700;
+    font-size: 76px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 42px;
+}
+
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.advantage__item {
+    width: 280px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantage__item-icon {
+    width: 56px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.advantage__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.advantage__item-text {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.advantage__item-1 {
+    .advantage__item-icon {
+        margin-bottom: 10px;
+    }
+}
+
+.advantage__item-2 {
+    .advantage__item-icon {
+        margin-bottom: 13px;
+    }
+}
+
+.advantage__item-3 {
+    .advantage__item-icon {
+        margin-bottom: 15px;
+    }
+}
+
+.advantage__item-4 {
+    .advantage__item-icon {
+        margin-bottom: 13px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .advantage__item {
+        width: 240px;
+    }
+    .advantage__item-title {
+        font-size: 18px;
+        height: 42px;
+    }
+    .advantage__item-text {
+        font-size: 16px;
+    }
+    .advantage__section-title {
+        font-size: 68px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .advantages {
+        flex-wrap: wrap;
+        gap: 40px 20px;
+    }
+    .advantage__item {
+        width: 46%;
+    }
+    .advantage__item-title {
+        font-size: 20px;
+        height: 48px;
+    }
+    .advantage__item-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 540px) {
+    .advantage__item {
+        width: 88%;
+    }
+    .advantage__section-wrapper {
+        padding: 22vw 0 42vw;
+    }
+    .advantage__section-title {
+        font-size: 11.6vw;
+        margin-bottom: 9.8vw;
+    }
+    .advantages {
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .advantage__item {
+        margin-bottom: 10vw;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .advantage__item-icon {
+        width: 13.5vw;
+        margin-bottom: 4.8vw !important;
+    }
+    .advantage__item-title {
+        font-size: 4.8vw;
+        height: 11.8vw;
+    }
+    .advantage__item-text {
+        font-size: 4.2vw;
+    }
+}
