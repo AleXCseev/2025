@@ -277,6 +277,9 @@
     .info__bottom .order__btn {
         margin-right: 60px;
     }
+    .info__bottom .order__nav-btn {
+        padding: 15px 34px;
+    }
 }
 
 @media (max-width: 1080px) {
@@ -332,6 +335,9 @@
     }
     .info__right:before {
         left: 30px;
+    }
+    .info__bottom .order__nav-btn {
+        padding: 20px 34px;
     }
 }
 

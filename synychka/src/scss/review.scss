@@ -1,0 +1,151 @@
+.review__section {
+    background: #e6eec6;
+}
+
+.review__section-wrapper {
+    padding: 100px 0;
+}
+
+.review__section-title {
+    font-weight: 700;
+    font-size: 76px;
+    text-align: center;
+    color: #3b3d32;
+    margin-bottom: 75px;
+}
+
+.review__slider {
+    width: 100%;
+    height: auto;
+}
+
+.review {
+    padding: 50px 20px;
+
+    span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #3b3d32;
+        position: absolute;
+        transition: 0.3s ease;
+
+        &:nth-child(1) {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        &:nth-child(2) {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+            left: 0;
+            border-right: none;
+            border-top: none;
+        }
+
+        &:nth-child(4) {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+        }
+    }
+
+    &:hover {
+        span:nth-child(1) {
+            transform: translate(3px, 3px);
+        }
+        span:nth-child(2) {
+            transform: translate(-3px, 3px);
+        }
+        span:nth-child(3) {
+            transform: translate(3px, -3px);
+        }
+        span:nth-child(4) {
+            transform: translate(-3px, -3px);
+        }
+    }
+}
+
+.review__name {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #3b3d32;
+    margin-bottom: 20px;
+}
+
+.review__text {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #3b3d32;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+
+    button {
+        width: 58px;
+        height: 58px;
+        border-radius: 100%;
+        border: 1px solid #3b3d32 !important;
+        background-image: url(../img/arrow.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        margin-right: 32px;
+        transition: 0.3s ease;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background-color: #3b3d32 !important;
+            background-image: url(../img/arrow-hover.png) !important;
+        }
+
+        span {
+            display: none;
+        }
+
+        &.owl-next {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .review__section-wrapper {
+        padding: 22vw 0 15vw;
+    }
+    .review__section-title {
+        font-size: 11.6vw;
+        margin-bottom: 9.8vw;
+    }
+    .review {
+        padding: 6vw;
+    }
+    .review__name {
+        font-size: 4.2vw;
+        margin-bottom: 2vw;
+    }
+    .review__text {
+        font-size: 4.2vw;
+    }
+    .owl-nav {
+        margin-top: 12vw;
+    }
+}

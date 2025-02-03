@@ -67,7 +67,7 @@ function css() {
             )
             .pipe(
                 autoprefixer({
-                    overrideBrowserslist: ['>0.01%'],
+                    overrideBrowserslist: ['>0.1%'],
                     cascade: true
                 })
             )
