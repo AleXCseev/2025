@@ -1,0 +1,100 @@
+.game-over__section {
+    .modal__wrapper {
+        width: 44vw;
+    }
+    .modal__main {
+        width: 27vw;
+        padding-bottom: 0;
+    }
+    .modal__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .modal__main:before {
+        right: -1.6vw;
+    }
+    .modal__game-info {
+        width: 15.6vw;
+    }
+}
+
+.game-over__result {
+    position: relative;
+    z-index: 2;
+    width: 10.6vw;
+    height: auto;
+
+    .game__info-item {
+        margin-bottom: 5px;
+    }
+
+    .statistic__player-title {
+        margin-bottom: 1vw;
+    }
+}
+
+.result__item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.3vw;
+    gap: 0.4vw;
+}
+
+.result__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.8vw;
+    font-weight: 500;
+    color: #fff;
+}
+
+// .result__number {
+//     width: 4vw;
+//     height: 2.4vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #202030;
+//     border: 1px solid #494954;
+//     font-family: "Raleway", sans-serif;
+//     font-size: 0.8vw;
+//     font-weight: 500;
+//     color: #fff;
+//     border-radius: 0.4vw;
+//     flex-shrink: 0;
+//     overflow-x: auto;
+// }
+
+.game-over__btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+    margin-top: 2.3vw;
+}
+
+.btn__game-over {
+    width: 10.6vw;
+    height: 4vw;
+
+    span {
+        text-align: center;
+        font-size: 0.8vw;
+    }
+
+    img {
+        width: auto;
+        height: 2.1vw;
+    }
+
+    .btn__wrapper {
+        gap: 0.4vw;
+        justify-content: center;
+        padding: 0 0.8vw;
+    }
+}
