@@ -1,0 +1,130 @@
+.header__section {
+}
+
+.header__line-top {
+    background: #274375;
+}
+
+.header__line-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header__line-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+
+    .header__link {
+        &:last-of-type {
+            margin-right: 0;
+        } 
+    }
+}
+
+.header__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    color: #fff;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+.header__arrow {
+    margin-left: 20px;
+}
+
+.header__logo {
+    width: 350px;
+    height: auto;
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+.header__line-bottom {
+    background: #0c2b64;
+    padding: 15px 0;
+    margin-bottom: 39px;
+}
+
+.header__line-bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__arrow {
+        margin-left: 10px;
+    }
+
+    .header__link {
+        margin-right: 0;
+    }
+}
+
+.header__link-menu {
+    display: none;
+}
+
+
+@media (max-width: 1140px) {
+    .container {
+        width: 700px;
+    }
+    .header__link {
+        font-size: 18px;
+    }
+    .header__line-bottom {
+        display: none;
+    }
+    .header__link-menu {
+        display: inline-block;
+    }
+    .header__logo {
+        margin: 30px auto 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    .header__link {
+        font-size: 4.2vw;
+        margin-right: 4.8vw;
+
+        img {
+            width: auto;
+            height: 4.8vw;
+        }
+    }
+    .header__link-menu {
+        img {
+            width: auto;
+            height: 3.8vw;
+        }
+    }
+    .header__arrow {
+        margin-left: 2vw !important;
+        width: 3.8vw !important;
+        height: auto !important;
+    }
+    .header__logo {
+        margin: 4.8VW auto 2.8VW;
+        width: 47.4vw;
+    }
+}
