@@ -1,0 +1,151 @@
+.info__section-wrapper {
+    padding: 100px 0 153px;
+    position: relative;
+    z-index: 1;
+}
+
+.info__title {
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    line-height: normal;
+    width: 100%;
+    max-width: 770px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 45px;
+}
+
+.info__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info__left {
+    width: 645px;
+    height: auto;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__phone {
+    position: absolute;
+}
+
+.phone__img {
+    width: 100%;
+    height: auto;   
+    position: relative;
+    z-index: 2;
+}
+
+.info__phone-1 {
+    width: 265px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.info__phone-2 {
+    width: 215px;
+    height: auto;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info__phone-3 {
+    width: 215px;
+    height: auto;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info__charact {
+    position: absolute;
+    height: auto;
+    z-index: 2;
+}
+
+.info-charact-1 {
+    width: 166px;
+    bottom: 0;
+    left: 59px;
+}
+
+.info-charact-2 {
+    width: 105px;
+    bottom: 0;
+    left: -16px;
+}
+
+
+.info__right {
+    width: 670px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.info__item {
+    width: 48%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(41px);
+    border-radius: 50px;
+    border: 1px solid rgba(153, 153, 153, 0.5);
+}
+
+.info__item-text {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+
+    span {
+        font-weight: 800;
+        color: #bafa56;
+    }
+}
+
+.info__decor {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.info__decor-1 {
+    width: 1116px;
+    height: 1116px;
+    top: -160px;
+    left: -360px;
+    transform: rotate(180deg);
+    background-image: url(../img/decor-1.png);
+}
+
+.info__decor-2 {
+    width: 794px;
+    height: 794px;
+    bottom: 109px;
+    right: -278px;
+    background-image: url(../img/info-decor.png);
+}
