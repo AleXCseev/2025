@@ -131,6 +131,15 @@
     color: #222;
 }
 
+.answer__block-reverse {
+    flex-direction: row-reverse;
+
+    .ansver__img-left {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+}
+
 @media (max-width: 1140px) {
     body {
         background-color: #fff;
