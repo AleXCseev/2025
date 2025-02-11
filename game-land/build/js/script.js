@@ -6,17 +6,17 @@ var landingFunctions = {
 
 	initLibraries: function() {
 		
-		$('[href*="#"]').on('click', function (e) {
-			var fixedOffset = 0;
-			// var cardHeight = $(".card").outerHeight(false)
-			// var windowHeight = $(window).height()
+		// $('[href*="#"]').on('click', function (e) {
+		// 	var fixedOffset = 0;
+		// 	// var cardHeight = $(".card").outerHeight(false)
+		// 	// var windowHeight = $(window).height()
 
-			$('html, body')
-			.stop()
-			// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
-			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
-			e.preventDefault();
-		})
+		// 	$('html, body')
+		// 	.stop()
+		// 	// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
+		// 	.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
+		// 	e.preventDefault();
+		// })
 
 		setTimeout(function(){
 			$(".header__review-icons").addClass("active");
@@ -64,11 +64,30 @@ var landingFunctions = {
 					$(".winners").removeClass("active");
 				}, 5000);
 				
-			}, 7000);
+			}, 15000);
 
 		}
 
 		info()
+
+		var video = $("#video");
+		var offset = $(video).offset().top;
+
+		$(window).scroll(function(){
+			var scroll = $(this).scrollTop() + 300;
+
+			scroll >= offset ? $("#video")[0].play() : $("#video")[0].pause();
+		});
+
+		$(".video").click(function() {
+			if($(this).closest(".video__wrapper").hasClass("active")) {
+				$(".video")[0].pause();
+				$(this).closest(".video__wrapper").removeClass("active");
+			} else {
+				$(this).closest(".video__wrapper").addClass("active");
+				$(".video")[0].play();
+			}
+		})
 	
 		AOS.init({
 			disable : function() {
@@ -86,13 +105,13 @@ var landingFunctions = {
 			AOS.refresh();
 		})
 
-		$('[data-fancybox]').fancybox({
-			loop: true,
-			infobar: false,
-			animationEffect: false,
-			backFocus: false,
-			hash: false,
-		});
+		// $('[data-fancybox]').fancybox({
+		// 	loop: true,
+		// 	infobar: false,
+		// 	animationEffect: false,
+		// 	backFocus: false,
+		// 	hash: false,
+		// });
 	},
 
 	time: function() {

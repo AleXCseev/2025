@@ -84,7 +84,6 @@
     left: -16px;
 }
 
-
 .info__right {
     width: 670px;
     height: auto;
@@ -149,3 +148,123 @@
     right: -278px;
     background-image: url(../img/info-decor.png);
 }
+
+@media (max-width: 1400px) {
+    .info__left {
+        width: 580px;
+    }
+    .info__right {
+        width: 600px;
+    }
+    .info__item-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .info__left {
+        width: 490px;
+    }
+    .info__phone-1 {
+        width: 230px;
+    }
+    .info__phone-2 {
+        width: 200px;
+    }
+    .info__phone-3 {
+        width: 200px;
+    }
+    .info__right {
+        width: 490px;
+    }
+    .info__item {
+        width: 48%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1080px) {
+    .info__block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .info__phone-1 {
+        width: 280px;
+    }
+    .info__phone-2, .info__phone-3 {
+        width: 240px;
+
+        .phone__display {
+            width: calc(100% - 10px);
+        }
+    }
+    .info__right {
+        width: 100%;
+    }
+    .info__item-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .info__phone-1 {
+        width: 42.1vw;
+    }
+    .info__phone-2, .info__phone-3 {
+        width: 32vw;
+    }
+    .info-charact-1 {
+        width: 21vw;
+        left: 12vw;
+        z-index: 4;
+    }
+    .info-charact-2 {
+        width: 14.5vw;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__items {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2vw;
+    }
+    .info__item {
+        width: 85%;
+        margin-bottom: 4.8vw;
+        padding: 7vw 6vw;
+    }
+    .info__item-text {
+        font-size: 4.5vw;
+    }
+    .info__title {
+        font-size: 7.2vw;
+        margin-bottom: 7vw;
+    }
+    .info__decor-1 {
+        width: 270vw;
+        height: 270vw;
+        top: -65vw;
+        left: 50%;
+        transform: translateX(-50%) rotate(180deg);
+    }
+    .info__decor-2 {
+        width: 192vw;
+        height: 192vw;
+        bottom: -5vw;
+        right: -70vw;
+    }
+    .info__section-wrapper {
+        padding: 24vw 0 28vw;
+    }
+}   
+
