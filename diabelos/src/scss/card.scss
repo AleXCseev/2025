@@ -5,26 +5,23 @@
 }
 
 .bar__block {
-    padding: 70px 0 22px;
-    border-bottom: 2px solid #fed356;
+    padding: 0px 0 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .bar__title {
-    font-weight: 600;
-    font-size: 24px;
+    font-weight: 700;
+    font-size: 36px;
     line-height: 1.5;
     text-align: center;
-    color: #222;
-    width: 100%;
-    max-width: 776px;
-    margin-bottom: 14px;
+    color: #ff3d00;
+    margin-bottom: 9px;
 }
 
 .bar__subtitle {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.5;
     text-align: center;
@@ -90,14 +87,12 @@
 .bar__info {
     font-weight: 400;
     font-size: 20px;
-    text-transform: uppercase;
     text-align: center;
     color: #222;
 }
 
 .card__block {
     padding: 64px 0 22px;
-    border-bottom: 2px solid #fed356;
     // display: none;
 }
 
