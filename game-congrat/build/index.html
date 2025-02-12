@@ -249,7 +249,10 @@
                     <div class="game__info-item">
                         <div class="game__info-wrapper">
                             <label for="experience" class="input__label">Очки опыта</label>
-                            <input id="experience" disabled type="text" placeholder="Очки опыта" value="100/250xp" class="input">
+                            <div class="input progress__bar">
+                                <div style="width: 60%;" class="progress"></div>
+                                <span>600/1000 xp</span>
+                            </div>
                         </div>
                         <button type="button" class="game__info-btn">
                             <img src="img/edit-experience-icon.png" alt="">
@@ -1149,7 +1152,7 @@
                                 <span>Награды:</span> Никаких наград.
                             </li>
                         </ul>
-                        <button type="button" class="btn btn__rounded btn__rounded-small btn__play">
+                        <button type="button" class="btn btn__rounded btn__rounded-small btn__play modal-open-triggle" data-modal="play-info">
                             <div class="btn__wrapper">
                                 <span>НАЧАТЬ ИГРУ</span>
                             </div>
@@ -1180,7 +1183,7 @@
                                     <span>Wallet Connect</span>
                                 </div>
                             </button>
-                            <button type="button" style="display: none;" class="btn btn__rounded btn__rounded-small btn__play">
+                            <button type="button" style="display: none;" class="btn btn__rounded btn__rounded-small btn__play modal-open-triggle" data-modal="play-info">
                                 <div class="btn__wrapper">
                                     <span>НАЧАТЬ ИГРУ</span>
                                 </div>
@@ -1271,7 +1274,7 @@
                                     <span>Wallet Connect</span>
                                 </div>
                             </button>
-                            <button type="button" style="display: none;" class="btn btn__rounded btn__rounded-small btn__play">
+                            <button type="button" style="display: none;" class="btn btn__rounded btn__rounded-small btn__play modal-open-triggle" data-modal="play-info">
                                 <div class="btn__wrapper">
                                     <span>НАЧАТЬ ИГРУ</span>
                                 </div>
@@ -1837,6 +1840,49 @@
 </div>
 
 
+        <div class="modal__section play-info__section" id="play-info">
+    <h2 class="main__title">
+        GramZone
+    </h2>
+
+    <div class="modal__wrapper-shadow blue"></div>
+    
+    <div class="modal__wrapper">
+        <div class="modal__border"></div>
+        <button type="button" class="btn__back modal-open-triggle" data-modal="play">
+            <img src="img/arrow-back.png" alt="">
+            <span>Назад</span>
+        </button>
+        <h3 class="modal__title">
+            ИГРОВОЙ РЕЖИМ
+        </h3>
+        <hr class="modal__divider">
+        <div class="modal__block"> 
+            <div class="info__block">
+                <h3 class="info__main-title">Условия игры</h3>
+                <p class="info__main-text">Для всех игровых режимов</p>
+                <div class="info__wrapper">
+                    <p class="info__text">
+                        Этот режим позволяет всем игрокам соревноваться друг с другом без игровых команд. Это бесплатный режим, где игроки могут наслаждаться игрой без каких-либо затрат.
+                    </p>
+                    <p class="info__text-alert">
+                        Важно! <br> При выходе с игры все собранные Gram выводяться в лобби.
+                    </p>
+                </div>
+                <label class="info__checkbox">
+                    <input type="checkbox" class="checkbox__input">
+                    <span class="info__check-box"></span>
+                    <span class="info__check-box-text">Я ознакомился и принимаю</span>
+                </label>
+                <button type="button" disabled class="btn btn__rounded btn__rounded-small btn__play">
+                    <div class="btn__wrapper">
+                        <span>НАЧАТЬ ИГРУ</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
         <div class="alert alert-success">
             Вы успешно пополнили баланс!

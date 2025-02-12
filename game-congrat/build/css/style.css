@@ -1565,6 +1565,45 @@ html, body, .modal__section {
   max-height: 5vw;
 }
 
+.progress__bar {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.progress__bar span {
+  position: relative;
+  z-index: 2;
+}
+.progress__bar.active .progress {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+       -o-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgb(51, 53, 153);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+       -o-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
 .shop__section .modal__main {
   width: auto;
   display: -webkit-box;
@@ -2911,6 +2950,145 @@ html, body, .modal__section {
 }
 .play__info-item-3 .play__info-list.active {
   display: block;
+}
+
+.info__block {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  padding: 1vw 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+}
+
+.play-info__section .btn__play {
+  -webkit-align-self: center;
+          align-self: center;
+}
+.play-info__section .btn__play:disabled {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  cursor: auto;
+}
+.play-info__section .btn__play:disabled:hover {
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  box-shadow: 0px 0px 20px 5px rgba(70, 73, 255, 0.7);
+}
+
+.info__main-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6vw;
+  position: relative;
+  margin-bottom: 0.3vw;
+  font-weight: 800;
+}
+.info__main-title:before {
+  content: "";
+  width: 22.65vw;
+  height: 1.2vw;
+  position: absolute;
+  bottom: -0.2vw;
+  left: 0;
+  background-image: url(../img/play-line.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.info__main-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9vw;
+  color: #585a80;
+  margin-bottom: 1vw;
+}
+
+.info__wrapper {
+  width: 100%;
+  height: auto;
+  max-height: 12vw;
+  overflow-y: auto;
+  margin-bottom: 1vw;
+  padding: 0 1vw 1vw 0;
+}
+
+.info__text {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8vw;
+  color: #fff;
+  margin-bottom: 1vw;
+}
+
+.info__text-alert {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8vw;
+  color: #fcc60a;
+}
+
+.info__checkbox {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  cursor: pointer;
+  margin-bottom: 1vw;
+}
+
+.info__check-box {
+  width: 1.9vw;
+  height: 1.9vw;
+  border: 1px solid #626262;
+  margin-right: 1vw;
+  border-radius: 0.2vw;
+  background-color: #22223f;
+  position: relative;
+}
+.info__check-box:before {
+  content: "";
+  width: 1.2vw;
+  height: 1.2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url(../img/checkbox-ok.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.checkbox__input:checked + .info__check-box:before {
+  opacity: 1;
+}
+
+.info__check-box-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8vw;
+  color: #9c9b9b;
 }
 
 .game-over__section .modal__wrapper {
@@ -4687,6 +4865,45 @@ html, body, .modal__section {
   .congrat__info span {
     font-size: 1.8vw;
   }
+  .info__main-title {
+    font-size: 2.2vw;
+    margin-bottom: 0.5vw;
+  }
+  .info__main-title:before {
+    width: 27vw;
+    height: 1.5vw;
+  }
+  .info__main-text {
+    font-size: 1.3vw;
+    margin-bottom: 2vw;
+  }
+  .info__wrapper {
+    max-height: 20vw;
+    margin-bottom: 2vw;
+    padding: 0 1vw 2vw 0;
+  }
+  .info__text {
+    font-size: 1.6vw;
+    margin-bottom: 1vw;
+  }
+  .info__text-alert {
+    font-size: 1.6vw;
+  }
+  .info__check-box {
+    width: 2.4vw;
+    height: 2.4vw;
+    border-radius: 0.4vw;
+  }
+  .info__check-box:before {
+    width: 1.6vw;
+    height: 1.6vw;
+  }
+  .info__check-box-text {
+    font-size: 1.5vw;
+  }
+  .info__checkbox {
+    margin-bottom: 2vw;
+  }
 }
 @media (max-width: 960px) and (max-height: 460px) {
   .main::after {
@@ -5097,6 +5314,9 @@ html, body, .modal__section {
   }
   .congrat__block {
     width: 38vw;
+  }
+  .congrat__block-wrapper {
+    padding: 0 2vw 3vw;
   }
   .congrat__icon {
     width: 8vw;
@@ -6385,5 +6605,49 @@ html, body, .modal__section {
   }
   .congrat__block-wrapper {
     padding: 0 2vw 4vw;
+  }
+  .info__block {
+    padding: 3vw 0;
+  }
+  .info__main-title {
+    font-size: 5vw;
+    margin-bottom: 1vw;
+  }
+  .info__main-title:before {
+    width: 62vw;
+    height: 4vw;
+    bottom: -0.8vw;
+  }
+  .info__main-text {
+    font-size: 3.5vw;
+    margin-bottom: 3vw;
+  }
+  .info__text {
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+  }
+  .info__text-alert {
+    font-size: 3.5vw;
+  }
+  .info__wrapper {
+    max-height: 90vw;
+    margin-bottom: 3vw;
+    padding: 0 0vw 2vw 0;
+  }
+  .info__check-box {
+    width: 7vw;
+    height: 7vw;
+    margin-right: 2vw;
+    border-radius: 1vw;
+  }
+  .info__check-box:before {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  .info__check-box-text {
+    font-size: 3.5vw;
+  }
+  .info__checkbox {
+    margin-bottom: 5vw;
   }
 }

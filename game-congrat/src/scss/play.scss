@@ -249,3 +249,126 @@
         }
     }
 }
+
+.info__block {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    padding: 1vw 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.play-info__section {
+    .btn__play {
+        align-self: center;
+    }
+    .btn__play:disabled {
+        filter: grayscale(100%); 
+        cursor: auto;
+    }
+    .btn__play:disabled:hover {
+        transform: none;
+        box-shadow: 0px 0px 20px 5px rgba(70, 73, 255, 0.7);
+    }
+}
+
+.info__main-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6vw;
+    position: relative;
+    margin-bottom: 0.3vw;
+    font-weight: 800;
+
+    &:before {
+        content: "";
+        width: 22.65vw;
+        height: 1.2vw;
+        position: absolute;
+        bottom: -0.2vw;
+        left: 0;
+        background-image: url(../img/play-line.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.info__main-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.9vw;
+    color: #585a80;
+    margin-bottom: 1vw;
+}
+
+.info__wrapper {
+    width:  100%;
+    height: auto;
+    max-height: 12vw;
+    overflow-y: auto;
+    margin-bottom: 1vw;
+    padding: 0 1vw 1vw 0;
+}
+
+.info__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.8vw;
+    color: #fff;
+    margin-bottom: 1vw;
+}
+
+.info__text-alert {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.8vw;
+    color: #fcc60a;
+}
+
+.info__checkbox {
+    position: relative; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1vw;
+}
+
+.info__check-box {
+    width: 1.9vw;
+    height: 1.9vw;
+    border: 1px solid #626262;
+    margin-right: 1vw;
+    border-radius: 0.2vw;
+    background-color: #22223f;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 1.2vw;
+        height: 1.2vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(../img/checkbox-ok.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+}
+
+.checkbox__input:checked + .info__check-box {
+    &:before {
+        opacity: 1;
+    }
+}
+
+.info__check-box-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.8vw;
+    color: #9c9b9b;
+}
+

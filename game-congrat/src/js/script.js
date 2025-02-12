@@ -114,6 +114,14 @@ var landingFunctions = {
 		$("#withdrawal").click( function() {
 			alertItem()
 		})
+
+		$(".info__checkbox .checkbox__input").change(function() {  
+			if (this.checked) {
+				$(this).closest('.modal__section').find(".btn__play").attr("disabled", false);
+			} else {
+				$(this).closest('.modal__section').find(".btn__play").attr("disabled", true);
+			}
+		});
 	},
 
 	preloader: function() {
@@ -297,14 +305,21 @@ var landingFunctions = {
 			if(id == "exit") {
 				timer();
 			}
+
 			if(id == "autorization") {
 				$(".main").removeClass("hide");
 			}
+
+			setTimeout(function() {
+				$(".modal__section").find(".progress__bar").addClass("active");
+			}, 500)
 		})	
 
 		$(".btn__back").click(function() {
+			if($(this).hasClass("modal-open-triggle")) return;
 			$(".main__page").show();
 			$(".main").removeClass("hide");
+			$(".progress__bar").removeClass("active")
 			
 			$(this).closest(".modal__section").removeClass("active");
 		})
@@ -314,6 +329,7 @@ var landingFunctions = {
 				$(".modal__section").removeClass("active");
 				$(".main__page").show();
 				$(".main").removeClass("hide");
+				$(".progress__bar").removeClass("active")
 			}
 		})
 	},

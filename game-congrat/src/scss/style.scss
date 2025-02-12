@@ -1031,6 +1031,45 @@ html, body, .modal__section {
             font-size: 1.8vw;
         }
     }
+    .info__main-title {
+        font-size: 2.2vw;
+        margin-bottom: 0.5vw;
+    }
+    .info__main-title:before {
+        width: 27vw;
+        height: 1.5vw;
+    }
+    .info__main-text {
+        font-size: 1.3vw;
+        margin-bottom: 2vw;
+    }
+    .info__wrapper {
+        max-height: 20vw;
+        margin-bottom: 2vw;
+        padding: 0 1vw 2vw 0;
+    }
+    .info__text {
+        font-size: 1.6vw;
+        margin-bottom: 1vw;
+    }
+    .info__text-alert {
+        font-size: 1.6vw;
+    }
+    .info__check-box {
+        width: 2.4vw;
+        height: 2.4vw;
+        border-radius: 0.4vw;
+    }
+    .info__check-box:before {
+        width: 1.6vw;
+        height: 1.6vw;
+    }
+    .info__check-box-text {
+        font-size: 1.5vw;
+    }
+    .info__checkbox {
+        margin-bottom: 2vw;
+    }
 }
 
 @media (max-width: 960px) and (max-height: 460px) {
@@ -1430,6 +1469,9 @@ html, body, .modal__section {
 
     .congrat__block {
         width: 38vw;
+    }
+    .congrat__block-wrapper {
+        padding: 0 2vw 3vw;
     }
     .congrat__icon {
         width: 8vw;
@@ -2667,6 +2709,50 @@ html, body, .modal__section {
     }
     .congrat__block-wrapper {
         padding: 0 2vw 4vw;
+    }
+    .info__block {
+        padding: 3vw 0;
+    }
+    .info__main-title {
+        font-size: 5vw;
+        margin-bottom: 1vw;
+    }
+    .info__main-title:before {
+        width: 62vw;
+        height: 4vw;
+        bottom: -0.8vw;
+    } 
+    .info__main-text {
+        font-size: 3.5vw;
+        margin-bottom: 3vw;
+    }
+    .info__text {
+        font-size: 3.5vw;
+        margin-bottom: 2vw;
+    }
+    .info__text-alert {
+        font-size: 3.5vw;
+    }
+    .info__wrapper {
+        max-height: 90vw;
+        margin-bottom: 3vw;
+        padding: 0 0vw 2vw 0;
+    }
+    .info__check-box {
+        width: 7vw;
+        height: 7vw;
+        margin-right: 2vw;
+        border-radius: 1vw;
+    }
+    .info__check-box:before {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+    .info__check-box-text {
+        font-size: 3.5vw;
+    }
+    .info__checkbox {
+        margin-bottom: 5vw;
     }
 }
 
