@@ -9,15 +9,7 @@
     margin-bottom: 20px;
 }
 
-.news__left {
-    width: calc(50% - 10px);
-    height: auto;
 
-    .info__tag {
-        margin-bottom: 30px;
-        text-align: left;
-    }
-}
 
 .news__section-title {
     font-family: "Unbounded", sans-serif;
@@ -67,10 +59,7 @@
 }
 
 .header__info-link {
-    position: absolute;
-    bottom: 30px;
-    right: 35px;
-    z-index: 1;
+   
 }
 
 .news__slider {
@@ -95,6 +84,15 @@
     object-fit: cover;
     border-radius: 10px;
     flex-shrink: 0;
+}
+
+.news__right {
+    .header__info-link {
+        position: absolute;
+        bottom: 30px;
+        right: 35px;
+        z-index: 1;
+    }
 }
 
 .news__slide-wrapper {
@@ -259,10 +257,10 @@
         font-size: 4.2vw;
     }
     .header__info-link {
-        position: static;
-        margin-left: auto;
-        margin-top: 6vw;
-        font-weight: 700;
+        position: static !important;
+        margin-left: auto !important;
+        margin-top: 6vw !important;
+        font-weight: 700 !important;
     }
     .news__slide {
         flex-direction: column;

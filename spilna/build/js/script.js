@@ -104,6 +104,30 @@ var landingFunctions = {
 			}
 		});
 
+		$('.team__slider').owlCarousel({
+			items: 3,
+			margin: 20,
+			dots: false,
+			dotsEach: true,
+			nav: true,
+			loop: true,
+			autoHeight: true,
+			// autoplay: true,
+			// autoplayTimeout: 10000,
+			// autoplayHoverPause: true,
+			responsive:{
+				0:{
+					items: 1,
+				},
+				700:{
+					items: 2,
+				},
+				1080:{
+					items: 3,
+				}
+			}
+		});
+
 		function menu() {
 			$(".mobile__menu-open").click(function() {
 				$(".header__nav-mobile").addClass("active");
