@@ -111,19 +111,22 @@ var landingFunctions = {
 			dotsEach: true,
 			nav: true,
 			loop: true,
-			autoHeight: true,
-			// autoplay: true,
-			// autoplayTimeout: 10000,
-			// autoplayHoverPause: true,
+			autoHeight: false,
+			autoplay: true,
+			autoplayTimeout: 10000,
+			autoplayHoverPause: true,
 			responsive:{
 				0:{
 					items: 1,
+					autoHeight: true,
 				},
 				700:{
 					items: 2,
+					autoHeight: false,
 				},
 				1080:{
 					items: 3,
+					autoHeight: false,
 				}
 			}
 		});

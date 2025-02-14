@@ -1,10 +1,19 @@
-.news__left {
-    width: calc(50% - 10px);
-    height: auto;
+.news__page, .article__page {
+    .header__section-wrapper {
+        padding: 25px 0;
+    }
+    .header__nav {
+        margin-bottom: 0;
+    }
 
-    .info__tag {
-        margin-bottom: 30px;
-        text-align: left;
+    .news__left {
+        width: calc(50% - 10px);
+        height: auto;
+    
+        .info__tag {
+            margin-bottom: 30px;
+            text-align: left;
+        }
     }
 }
 

@@ -1,0 +1,120 @@
+.article__page {
+    .breadcrumb {
+        margin-bottom: 75px;
+    }
+    .news__wrapper {
+        padding: 50px 0 100px;
+    }
+}
+
+.article__section-wrapper {
+    padding: 50px 0 130px;
+    border-bottom: 1px solid #066dca;
+}
+
+.article__block {
+    padding: 0 230px;
+
+    .header__date {
+        margin-bottom: 10px;
+    }
+}
+
+.article__title {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    color: #333;
+    margin-bottom: 45px;
+}
+
+.article__text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.article__subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    color: #066dca;
+    margin-bottom: 20px;
+}
+
+.article__list {
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+
+    li {
+        margin-bottom: 20px;
+    }
+}
+
+.article__news-title {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 45px;
+}
+
+
+@media (max-width: 1400px) {
+    .article__block {
+        padding: 0 150px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .article__block {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .article__block {
+        padding: 0;
+    }
+    .article__section-wrapper {
+        padding: 50px 0 80px;
+    }
+}
+
+@media (max-width: 540px) {
+    .article__section-wrapper {
+        padding: 12vw 0 8vw;
+    }
+    .article__page .breadcrumb {
+        margin-bottom: 12vw;
+    }
+    .article__block .header__date {
+        margin-bottom: 2vw;
+    }
+    .article__title {
+        font-size: 7vw;
+        margin-bottom: 6vw;
+    }
+    .article__text {
+        font-size: 4.2vw;
+        margin-bottom: 4.8vw;
+    }
+    .article__subtitle {
+        font-size: 5.5vw;
+        margin-bottom: 4.8vw;
+    }
+    .article__list {
+        font-size: 4.2vw;
+    }
+    .article__list li {
+        margin-bottom: 4.8vw;
+    }
+    .article__news-title {
+        font-size: 7vw;
+        margin-bottom: 10vw;
+    }
+}
