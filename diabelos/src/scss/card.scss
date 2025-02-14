@@ -89,17 +89,105 @@
     font-size: 20px;
     text-align: center;
     color: #222;
+    margin-bottom: 20px;
 }
 
 .card__block {
-    padding: 64px 0 22px;
-    // display: none;
+    padding: 36px 0 32px;
+    display: none;
 }
+
+.card__block-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    color: #222;
+    margin-bottom: 21px;
+
+    span {
+        color: #f00;
+    }
+}
+
+.card__prod {
+    width: 100%;
+    max-width: 363px;
+    margin-bottom: 26px;
+}
+
+.card__price {
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.old__price {
+    position: relative;
+    padding: 0 5px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    color: #222;
+    margin-right: 20px;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #f00;
+        transform: translate(-50%, -50%) rotate(-3deg);
+    }
+}
+
+.new__price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    color: #ff3d00;
+}
+
+.card__info {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: #222;
+
+    span {
+        color: #f00;
+    }
+}
+
+.card__timer {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    color: #f00;
+}
+
 
 .card__form {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
+    margin-bottom: 13px;
 }
 
 .input__wrapper {
@@ -144,6 +232,11 @@
     padding: 0 20px 0 80px;
     border: 1px solid #ff9e00;
     border-radius: 10px;
+    transition: 0.3s ease;
+
+    &:focus {
+        background-color: rgba(255,209,133, 0.3);
+    }
 }
 
 .card__submit {
@@ -152,7 +245,7 @@
     border-radius: 10px;
     background: #ff3d00;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
     color: #fff;
     display: flex;
@@ -193,11 +286,11 @@
         padding: 6.8vw 0 3vw;
     }
     .bar__title {
-        font-size: 5.5vw;
-        margin-bottom: 3vw;
+        font-size: 7vw;
+        margin-bottom: 2vw;
     }
     .bar__subtitle {
-        font-size: 4.8vw;
+        font-size: 4.2vw;
         margin-bottom: 4.8vw;
     }
     .bar__wrapper {
@@ -218,6 +311,40 @@
     }
     .bar__info {
         font-size: 4.5vw;
+        margin-bottom: 4.8vw;
+    }
+    .card__block {
+        padding: 0 0 5vw;
+    }
+    .card__subtitle {
+        font-size: 5.8vw;
+        margin-bottom: 5vw;
+    }
+    .card__prod {
+        max-width: 67vw;
+        margin-bottom: 6vw;
+    }
+    .card__price {
+        margin-bottom: 4.8vw;
+    }
+    .old__price {
+        font-size: 4.8vw;
+        margin-right: 4.8vw;
+    }
+    .new__price {
+        font-size: 5.8vw;
+    }
+    .card__info {
+        font-size: 4.2vw;
+    }
+    .card__timer {
+        font-size: 7vw;
+    }
+    .mb-22 {
+        margin-bottom: 5vw;
+    }
+    .card__submit {
+        font-size: 4.8vw;
     }
 }
 
