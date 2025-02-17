@@ -1,0 +1,140 @@
+.header__section {
+    background-color: #e83c30;
+    margin-bottom: 20px;
+}
+
+.header__section-wrapper {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+        width: 45px;
+        height: auto;
+        margin-right: 10px;
+    }
+}
+
+.header__title {
+    font-size: 39px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.header__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.header__social {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-right: 1px solid #fff;
+    padding: 5px 20px 5px 0;
+
+    svg {
+        width: auto;
+        height: 20px;
+        display: block;
+    }
+
+}
+
+.header__link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #fff;
+    transition: 0.3s ease;
+    width: auto;
+    flex-shrink: 0;
+    margin-left: 15px;
+
+    &:hover {
+        color: #909090;
+
+        svg {
+            fill: #909090;
+        }
+    }
+}
+
+.header__links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 5px;
+
+    svg {
+        width: auto;
+        height: 20px;
+        margin-left: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .container {
+        width: 700px;
+    }
+    .header__title {
+        font-size: 24px;
+    }
+    .header__social {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .header__left svg {
+        width: 35px;
+        margin-right: 10px;
+    }
+    .header__title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 540px) {
+    .header__title {
+        font-size: 5vw;
+    }
+    .header__left svg {
+        width: 8vw;
+        margin-right: 2vw;
+    }
+    .header__links {
+        .header__link:nth-child(2), .header__link:nth-child(3) {
+            display: none;
+        }
+    }
+    .header__link {
+        margin-left: 0;
+    }
+    .header__links svg {
+        width: auto;
+        height: 5vw;
+    }
+}
