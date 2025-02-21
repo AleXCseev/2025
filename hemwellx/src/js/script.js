@@ -20,24 +20,81 @@ var landingFunctions = {
 		})
 
 		
+		let data = [{
+			title: "घायल कुसुमा",
+			content: "ऑर्डर सफल",
+			time: "10 कुछ मिनट पहले"
+		}, {
+			title: "एफेंदी कुर्नियावान",
+			content: "ऑर्डर सफल",
+			time: "7 कुछ मिनट पहले"
+		}, {
+			title: "रहमा मुस्तिका",
+			content: "ऑर्डर सफल",
+			time: "12 कुछ मिनट पहले"
+		}, {
+			title: "नुरुल अदिंदा पुत्री",
+			content: "ऑर्डर सफल",
+			time: "8 कुछ मिनट पहले"
+		}, {
+			title: "डोनी हरमावन",
+			content: "ऑर्डर सफल",
+			time: "15 कुछ मिनट पहले"
+		}, {
+			title: "मेलिसा करीम",
+			content: "ऑर्डर सफल",
+			time: "3 कुछ मिनट पहले"
+		}, {
+			title: "उनका हुदा सलीम",
+			content: "ऑर्डर सफल",
+			time: "6 कुछ मिनट पहले"
+		}, {
+			title: "पुत्रियन मांडा",
+			content: "ऑर्डर सफल",
+			time: "5 कुछ मिनट पहले"
+		}, {
+			title: "रियाल्डो बुस्टोमी",
+			content: "ऑर्डर सफल",
+			time: "16 कुछ मिनट पहले"
+		}, {
+			title: "ऑगस्टीन में",
+			content: "ऑर्डर सफल",
+			time: "20 कुछ मिनट पहले"
+		}, {
+			title: "इवान फैडिला",
+			content: "ऑर्डर सफल",
+			time: "18 कुछ मिनट पहले"
+		}];
 
-		
-	
-		AOS.init({
-			disable : function() {
-				if( $(window).width() <= 1080) {
-					return true;
+		function info() {
+			let counter = 0;
+
+			// setTimeout(() => {
+			// 	$(".message").removeClass("active");
+			// }, 5000);
+
+			setInterval(() => {
+
+				$(".message__name").text(data[counter].title)
+				$(".message__text").text(data[counter].content)
+
+				counter++
+
+				if(counter == data.length) {
+					counter = 0;
 				}
-				return false
-			},
-			once: true,
-			duration: 1000,
-			offset : 0,
-		});
-	
-		$(window).resize(function() {
-			AOS.refresh();
-		})
+
+				$(".message").addClass("active");
+
+				setTimeout(() => {
+					$(".message").removeClass("active");
+				}, 5000);
+				
+			}, 10000);
+
+		}
+
+		info()
 
 		$('[data-fancybox]').fancybox({
 			loop: true,

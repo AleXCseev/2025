@@ -1,5 +1,9 @@
 .advantage__section {
     padding: 50px 0 0; 
+
+    .info__img {
+        max-width: calc(100% - 30px);
+    }
 }
 
 .advantage__title {
@@ -22,5 +26,18 @@
 
 .prod__img {
     width: 100%;
-    max-width: 400px;
+    max-width: 400px !important;
+}
+
+@media (max-width: 540px) {
+    .advantage__title {
+        padding: 0 15px;
+        font-size: 4vw;
+    }
+    .mb-50 {
+        margin-bottom: 10vw;
+    }
+    .advantage__section {
+        padding: 12vw 0 0; 
+    }
 }
