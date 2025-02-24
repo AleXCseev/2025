@@ -1,0 +1,402 @@
+.play__section {
+    .modal__block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+        gap: 2vw;
+    }
+}
+
+.play__mode {
+    .game__mode {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        cursor: auto;
+
+        &:hover {
+            .game__mode-img img {
+                box-shadow: none;
+            }
+        }
+    }
+    .game__mode-block {
+        width: 48%;
+        height: auto;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .game__mode-img {
+        border-radius: 1.1vw;
+
+        img {
+            border-radius: 1.1vw;
+        }
+    }
+    .btn__price {
+        min-width: 10vw;
+        height: 3.2vw;
+
+        &:disabled {
+            filter: grayscale(100%); 
+            cursor: auto;
+
+            &:hover {
+                box-shadow: 0px 0px 10px 5px rgba(70, 73, 255, 0.7);
+            }
+        }
+
+        span {
+            font-size: 1.2vw;
+        }
+    }
+}
+
+.play__mode {
+    .modal__wrapper {
+        height: auto;
+        padding-bottom: 3vw;
+    }
+}
+
+.play__mode-2 {
+    .game__mode {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+    }
+    .game__mode-block:last-child {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.game__mode-text {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 0.9vw;
+    color: #fff;
+    margin-bottom: 1vw;
+    width: 100%;
+    text-align: center;
+
+    span {
+        color: #e2b640;
+    }
+}
+
+.game__item {
+    width: 48%;
+    height: auto !important;
+    border-radius: 1vw;
+    margin-bottom: 0.8vw;
+
+    &:hover {
+        transform: none;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .btn__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        border-radius: 1vw;
+        padding: 0.5vw;
+
+        &:before {
+            transform: rotate(-11deg);
+        }
+    }
+}
+
+.game__item-title {
+    font-family: "Tactic Sans Extended", sans-serif;
+    font-size: 1.2vw;
+    color: #fff;
+    position: relative;
+    margin-bottom: 0.5vw;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        width: 5vw;
+        height: 1px;
+        background: #9696bf;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.game__item-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.9vw !important;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+
+    span {
+        font-family: "Raleway", sans-serif;
+        font-size: 0.9vw !important;
+    }
+}
+
+.game__item-yellow {
+    font-weight: 800 !important;
+    color: #e2b640 !important;
+}
+
+.game__item-bold {
+    font-weight: 800 !important;
+}
+
+
+.game__mode {
+    width: auto;
+    max-width: 35%;
+    cursor: pointer;
+
+    &:hover {
+        .game__mode-img img {
+            box-shadow: 0 0 10px 2px #e2b640;
+        }
+    }
+
+    &.blocked {
+        pointer-events: none;
+
+        .game__mode-top {
+            opacity: 0.2;
+        }
+
+        .game__mode-img:before, .game__mode-img:after {
+            opacity: 1;
+        }
+    }
+}
+
+.game__mode-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6vw;
+    width: 100%;
+    height: auto;
+}
+
+.game__mode-name {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 0.9vw;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #e2b640;
+}
+
+.game__mode-star {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5vw;
+
+    img {
+        width: 1.2vw;
+        height: auto;
+    }
+}
+
+.game__mode-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.8vw;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.8vw;
+        display: block;
+        transition: 0.3s ease;
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 0.8vw;
+        background: rgba(56, 58, 108, 0.84);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    &:after {
+        content: "";
+        width: 5.6vw;
+        height: 5.6vw;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #202030;
+        border: 1px solid #b79846;
+        background-image: url(../img/game-lock.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 2.2vw auto;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.info__block {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    padding: 1vw 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.play-info__section {
+    .btn__play {
+        align-self: center;
+    }
+    .btn__play:disabled {
+        filter: grayscale(100%); 
+        cursor: auto;
+    }
+    .btn__play:disabled:hover {
+        transform: none;
+        box-shadow: 0px 0px 20px 5px rgba(70, 73, 255, 0.7);
+    }
+}
+
+.info__main-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6vw;
+    position: relative;
+    margin-bottom: 0.3vw;
+    font-weight: 800;
+
+    &:before {
+        content: "";
+        width: 22.65vw;
+        height: 1.2vw;
+        position: absolute;
+        bottom: -0.2vw;
+        left: 0;
+        background-image: url(../img/play-line.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.info__main-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.9vw;
+    color: #585a80;
+    margin-bottom: 1vw;
+}
+
+.info__wrapper {
+    width:  100%;
+    height: auto;
+    max-height: 12vw;
+    overflow-y: auto;
+    margin-bottom: 1vw;
+    padding: 0 1vw 1vw 0;
+}
+
+.info__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.8vw;
+    color: #fff;
+    margin-bottom: 1vw;
+}
+
+.info__text-alert {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.8vw;
+    color: #fcc60a;
+}
+
+.info__checkbox {
+    position: relative; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1vw;
+}
+
+.info__check-box {
+    width: 1.9vw;
+    height: 1.9vw;
+    border: 1px solid #626262;
+    margin-right: 1vw;
+    border-radius: 0.2vw;
+    background-color: #22223f;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 1.2vw;
+        height: 1.2vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(../img/checkbox-ok.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+}
+
+.checkbox__input:checked + .info__check-box {
+    &:before {
+        opacity: 1;
+    }
+}
+
+.info__check-box-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.8vw;
+    color: #9c9b9b;
+}
+
