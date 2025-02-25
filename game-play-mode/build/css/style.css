@@ -383,150 +383,6 @@ html, body, .modal__section {
   z-index: -1;
 }
 
-.gram__icon {
-  position: absolute;
-  width: 8.4%;
-  height: auto;
-  opacity: 0;
-  -webkit-transform: scale(0.6);
-      -ms-transform: scale(0.6);
-       -o-transform: scale(0.6);
-          transform: scale(0.6);
-  -webkit-animation: gram 4s infinite;
-          animation: gram 4s infinite;
-}
-
-@-webkit-keyframes gram {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-  20% {
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  80% {
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-
-@keyframes gram {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-         -o-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-  20% {
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-         -o-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-         -o-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  80% {
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-         -o-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(1.2);
-         -o-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-.gram__icon-1 {
-  top: 35.6%;
-  right: 25.4%;
-}
-
-.gram__icon-2 {
-  top: 29%;
-  right: 18.6%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.gram__icon-3 {
-  top: 42.4%;
-  right: 18.6%;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.gram__icon-4 {
-  bottom: 2%;
-  right: 18.6%;
-}
-
-.gram__icon-5 {
-  bottom: 2%;
-  right: 32%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.gram__icon-6 {
-  bottom: 9.2%;
-  right: 25.4%;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.gram__icon-7 {
-  top: 28.8%;
-  left: 19%;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.gram__icon-8 {
-  top: 42.4%;
-  left: 19%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.gram__icon-9 {
-  top: 35.6%;
-  left: 12.2%;
-}
-
-.gram__icon-10 {
-  bottom: 16%;
-  left: 19%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.gram__icon-11 {
-  bottom: 9.2%;
-  left: 12.2%;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
 .main__page-center h1 {
   margin-bottom: 2vw;
 }
@@ -3980,28 +3836,6 @@ html, body, .modal__section {
   -webkit-align-items: center;
           align-items: center;
 }
-.preload__section .gram__icon-1, .autorization__section .gram__icon-1 {
-  top: 15.5%;
-  right: 45.6%;
-}
-.preload__section .gram__icon-2, .autorization__section .gram__icon-2 {
-  top: 2%;
-  right: 32.2%;
-}
-.preload__section .gram__icon-3, .autorization__section .gram__icon-3 {
-  top: 2%;
-  right: auto;
-  left: 32.6%;
-}
-.preload__section .gram__icon-4, .autorization__section .gram__icon-4 {
-  bottom: 29.4%;
-  right: 18.6%;
-}
-.preload__section .gram__icon-5, .autorization__section .gram__icon-5 {
-  bottom: 29.4%;
-  right: auto;
-  left: 19%;
-}
 
 .character__icon {
   position: absolute;
@@ -4129,50 +3963,6 @@ html, body, .modal__section {
   .gram__icons {
     width: 100vw;
     height: 92vw;
-  }
-  .gram__icon-1 {
-    top: 39.2%;
-    right: 16.7%;
-  }
-  .gram__icon-2 {
-    top: 33.2%;
-    right: 7.4%;
-  }
-  .gram__icon-3 {
-    top: 45%;
-    right: 7.4%;
-  }
-  .gram__icon-4 {
-    bottom: 10.6%;
-    right: 7.4%;
-  }
-  .gram__icon-5 {
-    bottom: 10.6%;
-    right: 26.5%;
-  }
-  .gram__icon-6 {
-    bottom: 16.2%;
-    right: 16.8%;
-  }
-  .gram__icon-7 {
-    top: 39.2%;
-    left: 17.2%;
-  }
-  .gram__icon-8 {
-    top: 50.6%;
-    left: 17.2%;
-  }
-  .gram__icon-9 {
-    top: 45%;
-    left: 7.7%;
-  }
-  .gram__icon-10 {
-    bottom: 16.2%;
-    left: 17.2%;
-  }
-  .gram__icon-11 {
-    bottom: 10.6%;
-    left: 7.7%;
   }
   .btn__settings {
     top: 3vw;
@@ -4608,26 +4398,6 @@ html, body, .modal__section {
     height: 4vw;
     margin: 0 1.6vw;
   }
-  .preload__section .gram__icon-1, .autorization__section .gram__icon-1 {
-    top: 21.6%;
-    right: 45.3%;
-  }
-  .preload__section .gram__icon-2, .autorization__section .gram__icon-2 {
-    top: 16%;
-    right: 35.8%;
-  }
-  .preload__section .gram__icon-3, .autorization__section .gram__icon-3 {
-    top: 16%;
-    left: 36.6%;
-  }
-  .preload__section .gram__icon-4, .autorization__section .gram__icon-4 {
-    bottom: 28%;
-    right: 16.6%;
-  }
-  .preload__section .gram__icon-5, .autorization__section .gram__icon-5 {
-    bottom: 28%;
-    left: 17.4%;
-  }
   .character__icon-1 {
     top: 15%;
     right: 12%;
@@ -5011,56 +4781,9 @@ html, body, .modal__section {
     width: 150px;
     height: 150px;
   }
-  .gram__icon {
-    width: 11%;
-  }
   .gram__icons {
     width: 116vw;
     height: 62vw;
-  }
-  .gram__icon-1 {
-    top: 31.2%;
-    right: 19.7%;
-  }
-  .gram__icon-2 {
-    top: 22.4%;
-    right: 11.6%;
-  }
-  .gram__icon-3 {
-    top: 39.8%;
-    right: 11.6%;
-  }
-  .gram__icon-4 {
-    bottom: 5.6%;
-    right: 11.6%;
-  }
-  .gram__icon-5 {
-    bottom: 5.6%;
-    right: 28%;
-  }
-  .gram__icon-6 {
-    bottom: 14.2%;
-    right: 19.8%;
-  }
-  .gram__icon-7 {
-    top: 31%;
-    left: 20.1%;
-  }
-  .gram__icon-8 {
-    top: 48%;
-    left: 20.1%;
-  }
-  .gram__icon-9 {
-    top: 39.6%;
-    left: 12%;
-  }
-  .gram__icon-10 {
-    bottom: 5.6%;
-    left: 28.2%;
-  }
-  .gram__icon-11 {
-    bottom: -2%;
-    left: 20.1%;
   }
   .btn__settings {
     top: 2vw;
@@ -5205,26 +4928,6 @@ html, body, .modal__section {
   .preloader__info-divider {
     height: 3vw;
     margin: 0 1.6vw;
-  }
-  .preload__section .gram__icon-1, .autorization__section .gram__icon-1 {
-    top: 22.4%;
-    right: 44.4%;
-  }
-  .preload__section .gram__icon-2, .autorization__section .gram__icon-2 {
-    top: 14%;
-    right: 36.2%;
-  }
-  .preload__section .gram__icon-3, .autorization__section .gram__icon-3 {
-    top: 14%;
-    left: 36.6%;
-  }
-  .preload__section .gram__icon-4, .autorization__section .gram__icon-4 {
-    bottom: 14%;
-    right: 19.8%;
-  }
-  .preload__section .gram__icon-5, .autorization__section .gram__icon-5 {
-    bottom: 14%;
-    left: 20.2%;
   }
   .btn {
     box-shadow: 0px 0px 10px 2px rgba(70, 73, 255, 0.7);
@@ -5449,53 +5152,6 @@ html, body, .modal__section {
   .gram__icons {
     width: 100vw;
     height: 160vw;
-  }
-  .gram__icon {
-    width: 27%;
-  }
-  .gram__icon-1 {
-    top: 4.6%;
-    right: 14.2%;
-  }
-  .gram__icon-2 {
-    top: -3%;
-    right: -6.6%;
-  }
-  .gram__icon-3 {
-    top: 11.2%;
-    right: -6.6%;
-  }
-  .gram__icon-4 {
-    bottom: -3.4%;
-    right: -6.6%;
-  }
-  .gram__icon-5 {
-    bottom: -3.4%;
-    right: 36.2%;
-  }
-  .gram__icon-6 {
-    bottom: 4.6%;
-    right: 14.6%;
-  }
-  .gram__icon-7 {
-    top: 26.3%;
-    left: -6%;
-  }
-  .gram__icon-8 {
-    top: 41.4%;
-    left: -6%;
-  }
-  .gram__icon-9 {
-    top: 35.2%;
-    left: -24.3%;
-  }
-  .gram__icon-10 {
-    bottom: 11.6%;
-    left: -5.8%;
-  }
-  .gram__icon-11 {
-    bottom: 3.6%;
-    left: -23.3%;
   }
   .main::after {
     background-color: rgb(58, 63, 221);
@@ -6165,26 +5821,6 @@ html, body, .modal__section {
   }
   .preloader__center {
     margin-top: 0;
-  }
-  .preload__section .gram__icon-1, .autorization__section .gram__icon-1 {
-    top: 11.8%;
-    right: 36.5%;
-  }
-  .preload__section .gram__icon-2, .autorization__section .gram__icon-2 {
-    top: 4.6%;
-    right: 15%;
-  }
-  .preload__section .gram__icon-3, .autorization__section .gram__icon-3 {
-    top: 4.6%;
-    left: 15.8%;
-  }
-  .preload__section .gram__icon-5, .autorization__section .gram__icon-5 {
-    bottom: 12%;
-    left: -5%;
-  }
-  .preload__section .gram__icon-4, .autorization__section .gram__icon-4 {
-    bottom: 12%;
-    right: -6.4%;
   }
   .character__icon-1 {
     top: 23%;

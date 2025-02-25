@@ -46,101 +46,101 @@
 	z-index: -1;
 }
 
-.gram__icon {
-	position: absolute;
-	width: 8.4%;
-	height: auto;
-	opacity: 0;
-	transform: scale(0.6);
-	animation: gram 4s infinite;
-}
+// .gram__icon {
+// 	position: absolute;
+// 	width: 8.4%;
+// 	height: auto;
+// 	opacity: 0;
+// 	transform: scale(0.6);
+// 	animation: gram 4s infinite;
+// }
 
-@keyframes gram {
-	0% {
-		opacity: 0;
-		transform: scale(0.6);
-	}
-	20% {
-		opacity: 0;
-		transform: scale(0.6);
-	}
-	50% {
-		opacity: 1;
-		transform: scale(0.9);
-	}
-	80% {
-		opacity: 1;
-		transform: scale(0.9);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1.2);
-	}
+// @keyframes gram {
+// 	0% {
+// 		opacity: 0;
+// 		transform: scale(0.6);
+// 	}
+// 	20% {
+// 		opacity: 0;
+// 		transform: scale(0.6);
+// 	}
+// 	50% {
+// 		opacity: 1;
+// 		transform: scale(0.9);
+// 	}
+// 	80% {
+// 		opacity: 1;
+// 		transform: scale(0.9);
+// 	}
+// 	100% {
+// 		opacity: 0;
+// 		transform: scale(1.2);
+// 	}
 	
-}
+// }
 
-.gram__icon-1 {
-	top: 35.6%;
-    right: 25.4%;
-}
+// .gram__icon-1 {
+// 	top: 35.6%;
+//     right: 25.4%;
+// }
 
-.gram__icon-2 {
-	top: 29%;
-    right: 18.6%;
-	animation-delay: 1s;
-}
+// .gram__icon-2 {
+// 	top: 29%;
+//     right: 18.6%;
+// 	animation-delay: 1s;
+// }
 
-.gram__icon-3 {
-	top: 42.4%;
-    right: 18.6%;
-	animation-delay: 2s;
-}
+// .gram__icon-3 {
+// 	top: 42.4%;
+//     right: 18.6%;
+// 	animation-delay: 2s;
+// }
 
-.gram__icon-4 {
-	bottom: 2%;
-    right: 18.6%;
-}
+// .gram__icon-4 {
+// 	bottom: 2%;
+//     right: 18.6%;
+// }
 
-.gram__icon-5 {
-	bottom: 2%;
-    right: 32%;
-	animation-delay: 1s;
-}
+// .gram__icon-5 {
+// 	bottom: 2%;
+//     right: 32%;
+// 	animation-delay: 1s;
+// }
 
-.gram__icon-6 {
-	bottom: 9.2%;
-    right: 25.4%;
-	animation-delay: 3s;
-}
+// .gram__icon-6 {
+// 	bottom: 9.2%;
+//     right: 25.4%;
+// 	animation-delay: 3s;
+// }
 
-.gram__icon-7 {
-	top: 28.8%;
-    left: 19%;
-	animation-delay: 2s;
-}
+// .gram__icon-7 {
+// 	top: 28.8%;
+//     left: 19%;
+// 	animation-delay: 2s;
+// }
 
-.gram__icon-8 {
-	top: 42.4%;
-    left: 19%;
-	animation-delay: 1s;
-}
+// .gram__icon-8 {
+// 	top: 42.4%;
+//     left: 19%;
+// 	animation-delay: 1s;
+// }
 
-.gram__icon-9 {
-	top: 35.6%;
-    left: 12.2%;
-}
+// .gram__icon-9 {
+// 	top: 35.6%;
+//     left: 12.2%;
+// }
 
-.gram__icon-10 {
-	bottom: 16%;
-    left: 19%;
-	animation-delay: 1s;
-}
+// .gram__icon-10 {
+// 	bottom: 16%;
+//     left: 19%;
+// 	animation-delay: 1s;
+// }
 
-.gram__icon-11 {
-	bottom: 9.2%;
-    left: 12.2%;
-	animation-delay: 3s;
-}
+// .gram__icon-11 {
+// 	bottom: 9.2%;
+//     left: 12.2%;
+// 	animation-delay: 3s;
+// }
 
 .main__page-center {
 	h1 {

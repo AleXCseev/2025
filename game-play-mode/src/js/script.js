@@ -281,7 +281,7 @@ var landingFunctions = {
 			})
 		}, 6000);
 
-		$(".preloader__section .character__icon").each(function() {
+		$(".preload__section .character__icon").each(function() {
 			moveRandomlyWithTransform($(this), 0);
 		})
 	},
