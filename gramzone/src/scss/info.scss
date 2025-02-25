@@ -1,0 +1,140 @@
+.info__section-wrapper {
+    padding-bottom: 50px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #222;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.red {
+    color: #ff3d00;
+}
+
+.info__img {
+    width: auto;
+    max-width: 100%;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info__block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.info__block-wrapper {
+    width: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.info__block-img {
+    width: 500px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.text-subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #ff3d00;
+}
+
+.info__block-reverse {
+    flex-direction: row-reverse;
+}
+
+.info__block-top {
+    align-items: flex-start;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: #d1d1d1;
+}
+
+@media (max-width: 1080px) {
+    .info__block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__block-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__block-img {
+        width: auto;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__section-wrapper {
+        padding-bottom: 10vw;
+    }
+    .text {
+        font-size: 4vw;
+    }
+    .info__img {
+        border-radius: 5vw;
+    }
+    .info__block-img {
+        width: 100%;
+    }
+    .text-subtitle {
+        font-size: 5vw;
+    }
+    .mb-12 {
+        margin-bottom: 3vw;
+    }
+    
+    .mb-15 {
+        margin-bottom: 3.5vw;
+    }
+    
+    .mb-40 {
+        margin-bottom: 8vw;
+    }
+    
+    .mb-50 {
+        margin-bottom: 10vw;
+    }
+    .info__block-img {
+        border-radius: 5vw;
+    }
+}
