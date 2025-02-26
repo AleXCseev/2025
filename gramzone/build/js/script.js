@@ -21,38 +21,6 @@ var landingFunctions = {
 			e.preventDefault();
 		})
 
-		// $(window).on("scroll", function(e) {
-		// 	const height = $(document).outerHeight(true)
-		// 	if(height - 2000 < $(window).scrollTop()) {
-		// 		$(".fixed__btn").fadeOut(300)
-		// 	} else {
-		// 		$(".fixed__btn").fadeIn(300)
-		// 	}
-		// })
-
-		// function showBtn() {
-		// 	var $element = $('.card__section');
-
-		// 	$(window).scroll(function() {
-		// 		var scroll = $(window).scrollTop() + $(window).height();
-		// 		var offset = $element.offset().top + $element.height();
-		// 		var bodyOffset = $("body").offset().top + $("body").height();
-
-		// 		if ((scroll > offset + 400 || scroll < offset - $element.height() - 200)) {
-		// 			if(scroll + 800 > bodyOffset) {
-		// 				$(".fixed__btn").hide();
-		// 			} else {
-		// 				$(".fixed__btn").show()
-		// 			}
-		// 		} else {
-		// 			$(".fixed__btn").hide()
-		// 		}
-
-		// 	});
-		// }
-
-		// showBtn()
-
 		// $('[data-fancybox]').fancybox({
 		// 	loop: true,
 		// 	infobar: false,
