@@ -91,9 +91,18 @@
     margin-bottom: 1vw;
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     span {
         color: #e2b640;
+    }
+
+    img {
+        width: 1.2vw;
+        height: auto;
+        margin: 0 0.5vw;
     }
 }
 
@@ -153,10 +162,19 @@
     color: #fff;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     span {
         font-family: "Raleway", sans-serif;
         font-size: 0.9vw !important;
+    }
+
+    img {
+        width: 1.2vw;
+        height: auto;
+        margin: 0 0.5vw;
     }
 }
 
@@ -167,6 +185,7 @@
 
 .game__item-bold {
     font-weight: 800 !important;
+    padding: 0 0.3vw;
 }
 
 
