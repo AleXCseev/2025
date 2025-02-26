@@ -2815,8 +2815,8 @@ html, body, .modal__section {
         margin-bottom: 2vw;
     }
     .play__section .modal__block {
-        padding: 4vw 0;
-        gap: 8vw;
+        padding: 2vw 4vw;
+        gap: 4vw;
     }
     .game__mode-name {
         font-size: 3.4vw;
@@ -2874,14 +2874,14 @@ html, body, .modal__section {
     }
     .game__item {
         border-radius: 4vw;
-        margin-bottom: 5vw;
+        margin-bottom: 4vw;
 
         &:last-child {
             margin-bottom: 5vw;
         }
     }
     .game__item .btn__wrapper {
-        padding: 3vw 2vw;
+        padding: 1vw 2vw;
         border-radius: 4vw;
     }
     .game__item-title {
@@ -2892,7 +2892,7 @@ html, body, .modal__section {
         width: 23vw;
     }
     .game__item-text {
-        font-size: 4vw !important;
+        font-size: 3.8vw !important;
     }
     .game__item-text span {
         font-size: 4vw !important;
