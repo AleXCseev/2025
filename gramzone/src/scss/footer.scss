@@ -1,0 +1,141 @@
+.footer__section-wrapper {
+    padding-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__section-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.footer__section-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: #222;
+}
+
+.footer__list li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #222;
+
+    img {
+        width: 27px;
+        height: auto;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    .bold {
+        font-size: 24px;
+    }
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.mb-36 {
+    margin-bottom: 36px;
+}
+
+.footer__link {
+    width: 325px;
+    height: auto;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;     
+    }
+
+    span {
+        position: absolute;
+        display: block;
+        width: 230px;
+        height: auto;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.blue {
+    color: #0074e8;
+}
+
+.footer__line {
+    background: #131429;
+}
+
+.footer__line-wrapper {
+    padding: 13px 0;
+}
+
+.footer__line-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 540px) {
+    .mb-32 {
+        margin-bottom: 6vw;
+    }
+    
+    .mb-36 {
+        margin-bottom: 7vw;
+    }
+    .footer__section-title {
+        font-size: 5vw;
+        margin-bottom: 1vw;
+    }
+    .footer__list li img {
+        width: 6vw;
+        margin-right: 2vw;
+    }
+    .footer__list li {
+        font-size: 4vw;
+    }
+    .footer__list li .bold {
+        font-size: 5vw;
+    }
+    .footer__section-text {
+        font-size: 4vw;
+    }
+    .footer__link {
+        width: 78.5vw;
+    }
+    .footer__link span {
+        width: 55vw;
+        font-size: 4.8vw;
+    }
+    .footer__section-wrapper {
+        padding-bottom: 5vw;
+    }
+    .footer__line-wrapper {
+        padding: 3vw 0;
+    }
+    .footer__line-text {
+        font-size: 4vw;
+    }
+}
