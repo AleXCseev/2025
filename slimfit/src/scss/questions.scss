@@ -1,0 +1,31 @@
+.question__block {
+    align-items: flex-start;
+
+    .img__block-wrapper {
+        padding-top: 40px;
+    }
+}
+.qustion__block-reverce {
+    flex-direction: row-reverse;
+}
+
+.question__bg {
+    background: #0d46a0;
+    color: #fff;
+}
+
+.info__list-small {
+    .info__list-item {
+        position: relative;
+
+        &:before {
+            display: block;
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: #0d46a0;
+            margin-right: 10px;
+        }
+    }
+}
