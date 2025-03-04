@@ -2,8 +2,6 @@ var landingFunctions = {
 	init: function() {
 		this.initLibraris()
 		this.bar()
-		this.time()
-		// this.modal()
 	}, 
 
 	initLibraris: function() {
@@ -20,14 +18,6 @@ var landingFunctions = {
 			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
 			e.preventDefault();
 		})
-
-		// $('[data-fancybox]').fancybox({
-		// 	loop: true,
-		// 	infobar: false,
-		// 	animationEffect: false,
-		// 	backFocus: false,
-		// 	hash: false,
-		// });
 	},
 
 	bar: function() {
@@ -36,7 +26,8 @@ var landingFunctions = {
 
 		$('.start').click(function () {
 			if (wheel.classList.contains('rotated')) {
-				resultWrapper.style.display = "block";
+				// resultWrapper.style.display = "block";
+				return false;
 			} else {
 				wheel.classList.add('super-rotation');
 				setTimeout(function () {
@@ -133,12 +124,6 @@ var landingFunctions = {
 
 		// $(".date__1").text(getDate(-5));
     	// $(".date").text(getDate(2));
-
-		$(".header__date").text(getDate(0));
-
-		$(".date-1").text(getDate(0));
-		$(".date-2").text(getDate(-1));
-		$(".date-3").text(getDate(-2));
 	},
 
 	modal: function() {

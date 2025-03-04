@@ -14,6 +14,7 @@
     width: 59px;
     height: auto;
     margin-right: 100px;
+    flex-shrink: 0;
 }
 
 .header__nav {
@@ -84,6 +85,7 @@
     color: #222;
     gap: 7px;
     margin-left: 7px;
+    flex-shrink: 0;
 }
 
 .header__link {
@@ -169,7 +171,7 @@
 }
 
 .img__block-wrapper {
-    width: calc(50% - 30px);
+    width: calc(50% - 20px);
     height: auto;
 }
 
@@ -210,7 +212,7 @@
     .header__title {
         font-size: 28px;
     }
-    .img__block {
+    .img__block, .question__block, .qustion__block-reverce {
         flex-direction: column;
         align-items: center;
         gap: 20px;

@@ -26,6 +26,31 @@
             border-radius: 100%;
             background-color: #0d46a0;
             margin-right: 10px;
+            flex-shrink: 0;
         }
     }
 }
+
+.red {
+    color: #ff3d00;
+}
+
+@media (max-width: 1160px) {
+    .question__block, .qustion__block-reverce {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .question__block .img__block-wrapper {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__list-small .info__list-item:before {
+        width: 3.5vw;
+        height: 3.5vw;
+        margin-right: 2vw;
+    }
+}
+
