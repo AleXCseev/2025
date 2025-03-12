@@ -1,0 +1,45 @@
+<section class="content__section">
+    <div class="container">
+        <div class="content__section-wrapper">
+            <h1 class="content__title">
+                Реєстрація нового гравця
+            </h1>
+            <p class="content__text">
+                Створіть акаунт, щоб грати разом з іншими гравцями.
+            </p>
+            <form action="" class="content__form">
+                <div class="input__wrapper">
+                    <input type="text" placeholder="Ім'я" required class="input">
+                    <span class="input__error">Неправильний логін</span>
+                </div>
+                <div class="input__wrapper">
+                    <input type="text" placeholder="Телефон або Email" required class="input">
+                    <span class="input__error">Неправильний логін</span>
+                </div>
+                <div class="input__wrapper error">
+                    <input type="password" placeholder="Пароль" required class="input">
+                    <span class="input__error">Пароль має містити більше символів</span>
+                </div>
+                <div class="input__wrapper error">
+                    <input type="password" placeholder="Підтвердження пароля" required class="input">
+                    <span class="input__error">Паролі мають співпадати</span>
+                </div>
+                <div class="checkbox__wrapper">
+                    <input id="checkbox" type="checkbox" class="checkbox">
+                    <span class="check__box"></span>
+                    <label for="checkbox">Я погоджуюся з 
+                        <a data-fancybox data-src="#modal-privacy" href="javascript:;">Правила і умови</a> та
+                        <a data-fancybox data-src="#modal-refusal" href="javascript:;"> Умовами використання</a>
+                    </label>
+                </div>
+                <button type="submit" class="form__submit">
+                    Реєстрація
+                </button>
+            </form>
+            <hr class="content__divider">
+            <p class="content__footer">
+                Вже маєте акаунт? <a href="index.html">Увійти <img src="img/content-arrow.png" alt=""></a>
+            </p>
+        </div>
+    </div>
+</section>
