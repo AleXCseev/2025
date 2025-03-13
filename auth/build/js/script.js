@@ -6,6 +6,7 @@ var landingFunctions = {
 	initLibraries: function() {
 		function lang() {
 			$(".lang__block").click(function() {
+				$(this).toggleClass("active");
 				$(".lang__wrapper").toggleClass("active");
 			});
 
