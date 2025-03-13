@@ -1,5 +1,5 @@
 .header__section {
-    background: linear-gradient(180deg, #0a0b11 20%, rgba(10, 11, 17, 0) 100%);
+    background: linear-gradient(180deg, #0a0b11 30%, rgba(10, 11, 17, 0) 100%);
     flex-shrink: 0;
 }
 
@@ -41,6 +41,7 @@
     span {
         line-height: 1;
         margin-top: 3px;
+        font-size: 16px;
     }
 
     img {
@@ -109,5 +110,98 @@
     }
 }
 
-.btn {
+@media (max-width: 1000px) {
+    .site__wrapper {
+        background-size: 36%;
+    }
+    .bg__light {
+        width: 200px;
+        height: 200px;
+    }
+    .container {
+        width: 700px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 15px; 
+    }
+    .bg__light-yellow {
+        top: 15vh;
+        left: -4vw;
+    }
+    .bg__light-green {
+        bottom: 12vh;
+        left: 0vw;
+    }
+    .bg__light-blue {
+        top: 20vh;
+        right: -4vw;
+    }
+    .bg__light-red {
+        bottom: 10vh;
+        right: 0vw;
+    }
+}
+
+@media (max-width: 540px) {
+    .site__wrapper {
+        background-size: 62vw;
+    }
+    .bg__light-yellow {
+        width: 51vw;
+        height: 51vw;
+    }
+    .bg__light-green {
+        bottom: 20vh;
+        left: 0vw;
+        width: 41vw;
+        height: 41vw;
+    }
+    .bg__light-blue {
+        width: 42vw;
+        height: 42vw;
+        top: 22vh;
+        right: -7vw;
+    }
+    .bg__light-red {
+        width: 42vw;
+        height: 42vw;
+        bottom: 10vh;
+        right: -5vw;
+    }
+    .header__section-wrapper {
+        padding: 21vw 0
+    }
+    .header__name {
+        font-size: 10.4vw;
+    }
+    .lang__block {
+        position: relative;
+    }
+    .btn__lang img {
+        width: 5vw;
+        margin-right: 2.5vw;
+    }
+    .btn__lang span {
+        margin-top: 0.8vw;
+        font-size: 3.4vw;
+    }
+    .lang__wrapper {
+        border-radius: 4vw;
+        padding: 2vw;
+        bottom: -19vw;
+    }
+    .btn__lang-item img {
+        width: 5vw;
+        margin-right: 2.5vw;
+    }
+    .btn__lang-item span {
+        font-size: 3.4vw;
+    }
+    .btn__lang-item {
+        margin-bottom: 2vw;
+    }
 }
