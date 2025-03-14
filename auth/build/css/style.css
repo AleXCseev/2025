@@ -178,6 +178,7 @@ body {
   font-weight: 300;
   color: #fff;
   background-color: #0a0b11;
+  position: relative;
 }
 
 .visually-hidden {
@@ -195,13 +196,18 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
-  position: relative;
+  overflow: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url(../img/court.png);
   background-repeat: repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: 27%;
+  z-index: 1;
 }
 
 .bg__light {
@@ -209,7 +215,6 @@ body {
   height: 256px;
   position: fixed;
   border-radius: 100%;
-  z-index: -1;
   -webkit-filter: blur(10px);
           filter: blur(10px);
   opacity: 0.4;
@@ -288,10 +293,10 @@ body {
   line-height: 1.4;
   margin-bottom: 20px;
 }
-.footer__modal h6 {
-  font-size: 24px;
+.footer__modal h3 {
+  font-size: 20px;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .footer__modal p {
   font-size: 18px;
@@ -776,6 +781,7 @@ body {
 .lang__block {
   width: auto;
   height: auto;
+  position: relative;
 }
 .lang__block.active .btn__lang:before {
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -829,18 +835,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0c0d14;
+  background-color: #0A0B11;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 10px;
   position: absolute;
-  bottom: -20px;
+  bottom: -90px;
   right: 0;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   transition: 0.3s ease;
+  z-index: 10;
 }
 .lang__wrapper.active {
   opacity: 1;
@@ -984,6 +991,7 @@ body {
 .content__text {
   font-weight: 300;
   font-size: 16px;
+  line-height: 1.4;
   text-align: center;
   color: #fff;
   width: 100%;
@@ -1180,13 +1188,13 @@ body {
   }
   .content__text {
     font-size: 3.4vw;
-    margin-bottom: 4vw;
+    margin-bottom: 6vw;
   }
   .content__form {
     padding-bottom: 14vw;
   }
   .input__wrapper {
-    margin-bottom: 2vw;
+    margin-bottom: 5vw;
   }
   .input {
     height: 10vw;

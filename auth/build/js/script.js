@@ -23,6 +23,7 @@ var landingFunctions = {
 			$(document).click(function(e) {
 				if (!$(e.target).closest(".lang__block").length) {
 					$(".lang__wrapper").removeClass("active");
+					$(".lang__block").removeClass("active");
 				}
 			});
 		}

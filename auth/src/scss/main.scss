@@ -129,6 +129,7 @@ html, body {
     bottom: 0;
 	overflow: auto;
 	overflow-x: hidden;
+	// touch-action: pan-x pan-y;
 }
 
 body {
@@ -140,6 +141,7 @@ body {
 	font-weight: 300;
 	color: #fff;
 	background-color: #0a0b11;
+	position: relative;
 }
 
 .visually-hidden {
@@ -158,13 +160,19 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	overflow: hidden;
-	position: relative;
+	overflow: auto;
+	overflow-x: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	background-image: url(../img/court.png);
 	background-repeat: repeat;
 	background-position: center;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 	background-size: 27%;
+	z-index: 1;
 }
 
 .bg__light {
@@ -172,7 +180,7 @@ body {
     height: 256px;
     position: fixed;
     border-radius: 100%;
-    z-index: -1;
+    // z-index: -1;
     filter: blur(10px);
     opacity: 0.4;
     transition: 3s linear;
