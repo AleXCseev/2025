@@ -1,0 +1,261 @@
+.info__section-wrapper {
+    padding-top: 36px;
+}
+
+.wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    background-color: #fff;
+}
+
+.info__section-title {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #c11700;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #222;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text__big {
+    font-weight: 400;
+    font-size: 24px;
+    color: #222;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.red {
+    color: #c11700;
+}
+
+.info__img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.blockquote {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.blockquote__img {
+    width: 395px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.blockquote__quote {
+    width: 26px;
+    height: auto;
+}
+
+.blockquote__quote-reverse {
+    transform: rotate(180deg);
+    margin-left: auto;
+}
+
+.info__title {
+    border-radius: 20px;
+    background: #e0ebff;
+    padding: 12px 30px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #222;
+}
+
+.info__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.info__block-center {
+    align-items: center;
+}
+
+.info__text-bg {
+    border-radius: 20px;
+    background: #1f458b;
+    padding: 12px 30px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.info__block-img {
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+.info__list-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    img {
+        width: 30px;
+        height: auto;
+        margin-right: 20px;
+        flex-shrink: 0;
+        margin-top: 7px;
+    }
+}
+
+.info__border {
+    padding-left: 20px;
+    border-left: 2px solid #1f458b;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-21 {
+    margin-bottom: 21px;
+}
+
+.mb-23 {
+    margin-bottom: 23px;
+}
+
+.mb-26 {
+    margin-bottom: 26px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.mb-42 {
+    margin-bottom: 42px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 1160px) {
+    .blockquote {
+        flex-direction: column;
+        align-items: center;
+    }
+    .blockquote__img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 30px;
+    }
+    .info__block {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        background-color: #fff;
+    }
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__section-wrapper {
+        padding-top: 4vw;
+    }
+    .mb-12 {
+        margin-bottom: 2.8vw;
+    }
+    .mb-15 {
+        margin-bottom: 3vw;
+    }
+    .mb-21 {
+        margin-bottom: 5vw;
+    }
+    .mb-23 {
+        margin-bottom: 5vw;
+    }
+    .mb-26 {
+        margin-bottom: 6vw;
+    }
+    .mb-30 {
+        margin-bottom: 6vw;
+    }
+    .mb-32 {
+        margin-bottom: 7vw;
+    }
+    .mb-42 {
+        margin-bottom: 10vw;
+    }
+    .mb-50 {
+        margin-bottom: 10vw;
+    }
+    .info__section-title {
+        font-size: 7vw;
+    }
+    .text__big {
+        font-size: 5.5vw;
+    }
+    .info__img {
+        border-radius: 5vw;
+    }
+    .text {
+        font-size: 4.5vw;
+    }
+    .info__title {
+        border-radius: 4vw;
+        padding: 2.5vw 5vw;
+        font-size: 4.5vw;
+    }
+    .info__text-bg {
+        border-radius: 4vw;
+        padding: 2.5vw 5vw;
+        font-size: 4.5vw;
+    }
+    .info__block-img {
+        width: 100%;
+        height: auto;
+        border-radius: 5vw;
+    }
+    .info__list-item img {
+        width: 7vw;
+        margin-right: 3vw;
+        margin-top: 1vw;
+    }
+    .info__border {
+        padding-left: 4.5vw;
+    }
+}
+
+
