@@ -35,9 +35,9 @@ var landingFunctions = {
 					$('.card__block').slideDown(1000);
 					start_timer();
 				}, 8000);
-				setTimeout(function () {
-					$(".card__decor img").addClass("active")
-				}, 9000);
+				// setTimeout(function () {
+				// 	$(".card__decor img").addClass("active")
+				// }, 9000);
 				wheel.classList.add('rotated');
 			}
 		});

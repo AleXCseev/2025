@@ -1,4 +1,5 @@
 .card__section-wrapper {
+    padding-top: 40px;
     padding-bottom: 30px;
 }
 
@@ -6,8 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 13px;
-    border-bottom: 2px solid #e1eaff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e7ff;
 }
 
 .bar__title {
@@ -15,7 +16,7 @@
     font-size: 30px;
     line-height: 1.5;
     text-align: center;
-    color: #0d46a0;
+    color: #c11700;;
     margin-bottom: 8px;
 }
 
@@ -24,7 +25,7 @@
     font-size: 24px;
     line-height: 1.5;
     text-align: center;
-    color: #222;
+    color: #1f458b;
     margin-bottom: 4px;
 }
 
@@ -131,7 +132,7 @@
 .card {
     width: 100%;
     height: auto;
-    background-color: #d9f8cb;
+    background-color: #e0e7ff;
     border-radius: 10px;
     padding: 43px 71px 50px 0;
     margin-bottom: 23px;
@@ -248,12 +249,12 @@
         top: 0;
         left: 0;
         border-radius: 10px 0 0 10px;
-        background-color: #a2df86;
+        background-color: #b0c1fe;
         pointer-events: none;
         background-image: url(../img/name.png);
         background-repeat: no-repeat;
         background-position: center;
-        border: 1px solid #70b84f;
+        border: 1px solid #7398db;
         border-right: none;
     }
 }
@@ -272,7 +273,7 @@
     line-height: 1;
     color: #111;
     padding: 0 20px 0 80px;
-    border: 1px solid #70b84f;
+    border: 1px solid #7398db;
     border-radius: 10px;
     transition: 0.3s ease;
 
@@ -305,12 +306,12 @@
     width: auto;
     position: absolute;
     top: 50%;
-    left: -432px;
+    left: -470px;
     transform: translateY(-50%);
 }
 
 .card__prod {
-    width: 311px;
+    width: 394px;
     height: auto;
     position: relative;
     z-index: 3;
@@ -400,6 +401,9 @@
 }
 
 @media (max-width: 540px) {
+    .card__section-wrapper {
+        padding-top: 0px;
+    }
     .bar__block {
         padding: 6.8vw 0 3vw;
     }
@@ -434,7 +438,7 @@
         padding: 5vw 0;
     }
     .card__title {
-        font-size: 9.8vw;
+        font-size: 9vw;
         margin-bottom: 0;
     }
     .card__subtitle {
@@ -484,7 +488,7 @@
         margin-bottom: 5vw;
     }
     .card__prod {
-        width: 50vw;
+        width: 65vw;
     }
     .card__prod-1, .card__prod-2 {
         width: 50vw;
