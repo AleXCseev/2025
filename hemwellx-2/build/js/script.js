@@ -18,6 +18,14 @@ var landingFunctions = {
 			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
 			e.preventDefault();
 		})
+
+		$('[data-fancybox]').fancybox({
+			loop: true,
+			infobar: false,
+			animationEffect: false,
+			backFocus: false,
+			hash: false,
+		});
 	},
 
 	bar: function() {
