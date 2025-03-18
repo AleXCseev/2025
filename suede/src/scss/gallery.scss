@@ -1,0 +1,149 @@
+.gallery__section .container {
+    width: 1470px;
+}
+
+.gallery__section-wrapper {
+    padding-bottom: 166px;
+}
+
+.gallery__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.gallery__item {
+    width: 25%;
+    height: auto;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.gallery__item-text {
+    width: auto;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+}
+
+
+@media (max-width: 1480px) {
+    .gallery__section .container {
+        width: 1260px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .gallery__section .container {
+        width: 1060px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .gallery__block {
+        flex-wrap: wrap;
+    }
+    .gallery__item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery__section-wrapper {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 540px) {
+    .gallery__section-wrapper {
+        padding-bottom: 0px;
+    }
+    .gallery__block {
+        overflow: auto;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+    }
+    .gallery__item {
+        width: 100%;
+        height: auto;
+
+        img {
+            border-radius: 7vw;
+        }
+    }
+    .gallery__item-text {
+        bottom: 7vw;
+        left: 12vw;
+        font-size: 4.8vw;
+    }
+    .owl-nav {
+        margin: auto;
+        margin-top: 7vw;
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            width: 38px;
+            height: 24px;
+            background-image: url(../img/arrow.png) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: contain !important;
+
+            span {
+                display: none;
+            }
+
+            &:hover {
+                background-image: url(../img/arrow-hover.png) !important;
+            }
+
+            &.owl-next {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .owl-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -17px;
+        margin-bottom: 7px;
+
+        button {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            margin-right: 10px;
+            background-color: #2e187c !important;
+            transition: 0.3s ease;
+
+            &.active {
+                background-color: #b22d93 !important;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
