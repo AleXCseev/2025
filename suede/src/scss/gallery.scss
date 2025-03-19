@@ -41,6 +41,60 @@
     transform: rotate(-90deg);
 }
 
+.owl-nav {
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        width: 38px;
+        height: 24px;
+        background-image: url(../img/arrow.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: contain !important;
+
+        span {
+            display: none;
+        }
+
+        &:hover {
+            background-image: url(../img/arrow-hover.png) !important;
+        }
+
+        &.owl-next {
+            transform: rotate(180deg);
+        }
+    }
+}
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -17px;
+    margin-bottom: 7px;
+
+    button {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin-right: 10px;
+        background-color: #2e187c !important;
+        transition: 0.3s ease;
+
+        &.active {
+            background-color: #b22d93 !important;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
 
 @media (max-width: 1480px) {
     .gallery__section .container {
@@ -70,6 +124,9 @@
 }
 
 @media (max-width: 540px) {
+    .owl-nav {
+        margin-top: 7vw;
+    }
     .gallery__section-wrapper {
         padding-bottom: 0px;
     }
@@ -92,58 +149,5 @@
         left: 12vw;
         font-size: 4.8vw;
     }
-    .owl-nav {
-        margin: auto;
-        margin-top: 7vw;
-        width: 90%;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        button {
-            width: 38px;
-            height: 24px;
-            background-image: url(../img/arrow.png) !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-            background-size: contain !important;
-
-            span {
-                display: none;
-            }
-
-            &:hover {
-                background-image: url(../img/arrow-hover.png) !important;
-            }
-
-            &.owl-next {
-                transform: rotate(180deg);
-            }
-        }
-    }
-    .owl-dots {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: -17px;
-        margin-bottom: 7px;
-
-        button {
-            width: 10px;
-            height: 10px;
-            border-radius: 100%;
-            margin-right: 10px;
-            background-color: #2e187c !important;
-            transition: 0.3s ease;
-
-            &.active {
-                background-color: #b22d93 !important;
-            }
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
+    
 }

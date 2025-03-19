@@ -1,9 +1,8 @@
 var landingFunctions = {
 	init: function() {
 		this.initLibraris()
-		// this.card()
 		this.time()
-		// this.modal()
+		this.modal()
 	}, 
 
 	initLibraris: function() {
@@ -29,6 +28,18 @@ var landingFunctions = {
 			}
 		})
 
+		$('.new__price').each(function () {
+			var newPrice = parseInt($(this).text());
+	        var currency = $(this).text().replace(/[0-9]/g, '');
+			p = newPrice * 100 / 49;
+			p2 = Math.ceil(p);
+			$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
+			$(this).closest('.header__price-wrapper').find('.result').text(p2 - newPrice + " " + currency)
+			$(this).closest('.card').find('.result').text(p2 - newPrice + " " + currency)
+		});
+
+		
+
 		function initialize(){
 			if($(window).width() <= 540) {
 			  	$(".gallery__block").addClass("owl-carousel").owlCarousel({
@@ -51,21 +62,6 @@ var landingFunctions = {
 				$(".gallery__block").removeClass("owl-carousel").owlCarousel('destroy');
 				$(".advantage__decor").removeClass("owl-carousel").owlCarousel('destroy');
 			}
-		// 	if($(window).width() <= 1080) {
-		// 		$(".review__slider").addClass("owl-carousel").owlCarousel({
-		// 		  items: 1,
-		// 		  margin: 60,
-		// 		  dots: true,
-		// 		  dotsEach: true,
-		// 		  nav: false,
-		// 		  loop: true,
-		// 		  autoHeight: true,
-		// 		  stagePadding: 20,
-		// 	  });
-		//   } else {
-		// 	  $(".card__photos").removeClass("owl-carousel").owlCarousel('destroy');
-		// 	  $(".review__slider").removeClass("owl-carousel").owlCarousel('destroy');
-		//   }
 		}
 
 		var id;
@@ -77,21 +73,53 @@ var landingFunctions = {
 
 		initialize();
 
-		// AOS.init({
-		// 	disable : function() {
-		// 		if( $(window).width() <= 1080) {
-		// 			return true;
-		// 		}
-		// 		return false
-		// 	},
-		// 	once: true,
-		// 	duration: 1000,
-		// 	offset : 0,
-		// });
+		$(".review__slider").owlCarousel({
+			items: 3,
+			margin: 30,
+			dots: false,
+			dotsEach: true,
+			nav: true,
+			loop: true,
+			autoHeight: true,
+			responsive:{
+				0:{
+					items: 1,
+					dots: true
+				},
+				700:{
+					items: 2,
+					dots: false
+				},
+				1080:{
+					items:3,
+					dots: false,
+				}
+			}
+		});
+
+		AOS.init({
+			disable : function() {
+				if( $(window).width() <= 1080) {
+					return true;
+				}
+				return false
+			},
+			once: true,
+			duration: 1000,
+			offset : 100,
+		});
 	
-		// $(window).resize(function() {
-		// 	AOS.refresh();
-		// })
+		$(window).resize(function() {
+			AOS.refresh();
+		})
+
+		$.raty.path = $("body").data("path") +  '/img/raty';
+
+		$('.modal__raiting').raty({
+			half: true,
+			space: false,
+			number: 5,
+		});
 
 		$('[data-fancybox]').fancybox({
 			loop: true,
@@ -100,10 +128,6 @@ var landingFunctions = {
 			backFocus: false,
 			hash: false,
 		});
-	},
-
-	card: function() {
-		
 	},
 
 	time: function() {
@@ -166,7 +190,7 @@ var landingFunctions = {
 		}
 
 		// $(".date__1").text(getDate(-5));
-    	$(".date").text(getDate(2));
+    	$(".date").text(getDate(5));
 
 	},
 
