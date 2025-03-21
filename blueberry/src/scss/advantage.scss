@@ -1,0 +1,239 @@
+.advantage__section-wrapper {
+    padding-bottom: 92px;
+}
+
+.advantage__block {
+    margin-bottom: 137px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.advantage__left {
+    width: 605px;
+    border-radius: 30px;
+    background: #f3ebd8;
+    padding: 38px 30px 40px;
+}
+
+.advantage__block-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+    color: #177558;
+    margin-bottom: 29px;
+}
+
+.advantage__block-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 11px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.advantage__block-icon {
+    width: 64px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 29px;
+    flex-shrink: 0;
+}
+
+.advantage__block-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #173935;
+}
+
+.advantage__right {
+    width: 605px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantage__prod {
+    position: relative;
+    width: 292px;
+    height: auto;
+    margin-bottom: 16px;
+    margin-right: 100px;
+}
+
+.advantage__prod-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.advantage__prod-decor {
+    width: 266px;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    right: -179px;
+    transform: scaleX(-1);
+}
+
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.advantage {
+    width: 605px;
+    height: auto;
+    padding: 50px 50px 40px;
+    border-radius: 30px;
+    background: #f3ebd8;
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+
+    &:hover {
+        background: #447f6d;
+
+        .advantage__number {
+            color: #ffc700;
+        }
+
+        .advantage__text {
+            color: #fff;
+        }
+    }
+}
+
+.advantage__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 41px;
+}
+
+.advantage__icon {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #c7d0bd;
+}
+
+.advantage__number {
+    width: auto;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: right;
+    color: #447e6f;
+    transition: 0.3s ease;
+}
+
+.advantage__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #173935;
+    transition: 0.3s ease;
+}
+
+
+@media (max-width: 1280px) {
+    .advantage__left, .advantage__right {
+        width: 490px;
+    }
+    .advantage {
+        width: 490px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .advantage__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 65px;
+    }
+    .advantage__left, .advantage__right {
+        width: 100%;
+    }
+    .advantage__left {
+        margin-bottom: 50px;
+    }
+    .advantage {
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .advantage__section-wrapper {
+        padding-bottom: 12vw;
+    }
+    .advantage__block {
+        margin-bottom: 14vw;
+    }
+    .advantage__left {
+        padding: 10vw 7vw;
+        border-radius: 7vw;
+        margin-bottom: 12vw;
+    }
+    .advantage__block-title {
+        font-size: 5.6vw;
+        margin-bottom: 7vw;
+    }
+    .advantage__block-item {
+        margin-bottom: 3vw;
+    }
+    .advantage__block-icon {
+        width: 15vw;
+        margin-right: 5.8vw;
+    }
+    .advantage__block-text {
+        font-size: 4.8vw;
+    }
+    .advantage__prod {
+        width: 50.5vw;
+        margin-bottom: 6vw;
+        margin-right: 18vw;
+    }
+    .advantage__prod-decor {
+        width: 46vw;
+        bottom: 2vw;
+        right: -30vw;
+    }
+    .advantage {
+        width: 605px;
+        padding: 7vw 7vw 6vw;
+        border-radius: 7vw;
+    }
+    .advantage__top {
+        margin-bottom: 5vw;
+    }
+    .advantage__icon {
+        width: 100px;
+        height: 100px;
+
+        img {
+            width: auto;
+            height: 14.8vw;
+        }
+    }
+    .advantage__number {
+        font-size: 15vw;
+    }
+    .advantage__text {
+        font-size: 4.8vw;
+    }
+}

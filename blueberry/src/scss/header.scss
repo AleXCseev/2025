@@ -1,0 +1,326 @@
+.header__section {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 100px 100px;
+    background-color: #F4F1E1;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../img/header-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.1;
+    }
+}
+
+.header__section-wrapper {
+
+}
+
+.header__content {
+    width: 605px;
+    height: auto;
+    padding: 50px 0 97px;
+    position: relative;
+}
+
+.header__logo {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #3d7262;
+    width: auto;
+    padding: 12px 20px;
+    border: 2px solid #3d7262;
+    border-radius: 30px;
+    margin-bottom: 17px;
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #177558;
+    margin-bottom: 6px;
+}
+
+.header__text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #173935;
+    margin-bottom: 36px;
+}
+
+.btn__wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.price__block {
+    margin-bottom: 14px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.old__price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    color: #222;
+    position: relative;
+    padding: 0 5px;
+    margin-right: 20px;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #f00;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.new__price {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+    color: #e24400;
+}
+
+.order__btn {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 25px;
+    border-radius: 40px;
+    background: #177558;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: #00873e;
+    }
+}
+
+.order__info {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    color: #d30000;
+    margin-top: 7px;
+}
+
+.header__items {
+    width: 230px;
+    position: absolute;
+    top: 231px;
+    right: -280px;
+}
+
+.header__item {
+    width: 100%;
+    height: auto;
+    background: #3f8309;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.header__decor {
+    position: absolute;
+    width: 292px;
+    height: auto;
+    top: 109px;
+    right: -552px;
+}
+
+.header__prod {
+    width: 100%;
+    height: auto;
+}
+
+.header__prod-decor {
+    width: 266px;
+    height: auto;
+    position: absolute;
+    bottom: -74px;
+    right: -161px;
+}
+
+
+@media (max-width: 1280px) {
+    .container {
+        width: 1000px;
+    }
+    .header__content {
+        width: 500px;
+        padding: 50px 0 80px;
+    }
+    .header__title {
+        font-size: 30px;
+    }
+    .header__text {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .header__items {
+        width: 230px;
+        top: 200px;
+        right: -250px;
+    }
+    .header__decor {
+        width: 270px;
+        top: 95px;
+        right: -500px;
+    }
+    .header__prod-decor {
+        width: 210px;
+        bottom: -60px;
+        right: -100px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .header__section:before {
+        background-position: left center;
+    }
+    .container {
+        width: 700px;
+    }
+    .header__content {
+        width: 100%;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__decor {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 73px;
+        margin-right: 60px;
+    }
+    .header__items {
+        position: static;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .header__item {
+        text-align: center;
+    }
+    .header__title {
+        text-align: center;
+    }
+    .header__text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    .header__section {
+        border-radius: 0 0 12vw 12vw;
+    }
+    .header__section:before {
+        background-position: 24% center;
+    }
+    .header__content {
+        padding: 4.8vw 0 12vw;
+    }
+    .header__logo {
+        font-size: 4.8vw;
+        padding: 2.8vw 4.8vw;
+        border-radius: 7vw;
+        margin-bottom: 5vw;
+    }
+    .header__title {
+        font-size: 5.8vw;
+        margin-bottom: 2.5vw;
+    }
+    .header__text {
+        font-size: 5.8vw;
+        margin-bottom: 4.8vw;
+    }
+    .header__decor {
+        width: 50.5vw;
+        margin-right: 10vw;
+        margin-bottom: 18vw;
+    }
+    .header__prod-decor {
+        width: 46vw;
+        bottom: -13vw;
+        right: -27vw;
+    }
+    .header__items {
+        margin-bottom: 7vw;
+    }
+    .header__item {
+        border-radius: 2.5vw;
+        padding: 1vw 3vw;
+        font-size: 4.5vw;
+        margin-bottom: 4.8vw;
+    }
+    .price__block {
+        margin-bottom: 3vw;
+    }
+    .old__price {
+        font-size: 5.8vw;
+        padding: 0 1vw;
+        margin-right: 4.8vw;
+    }
+    .new__price {
+        font-size: 9vw;
+    }
+    .order__btn {
+        font-size: 4.8vw;
+        padding: 6vw;
+        border-radius: 10vw;
+    }
+    .order__info {
+        font-size: 4.8vw;
+        margin-top: 1.5vw;
+    }
+}
