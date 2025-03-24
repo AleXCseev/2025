@@ -28,50 +28,15 @@ var landingFunctions = {
 			}
 		})
 
-		$('.new__price').each(function () {
-			var newPrice = parseInt($(this).text());
-	        var currency = $(this).text().replace(/[0-9]/g, '');
-			p = newPrice * 100 / 49;
-			p2 = Math.ceil(p);
-			$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
-			$(this).closest('.header__price-wrapper').find('.result').text(p2 - newPrice + " " + currency)
-			$(this).closest('.card').find('.result').text(p2 - newPrice + " " + currency)
-		});
-
-		
-
-		function initialize(){
-			if($(window).width() <= 540) {
-			  	$(".gallery__block").addClass("owl-carousel").owlCarousel({
-					items: 1,
-					margin: 10,
-					dots: true,
-					dotsEach: true,
-					nav: true,
-					loop: true,
-				});
-				$(".advantage__decor").addClass("owl-carousel").owlCarousel({
-					items: 1,
-					margin: 10,
-					dots: true,
-					dotsEach: true,
-					nav: true,
-					loop: true,
-				});
-			} else {
-				$(".gallery__block").removeClass("owl-carousel").owlCarousel('destroy');
-				$(".advantage__decor").removeClass("owl-carousel").owlCarousel('destroy');
-			}
-		}
-
-		var id;
-
-		$(window).resize( function() {
-			clearTimeout(id);
-			id = setTimeout(initialize, 500);
-		});
-
-		initialize();
+		// $('.new__price').each(function () {
+		// 	var newPrice = parseInt($(this).text());
+	    //     var currency = $(this).text().replace(/[0-9]/g, '');
+		// 	p = newPrice * 100 / 49;
+		// 	p2 = Math.ceil(p);
+		// 	$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
+		// 	$(this).closest('.header__price-wrapper').find('.result').text(p2 - newPrice + " " + currency)
+		// 	$(this).closest('.card').find('.result').text(p2 - newPrice + " " + currency)
+		// });
 
 		$(".review__slider").owlCarousel({
 			items: 3,

@@ -36,11 +36,34 @@
     }
 }
 
+.info__item-1 .info__item-img {
+    background-image: url(../img/info-1.jpg);
+}
+
+.info__item-2 .info__item-img {
+    background-image: url(../img/info-2.jpg);
+}
+
+.info__item-3 .info__item-img {
+    background-image: url(../img/info-3.jpg);
+}
+
+.info__item-4 .info__item-img {
+    background-image: url(../img/info-4.jpg);
+}
+
+.info__item-5 .info__item-img {
+    background-image: url(../img/info-5.jpg);
+}
+
 .info__item-img {
     width: 100%;
-    height: auto;
+    height: 202px;
     border-radius: 20px;
     margin-bottom: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .info__item-text {
@@ -166,6 +189,7 @@
         border-radius: 7vw;
     }
     .info__item-img {
+        height: 82.4vw;
         border-radius: 4.8vw;
         margin-bottom: 5vw;
     }
