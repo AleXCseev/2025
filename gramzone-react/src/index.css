@@ -1,0 +1,19 @@
+@import "./fonts.css";
+@import "tailwindcss";
+
+@theme {
+  --font-unbounded: "Unbounded", "sans-serif";
+  --font-haval: "Haval", "sans-serif";
+  --font-sf: "SF Pro Text", "sans-serif";
+  --font-wormbox: "Wormbox", "sanserif";
+
+  --color-main-bg: #020a22;
+  --color-item-bg: #0c0d14;
+  --color-white: #fff;
+  --color-border: rgba(255, 255, 255, 0.10);
+  --gradient-bg-light-1: 50% 50% at 50% 50%, rgb(250, 220, 86) 0%, rgba(250, 220, 86, 0) 100%;
+  --gradient-bg-light-2: 50% 50% at 50% 50%, rgb(54, 122, 255) 0%, rgba(54, 122, 255, 0) 100%;
+  --gradient-bg-light-3: 50% 50% at 50% 50%, rgb(228, 32, 31) 0%, rgba(228, 32, 31, 0) 100%;
+  --gradient-bg-light-4: 50% 50% at 50% 50%, rgb(186, 250, 86) 0%, rgba(186, 250, 86, 0) 100%;
+  --header-gradient: 180deg, #0a0b11 11%, rgba(10, 11, 17, 0) 100%;
+}

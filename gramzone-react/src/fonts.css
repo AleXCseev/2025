@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Unbounded";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./assets/fonts/Unbounded-Light.woff2") format("woff2"), url("./assets/fonts/Unbounded-Light.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Unbounded";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/Unbounded-Regular.woff2") format("woff2"), url("./assets/fonts/Unbounded-Regular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Unbounded";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/Unbounded-Medium.woff2") format("woff2"), url("./assets/fonts/Unbounded-Medium.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Haval";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./assets/fonts/Haval-Light.woff2") format("woff2"), url("./assets/fonts/Haval-Light.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./assets/fonts/SFProDisplay-Semibold.woff2") format("woff2"), url("./assets/fonts/SFProDisplay-Semibold.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Wormbox";
+    font-style: normal;
+    /* font-weight: 400; */
+    src: url("./assets/fonts/wormbox_rounded.woff") format("woff");
+  }
