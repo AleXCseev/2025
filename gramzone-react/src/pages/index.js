@@ -1,5 +1,9 @@
-import { MainPage } from "./main-page/MainPage"
+import { HomePage } from "./home-page/HomePage"
+import { UserPage } from "./user-page/UserPage"
+import { TaskPage } from "./task-page/TaskPage"
 
 export {
-    MainPage,
+    HomePage,
+    UserPage,
+    TaskPage
 }

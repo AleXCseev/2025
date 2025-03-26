@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import cn from 'classnames'
 
-export const BgLight = ({ className }) => {
+export const BgLight = ({ className, noAnimate = false }) => {
     const [light, setLight] = useState()
 
   function moveRandomlyWithTransform(step) {
@@ -18,6 +18,9 @@ export const BgLight = ({ className }) => {
   let interval;
 
   useEffect(() => {
+    if(noAnimate) {
+      return
+    }
     interval = setInterval(() =>{
       setLight(() => moveRandomlyWithTransform(20))
     }, 3000)
@@ -27,6 +30,6 @@ export const BgLight = ({ className }) => {
     }
   })
     return (
-        <div style={light} className={cn('rounded-full bg-repeat bg-center bg-cover w-52 h-52 absolute transition ease-in duration-3000', className)}></div>
+        <div style={light} className={cn('rounded-full bg-repeat bg-center bg-cover absolute transition ease-in duration-3000', className)}></div>
     )
 }

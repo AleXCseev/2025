@@ -11,7 +11,8 @@ export const Button = ({ variant="default", className, children }) => {
                 "rounded-[20px] cursor-pointer w-16 h-16 flex justify-center items-center bg-(--color-item-bg) border-2 border-(--color-border)", 
                 btnVariants[variant], 
                 className
-                )}>
+                )}
+        >
             {children}
         </button>
     )
