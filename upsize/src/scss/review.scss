@@ -1,0 +1,134 @@
+.review__section-wrapper {
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review__info {
+    border-radius: 30px;
+    background: #ffe5f1;
+    padding: 25px 40px 30px 40px;
+    margin-bottom: 60px;
+}
+
+.review__info-medium {
+    font-weight: 400;
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.review__info-text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #222;
+}
+
+.review {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+}
+
+.review__name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.45;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.review__message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.quote {
+    width: 26px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.review__message-wrapper .text {
+    margin-bottom: 15px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.review__img {
+    width: auto;
+    max-width: 100%;
+    border-radius: 30px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.order__btn {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 13px 30px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    border-radius: 40px;
+    background: #a1436f;
+    margin: 0 auto;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid #a1436f;
+
+    &:hover {
+        background-color: transparent;
+        color: #a1436f;
+    }
+}
+
+@media (max-width: 540px) {
+    .review__info {
+        border-radius: 7vw;
+        padding: 6vw 7vw 7vw 6vw;
+        margin-bottom: 9.8vw;
+    }
+    .review {
+        margin-bottom: 4.8vw;
+    }
+    .review__name {
+        font-size: 5.8vw;
+        margin-bottom: 2vw;
+    }
+    .quote {
+        width: 6vw;
+        margin-right: 4.8vw;
+        margin-top: 1vw;
+    }
+    .review__message-wrapper .text {
+        margin-bottom: 3.5vw;
+    }
+    .review__img {
+        border-radius: 7vw;
+        margin-bottom: 3.5vw;
+    }
+    .order__btn {
+        width: 100%;
+        padding: 6vw;
+        font-size: 4.8vw;
+        border-radius: 10vw;
+        margin-top: 8vw;
+    }
+    .review__section-wrapper {
+        padding-bottom: 15vw;
+    }
+    .fancybox-content {
+        padding: 44px 15px 20px;
+    }
+}

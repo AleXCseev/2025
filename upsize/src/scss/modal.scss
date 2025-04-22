@@ -1,0 +1,26 @@
+.footer-info{
+	margin: 15px 0;
+	padding: 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+[id^="modal"]{
+	display: none;
+	max-width: 600px !important;
+	margin: auto;
+}
+[id^="modal"] p{
+	margin-bottom: 10px;
+}
+
+[id^="modal"] h2{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+[id^="modal"] h6{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
