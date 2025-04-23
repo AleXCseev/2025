@@ -1,0 +1,132 @@
+.info-2__section {
+    background-color: #333;
+}
+
+.info-2__section-wrapper {
+    padding: 60px 0 30px;
+}
+
+.info-2__section-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.38;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f7f7f7;
+    margin-bottom: 32px;
+}
+
+.info-2__item {
+    width: 100%;
+    height: 215px;
+    border-radius: 12px;
+    padding: 18px 20px 0;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: #4d4d4d;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.info-2__item-line {
+    position: absolute;
+    top: 54px;
+    left: 9px;
+    z-index: 2;
+}
+
+.info-2__item-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: #cdba6d;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.info-2__item-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.40;
+    text-transform: uppercase;
+    text-align: center;
+    color: #cdba6d;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.info-2__item-duration {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #d1d1d1;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.info-2__item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.42;
+    color: #f7f7f7;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.info-2__item-1 {
+    height: 225px;
+}
+
+.info-2__item-2 {
+    .info-2__item-line {
+        left: 12px;
+    }
+}
+
+.info-2__item-3 {
+    .info-2__item-line {
+        left: 22px;
+    }
+}
+
+.info-2__item-4 {
+    .info-2__item-line {
+        left: 16px;
+    }
+}

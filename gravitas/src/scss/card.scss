@@ -1,0 +1,131 @@
+.card__section {
+    background-image: url(../img/card-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card__section-wrapper {
+    padding: 30px 0 65px;
+}
+
+.card__section-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f7f7f7;
+    margin-bottom: 25px;
+}
+
+.card__form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 12px 20px;
+    box-shadow: 3px 6px 10px 3px rgba(0, 0, 0, 0.25);
+    background: rgba(27, 31, 38, 0.6);
+}
+
+.card__form-icon {
+    width: 30px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card__form-text {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f7f7f7;
+    margin-bottom: 16px;
+}
+
+.textarea__wrapper {
+    img {
+        transform: none;
+        top: 13px;
+    }
+}
+
+.textarea {
+    height: 72px;
+    resize: none;
+    display: inline-block;
+    margin: 0;
+}
+
+.invite__section-wrapper {
+    padding: 40px 0 25px;
+}
+
+.invite__section-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 25px;
+}
+
+.invite__form {
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.25);
+    background: #f7f7f7;
+
+    .header__form-submit {
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+        background: #0077b6;
+    }
+
+    .header__form-info {
+        color: #2e353d;
+        margin-top: 16px;
+    }
+    
+}
+
+.invite__form-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.375;
+    text-transform: uppercase;
+    color: #4d4d4d;
+    margin-bottom: 16px;
+
+    img {
+        width: 36px;
+        height: auto;
+        margin-right: 15px;
+    }
+}
+
+.invite__form-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 16px;
+}
+
+
+
