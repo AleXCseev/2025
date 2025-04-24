@@ -137,6 +137,10 @@
     flex-shrink: 0;
     margin-right: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+    span {
+        opacity: 0;
+    }
 }
 
 .review__item-text {

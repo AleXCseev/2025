@@ -1,49 +1,72 @@
-<div class="footer__modal" id="modal-privacy">
-    <h6>Політика конфіденційності</h6>
-    <p>Наш інтернет-магазин шанобливо ставиться до прав клієнта. Дотримується строга конфіденційність при оформленні замовлення. Відомості надійно зберігаються і захищені від передачі.</p>
-    <p>Згодою на обробку даних клієнта виключно з метою надання послуг є розміщення замовлення на сайті.</p>
-    <p>До персональних даних відноситься особиста інформація про клієнта: домашня адреса; ім'я прізвище по батькові; відомості про народження; майнове, сімейний стан; особисті контакти (телефон, електронна пошта) та інші відомості, які перераховані в Законі «Про персональні дані».</p>
-    <p>Клієнт має право відмовитися від обробки персональних даних. Нами в даному випадку гарантується видалення з сайту всіх персональних даних в триденний термін в робочий час. Подібна відмова клієнт може оформити простим електронним листом на адресу, вказану на сторінці нашого сайту. </p>
-</div>
-
-<div class="footer__modal" id="modal-delivery">
-    <h6>ДОСТАВКА І ОПЛАТА</h6>
-    <p>По Україні доставка здійснюється за допомогою компанії «Нова Пошта» протягом 2-х днів з моменту замовлення. Вартість і деталі такої доставки відрізняються в залежності від регіону вашого проживання і розміру посилки.</p>
-    <p>Продавець не бере на себе ніяких зобов’язань по відшкодуванню будь-яких збитків Клієнта, пов’язаних з несвоєчасною доставкою замовлення, а також звільняється від будь-яких можливих штрафних санкцій.</p>
-    <p>Клієнт, який отримав товар, повинен перевірити його на предмет якості та кількості.</p>
-</div>
-
-<div class="footer__modal" id="modal-refusal">
-    <h6>ВІДМОВА ВІД ВІДПОВІДАЛЬНОСТІ</h6>
-    <p>Інтернет-магазин залишає за собою право в будь-який час без повідомлення Клієнта вносити зміни щодо товарів, матеріалів і послуг, що надаються на сайті.</p>
-    <p>Інтернет-магазин не несе відповідальності за будь-які збитки (включаючи моральну шкоду, шкоду від втрати прибутку (упущена вигода), даних або від переривання ділової активності), що виник внаслідок використання або неможливості використання даного сайту.</p>
-</div>
-
-<div class="modal__review">
-    <div class="modal__review-wrapper">
-        <form class="active">
-            <input type="text" class="name__input" placeholder="Ім'я" required>
-            <input type="file" name="file" id="file" class="input__file">
-            <label for="file" class="file">
-                <div>
-                    <img src="" alt="">
-                </div>
-                <span>Додайте фотографію</span> 
-            </label>
-            <div class="modal__star-raiting">
-                Рейтинг: <div class="modal__raiting"></div>
-            </div>
-            <textarea cols="30" rows="10" class="modal__area" placeholder="Ваш відгук..."></textarea>
-            <button type="submit" class="send">Надіслати</button>
-        </form>
-        <div class="send__window">
-            <div class="send__img">
-                <img src="img/mailing.png" alt="" class="modal__send-img">
-            </div>
-            <div class="send__massage">Дякуємо за відгук, він буде відображений на сайті після перевірки модераторами</div>
+<div class="modal__wrapper" id="modal-1">
+    <form class="card__form">
+        <img src="img/sheld-icon.png" alt="" class="card__form-icon">
+        <p class="card__form-text">
+            Отримати безкоштовну консультацію сьогодні
+        </p>
+        <div class="input__wrapper">
+            <img src="img/name-icon.png" alt="">
+            <input type="name" placeholder="Ваше Ім'я" required class="input">
         </div>
-        <a class="modal__close"><img src="img/close.png" alt=""></a>
-    </div>
+        <div class="input__wrapper">
+            <img src="img/phone-icon.png" alt="">
+            <input type="tel" placeholder="Ваш номер телефону" required class="input">
+        </div>
+        <div class="input__wrapper">
+            <img src="img/tringle-icon.png" alt="">
+            <select name="" id="" class="input">
+                <option value="" hidden>Виберіть тип послуги</option>
+                <option value="Довіреність (засвідчення підпису)">Довіреність (засвідчення підпису)</option>
+                <option value="Нотаріальний акт">Нотаріальний акт</option>
+                <option value="Заява">Заява</option>
+                <option value="Засвідчення підпису">Засвідчення підпису</option>
+            </select>
+        </div>
+        <div class="input__wrapper">
+            <img src="img/date-icon.png" alt="">
+            <input type="text" placeholder="Бажані терміни" required id="datepicker" class="input">
+        </div>
+        <div class="input__wrapper textarea__wrapper">
+            <img src="img/message-icon.png" alt="">
+            <textarea class="input textarea" placeholder="Коментар"></textarea>
+        </div>
+        <button type="submit" class="header__form-submit">
+            Забронювати зараз
+        </button>
+        <p class="header__form-info">
+            Відповідаємо протягом 15 хвилин у робочий час
+        </p>
+    </form>
 </div>
 
 
+<div class="modal__wrapper" id="modal-2">
+    <form class="header__form">
+        <div class="header__form-top">
+            <p class="header__form-title">
+                Забронювати <br> візит за 2 хвилини
+            </p>
+            <img src="img/timer-icon.png" alt="">
+        </div>
+        <div class="input__wrapper">
+            <img src="img/phone-icon.png" alt="">
+            <input type="tel" placeholder="Ваш номер телефону" required class="input">
+        </div>
+        <div class="input__wrapper">
+            <img src="img/tringle-icon.png" alt="">
+            <select name="" id="" class="input">
+                <option value="" hidden>Виберіть тип послуги</option>
+                <option value="Довіреність (засвідчення підпису)">Довіреність (засвідчення підпису)</option>
+                <option value="Нотаріальний акт">Нотаріальний акт</option>
+                <option value="Заява">Заява</option>
+                <option value="Засвідчення підпису">Засвідчення підпису</option>
+            </select>
+        </div>
+        <button type="submit" class="header__form-submit">
+            Забронювати зараз
+        </button>
+        <p class="header__form-info">
+            Відповідаємо протягом 15 хвилин у робочий час
+        </p>
+    </form>
+</div>

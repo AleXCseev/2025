@@ -25,8 +25,12 @@
         margin-bottom: 0;
     }
 
-    &:hover .info__item-inner {
-        transform: rotateY(10deg);
+    // &:hover .info__item-inner {
+    //     transform: rotateY(10deg);
+    // }
+
+    &.animation .info__item-front {
+        animation: rotate-card 2s infinite;
     }
 
     &.active .info__item-inner {
@@ -55,6 +59,15 @@
     justify-content: flex-start;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
     border-radius: 12px;
+}
+
+@keyframes rotate-card {
+    0%, 100% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(10deg);
+    } 
 }
 
 .info__item-top {

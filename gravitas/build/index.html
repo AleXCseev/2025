@@ -7,25 +7,23 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="libs/animations.css">
+    <link rel="stylesheet" href="libs/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Gravitas Group</title>
 </head>
 <body data-path=".">
     <div class="site__wrapper">
-		<header class="header__section">
+		<header class="header__section" id="main">
     <div class="menu">
         <button type="button" class="menu__close">
             <img src="img/close.png" alt="">
         </button>
         <div class="menu__items">
             <a href="#advantage" class="menu__item">
-                Переваги
-            </a>
-            <a href="#advantage" class="menu__item">
                 Детальніше
             </a>
-            <a href="#consalt" class="menu__item">
+            <a href="#card" class="menu__item">
                 отримати консультацію
             </a>
             <a href="#info" class="menu__item">
@@ -37,8 +35,8 @@
             <a href="#faq" class="menu__item">
                 Популярні питання
             </a>
-            <a href="#card" class="menu__item">
-                отримати персональну консультацію
+            <a href="#advantage-2" class="menu__item">
+                Забронювати зараз
             </a>
             <a href="#footer" class="menu__item">
                 контакти
@@ -178,14 +176,14 @@
         <p class="advantage__consalt-text">
             Ви просто приходите у зручний час і <br> забираєте готовий результат, що <br> <span>гарантовано буде прийнятий в Україні.</span> 
         </p>
-        <form class="header__form">
-            <button type="submit" class="header__form-submit">
+        <div style="padding: 0 20px;">
+            <a data-fancybox data-src="#modal-1" class="header__form-submit">
                 отримати консультацію
-            </button>
+            </a>
             <p class="header__form-info">
                 Відповідаємо протягом 15 хвилин у робочий час
             </p>
-        </form>
+        </div>
     </div>
 </section>
       <section class="info__section" id="info">
@@ -194,80 +192,6 @@
             <h2 class="info__section-title">
                 Нотаріальні послуги у [місто] зі знижкою 20% до <span class="date"></span>
             </h2>
-            <div class="info__item info__item-1">
-                <div class="info__item-inner">
-                    <div class="info__item-front">
-                        <div class="info__item-top">
-                            <h3 class="info__item-title">
-                                Довіреність <br> (засвідчення <br> підпису)
-                            </h3>
-                            <div class="info__item-price">
-                                <div class="price">
-                                    <span class="new__price">360 zl</span>
-                                    <span class="old__price">450 zl</span>
-                                </div>
-                            </div>    
-                        </div>
-                        <div class="info__item-content">
-                            <h4 class="info__item-subtitle">
-                                що ви отримуєте:
-                            </h4>
-                            <p class="info__item-text">
-                                Юридична консультація 
-                            </p>
-                            <p class="info__item-text">
-                                Підготовка проєкту документа довіреності
-                            </p>
-                            <p class="info__item-text">
-                                Переклад документа на польську мову
-                            </p>
-                            <p class="info__item-text">
-                                Супровід у нотаріуса - запис та особисті домовленості 
-                            </p>
-                            <p class="info__item-text">
-                                Перевірка правильності оформлення
-                            </p>
-                            <p class="info__item-bottom">
-                                Застосування: на продаж нерухомості, керування автомобілем, представництво в установах
-                            </p>
-                        </div>
-                    </div>
-                    <div class="info__item-back">
-                        <div class="info__item-top">
-                            <h3 class="info__item-title">
-                                Довіреність <br> (засвідчення <br> підпису)
-                            </h3>
-                            <div class="info__item-price">
-                                <div class="price">
-                                    <span class="new__price">360 zl</span>
-                                    <span class="old__price">450 zl</span>
-                                </div>
-                            </div>    
-                        </div>
-                        <div class="info__item-content">
-                            <h4 class="info__item-subtitle">
-                                замовити послугу сьогодні
-                            </h4>
-                            <form class="info__item-form">
-                                <div class="input__wrapper">
-                                    <img src="img/name-icon.png" alt="">
-                                    <input type="name" placeholder="Ваше Ім'я" required class="input">
-                                </div>
-                                <div class="input__wrapper">
-                                    <img src="img/phone-icon.png" alt="">
-                                    <input type="tel" placeholder="Ваш номер телефону" required class="input">
-                                </div>
-                                <button type="submit" class="header__form-submit">
-                                    Забронювати зараз
-                                </button>
-                                <p class="header__form-info">
-                                    Відповідаємо протягом 15 хвилин у робочий час
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="info__item info__item-2">
                 <div class="info__item-inner">
                     <div class="info__item-front">
@@ -611,20 +535,20 @@
             </div>
         </div>
     </div>
-    <div class="advantage__bottom">
+    <div class="advantage__bottom" id="advantage-2">
         <div class="container">
             <div class="advantage__bottom-wrapper">
                 <h3 class="advantage__bottom-title">
                     Забронюйте консультацію прямо зараз і отримайте персональну знижку 20%
                 </h3>
-                <form class="advantage__bottom-form">
-                    <button type="submit" class="header__form-submit">
+                <div class="advantage__bottom-form">
+                    <a data-fancybox data-src="#modal-2" class="header__form-submit">
                         Забронювати зараз
-                    </button>
+                    </a>
                     <p class="header__form-info">
                         Відповідаємо протягом 15 хвилин у робочий час
                     </p>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -799,7 +723,7 @@
             </div>
             <div class="review__item">
                 <div class="review__item-number">
-                    2500 +
+                    <span>2500</span>&nbsp;+
                 </div>
                 <p class="review__item-text">
                     успішних документів
@@ -807,7 +731,7 @@
             </div>
             <div class="review__item">
                 <div class="review__item-number">
-                    ~ 98%
+                    ~&nbsp;<span>98</span>%
                 </div>
                 <p class="review__item-text">
                     приймаються з першого разу
@@ -815,7 +739,7 @@
             </div>
             <div class="review__item">
                 <div class="review__item-number">
-                    < 70%
+                    <&nbsp;<span>70</span>%
                 </div>
                 <p class="review__item-text">
                     економії вашого часу
@@ -835,6 +759,7 @@
                     <span class="faq__quastion-text">
                         Чи дійсні документи в Україні?
                     </span>
+                    <img src="img/tringle-icon.png" alt="">
                 </button>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
@@ -847,6 +772,7 @@
                     <span class="faq__quastion-text">
                         Якщо мій документ не приймуть в Україні?
                     </span>
+                    <img src="img/tringle-icon.png" alt="">
                 </button>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
@@ -859,6 +785,7 @@
                     <span class="faq__quastion-text">
                         Скільки часу займає процес?
                     </span>
+                    <img src="img/tringle-icon.png" alt="">
                 </button>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
@@ -871,6 +798,7 @@
                     <span class="faq__quastion-text">
                         Які документи потрібно взяти з собою?
                     </span>
+                    <img src="img/tringle-icon.png" alt="">
                 </button>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
@@ -883,6 +811,7 @@
                     <span class="faq__quastion-text">
                         Чи потрібно знати польську мову?
                     </span>
+                    <img src="img/tringle-icon.png" alt="">
                 </button>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
@@ -895,6 +824,7 @@
                     <span class="faq__quastion-text">
                         Чи працюєте в інших містах Польщі?
                     </span>
+                    <img src="img/tringle-icon.png" alt="">
                 </button>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
@@ -979,7 +909,13 @@
                 </div>
                 <div class="input__wrapper">
                     <img src="img/geo-icon.png" alt="">
-                    <input type="text" placeholder="Виберіть місто в Польщі" class="input">
+                    <select name="" id="" class="input">
+                        <option value="" hidden>Виберіть місто в Польщі</option>
+                        <option value="--">----</option>
+                        <option value="--">----</option>
+                        <option value="--">----</option>
+                        <option value="--">----</option>
+                    </select>
                 </div>
                 <div class="input__wrapper textarea__wrapper">
                     <img src="img/message-icon.png" alt="">
@@ -1033,7 +969,82 @@
     </div>
 </footer> 
     </div>
+    <div class="modal__wrapper" id="modal-1">
+    <form class="card__form">
+        <img src="img/sheld-icon.png" alt="" class="card__form-icon">
+        <p class="card__form-text">
+            Отримати безкоштовну консультацію сьогодні
+        </p>
+        <div class="input__wrapper">
+            <img src="img/name-icon.png" alt="">
+            <input type="name" placeholder="Ваше Ім'я" required class="input">
+        </div>
+        <div class="input__wrapper">
+            <img src="img/phone-icon.png" alt="">
+            <input type="tel" placeholder="Ваш номер телефону" required class="input">
+        </div>
+        <div class="input__wrapper">
+            <img src="img/tringle-icon.png" alt="">
+            <select name="" id="" class="input">
+                <option value="" hidden>Виберіть тип послуги</option>
+                <option value="Довіреність (засвідчення підпису)">Довіреність (засвідчення підпису)</option>
+                <option value="Нотаріальний акт">Нотаріальний акт</option>
+                <option value="Заява">Заява</option>
+                <option value="Засвідчення підпису">Засвідчення підпису</option>
+            </select>
+        </div>
+        <div class="input__wrapper">
+            <img src="img/date-icon.png" alt="">
+            <input type="text" placeholder="Бажані терміни" required id="datepicker" class="input">
+        </div>
+        <div class="input__wrapper textarea__wrapper">
+            <img src="img/message-icon.png" alt="">
+            <textarea class="input textarea" placeholder="Коментар"></textarea>
+        </div>
+        <button type="submit" class="header__form-submit">
+            Забронювати зараз
+        </button>
+        <p class="header__form-info">
+            Відповідаємо протягом 15 хвилин у робочий час
+        </p>
+    </form>
+</div>
+
+
+<div class="modal__wrapper" id="modal-2">
+    <form class="header__form">
+        <div class="header__form-top">
+            <p class="header__form-title">
+                Забронювати <br> візит за 2 хвилини
+            </p>
+            <img src="img/timer-icon.png" alt="">
+        </div>
+        <div class="input__wrapper">
+            <img src="img/phone-icon.png" alt="">
+            <input type="tel" placeholder="Ваш номер телефону" required class="input">
+        </div>
+        <div class="input__wrapper">
+            <img src="img/tringle-icon.png" alt="">
+            <select name="" id="" class="input">
+                <option value="" hidden>Виберіть тип послуги</option>
+                <option value="Довіреність (засвідчення підпису)">Довіреність (засвідчення підпису)</option>
+                <option value="Нотаріальний акт">Нотаріальний акт</option>
+                <option value="Заява">Заява</option>
+                <option value="Засвідчення підпису">Засвідчення підпису</option>
+            </select>
+        </div>
+        <button type="submit" class="header__form-submit">
+            Забронювати зараз
+        </button>
+        <p class="header__form-info">
+            Відповідаємо протягом 15 хвилин у робочий час
+        </p>
+    </form>
+</div>
+ 
     <script src="libs/jquery.min.js"></script>
+    <script src="libs/jquery.spincrement.min.js"></script>
+    <script src="libs/jquery.fancybox.min.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="libs/owl.carousel.min.js"></script>

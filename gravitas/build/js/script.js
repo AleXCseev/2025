@@ -2,7 +2,6 @@ var landingFunctions = {
 	init: function() {
 		this.initLibraris()
 		this.time()
-		this.modal()
 	}, 
 
 	initLibraris: function() {
@@ -40,6 +39,7 @@ var landingFunctions = {
 		})
 
 		$(".info__item").click(function() {
+			$(".info__item").removeClass("animation")
 			$(".info__item").removeClass("active")
 			$(this).addClass("active")
 		})
@@ -48,6 +48,18 @@ var landingFunctions = {
 			$(this).find(".hide").hide()
 			$(this).find(".show").fadeIn(200)
 		})
+
+		$(window).scroll(function() {
+			$('.info__item').each(function(){
+			var imagePos = $(this).offset().top;
+	
+			var topOfWindow = $(window).scrollTop();
+				if (imagePos < topOfWindow + 300) {
+					$('.info__item').removeClass("animation")
+					$(this).addClass("animation");
+				}
+			});
+		});
 
 		function priceWithDiscount (targetPrice, discount) {
 			let re = /[0-9\s.,]+/g;
@@ -69,6 +81,26 @@ var landingFunctions = {
 			$(this).closest(".price").find(".old__price").text(priceWithDiscount(price, 20))
 			$(this).text(priceWithDiscount(price, 0))
 		})
+
+		var show = true;
+		var countbox = ".review__slider";
+		$(window).on("scroll load resize", function () {
+			if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+			var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+			var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+			var w_height = $(window).height(); // Высота окна браузера
+			var d_height = $(document).height(); // Высота всего документа
+			var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+			if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+				$('.review__item-number span').css('opacity', '1');
+				$('.review__item-number span').spincrement({
+					thousandSeparator: "",
+					duration: 2000
+				});
+				 
+				show = false;
+			}
+		});
 
 		$(".review__slider").owlCarousel({
 			items: 1,
@@ -99,13 +131,13 @@ var landingFunctions = {
 		})
 		
 
-		// $('[data-fancybox]').fancybox({
-		// 	loop: true,
-		// 	infobar: false,
-		// 	animationEffect: false,
-		// 	backFocus: false,
-		// 	hash: false,
-		// });
+		$('[data-fancybox]').fancybox({
+			loop: true,
+			infobar: false,
+			animationEffect: false,
+			backFocus: false,
+			hash: false,
+		});
 	},
 
 	time: function() {
@@ -168,62 +200,6 @@ var landingFunctions = {
 		}
 
 		$(".date").text(getDate(1))
-	},
-
-	modal: function() {
-		function modal() {
-			$(".add__review").click(function () {
-				$(".modal__review").addClass("active")
-			})
-	
-			function close() {
-				$(".modal__review").removeClass("active")
-			}
-	
-			$(".modal__review").click( function(e) {
-				var target = e.target;
-				if(target.classList.contains("modal__close")) {
-					close()
-				}
-				if(target.classList.contains("modal")) {
-					close()
-				}
-			})
-	
-			function readURL(input) {
-				if (input.files && input.files[0]) {
-					var reader = new FileReader();
-					console.log(reader)
-					reader.onload = function (e) {
-						$('.file img').attr('src', e.target.result).css("display", "block");
-					};
-					reader.readAsDataURL(input.files[0]);
-				}
-			}
-	
-			$(".modal__review .input__file").on("change", function () {
-				readURL(this);
-			});
-	
-			$(".modal__review form").submit(function (e) {
-				e.preventDefault()
-				$(this).removeClass("active");
-				$(".send__window").addClass("active");
-				$(".modal__review .name__input").val("")
-				$(".modal__review .modal__area").val("")
-				$(".modal__review .file img").attr("src", "").css("display", "none")
-				delayClose()
-			})
-			function delayClose() {
-				setTimeout(function () {
-					$(".modal__review form").addClass("active");
-					$(".send__window").removeClass("active");
-					close();
-				}, 5000);
-			}
-		}
-	
-		modal()
 	},
 
 }
