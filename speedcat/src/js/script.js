@@ -20,24 +20,52 @@ var landingFunctions = {
 			e.preventDefault();
 		})
 
-		// $('.review__slider').owlCarousel({
-		// 	items: 1,
-		// 	margin: 40,
-		// 	dots: false,
-		// 	dotsEach: true,
-		// 	nav: true,
-		// 	loop: true,
-		// 	autoHeight: true,
-		// 	responsive:{
-		// 		0:{
-		// 			dots: true,
-		// 		},
-		// 		1080:{
-		// 			dots: false,
-		// 		}
-		// 	}
-		// });
+		$('.gallery__slider').owlCarousel({
+			items: 3,
+			margin: 20,
+			dots: false,
+			dotsEach: true,
+			nav: true,
+			loop: true,
+			center: true,
+			autoHeight: false,
+			responsive:{
+				0:{
+					dots: true,
+					items: 1,
+					center: false,
+				},
+				700:{
+					dots: false,
+					items: 3,
+					center: true,
+				}
+			}
+		});
 
+		$('.review__slider').owlCarousel({
+			items: 3,
+			margin: 30,
+			dots: false,
+			dotsEach: true,
+			nav: true,
+			loop: true,
+			autoHeight: true,
+			responsive:{
+				0: {
+					items: 1,
+					dots: true,
+				},
+				1081: {
+					items: 2,
+					dots: false,
+				},
+				1281:{
+					items: 3,
+					dots: false,
+				}
+			}
+		});
 
 		$.raty.path = $("body").data("path") +  '/img/raty';
 

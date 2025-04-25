@@ -108,6 +108,7 @@
     padding: 7px 15px;
     border-radius: 10px;
     background: #ba2d8a;
+    animation: pulse 2s infinite
 }
 
 .old__price-text {
@@ -405,6 +406,10 @@
     }
     .old__price-text {
         font-size: 5.8vw;
+    }
+    .old__price {
+        font-size: 5.8vw;
+        padding: 0 1vw;
     }
     .order__btn {
         font-size: 4.8vw;

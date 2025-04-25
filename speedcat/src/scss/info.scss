@@ -11,6 +11,15 @@
     transform: rotate(180deg);
 }
 
+.info__decor-2 {
+    width: 2284px;
+    height: auto;
+    position: absolute;
+    bottom: -550px;
+    right: 0;
+    transform: rotate(180deg) scaleX(-1);
+}
+
 .info__section-wrapper {
     padding-bottom: 135px;
 }
@@ -87,6 +96,12 @@
     z-index: 1;
 }
 
+.info__center-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .info__center-decor {
     width: 160px;
     height: 1200px;
@@ -96,6 +111,10 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+}
+
+.info__center-logo {
+    display: none;
 }
 
 .info__left {
@@ -257,5 +276,195 @@
 
     .header__price {
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .info__top-item {
+        width: 280px;
+    }
+    .info__left {
+        width: 360px;
+    }
+    .info__right {
+        width: 360px;
+    }
+    .info__center-boot {
+        width: 260px;
+    }
+    .info__img {
+        width: 380px;
+    }
+    .info__center-decor {
+        width: 160px;
+        height: 1100px;
+        bottom: -1000px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .info__top-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__top-item {
+        width: 100%;
+        margin-bottom: 44px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .info__center {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .info__left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__left-title {
+        text-align: center;
+    }
+    .info__left-text {
+        text-align: center;
+    }
+    .info__center-decor {
+        display: none;
+    }
+    .info__right {
+        width: 100%;
+        margin-bottom: 43px;
+    }
+    .info__center-boot {
+        width: 220px;
+        margin: 30px 0;
+        position: relative;
+        z-index: 2;
+    }
+    .info__img {
+        width: calc(50% - 10px);
+    }
+    .info__center-block {
+        position: relative;
+    }
+    .info__center-logo {
+        display: block;
+        width: 100%;
+        max-width: 384px;
+        height: auto;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(-1);
+    }
+    .info__bottom-item {
+        width: 160px;
+    }
+    .info__bottom-boot {
+        width: 630px;
+    }
+    .info__bottom-line {
+        height: 100px;
+        top: -100px;
+    }
+    .info__bottom-1 .info__bottom-line {
+        height: 265px;
+        top: -265px;
+    }
+    .info__bottom-3 .info__bottom-line {
+        height: 265px;
+        top: -265px;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__decor {
+        display: none;
+    }
+    .info__decor-2 {
+        display: none;
+    }
+    .info__top {
+        padding: 10vw 7vw;
+        margin-bottom: 19vw;
+    }
+    .info__top-title {
+        font-size: 7vw;
+        margin-bottom: 10vw;
+    }
+    .info__top-item {
+        margin-bottom: 10vw;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .info__top-item img {
+        height: 15.4vw;
+        margin-bottom: 5vw;
+    }
+    .info__top-item h3 {
+        font-size: 5.8vw;
+        margin-bottom: 2vw;
+    }
+    .info__top-item p {
+        font-size: 4.8vw;
+    }
+    .info__logo {
+        width: 46vw;
+        margin-bottom: 10vw;
+    }
+    .info__left-title {
+        font-size: 7vw;
+        margin-bottom: 3vw;
+    }
+    .info__left-text {
+        font-size: 5.8vw;
+        text-align: left;
+    }
+    .info__center-boot {
+        width: 63vw;
+        margin: 7vw 0;
+    }
+    .info__list-item img {
+        width: 9.8vw;
+        margin-right: 4.8vw;
+        margin-top: 1vw;
+    }
+    .info__list-item span {
+        font-size: 5.8vw;
+    }
+    .info__list-item {
+        margin-bottom: 8vw;
+    }
+    .info__right {
+        margin-bottom: 10vw;
+    }
+    .info__img {
+        border-radius: 7vw;
+    }
+    .info__imgs {
+        margin-bottom: 7vw;
+    }
+    .info__bottom-boot {
+        width: 100%;
+        margin-bottom: 4vw;
+    }
+    .info__bottom-items {
+        display: none;
+    }
+    .info__bottom-price {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__bottom-price .header__price {
+        margin-bottom: 3.5vw;
+    }
+    .info__section-wrapper {
+        padding-bottom: 18vw;
     }
 }
