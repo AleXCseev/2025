@@ -1,0 +1,213 @@
+.advantage__section-wrapper {
+    padding-top: 110px;
+}
+
+.advantage__section-title {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #333;
+    width: 100%;
+    max-width: 680px;
+    margin-bottom: 30px;
+}
+
+.advantage__section-text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+    max-width: 680px;
+}
+
+.advantage__block {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: -130px;
+
+    .order__btn {
+        margin-top: -230px;
+        margin-bottom: 130px;
+
+        &:after {
+            content: "";
+            width: 65px;
+            height: 45px;
+            background-image: url(../img/advantage-decor-btn.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            left: -72px;
+            top: -15px;
+        }
+    }
+}
+
+.advantage__block-center {
+    width: 1009px;
+    height: 1428px;
+    position: relative;
+    margin: auto;
+    background-image: url(../img/advantage-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantage__line {
+    position: absolute;
+    width: 943px;
+    height: auto;
+    top: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.advantage__boot-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-top: 200px;
+    margin-left: 160px;
+
+    .pin {
+        position: absolute;
+        top: 50px;
+        left: 47%;
+        transform: translateX(-50%);
+    }
+}
+
+.pin {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #f6f3ee;
+    box-shadow: inset 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        background: linear-gradient(149deg, #a7bc6c 0%, #899f4c 100%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.advantage__boot {
+    width: 806px;
+    height: auto;
+}
+
+
+.advantage__item {
+    width: 410px;
+    height: 450px;
+    border-radius: 50px;
+    box-shadow: 20px 20px 25px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 35px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+
+    .pin {
+        margin-bottom: 40px;
+        flex-shrink: 0;
+    }
+}
+
+.advantage__item-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: #ddddf2;
+    padding: 25px;
+    flex-shrink: 1;
+}
+
+.advantage__item-number {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.50;
+    color: #9b99da;
+    margin-bottom: 35px;
+}
+
+.advantage__item-title {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.advantage__item-text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+}
+
+.advantage__item-1 {
+    top: -80px;
+    right: 50px;
+    transform: rotate(-15deg);
+}
+
+.advantage__item-2 {
+    top: 220px;
+    left: 60px;
+    transform: rotate(15deg);
+}
+
+.advantage__item-3 {
+    top: 600px;
+    right: 80px;
+    transform: rotate(15deg);
+}
+
+.advantage__item-4 {
+    top: 780px;
+    left: 60px;
+    transform: rotate(-15deg);
+}
+
+.advantage__decor {
+    position: absolute;
+    height: auto;
+}
+
+.advantage__decor-1 {
+    width: 140px;
+    top: 400px;
+    right: 0;
+}
+
+.advantage__decor-2 {
+    width: 164px;
+    left: -60px;
+    top: 660px;
+}
+
+.advantage__decor-3 {
+    width: 137px;
+    bottom: 230px;
+    right: 120px;
+}
+    
