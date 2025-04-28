@@ -1,7 +1,6 @@
 var landingFunctions = {
 	init: function() {
 		this.initLibraris()
-		// this.card()
 		this.time()
 		this.modal()
 	}, 
@@ -29,6 +28,9 @@ var landingFunctions = {
 			loop: true,
 			center: true,
 			autoHeight: false,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
 			responsive:{
 				0:{
 					dots: true,
@@ -51,6 +53,9 @@ var landingFunctions = {
 			nav: true,
 			loop: true,
 			autoHeight: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
 			responsive:{
 				0: {
 					items: 1,
@@ -98,56 +103,6 @@ var landingFunctions = {
 			backFocus: false,
 			hash: false,
 		});
-	},
-
-	card: function() {
-		function cardSlider (selector) {
-			var owl = $(selector + " .card__main-foto").owlCarousel({
-				items: 1,
-				margin: 100,
-				dots: false,
-				nav: false,
-				loop: true,
-				mouseDrag: false,
-				touchDrag: false,
-				animateOut: 'fadeOut',
-			});
-	
-			$(selector + " .card__foto").each(function() {
-				$(this).click(function() {
-					$(this).closest(".card").find(".card__foto").removeClass("active")
-					var position = $(this).data("slide") - 1
-					owl.trigger("to.owl.carousel", [position, 300])
-					$(this).closest(".card").find(`[data-slide='${Number(position) + 1}']`).addClass("active")
-				})
-			})
-
-			$(selector + " .card__nav-prev").click(function() {
-				var position = $(this).closest(".card__other-foto").find(".card__foto.active").data("slide")
-				$(this).closest(".card__other-foto").find(".card__foto.active").removeClass("active")
-				if (Number(position) - 1 !== 0) {
-					$(this).closest(".card__other-foto").find(`[data-slide='${Number(position) - 1 }']`).addClass("active")
-				} else {
-					$(this).closest(".card__other-foto").find("[data-slide='6']").addClass("active")
-				}
-				owl.trigger('prev.owl.carousel');
-			})
-
-			$(selector + " .card__nav-next").click(function() {
-				var position = $(this).closest(".card__other-foto").find(".card__foto.active").data("slide")
-				$(this).closest(".card__other-foto").find(".card__foto.active").removeClass("active")
-				if (Number(position) + 1 > 6) {
-					$(this).closest(".card__other-foto").find(`[data-slide='1']`).addClass("active")
-				} else {
-					$(this).closest(".card__other-foto").find(`[data-slide='${Number(position) + 1 }']`).addClass("active")
-				}
-				owl.trigger('next.owl.carousel');
-			})
-		}
-	
-		cardSlider(".card__1")
-		cardSlider(".card__2")
-		cardSlider(".card__3")
 	},
 
 	time: function() {

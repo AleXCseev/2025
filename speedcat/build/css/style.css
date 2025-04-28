@@ -2655,6 +2655,7 @@ body {
   margin-bottom: 10px;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 @media (max-width: 1080px) {
