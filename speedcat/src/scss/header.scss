@@ -24,7 +24,7 @@
 .header__logo {
     width: 160px;
     height: auto;
-    margin-bottom: 37px;
+    margin-bottom: 20px;
 }
 
 .header__title {
@@ -32,13 +32,13 @@
     font-size: 48px;
     text-transform: uppercase;
     color: #254762;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 
 .header__item {
     display: inline-block;
     position: relative;
-    min-width: 250px;
+    min-width: 372px;
     width: auto;
     border-radius: 30px;
     background: linear-gradient(135deg, #feb1b5 0%, #ebd5d7 100%);
@@ -345,7 +345,7 @@
     }
     .header__title {
         margin-bottom: 4.6vw;
-        font-size: 9.3vw;
+        font-size: 9vw;
     }
     .header__block {
         margin-bottom: 7vw;
@@ -384,7 +384,7 @@
         }
     }
     .header__item {
-        min-width: 59vw;
+        min-width: 90vw;
         border-radius: 7vw;
     }
     .header__price-wrapper {

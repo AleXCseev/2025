@@ -315,6 +315,11 @@
             margin-bottom: 0;
         }
     }
+    .info__top-item h3 {
+        br {
+            display: none;
+        }
+    }
     .info__center {
         flex-direction: column;
         align-items: center;
