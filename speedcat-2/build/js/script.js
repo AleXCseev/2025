@@ -20,54 +20,53 @@ var landingFunctions = {
 		})
 
 		$('.gallery__slider').owlCarousel({
-			items: 3,
-			margin: 20,
+			items: 4,
+			margin: 10,
 			dots: false,
 			dotsEach: true,
 			nav: true,
 			loop: true,
-			center: true,
 			autoHeight: false,
-			autoplay: true,
-			autoplayTimeout: 3000,
-			autoplayHoverPause: true,
+			// autoplay: true,
+			// autoplayTimeout: 3000,
+			// autoplayHoverPause: true,
 			responsive:{
 				0:{
-					dots: true,
 					items: 1,
-					center: false,
 				},
-				700:{
-					dots: false,
+				540: {
+					items: 2,
+				},
+				1081: {
 					items: 3,
-					center: true,
+				},
+				1281:{
+					items: 4,
 				}
 			}
 		});
 
 		$('.review__slider').owlCarousel({
 			items: 3,
-			margin: 30,
+			margin: 20,
 			dots: false,
 			dotsEach: true,
 			nav: true,
 			loop: true,
-			autoHeight: true,
-			autoplay: true,
-			autoplayTimeout: 5000,
-			autoplayHoverPause: true,
+			// autoHeight: true,
+			stagePadding: 30,
+			// autoplay: true,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause: true,
 			responsive:{
 				0: {
 					items: 1,
-					dots: true,
 				},
 				1081: {
 					items: 2,
-					dots: false,
 				},
 				1281:{
 					items: 3,
-					dots: false,
 				}
 			}
 		});

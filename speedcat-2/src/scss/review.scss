@@ -1,0 +1,111 @@
+.review__section {
+    background: #ddddf2;
+    background-image: url(../img/review-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.review__section-wrapper {
+    padding: 60px 0 66px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.review__decor {
+    width: 120px;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    animation: rotate 20s infinite linear;
+}
+
+.review__decor-1 {
+    top: 134px;
+    right: -25px;
+}
+
+.review__decor-2 {
+    bottom: 100px;
+    left: -65px;
+}
+
+.review__section-title {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.review__slider {
+    width: calc(100% + 60px);
+    height: auto;
+
+    .owl-stage-outer {
+        padding: 20px 0 30px;
+    }
+
+    .owl-item .review {
+        opacity: 0;
+        transition: 0.3s ease;
+    } 
+
+    .active .review {
+        opacity: 1;
+    } 
+
+    .owl-nav {
+        margin-top: 0;
+    }
+}
+
+.review {
+    height: auto;
+    min-height: 300px;
+    border-radius: 50px;
+    box-shadow: 15px 15px 20px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 50px 45px 20px;
+    position: relative;
+}
+
+.review__quote {
+    width: 73px !important;
+    height: auto;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+}
+
+.review__name {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.review__text {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+@media (max-width: 1080px) {
+    .review__decor-1 {
+        top: 170px;
+        right: -25px;
+    }
+}
+
+@media (max-width: 540px) {
+
+}
