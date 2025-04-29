@@ -1,0 +1,246 @@
+.header__line {
+    background: #1c35ac;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.header__section-wrapper {
+    padding: 20px 0 70px;
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.header__prod-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+        content: "";
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background-color: #3554ec;
+        filter: blur(100px);
+        position: absolute;
+        top: 50%;
+        right: 42px;
+        transform: translateY(-50%);
+    }
+}
+
+.header__prod {
+    width: 285px;
+    height: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header__items {
+    width: 211px;
+    position: absolute;
+    top: 116px;
+    left: 0;
+}
+
+.header__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    img {
+        width: auto;
+        height: 40px;
+    }
+
+    span {
+        display: inline-block;
+        width: 156px;
+        height: auto;
+        font-weight: 600;
+        font-size: 20px;
+        color: #ffcf52;
+    }
+}
+
+.header__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+
+    img {
+        width: 145px;
+        height: auto;
+        border-radius: 10px;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+}
+
+.header__info-text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.order__block {
+    border-radius: 20px;
+    background: #0e1d62;
+    padding: 22px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order__title {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.order__price {
+    width: 100%;
+    margin-bottom: 12px;
+    position: relative;
+    padding: 10px 0;
+
+    &:before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background: #58cdff;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 1px);
+    }
+}
+
+.price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.old__price {
+    position: relative;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+
+    &:before, &:after {
+        content: "";
+        width: 110%;
+        height: 2px;
+        background: #f00;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    &:before {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+
+    &:after {
+        transform: translate(-50%, -50%) rotate(-15deg);
+    }
+}
+
+.new__price {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+    color: #ffd53a;
+}
+
+.order__result {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #58cdff;
+    margin-bottom: 14px;
+}
+
+.result {
+}
+
+.order__btn {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #02172b;
+    position: relative;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffe500 0%, #ffcf52 100%);
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s ease;
+        background: linear-gradient(135deg, #ebff00 0%, #faff00 100%);
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+.order__quantity {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    color: #fff;
+
+    span {
+        border-radius: 6px;
+        background: #1652c6;
+        padding: 6px 10px;
+        font-weight: 600;
+    }
+}
+
+.quantity {
+}
