@@ -20,6 +20,15 @@ var landingFunctions = {
 			e.preventDefault();
 		});
 
+		$('.new__price').each(function () {
+			var newPrice = parseInt($(this).text());
+	        var currency = $(this).text().replace(/[0-9]/g, '');
+			p = newPrice * 100 / 40;
+			p2 = Math.ceil(p);
+			$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
+			$(this).closest('.order__block').find('.result').text(p2 - newPrice + " " + currency);
+		});
+
 		$(".card__slider").owlCarousel({
 			loop: true,
 			margin: 40,
@@ -28,24 +37,22 @@ var landingFunctions = {
 			dots: true,
 			dotsEach: true,
 			autoHeight: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true
 		})
 
-		const owl = $(".review__slider").owlCarousel({
+		$(".review__slider").owlCarousel({
 			loop: true,
-			margin: 10,
-			nav: false,
+			margin: 40,
+			nav: true,
 			items: 1,
 			dots: true,
 			dotsEach: true,
 			autoHeight: true,
-		})
-
-		$('.review__btn-prev').click(function() {
-			owl.trigger('prev.owl.carousel');
-		})
-
-		$('.review__btn-next').click(function() {
-			owl.trigger('next.owl.carousel');
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true
 		})
 
 		$.raty.path = $("body").data("path") +  '/img/raty';
