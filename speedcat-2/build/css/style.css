@@ -3266,3 +3266,39 @@ body {
     right: -25px;
   }
 }
+@media (max-width: 540px) {
+  .review__section-wrapper {
+    padding: 14vw 0 15vw;
+  }
+  .review__section-title {
+    font-size: 7vw;
+    margin-bottom: 7vw;
+  }
+  .review {
+    min-height: 70vw;
+    border-radius: 12vw;
+    padding: 12vw 6vw 4.8vw;
+    position: relative;
+  }
+  .review__name {
+    font-size: 4.5vw;
+    margin-bottom: 6vw;
+  }
+  .review__text {
+    font-size: 4.5vw;
+  }
+  .review__decor {
+    width: 29vw;
+  }
+  .review__decor-1 {
+    top: 42vw;
+    right: -10vw;
+  }
+  .review__decor-2 {
+    bottom: 23vw;
+    left: -14vw;
+  }
+  .review__section {
+    background-size: 220%;
+  }
+}
