@@ -58,7 +58,7 @@
 .header__link {
     width: auto;
     height: auto;
-    padding: 18px 35px;
+    padding: 18px 35px 15px;
     border: 1px solid #9b99da;
     border-radius: 50px;
     display: flex;
@@ -106,6 +106,7 @@
     position: absolute;
     top: 154px;
     right: 10px;
+    // animation: rotate 20s linear infinite;
 }
 
 .header__tag {

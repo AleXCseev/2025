@@ -2,21 +2,30 @@ var landingFunctions = {
 	init: function() {
 		this.initLibraris()
 		this.time()
-		this.modal()
+		// this.modal()
 	}, 
 
 	initLibraris: function() {
 		
 		$('[href*="#"]').on('click', function (e) {
 			var fixedOffset = 0;
-			var cardHeight = $(".card").outerHeight(false)
-			var windowHeight = $(window).height()
 
-			$('html, body')
-			.stop()
-			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
-			// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
-			e.preventDefault();
+			if($(window).width() <= 1080) {
+				var cardHeight = $(".card").outerHeight(false)
+				var windowHeight = $(window).height()
+
+				$('html, body')
+					.stop()
+					.animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
+					// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
+				e.preventDefault();
+			} else {
+				$('html, body')
+					.stop()
+					// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
+					.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
+				e.preventDefault();
+			}
 		})
 
 		$('.gallery__slider').owlCarousel({
@@ -27,9 +36,9 @@ var landingFunctions = {
 			nav: true,
 			loop: true,
 			autoHeight: false,
-			// autoplay: true,
-			// autoplayTimeout: 3000,
-			// autoplayHoverPause: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
 			responsive:{
 				0:{
 					items: 1,
@@ -55,9 +64,9 @@ var landingFunctions = {
 			loop: true,
 			// autoHeight: true,
 			stagePadding: 30,
-			// autoplay: true,
-			// autoplayTimeout: 5000,
-			// autoplayHoverPause: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
 			responsive:{
 				0: {
 					items: 1,

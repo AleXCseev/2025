@@ -323,6 +323,14 @@
     transform: translateY(-50%);
 }
 
+select {
+    text-align:-moz-center;
+    text-align:-webkit-center;
+    text-align-last: center;
+    -webkit-text-align-last: center;
+    text-indent: 44% hanging;
+}
+
 @media (max-width: 1480px) {
     .card__left {
         width: 700px;
