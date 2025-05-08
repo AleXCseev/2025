@@ -987,21 +987,14 @@ body {
 
 .review__info {
   border-radius: 30px;
-  background: #ffe5f1;
-  padding: 25px 40px 30px 40px;
-  margin-bottom: 60px;
-}
-
-.review__info-medium {
-  font-weight: 400;
-  font-size: 24px;
-  color: #222;
-  margin-bottom: 10px;
+  background: #f7cab7;
+  padding: 25px 40px 25px 40px;
+  margin-bottom: 40px;
 }
 
 .review__info-text {
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 24px;
   color: #222;
 }
 
@@ -1067,24 +1060,24 @@ body {
   text-align: center;
   color: #fff;
   border-radius: 40px;
-  background: #a1436f;
+  background: #d47058;
   margin: 0 auto;
   margin-top: 30px;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  border: 2px solid #a1436f;
+  border: 2px solid #d47058;
 }
 .order__btn:hover {
   background-color: transparent;
-  color: #a1436f;
+  color: #d47058;
 }
 
 @media (max-width: 540px) {
   .review__info {
     border-radius: 7vw;
-    padding: 6vw 7vw 7vw 6vw;
+    padding: 6vw 7vw;
     margin-bottom: 9.8vw;
   }
   .review {
@@ -1109,7 +1102,7 @@ body {
   .order__btn {
     width: 100%;
     padding: 6vw;
-    font-size: 4.8vw;
+    font-size: 4.5vw;
     border-radius: 10vw;
     margin-top: 8vw;
   }
@@ -1121,7 +1114,7 @@ body {
   }
 }
 .footer__section {
-  background: #954aa2;
+  background: #d47058;
 }
 
 .footer__section-wrapper {
