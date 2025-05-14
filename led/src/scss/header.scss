@@ -1,0 +1,220 @@
+.header__line {
+    background: #e44c00;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.header__section-wrapper {
+    padding: 22px 0 70px;
+}
+
+.header__title {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #fb0;
+    margin-bottom: 7px;
+}
+
+.header__text {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.header__prod {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:before {
+        content: "";
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5;
+        background-color: #ffae00;
+        filter: blur(40px);
+    }
+
+    img {
+        width: 400px;
+        height: auto;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.header__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        margin-bottom: 30px;
+    }
+}
+
+.header__item-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: #e44c00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.header__item-text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+
+    span {
+       font-weight: 600; 
+    }
+}
+
+.order__block {
+    background: #191928;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 9px;
+}
+
+.order__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.order__text {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 22px;
+    padding-top: 5px;
+}
+
+.old__price {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 0 10px;
+    line-height: normal;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #f00;
+        transform: translateY(-50%) rotate(-3deg);
+    }
+}
+
+.order__discount {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background: #d83c3f;
+    margin-bottom: 8px;
+}
+
+.new__price {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #ffc300;
+    line-height: normal;
+}
+
+.order__btn {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    line-height: normal;
+    border-radius: 30px;
+    position: relative;
+    background: linear-gradient(90deg, #e44c00 0%, #f80 100%);
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: 0.5s ease;
+        background: linear-gradient(90deg, #e41300 0%, #ffa600 100%);
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+.order__quantity {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    line-height: normal;
+    margin-top: 10px;
+    text-align: center;
+
+    span {
+        border-radius: 6px;
+        background: #d83c3f;
+        padding: 0 6px 1px;
+    }
+}
+
+.quantity {
+}
