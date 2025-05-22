@@ -143,7 +143,7 @@ var landingFunctions = {
 			}, 1000);
 		}
 	
-		timer()
+		// timer()
 
 		function getDate(plusDays) {
 			var now = new Date;
@@ -160,7 +160,7 @@ var landingFunctions = {
 			monthNum += now.getMonth() + 1;
 			
 			// return dayNum + "." + monthNum + "." + now.getFullYear();
-			return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
+			return dayNum + "." + monthNum;
 		}
 
 		// $(".date__1").text(getDate(-5));
