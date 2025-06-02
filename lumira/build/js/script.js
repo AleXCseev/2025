@@ -53,7 +53,40 @@ var landingFunctions = {
 			autoplayHoverPause: true,
 		});
 
-		$('.gallery__slider-mobile').owlCarousel({
+		var show = true;
+		var countbox = ".advantage__content";
+		$(window).on("scroll load resize", function () {
+			if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+			var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+			var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+			var w_height = $(window).height(); // Высота окна браузера
+			var d_height = $(document).height(); // Высота всего документа
+			var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+			if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+				$('.advantage__list-item span').css('opacity', '1');
+				$('.advantage__list-item span').spincrement({
+					thousandSeparator: "",
+					duration: 2000
+				});
+				 
+				show = false;
+			}
+		});
+
+		$('.gallery__slider').owlCarousel({
+			items: 1,
+			margin: 20,
+			dots: true,
+			dotsEach: true,
+			nav: false,
+			loop: true,
+			autoHeight: true,
+			// autoplay: true,
+			// autoplayTimeout: 3000,
+			// autoplayHoverPause: true,
+		});
+
+		$('.card__slider').owlCarousel({
 			items: 1,
 			margin: 20,
 			dots: false,
@@ -224,22 +257,32 @@ var landingFunctions = {
 
 		const getPrice = this.getPrice
 
-		$(".card__color-btn").click(function() {
+		$(".card__open-form").click(function() {
+			$(".card__form").removeClass("active")
+			$(this).closest(".card").find(".card__form").addClass("active")
+		})
+
+		$(".card__close-btn").click(function() {
+			$(this).closest(".card").find(".card__form").removeClass("active")
+		})
+
+		$(".card__color").click(function() {
 			if($(this).hasClass("active")) return
 
 			const color = $(this).data("color")
 
-			$(this).closest(".card").find(".card__color-btn").removeClass("active")
+			$(this).closest(".card").find(".card__color").removeClass("active")
 			$(this).addClass("active")
-			$(this).closest(".card").find(".card__gallery").hide().removeClass("active")
-			$(this).closest(".card").find(".card__gallery-" + color).fadeIn(300).addClass("active")
 
-			const id = $(this).data("id")
-			const price = $(this).data("price")
-			const currency = $(this).data("currency")
+			$(this).closest(".card").find(".card__slider").removeClass("active")
+			$(this).closest(".card").find(".card__color-" + color).addClass("active")
 
-			$(this).closest(".card").find(".new__price").text(price + " " + currency)
-			getPrice()
+			// const id = $(this).data("id")
+			// const price = $(this).data("price")
+			// const currency = $(this).data("currency")
+
+			// $(this).closest(".card").find(".new__price").text(price + " " + currency)
+			// getPrice()
 		})
 	},
 
