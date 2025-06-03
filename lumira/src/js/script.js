@@ -4,7 +4,7 @@ var landingFunctions = {
 		this.time()
 		this.getPrice()
 		this.card()
-		// this.modal()
+		this.modal()
 	}, 
 
 	getPrice: function() {
@@ -100,16 +100,34 @@ var landingFunctions = {
 		});
 
 		$('.review__slider').owlCarousel({
-			items: 1,
+			items: 3,
 			margin: 20,
 			dots: false,
 			dotsEach: true,
 			nav: true,
 			loop: true,
-			autoHeight: true,
-			// autoplay: true,
-			autoplayTimeout: 5000,
-			autoplayHoverPause: true,
+			autoHeight: false,
+			// autoplay: false,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause: true,
+			responsive:{
+				0:{
+					items:1,
+					autoHeight: true,
+				},
+				1281:{
+					items:3,
+					autoHeight: false,
+				}
+			}
+		});
+
+		$.raty.path = $("body").data("path") +  '/img/raty';
+
+		$('.modal__raiting').raty({
+			half: true,
+			space: false,
+			number: 5,
 		});
 	
 		AOS.init({
@@ -192,12 +210,15 @@ var landingFunctions = {
 			}
 			monthNum += now.getMonth() + 1;
 			
-			// return dayNum + "." + monthNum + "." + now.getFullYear();
-			return dayNum + "." + monthNum;
+			return dayNum + "." + monthNum + "." + now.getFullYear();
+			// return dayNum + "." + monthNum;
 		}
 
 		// $(".date__1").text(getDate(-5));
-    	$(".date").text(getDate(2));
+    	$(".date__1").text(getDate(0));
+		$(".date__2").text(getDate(-1));
+		$(".date__3").text(getDate(-2));
+		$(".date__4").text(getDate(-3));
 
 	},
 

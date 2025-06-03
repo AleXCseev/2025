@@ -6,6 +6,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.card__decor {
+    width: 248px;
+    height: auto;
+    position: absolute;
+    top: 830px;
+    left: -248px;
 }
 
 .card__section-title {
@@ -66,6 +75,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    min-height: 580px;
     margin-bottom: 20px;
 }
 
@@ -259,6 +269,106 @@
     }
 }
 
+.card__2 {
+    .card__btn-1 {
+        background-color: #E791CE;
+    }
+
+    .card__btn-2 {
+        background-color: #C1B8BB;
+    }
+
+    .card__btn-3 {
+        background-color: #06071C;
+    }
+
+    .card__btn-4 {
+        background-color: #915161;
+    }
+
+    .card__btn-5 {
+        background-color: #C6B0BC;
+    }
+}
+
+.card__3 {
+    .card__btn-1 {
+        background-color: #fe0018;
+    }
+
+    .card__btn-2 {
+        background-color: #044f88;
+    }
+}
+
+.card__4 {
+    .card__btn-1 {
+        background-color: #dddde7;
+    }
+
+    .card__btn-2 {
+        background-color: #de3582;
+    }
+
+    .card__btn-3 {
+        background-color: #00a2ac;
+    }
+}
+
+.card__5 {
+    .card__btn-1 {
+        background-color: #e4e5ea;
+    }
+
+    .card__btn-2 {
+        background-color: #131315;
+    }
+
+    .card__btn-3 {
+        background-color: #c4a799;
+    }
+}
+
+.card__6 {
+    .card__btn-1 {
+        background-color: #d9aa92;
+    }
+
+    .card__btn-2 {
+        background-color: #131315;
+    }
+
+    .card__btn-3 {
+        background-color: #2bbddb;
+    }
+
+    .card__btn-4 {
+        background-color: #c4111e;
+    }
+}
+
+.card__7 {
+    .card__btn-1 {
+        background-color: #f5f5f7;
+    }
+
+    .card__btn-2 {
+        background-color: #0a9197;
+    }
+
+    .card__btn-3 {
+        background-color: #f1610e;
+    }
+
+    .card__btn-4 {
+        background-color: #0156ca;
+    }
+
+    .card__btn-5 {
+        background-color: #c3001b;
+    }
+}
+
 .card__open-form, .submit__btn {
     width: 100%;
     height: auto;
@@ -307,6 +417,11 @@
         visibility: visible;
         pointer-events: auto;
     }
+
+    form {
+        width: 100%;
+        max-width: 320px;
+    }
 }
 
 .card__close-btn {
@@ -327,6 +442,7 @@
     color: #303030;
     line-height: normal;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .card__form-text {
@@ -394,3 +510,174 @@
     margin-top: 10px;
 }
 
+@media (max-width: 1480px) {
+    .card {
+        width: 386px;
+    }
+    .card__gallery {
+        min-height: 508px;
+    }
+    .card__title {
+        font-size: 20px;
+    }
+    .card__info-right {
+        font-size: 16px;
+    }
+    .card__info-left {
+        font-size: 16px;
+    }
+    .card__decor {
+        width: 200px;
+        top: 830px;
+        left: -205px;
+    }
+    .card__form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .card {
+        width: 440px;
+    }
+    .card__gallery {
+        min-height: 580px;
+    }
+    .card__title {
+        font-size: 24px;
+    }
+    .card__info-right {
+        font-size: 18px;
+    }
+    .card__info-left {
+        font-size: 18px;
+    }
+    .card__decor {
+        width: 200px;
+        top: 830px;
+        left: -205px;
+    }
+    .card__form {
+        padding: 50px;
+    }
+    .card__block {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1080px) {
+    .card__block {
+        justify-content: center;
+    }
+    .card__decor {
+        display: none;
+    }
+    .card__section-wrapper {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 540px) {
+    .card__block {
+        gap: 12vw 0;
+    }
+    .card__section-title {
+        font-size: 11.8vw;
+        margin-bottom: 3.5vw;
+    }
+    .card__section-wrapper {
+        padding-bottom: 19.8vw;
+    }
+    .card__section-subtitle {
+        font-size: 4.5vw;
+        margin-bottom: 2vw;
+    }
+    .card__section-text {
+        font-size: 4.5vw;
+        margin-bottom: 12vw;
+    }
+    .card {
+        width: 100%;
+    }
+    .card__gallery {
+        min-height: 122.5vw;
+        margin-bottom: 4.8vw;
+    }
+    .card__content {
+        padding: 3.5vw 4.8vw;
+        border-radius: 4.8vw;
+    }
+    .card__title {
+        font-size: 4.8vw;
+        margin-bottom: 2vw;
+    }
+    .card__info {
+        margin-bottom: 1vw;
+    }
+    .card__info-left {
+        font-size: 4.5vw;
+    }
+    .old__price {
+        font-size: 4.5vw;
+        margin-right: 2vw;
+    }
+    .new__price {
+        font-size: 28px;
+    }
+    .card__info-right {
+        font-size: 4.5vw;
+    }
+    .card__colors {
+        gap: 2vw;
+    }
+    .card__color {
+        width: 4.8vw;
+        height: 4.8vw;
+    }
+    .card__color img {
+        width: 1.8vw;
+    }
+    .card__open-form, .submit__btn {
+        border-radius: 4.8vw;
+        padding: 3vw;
+        font-size: 4.5vw;
+        margin-top: 1.4vw;
+    }
+    .card__form {
+        padding: 4.8vw;
+    }
+    .card__form-title {
+        font-size: 5.8vw;
+        margin-bottom: 3vw;
+    }
+    .card__form-text {
+        max-width: 56vw;
+        font-size: 4.5vw;
+        margin-bottom: 4.8vw;
+    }
+    .card__input-wrapper {
+        margin-bottom: 2vw;
+    }
+    .card__input {
+        height: 14.5vw;
+        border-radius: 7vw;
+        padding: 0 2vw;
+        font-size: 4.5vw;
+    }
+    .card__input-select:before {
+        width: 14.5vw;
+        height: 14.5vw;
+    }
+    .submit__btn {
+        padding: 4.5vw;
+        border-radius: 7vw;
+    }
+    .card__form-info {
+        max-width: 48vw;
+        font-size: 3vw;
+        margin-top: 2vw;
+    }
+    .fancybox-slide {
+        padding: 44px 15px;
+    }
+}
