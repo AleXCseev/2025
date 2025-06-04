@@ -94,6 +94,7 @@ var landingFunctions = {
 			nav: true,
 			loop: true,
 			autoHeight: true,
+			lazyLoad: true
 			// autoplay: true,
 			// autoplayTimeout: 3000,
 			// autoplayHoverPause: true,
@@ -115,8 +116,12 @@ var landingFunctions = {
 					items:1,
 					autoHeight: true,
 				},
+				1081:{
+					items: 2,
+					autoHeight: false,
+				},
 				1281:{
-					items:3,
+					items: 3,
 					autoHeight: false,
 				}
 			}
