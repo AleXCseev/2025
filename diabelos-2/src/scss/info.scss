@@ -1,0 +1,300 @@
+.wrapper {
+    background-color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-left: 1px solid #e0f2ed;
+    border-right: 1px solid #e0f2ed;
+}
+
+.info__section {
+    width: 100%;
+    height: auto;
+}
+
+.info__section-wrapper {
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #de380f;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #095546;
+}
+
+.img__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    div {
+        width: auto;
+    }
+}
+
+.info__img {
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.text__small {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #095546;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #222;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.img__block-reverse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.info__prod {
+    width: 363px;
+    height: auto;
+}
+
+.text__big {
+    font-weight: 600;
+    font-size: 24px;
+    color: #095546;
+}
+
+.title__bg {
+    border-radius: 10px;
+    background: #0c6d5a;
+    padding: 10px 20px;
+    
+    .text {
+        color: #fff;
+    }
+}
+
+.alert {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.img__alert {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.alert__center {
+    align-items: center;
+
+    .img__alert {
+        margin-top: 0;
+    }
+}
+
+.green {
+    font-weight: 600;
+    color: #095546;
+}
+
+.info__imgs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 80px;
+
+    div {
+        width: auto;
+    }
+}
+
+.info__img-decor {
+    width: auto;
+}
+
+.yellow {
+    color: #ffea00;
+}
+
+.red {
+    color: #de380f;
+}
+
+.img__block-bg {
+    border-radius: 10px;
+    background: #9af3e1;
+    padding: 10px 20px;
+}
+
+.videos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-9 {
+    margin-bottom: 9px;
+}
+
+.mb-14 {
+    margin-bottom: 14px;
+}
+
+.mb-17 {
+    margin-bottom: 17px;
+}
+
+.mb-19 {
+    margin-bottom: 19px;
+}
+
+.mb-23 {
+    margin-bottom: 23px;
+}
+
+.mb-45 {
+    margin-bottom: 45px;
+}
+
+@media (max-width: 1160px) {
+    .info__img {
+        max-width: 400px;
+    }
+    .video {
+        width: 280px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .img__block {
+        flex-direction: column;
+        align-items: center !important;
+    }
+    .img__block-reverse {
+        flex-direction: column-reverse;
+        align-items: center !important;
+    }
+    .info__img {
+        max-width: 500px;
+    }
+    .info__imgs {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .videos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .video {
+        width: 100%;
+        max-width: 500px;
+    }
+    .alert__center {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        border: none;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__section-wrapper {
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+    }
+    .title {
+        font-size: 7vw;
+    }
+    .subtitle {
+        font-size: 5.5vw;
+    }
+    .info__img {
+        max-width: 100%;
+        border-radius: 7vw;
+    }
+    .text__small {
+        font-size: 4.5vw;
+    }
+    .text {
+        font-size: 4.8vw;
+    }
+    .title__bg {
+        border-radius: 2vw;
+        padding: 2.4vw 4.8vw;
+    }
+    .img__alert {
+        width: 9.8vw;
+        margin-right: 3vw;
+        margin-top: 1vw;
+    }
+    .info__img-decor {
+        max-width: 100%;
+    }
+    .videos {
+        gap: 4.8vw;
+    }
+    .video {
+        border-radius: 7vw;
+    }
+    .mb-5 {
+        margin-bottom: 1vw;
+    }
+    .mb-9 {
+        margin-bottom: 2vw;
+    }
+    .mb-14 {
+        margin-bottom: 3vw;
+    }
+    .mb-17 {
+        margin-bottom: 4vw;
+    }
+    .mb-19 {
+        margin-bottom: 4.5vw;
+    }
+    .mb-23 {
+        margin-bottom: 5.4vw;
+    }
+    .mb-45 {
+        margin-bottom: 10vw;
+    }
+}
