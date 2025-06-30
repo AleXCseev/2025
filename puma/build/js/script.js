@@ -66,6 +66,30 @@ var landingFunctions = {
 			changeImg(counter);
 		}, 3000)
 
+		$('.info__slider').owlCarousel({
+			items: 3,
+			margin: 10,
+			dots: false,
+			dotsEach: true,
+			nav: true,
+			loop: true,
+			autoHeight: false,
+			// autoplay: true,
+			// autoplayTimeout: 3000,
+			// autoplayHoverPause: true,
+			responsive:{
+				0:{
+					items:1,
+				},
+				700:{
+					items:2,
+				},
+				1080:{
+					items:3,
+				}
+			}
+		});
+
 		// $('.gallery__slider').owlCarousel({
 		// 	items: 1,
 		// 	margin: 20,
@@ -78,6 +102,7 @@ var landingFunctions = {
 		// 	// autoplayTimeout: 3000,
 		// 	// autoplayHoverPause: true,
 		// });
+
 
 		// $('.gallery__slider-mobile').owlCarousel({
 		// 	items: 1,

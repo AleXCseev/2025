@@ -1,0 +1,238 @@
+.info__section-wrapper {
+    padding-top: 130px;
+
+    .order__btn {
+        margin-top: -47px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.info__section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.info__section-title {
+    font-family: "Coolvetica", sans-serif;
+    width: 745px;
+    height: auto;
+    font-weight: 400;
+    font-size: 64px;
+    color: #1c1c1c;
+    flex-shrink: 0;
+
+    span {
+        color: #b8b0e4;
+    }
+}
+
+.info__tags {
+    width: 445px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px 15px;
+}
+
+.info__tag {
+    width: auto;
+    height: auto;
+    border: 1px solid #b8b0e4;
+    border-radius: 20px;
+    padding: 5px 25px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #b8b0e4;
+
+    &.active {
+        background: #b8b0e4;
+        color: #fff;
+    }
+}
+
+.info__slider-wrapper {
+    width: calc(100% + 280px);
+    height: auto;
+    overflow: hidden;
+}
+
+.info__slider {
+    width: calc(100% - 280px);
+
+    .owl-stage-outer {
+        overflow: visible;
+    }
+}
+
+.info__slide {
+}
+
+.info__slide-img {
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.info__slide-title {
+    font-weight: 600;
+    font-size: 26px;
+    color: #1c1c1c;
+    margin-bottom: 8px;
+}
+
+.info__slide-price {
+}
+
+.price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.new__price {
+    font-weight: 600;
+    font-size: 26px;
+    color: #e870a2;
+}
+
+.old__price {
+    font-weight: 400;
+    font-size: 18px;
+    color: #d4d0ef;
+    text-decoration: line-through;
+}
+
+.owl-nav {
+    width: 128px;
+    height: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 53px;
+
+    button {
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        background-color: #b8b0e4 !important;
+        background-image: url(../img/info-arrow.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+
+        span {
+            display: none;
+        }
+
+        &.owl-next {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .info__section-title {
+        width: 540px;
+        font-size: 48px;
+    }
+    .info__slide-title {
+        font-size: 22px;
+    }
+    .info__tags {
+        width: 445px;
+        gap: 15px 10px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .info__section-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__section-title {
+        width: 100%;
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+    .info__tags {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .info__section-wrapper .order__btn {
+        margin: auto;
+        margin-top: 40px;
+        position: relative;
+        z-index: 2;
+    }
+    .owl-nav {
+        width: 128px;
+        margin: auto;
+        margin-top: 28px;
+    }
+    .info__slider-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .info__slider {
+        width: 100%;
+        max-width: 400px;
+    }
+    .info__slider .owl-stage-outer {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__section-wrapper {
+        padding-top: 18vw;
+    }
+    .info__section-top {
+        margin-bottom: 7vw;
+    }
+    .info__section-title {
+        font-size: 9vw;
+        margin-bottom: 7vw;
+    }
+    .info__tags {
+        gap: 4.8vw 3.5vw;
+    }
+    .info__tag {
+        border-radius: 4.8vw;
+        padding: 1vw 6vw;
+        font-size: 4.5vw;
+    }
+    .info__slide-img {
+        border-radius: 7vw;
+        margin-bottom: 3.5vw;
+    }
+    .info__slide-title {
+        font-size: 6vw;
+        text-align: center;
+        margin-bottom: 2vw;
+    }
+    .price {
+        justify-content: center;
+        gap: 3.5vw;
+    }
+    .new__price {
+        font-size: 6vw;
+    }
+    .old__price {
+        font-size: 4.5vw;
+    }
+    .owl-nav {
+        margin-top: 7vw;
+    }
+    .info__section-wrapper .order__btn {
+        margin-top: 9.8vw;
+    }
+}

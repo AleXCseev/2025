@@ -1,0 +1,234 @@
+.info-2__section-wrapper {
+    padding: 130px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info__line {
+    width: 2005px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 345px;
+        height: auto;
+        opacity: 0.15;
+    }
+}
+
+.info-2__block {
+    margin: 50px 0;
+    position: relative;
+}
+
+.info-2__block-wrapper {
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/info-2-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    padding: 0 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-2__text {
+    font-weight: 400;
+    font-size: 64px;
+    color: #1c1c1c;
+}
+
+.info-2__text-bold {
+    font-weight: 700;
+}
+
+.info-2__text-line {
+    display: block;
+}
+
+.info-2__text-end {
+    display: block;
+    text-align: right;
+}
+
+.info-2__boot-1 {
+    position: absolute;
+    width: 126px;
+    height: auto;
+    bottom: 22px;
+    left: 490px;
+}
+
+.info-2__boot-2 {
+    position: absolute;
+    width: 190px;
+    height: auto;
+    bottom: 160px;
+    right: 93px;
+    transform: rotate(15deg);
+}
+
+.info-2__tag {
+    width: auto;
+    height: auto;
+    border: 1px solid #b8b0e4;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: 400;
+    font-size: 32px;
+    color: #b8b0e4;
+}
+
+.info-2__tag-1 {
+    position: absolute;
+    top: 21px;
+    right: 0;
+}
+
+.info-2__tag-2 {
+    position: absolute;
+    bottom: 21px;
+    left: 0;
+}
+
+
+@media (max-width: 1480px) {
+    .info-2__block-wrapper {
+        height: 485px;
+    }
+    .info-2__text {
+        font-size: 56px;
+    }
+    .info-2__boot-1 {
+        width: 126px;
+        bottom: 16px;
+        left: 430px;
+    }
+    .info-2__boot-2 {
+        width: 190px;
+        bottom: 128px;
+        right: 62px;
+    }
+    .info-2__tag-1 {
+        top: 12px;
+    }
+    .info-2__tag-2 {
+        bottom: 12px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .info-2__block-wrapper {
+        height: 404px;
+    }
+    .info-2__text {
+        font-size: 48px;
+    }
+    .info-2__boot-1 {
+        width: 110px;
+        bottom: 12px;
+        left: 348px;
+    }
+    .info-2__boot-2 {
+        width: 160px;
+        bottom: 102px;
+        right: 32px;
+    }
+    .info-2__tag {
+        font-size: 26px;
+    }
+    .info-2__tag-1 {
+        top: 8px;
+    }
+    .info-2__tag-2 {
+        bottom: 12px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .info-2__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 25px 0;
+    }
+    .info-2__block-wrapper {
+        height: auto;
+        border: 1px solid #b8b0e4;
+        border-radius: 50px;
+        background: #f4f3fb;
+        padding: 40px 20px 84px;
+    }
+    .info-2__tag {
+        position: static;
+        margin-top: 15px;
+    }
+    .info-2__text {
+        text-align: center;
+
+        span {
+            display: inline;
+        }
+    }
+    .info-2__boot-1 {
+        width: 110px;
+        bottom: 12px;
+        left: 76px;
+    }
+    .info-2__boot-2 {
+        width: 160px;
+        bottom: 6px;
+        right: 42px;
+    }
+    .info__line {
+        width: 1360px;
+    }
+    .info__line img {
+        width: 220px;
+    }
+}
+
+@media (max-width: 540px) {
+    .info-2__section-wrapper {
+        padding: 18vw 0;
+    }
+    .info__line {
+        width: 157vw;
+    }
+    .info__line img {
+        width: 27vw;
+    }
+    .info-2__block {
+        margin: 6vw 0;
+    }
+    .info-2__block-wrapper {
+        border-radius: 12vw;
+        padding: 9.8vw 6vw 21vw;
+    }
+    .info-2__text {
+        font-size: 9vw;
+    }
+    .info-2__boot-1 {
+        width: 24vw;
+        bottom: 2vw;
+        left: 4vw;
+    }
+    .info-2__boot-2 {
+        width: 26vw;
+        bottom: 7vw;
+        right: 2vw;
+    }
+    .info-2__tag {
+        margin-top: 3.5vw;
+    }
+    .info-2__tag {
+        font-size: 7vw;
+        padding: 2vw 7vw;
+    }
+}
