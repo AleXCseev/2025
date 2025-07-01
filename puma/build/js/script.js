@@ -3,7 +3,7 @@ var landingFunctions = {
 		this.initLibraris()
 		this.time()
 		this.getPrice()
-		// this.card()
+		this.card()
 		// this.modal()
 	}, 
 
@@ -90,18 +90,18 @@ var landingFunctions = {
 			}
 		});
 
-		// $('.gallery__slider').owlCarousel({
-		// 	items: 1,
-		// 	margin: 20,
-		// 	dots: false,
-		// 	dotsEach: true,
-		// 	nav: true,
-		// 	loop: true,
-		// 	autoHeight: true,
-		// 	// autoplay: true,
-		// 	// autoplayTimeout: 3000,
-		// 	// autoplayHoverPause: true,
-		// });
+		$('.gallery__slider, .gallery__mobile').owlCarousel({
+			items: 1,
+			margin: 20,
+			dots: true,
+			dotsEach: true,
+			nav: false,
+			loop: true,
+			// autoHeight: true,
+			// autoplay: true,
+			// autoplayTimeout: 3000,
+			// autoplayHoverPause: true,
+		});
 
 
 		// $('.gallery__slider-mobile').owlCarousel({
@@ -272,25 +272,29 @@ var landingFunctions = {
 	},
 
 	card: function() {
+		$('.card__normal .card__photos').owlCarousel({
+			items: 3,
+			margin: 15,
+			dots: true,
+			dotsEach: true,
+			nav: false,
+			loop: true,
+			autoHeight: false,
+		});
 
-		const getPrice = this.getPrice
+		$(".card__mobile").addClass("owl-carousel").owlCarousel({
+			items: 1,
+			margin: 15,
+			dots: true,
+			dotsEach: true,
+			nav: false,
+			loop: true,
+			autoHeight: false,
+		});
 
-		$(".card__color-btn").click(function() {
-			if($(this).hasClass("active")) return
-
-			const color = $(this).data("color")
-
-			$(this).closest(".card").find(".card__color-btn").removeClass("active")
+		$(".card__size").click(function() {
+			$(this).closest(".card").find(".card__size").removeClass("active")
 			$(this).addClass("active")
-			$(this).closest(".card").find(".card__gallery").hide().removeClass("active")
-			$(this).closest(".card").find(".card__gallery-" + color).fadeIn(300).addClass("active")
-
-			const id = $(this).data("id")
-			const price = $(this).data("price")
-			const currency = $(this).data("currency")
-
-			$(this).closest(".card").find(".new__price").text(price + " " + currency)
-			getPrice()
 		})
 	},
 
