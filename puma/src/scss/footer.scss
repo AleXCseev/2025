@@ -1,0 +1,238 @@
+.footer__section {
+    overflow: hidden;
+    border-radius: 50px 50px 0 0;
+    background: radial-gradient(153.85% 153.85% at 100% 100%, rgb(184, 176, 228) 0%, rgb(134, 122, 201) 100%);;
+}
+
+.footer__section-wrapper {
+    .header__info {
+        bottom: 77px;
+    }
+}
+
+.footer__content {
+    width: 740px;
+    height: auto;
+    position: relative;
+    padding: 90px 0 92px;
+}
+
+.footer__logo {
+    width: 95px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.footer__title {
+    font-family: "Coolvetica", sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer__text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.footer__text-big {
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.footer__date {
+    width: 242px;
+    height: auto;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer__boots {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 42px;
+}
+
+.footer__boot {
+    width: 182px;
+    height: auto;
+}
+
+.footer__decor {
+    position: absolute;
+    height: auto;
+}
+
+.footer__decor-1 {
+    width: 386px;
+    bottom: -66px;
+    right: -410px;
+}
+
+.footer__decor-2 {
+    width: 471px;
+    bottom: -125px;
+    right: -730px;
+}
+
+.footer__info {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+}
+
+@media (max-width: 1480px) {
+    .footer__content {
+        width: 640px;
+    }
+    .footer__title {
+        font-size: 54px;
+    }
+    .footer__decor-1 {
+        width: 350px;
+        bottom: -60px;
+        right: -360px;
+    }
+    .footer__decor-2 {
+        width: 422px;
+        bottom: -100px;
+        right: -655px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .footer__content {
+        width: 560px;
+    }
+    .footer__logo {
+        margin-bottom: 30px;
+    }
+    .footer__title {
+        font-size: 48px;
+    }
+    .footer__text-big {
+        font-size: 26px;
+    }
+    .footer__section-wrapper .header__info {
+        .header__info-wrapper {
+            padding: 0 20px 0 10px;
+        }
+    }
+    .header__info-title {
+        font-size: 20px;
+    }
+    .footer__decor-1 {
+        width: 340px;
+        bottom: -50px;
+        right: -325px;
+    }
+    .footer__decor-2 {
+        width: 400px;
+        bottom: -80px;
+        right: -600px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .footer__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding: 70px 0;
+    }
+    .footer__section-wrapper .header__info {
+        display: none;
+    }
+    .footer__boots {
+        justify-content: center;
+        display: none;
+    }
+    .footer__info {
+        display: none;
+    }
+    .footer__text-big {
+        display: none;
+    }
+    .footer__title {
+        text-align: center;
+        font-size: 56px;
+    }
+    .footer__text {
+        text-align: center;
+        margin-bottom: 400px;
+    }
+    .footer__decor-1 {
+        width: 270px;
+        bottom: -50px;
+        right: auto;
+        left: 70px;
+        z-index: -1;
+    }
+    .footer__decor-2 {
+        width: 318px;
+        bottom: -80px;
+        right: 70px;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer__decor-1 {
+        left: 0;
+    }
+    .footer__decor-2 {
+        right: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer__section {
+        border-radius: 12vw 12vw 0 0;
+    }
+    .footer__content {
+        padding: 7vw 0 17vw;
+    }
+    .footer__logo {
+        width: 16vw;
+        margin-bottom: 11vw;
+    }
+    .footer__title {
+        font-size: 8.5vw;
+        margin-bottom: 3.5vw;
+    }
+    .footer__text {
+        font-size: 4.5vw;
+        margin-bottom: 85vw;
+    }
+    .footer__decor-1 {
+        width: 50vw;
+        bottom: -2vw;
+        left: -4vw;
+    }
+    .footer__decor-2 {
+        width: 62vw;
+        bottom: -12vw;
+        right: -5vw;
+        z-index: -1;
+    }
+    .footer__date {
+        font-size: 4.5vw;
+        margin-top: 2vw;
+    }
+}

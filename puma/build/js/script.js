@@ -11,7 +11,7 @@ var landingFunctions = {
 		$('.new__price').each(function () {
 			var p = parseInt($(this).text());
 	        var currency = $(this).text().replace(/[0-9]/g, '');
-			p = p * 100 / 50;
+			p = p * 100 / 40;
 			p2 = Math.ceil(p);
 			$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
 		});
@@ -23,7 +23,7 @@ var landingFunctions = {
 			var fixedOffset = 0;
 
 			if($(window).width() <= 1080) {
-				var cardHeight = $(".card").outerHeight(false)
+				var cardHeight = $("#card-1").outerHeight(false)
 				var windowHeight = $(window).height()
 
 				$('html, body')
@@ -97,38 +97,23 @@ var landingFunctions = {
 			dotsEach: true,
 			nav: false,
 			loop: true,
-			// autoHeight: true,
-			// autoplay: true,
-			// autoplayTimeout: 3000,
-			// autoplayHoverPause: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
 		});
 
-
-		// $('.gallery__slider-mobile').owlCarousel({
-		// 	items: 1,
-		// 	margin: 20,
-		// 	dots: false,
-		// 	dotsEach: true,
-		// 	nav: true,
-		// 	loop: true,
-		// 	autoHeight: true,
-		// 	// autoplay: true,
-		// 	// autoplayTimeout: 3000,
-		// 	// autoplayHoverPause: true,
-		// });
-
-		// $('.review__slider').owlCarousel({
-		// 	items: 1,
-		// 	margin: 20,
-		// 	dots: false,
-		// 	dotsEach: true,
-		// 	nav: true,
-		// 	loop: true,
-		// 	autoHeight: true,
-		// 	// autoplay: true,
-		// 	autoplayTimeout: 5000,
-		// 	autoplayHoverPause: true,
-		// });
+		$('.review__slider').owlCarousel({
+			items: 1,
+			margin: 20,
+			dots: false,
+			dotsEach: true,
+			nav: true,
+			loop: true,
+			// autoHeight: true,
+			// autoplay: true,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause: true,
+		});
 	
 		AOS.init({
 			disable : function() {
