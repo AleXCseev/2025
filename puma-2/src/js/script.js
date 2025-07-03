@@ -19,58 +19,44 @@ var landingFunctions = {
 			e.preventDefault();
 		})
 
-		$('.gallery__slider').owlCarousel({
-			items: 3,
-			margin: 20,
-			dots: false,
+		$('.card__slider').owlCarousel({
+			items: 1,
+			margin: 0,
+			dots: true,
 			dotsEach: true,
 			nav: true,
 			loop: true,
-			center: true,
-			autoHeight: false,
-			autoplay: true,
-			autoplayTimeout: 3000,
-			autoplayHoverPause: true,
-			responsive:{
-				0:{
-					dots: true,
-					items: 1,
-					center: false,
-				},
-				700:{
-					dots: false,
-					items: 3,
-					center: true,
-				}
-			}
+			// autoplay: true,
+			// autoplayTimeout: 3000,
+			// autoplayHoverPause: true,
 		});
 
-		$('.review__slider').owlCarousel({
-			items: 3,
-			margin: 30,
-			dots: false,
-			dotsEach: true,
-			nav: true,
-			loop: true,
-			autoHeight: true,
-			autoplay: true,
-			autoplayTimeout: 5000,
-			autoplayHoverPause: true,
-			responsive:{
-				0: {
-					items: 1,
-					dots: true,
-				},
-				1081: {
-					items: 2,
-					dots: false,
-				},
-				1281:{
-					items: 3,
-					dots: false,
-				}
-			}
-		});
+		// $('.review__slider').owlCarousel({
+		// 	items: 3,
+		// 	margin: 30,
+		// 	dots: false,
+		// 	dotsEach: true,
+		// 	nav: true,
+		// 	loop: true,
+		// 	autoHeight: true,
+		// 	autoplay: true,
+		// 	autoplayTimeout: 5000,
+		// 	autoplayHoverPause: true,
+		// 	responsive:{
+		// 		0: {
+		// 			items: 1,
+		// 			dots: true,
+		// 		},
+		// 		1081: {
+		// 			items: 2,
+		// 			dots: false,
+		// 		},
+		// 		1281:{
+		// 			items: 3,
+		// 			dots: false,
+		// 		}
+		// 	}
+		// });
 
 		$.raty.path = $("body").data("path") +  '/img/raty';
 

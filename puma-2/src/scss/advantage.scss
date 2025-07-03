@@ -1,0 +1,254 @@
+.advantage__section {
+    overflow: hidden;
+    background: linear-gradient(90deg, #ffeef6 0%, #ffd3e8 100%);
+}
+
+.advantage__section-wrapper {
+    padding: 100px 0;
+    position: relative;
+}
+
+.advantage__decor {
+    position: absolute;
+    height: auto;
+}
+
+.advantage__decor-1 {
+    width: 395px;
+    top: 254px;
+    left: -450px;
+    transform: rotate(-15deg);
+}
+
+.advantage__decor-2 {
+    width: 90px;
+    bottom: 200px;
+    right: -190px;
+}
+
+.advantage__block {
+    width: 466px;
+    height: auto;
+    position: relative;
+}
+
+.advantage__item {
+    border-left: 10px solid #e994bc;
+    border-radius: 30px;
+    background: #fffcf3;
+    padding: 32px 30px 32px 40px;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.advantage__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    color: #7c395a;
+    margin-bottom: 15px;
+}
+
+.advantage__item-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #111;
+}
+
+.advantage__logo {
+    width: 227px;
+    height: auto;
+    position: absolute;
+    top: 33px;
+    right: -644px;
+}
+
+.advantage__img {
+    position: absolute;
+    height: auto;
+    width: 337px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.advantage__img-1 {
+    top: 0;
+    right: -377px;
+    z-index: 1;
+}
+
+.advantage__img-2 {
+    // top: 180px;
+    right: -674px;
+    bottom: 0;
+}
+
+.advantage__order {
+    width: 267px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: -307px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header__order-text {
+        font-size: 20px;
+        color: #7c395a;
+    }
+
+    .header__order-discount {
+        font-size: 70px;
+        color: #7c395a;
+        margin: -10px 0;
+    }
+
+    .header__order-discount span {
+        font-size: 16px;
+        top: 22px;
+        left: 4px;
+    }
+
+    .order__btn {
+        background: #7c395a;
+        font-size: 16px;
+        padding: 16px;
+        color: #fff;
+
+        &:hover {
+            background: #fffcf3;
+            color: #7c395a;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .advantage__img {
+        width: 300px;
+    }
+    .advantage__img-1 {
+        right: -340px;
+    }
+    .advantage__img-2 {
+        right: -580px;
+    }
+    .advantage__logo {
+        width: 210px;
+        top: 33px;
+        right: -585px;
+    }
+    .advantage__order {
+        width: 230px;
+        right: -270px;
+    }
+    .advantage__block {
+        width: 450px;
+    }
+    .advantage__item {
+        border-radius: 30px;
+        padding: 25px 20px 25px 30px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .advantage__block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .advantage__item-title {
+        font-size: 26px;
+        text-align: center;
+    }
+    .advantage__item-text {
+        font-size: 20px;
+        text-align: center;
+    }
+    .advantage__img {
+        width: 340px;
+        position: static;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        margin-bottom: 40px;
+    }
+    .advantage__order {
+        width: 270px;
+        position: static;
+        bottom: auto;
+        right: auto;
+    }
+    .advantage__logo {
+        position: static;
+        top: auto;
+        right: auto;
+        margin-bottom: 30px;
+    }
+    .advantage__decor-2 {
+        display: none;
+    }
+    .advantage__decor-1 {
+        top: auto;
+        bottom: 0px;
+        width: 270px;
+        left: -50px;
+    }
+}
+
+@media (max-width: 540px) {
+    .advantage__section-wrapper {
+        padding: 12vw 0;
+    }
+    .advantage__logo {
+        width: 54vw;
+        margin-bottom: 7vw;
+    }
+    .advantage__item {
+        border-radius: 7vw;
+        padding: 5vw 4.8vw 5vw 7vw;
+        margin-bottom: 7vw;
+    }
+    .advantage__img {
+        width: 100%;
+        margin-bottom: 7vw;
+    }
+    .advantage__item-title {
+        font-size: 5.8vw;
+        margin-bottom: 1vw;
+    }
+    .advantage__item-text {
+        font-size: 4.8vw;
+    }
+    .advantage__order {
+        width: 100%;
+    }
+    .advantage__order .header__order-text {
+        font-size: 4.8vw;
+    }
+    .advantage__order .header__order-discount {
+        font-size: 17vw;
+        margin: -2vw 0;
+    }
+    .advantage__order .header__order-discount span {
+        font-size: 3.5vw;
+        top: 6vw;
+        left: 1vw;
+    }
+    .advantage__order .order__btn {
+        font-size: 4.5vw;
+        padding: 4.5vw;
+        border-radius: 4.8vw;
+    }
+    .advantage__decor-1 {
+        top: auto;
+        bottom: 1vw;
+        width: 51vw;
+        left: -20vw;
+    }
+}

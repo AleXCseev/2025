@@ -1,0 +1,246 @@
+.info__section {
+    background: linear-gradient(90deg, #fffcf3 0%, #fef1e1 100%);
+}
+
+.info__section-wrapper {
+    padding: 90px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.info__decor {
+    position: absolute;
+    height: auto;
+}
+
+.info__decor-1 {
+    width: 395px;
+    top: 162px;
+    right: -415px;
+    transform: scaleX(-1);
+}
+
+.info__decor-2 {
+    width: 176px;
+    top: 200px;
+    left: -160px;
+}
+
+.info__section-title {
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #7c395a;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 554px;
+}
+
+.info__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.info__block-items {
+    width: 545px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    position: relative;
+}
+
+.info__boot {
+    position: absolute;
+    height: auto;
+}
+
+.info__boot-1 {
+    width: 703px;
+    top: 20px;
+    left: -12px;
+}
+
+.info__boot-2 {
+    width: 688px;
+    top: 0;
+    right: -18px;
+}
+
+.info__logo {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.info__item {
+    width: 260px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.info__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+    color: #111;
+}
+
+.info__item-img {
+    width: 100%;
+    height: auto;
+}
+
+.info__item-1 {
+    align-self: flex-end;
+}
+
+.info__item-2 {
+    flex-direction: column-reverse;
+}
+
+.info__item-3 {
+}
+
+.info__item-4 {
+    flex-direction: column-reverse;
+    align-self: flex-end;
+}
+
+@media (max-width: 1280px) {
+    .info__block-items {
+        width: 480px;
+    }
+    .info__item {
+        width: 235px;
+    }
+    .info__boot-1 {
+        width: 600px;
+        top: 40px;
+        left: -12px;
+    }
+    .info__boot-2 {
+        width: 612px;
+        top: 15px;
+        right: -18px;
+    }
+    .info__logo {
+        width: 450px;
+    }
+    .info__decor-1 {
+        width: 340px;
+        top: 140px;
+        right: -250px;
+    }
+    .info__decor-2 {
+        width: 176px;
+        top: 200px;
+        left: -100px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .info__block {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .info__block-items {
+        width: 100%;
+        align-items: center;
+        gap: 0;
+    }
+    .info__item {
+        align-self: center !important;
+        flex-direction: column-reverse !important;
+        margin-bottom: 33px;
+    }
+    .info__boot {
+        position: static;
+        top: auto;
+        right: auto;
+        margin: -20px 0 -30px;
+    }
+    .info__boot-2 {
+        margin-top: -80px;
+    }
+    .info__section-title {
+        margin-bottom: 0;
+    }
+    .info__block {
+        gap: 0;
+    }
+    .info__logo {
+        bottom: 30%;
+        transform: translate(-50%, -50%);
+    }
+    .info__decor-1 {
+        width: 340px;
+        top: auto;
+        bottom: 60px;
+        right: -250px;
+    }
+    .info__decor-2 {
+        width: 176px;
+        top: 240px;
+        left: auto;
+        right: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .info__section-wrapper {
+        padding: 10vw 0 2vw;
+    }
+    .info__section-title {
+        font-size: 7vw;
+    }
+    .info__boot-1 {
+        width: 120vw;
+        margin: -8vw 0px -10vw;
+        margin-left: 16vw;
+    }
+    .info__decor-2 {
+        width: 42vw;
+        top: 50vw;
+        right: 0;
+    }
+    .info__item {
+        width: 63vw;
+        margin-bottom: 8vw;
+        gap: 3vw;
+    }
+    .info__item-title {
+        font-size: 5.8vw;
+    }
+    .info__boot-2 {
+        width: 120vw;
+        margin: -5vw 0 -7vw;
+        margin-right: 16vw;
+    }
+    .info__logo {
+        width: 100%;
+        bottom: 32%;
+    }
+    .info__decor-1 {
+        width: 68vw;
+        top: auto;
+        bottom: 29vw;
+        right: -20vw;
+    }
+}
