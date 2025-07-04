@@ -2,8 +2,6 @@ var landingFunctions = {
 	init: function() {
 		this.initLibraris()
 		this.time()
-		// this.modal()
-		// this.quantity()
 	}, 
 
 	initLibraris: function() {
@@ -20,47 +18,48 @@ var landingFunctions = {
 			e.preventDefault();
 		});
 
-		$('.new__price').each(function () {
-			var newPrice = parseInt($(this).text());
-	        var currency = $(this).text().replace(/[0-9]/g, '');
-			p = newPrice * 100 / 40;
-			p2 = Math.ceil(p);
-			$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
-			$(this).closest('.order__block').find('.result').text(p2 - newPrice + " " + currency);
-		});
+		function priceWithDiscount (targetPrice, discount) {
+			let re = /[0-9\s.,]+/g;
+			let result = targetPrice.match(re);
+			if (result.length > 0) {
+				let hasDots = result[0].indexOf(".") > -1;
+				let priceNumber = result[0].replace(/(\.|,|\s)/g, "");
+				console.log(priceNumber)
+				let discountPrice = Math.ceil(priceNumber * 100 / (100 - discount));
+				let newPrice = hasDots
+					? ("" + discountPrice).replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+					: discountPrice;
+				return targetPrice.replace(re, newPrice);
+			}
+			return targetPrice;
+		}
 
-		$(".card__slider").owlCarousel({
+		$(".new__price").each(function() {
+			var price = $(this).text().trim()
+			$(this).closest(".price").find(".old__price").text(priceWithDiscount(price, 50))
+			$(this).text(priceWithDiscount(price, 0))
+		})
+
+		var owl = $(".review__slider").owlCarousel({
 			loop: true,
 			margin: 40,
 			nav: true,
 			items: 1,
-			dots: true,
+			dots: false,
 			dotsEach: true,
 			autoHeight: true,
-			autoplay: true,
-			autoplayTimeout: 3000,
-			autoplayHoverPause: true
+			// autoplay: true,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause: true
+			onInitialized: function(e) {
+				$('.slider__number').text(this.items().length)
+			}
+
 		})
 
-		$(".review__slider").owlCarousel({
-			loop: true,
-			margin: 40,
-			nav: true,
-			items: 1,
-			dots: true,
-			dotsEach: true,
-			autoHeight: true,
-			autoplay: true,
-			autoplayTimeout: 5000,
-			autoplayHoverPause: true
-		})
-
-		$.raty.path = $("body").data("path") +  '/img/raty';
-
-		$('.modal__raiting').raty({
-			half: true,
-			space: false,
-			number: 5,
+		owl.on("changed.owl.carousel", function(e) {
+			var index = e.relatedTarget.relative(e.item.index);
+			$(this).closest(".review__section").find(".slider__number-current").html(index + 1);
 		});
 
 		$('[data-fancybox]').fancybox({
@@ -132,90 +131,6 @@ var landingFunctions = {
 		}
 
 		$(".date").text(getDate(7))
-	},
-
-	modal: function() {
-		function modal() {
-			$(".add__review").click(function () {
-				$(".modal__review").addClass("active")
-			})
-	
-			function close() {
-				$(".modal__review").removeClass("active")
-			}
-	
-			$(".modal__review").click( function(e) {
-				var target = e.target;
-				if(target.classList.contains("modal__close")) {
-					close()
-				}
-				if(target.classList.contains("modal")) {
-					close()
-				}
-			})
-	
-			function readURL(input) {
-				if (input.files && input.files[0]) {
-					var reader = new FileReader();
-					console.log(reader)
-					reader.onload = function (e) {
-						$('.file img').attr('src', e.target.result).css("display", "block");
-					};
-					reader.readAsDataURL(input.files[0]);
-				}
-			}
-	
-			$(".modal__review .input__file").on("change", function () {
-				readURL(this);
-			});
-	
-			$(".modal__review form").submit(function (e) {
-				e.preventDefault()
-				$(this).removeClass("active");
-				$(".send__window").addClass("active");
-				$(".modal__review .name__input").val("")
-				$(".modal__review .modal__area").val("")
-				$(".modal__review .file img").attr("src", "").css("display", "none")
-				delayClose()
-			})
-			function delayClose() {
-				setTimeout(function () {
-					$(".modal__review form").addClass("active");
-					$(".send__window").removeClass("active");
-					close();
-				}, 5000);
-			}
-		}
-	
-		modal()
-	},
-
-	quantity: function() {
-		var currentNumber;
-
-		function getRandomInt(max) {
-			return Math.floor(Math.random() * Math.floor(max));
-		}
-
-		if(localStorage.getItem("quantity")) {
-			$(".quantity").text(localStorage.getItem("quantity") + " шт.");
-		} else {
-			currentNumber = 25
-			localStorage.setItem("quantity", currentNumber)
-			$(".quantity").text(currentNumber + " шт.");
-		}
-
-		setInterval(function () {
-			currentNumber = localStorage.getItem("quantity");
-			if (currentNumber >= 3) {
-				currentNumber = currentNumber - getRandomInt(3);
-				$(".quantity").text(currentNumber + " шт.");
-				localStorage.setItem("quantity", currentNumber)
-			} else {
-				currentNumber = 25;
-				localStorage.setItem("quantity", currentNumber)
-			}
-		}, 100000)
 	},
 
 }

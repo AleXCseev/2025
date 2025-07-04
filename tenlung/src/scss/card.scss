@@ -1,0 +1,243 @@
+
+.card__section-wrapper {
+    padding: 30px 0 42px;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 42px;
+}
+
+.card__title {
+    width: 100%;
+    height: auto;
+    padding: 12px 30px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background: #ff4d00;
+}
+
+.card__wrapper {
+    background: #ffd587;
+    padding: 13px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__prod {
+    width: 216px;
+    height: auto;
+    margin-bottom: 3px;
+}
+
+.card__price {
+    width: 100%;
+    height: auto;
+    margin-bottom: 11px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.old__price {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+    padding: 0 10px;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background: #f00;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.new__price {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #de1a00;
+}
+
+.card__form {
+    width: 100%;
+    height: auto;    
+}
+
+.card__input-wrapper {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 55px;
+        height: 100%;
+        background: #0d45ba;
+        border-radius: 30px 0 0 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.card__input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #0d45ba;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    color: #111;
+    padding: 0 20px 0 70px;
+    transition: 0.3s ease;
+    background-color: transparent;
+
+    &:focus {
+        background: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.name:before {
+    background-image: url(../img/name.png);
+}
+
+.phone:before {
+    background-image: url(../img/phone.png);
+}
+
+.home:before {
+    background-image: url(../img/home.png);
+}
+
+.card__submit {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.card__info {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #111;
+    margin-top: 15px;
+}
+
+.doctor__title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #de1a00;
+    margin-bottom: 11px;
+}
+
+.doctor__photo {
+    width: 231px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 13px;
+}
+
+.doctor__subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #04318e;
+    margin-bottom: 8px;
+}
+
+.doctor__subtitle-second {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #111;
+    margin-bottom: 17px;
+}
+
+.doctor__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #111;
+
+    &:last-of-type {
+        margin-bottom: 34px;
+    }
+}
+
+.doctor__subtitle-black {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+    margin-bottom: 16px;
+}
+
+.list {
+    margin-bottom: 20px;
+}
+
+.list__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 17px;
+
+    img {
+        width: 30px;
+        height: auto;
+        flex-shrink: 0;
+        margin-top: 7px;
+        margin-right: 15px;
+    }
+}
+
+.list__item-title {
+    font-weight: 600;
+    font-size: 24px;
+    color: #04318e;
+    margin-bottom: 8px;
+}
+
+.list__item-text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #111;
+}
+
+.sert__title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #de1a00;
+    margin-bottom: 11px;
+}
+
+.sert__img {
+    width: 100%;
+    height: auto;
+}
