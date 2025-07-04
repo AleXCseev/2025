@@ -31,32 +31,29 @@ var landingFunctions = {
 			// autoplayHoverPause: true,
 		});
 
-		// $('.review__slider').owlCarousel({
-		// 	items: 3,
-		// 	margin: 30,
-		// 	dots: false,
-		// 	dotsEach: true,
-		// 	nav: true,
-		// 	loop: true,
-		// 	autoHeight: true,
-		// 	autoplay: true,
-		// 	autoplayTimeout: 5000,
-		// 	autoplayHoverPause: true,
-		// 	responsive:{
-		// 		0: {
-		// 			items: 1,
-		// 			dots: true,
-		// 		},
-		// 		1081: {
-		// 			items: 2,
-		// 			dots: false,
-		// 		},
-		// 		1281:{
-		// 			items: 3,
-		// 			dots: false,
-		// 		}
-		// 	}
-		// });
+		$('.review__slider').owlCarousel({
+			items: 3,
+			margin: 30,
+			dots: true,
+			dotsEach: true,
+			nav: true,
+			loop: true,
+			autoHeight: true,
+			// autoplay: true,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause: true,
+			responsive:{
+				0: {
+					items: 1,
+				},
+				1081: {
+					items: 2,
+				},
+				1281:{
+					items: 3,
+				}
+			}
+		});
 
 		$.raty.path = $("body").data("path") +  '/img/raty';
 
