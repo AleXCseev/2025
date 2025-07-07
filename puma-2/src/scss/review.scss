@@ -109,3 +109,75 @@
     z-index: 2;
     margin-right: 30px;
 }
+
+
+@media (max-width: 700px) {
+    .add__review {
+        position: static;
+        align-self: center;
+        margin-top: 8px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .review__decor-1 {
+        width: 285px;
+        top: 40px;
+        left: -150px;
+    }
+    .review__section-title {
+        position: relative;
+        z-index: 1;
+    }
+    .review__decor-2 {
+        width: 160px;
+        top: 90px;
+        right: -15px;
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 540px) {
+    .review__section-wrapper {
+        padding: 10vw 0 11vw;
+    }
+    .review__decor-1 {
+        width: 60vw;
+        top: 11vw;
+        left: -38vw;
+    }
+    .review__decor-2 {
+        width: 42vw;
+        top: 17vw;
+    }
+    .review__section-title {
+        font-size: 7vw;
+        margin-bottom: 5vw;
+    }
+    .review {
+        border-radius: 7vw;
+        padding: 7vw 7vw 5.5vw;
+    }
+    .review__quote {
+        width: 10vw !important;
+        margin-bottom: 3vw;
+    }
+    .review__text {
+        font-size: 4.8vw;
+        margin-bottom: 2vw;
+    }
+    .review__footer {
+        padding-top: 3.5vw;
+    }
+    .review__name {
+        font-size: 4.8vw;
+    }
+    .review__slider .owl-nav {
+        max-width: 100%;
+        margin-top: 4.8vw;
+        padding: 0 4.8vw
+    }
+    .add__review {
+        margin-top: 2vw;
+        font-size: 4vw;
+    }
+}

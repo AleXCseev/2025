@@ -153,8 +153,8 @@
     pointer-events: none;
 
     span {
-        font-size: 20px;
-        position: absolute;
+        font-size: 32px;
+        position: static;
         top: 29px;
         left: 5px;
     }
@@ -330,7 +330,7 @@
         margin: -3vw 0;
     }
     .header__order-discount span {
-        font-size: 4.8vw;
+        font-size: 7vw;
         top: 7vw;
         left: 1vw;
     }

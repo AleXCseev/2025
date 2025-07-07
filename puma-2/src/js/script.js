@@ -1,7 +1,7 @@
 var landingFunctions = {
 	init: function() {
 		this.initLibraris()
-		this.time()
+		// this.time()
 		this.modal()
 	}, 
 
