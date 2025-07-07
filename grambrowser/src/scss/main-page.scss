@@ -1,0 +1,328 @@
+.main__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.bg__shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #0c0d14 0%, rgba(12, 13, 20, 0.7) 100%);
+}
+
+.header__section {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(180deg, #0a0b11 11%, rgba(10, 11, 17, 0) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.header__section-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 5.6rem 0 6.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__about-link {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: "Haval", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #fff;
+
+    img {
+        width: 1.75rem;
+        height: auto;
+    }
+}
+
+.header__right {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header__enter-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: "Haval", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #fff;
+
+    img {
+        width: 1.75rem;
+        height: auto;
+    }
+}
+
+.header__lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.header__lang-flag {
+    width: 1.75rem;
+    height: auto;
+}
+
+.header__lang-arrow {
+    width: 1rem;
+    height: auto;
+}
+
+.main__section {
+    width: 100%;
+    height: 100%;
+}
+
+.main__section-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.main__wrapper {
+    margin-top: -8.125rem;   
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2.6rem;
+}
+
+.main__subtitle {
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 1.18em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.4rem;
+    transform: translateY(-10rem);
+    opacity: 0;
+    animation-delay: 0.3s;
+    animation: title 2s forwards;
+}
+
+@keyframes title {
+    0% {
+        transform: translateY(-10rem) scale(0.3);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.main__title {
+    font-family: "Wormbox", sans-serif;
+    font-weight: 700;
+    font-size: 7.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3.125rem;
+    animation: title 2s forwards;
+}
+
+.main__gamepad-link {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: "Haval", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    pointer-events: auto;
+
+    img {
+        width: 4rem;
+        height: auto;
+    }
+}
+
+.play {
+    width: auto;
+    height: auto;
+    background: linear-gradient(180deg, rgba(186, 250, 86, 0.4) 0%, rgba(186, 250, 86, 0.05) 100%);
+    backdrop-filter: blur(5px);
+    border-radius: 2.5rem;
+    padding: 1.125rem 3rem 0.8rem;
+    box-shadow: 0 5px 5px 0 rgba(1, 6, 21, 0.5);
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+
+    span {
+        font-family: "Haval", sans-serif;
+        font-weight: 400;
+        font-size: 1.875rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 2.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(0deg, rgba(186, 250, 86, 0.4) 0%, rgba(186, 250, 86, 0.05) 100%);
+        backdrop-filter: blur(5px);
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+
+    &:after {
+        content: "";
+        width: 5.125rem;
+        height: 2px;
+        position: absolute;
+        z-index: 2;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 1px 5px 0 #bafa56;
+        background: #bafa56;
+        border-radius: 2px;
+    }
+
+    &:hover {
+        background: transparent;
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+.navigation__section {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(0deg, #0a0b11 11%, rgba(10, 11, 17, 0) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.navigation__section-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 2.875rem 0 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #0c0d14;
+    backdrop-filter: blur(4px);
+    padding: 1.8rem 2rem 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 1rem;
+}
+
+.navigation__link {
+    width: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    font-size: 0.45rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 6.125rem;
+        height: 4.8125rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        background-image: url(../img/nav/nav-active.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+
+    &:after {
+        content: "";
+        width: 1.5rem;
+        height: 2px;
+        box-shadow: 0 1px 5px 0 #bafa56;
+        background: #bafa56;
+        border-radius: 2px;
+        position: absolute;
+        top: -0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+
+    img {
+        width: auto;
+        height: 2rem;
+    }
+
+    &.active {
+        &:before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        &:after {
+            opacity: 1;
+        }
+    }
+
+}
+
