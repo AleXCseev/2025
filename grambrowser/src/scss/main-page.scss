@@ -57,6 +57,39 @@
     justify-content: flex-end;
     align-items: center;
     gap: 3rem;
+    position: relative;
+}
+
+.user {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.7rem;
+   
+}
+
+.user__character {
+    width: 1.75rem;
+    height: auto;
+}
+
+.user__name {
+    font-family: "Haval", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.logout {
+    width: 1.75rem;
+    height: auto;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .header__enter-link {
@@ -76,21 +109,86 @@
 }
 
 .header__lang {
-    display: flex;
+    display: flex !important;
+    width: auto;
+    height: auto;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
     cursor: pointer;
+
+    &.active {
+        .header__lang-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    .header__lang-flag {
+        width: 1.75rem;
+        height: auto;
+    }
+
+    .header__lang-arrow {
+        width: 1rem;
+        height: auto;
+        transition: 0.3s ease;
+    }
 }
 
-.header__lang-flag {
+
+.lang__modal {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+    width: auto;
+    height: auto;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: #0c0d14;
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 100;
+    pointer-events: none;
+
+    &.active {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &:before {
+        content: "";
+        width: 21px;
+        height: 12px;
+        transform: rotate(180deg);
+        position: absolute;
+        top: -12px;
+        right: 1.5rem;
+        background-image: url(../img/modal-tringle.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.lang__modal-btn {
+    display: inline-block;
     width: 1.75rem;
     height: auto;
-}
+    pointer-events: auto;
 
-.header__lang-arrow {
-    width: 1rem;
-    height: auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .main__section {
@@ -107,15 +205,15 @@
     justify-content: space-between;
     position: relative;
     z-index: 1;
+    padding-bottom: 2rem;
 }
 
 .main__wrapper {
-    margin-top: -8.125rem;   
+    margin-top: -7.6rem;   
     pointer-events: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2.6rem;
 }
 
 .main__subtitle {
@@ -182,6 +280,7 @@
     backdrop-filter: blur(5px);
     border-radius: 2.5rem;
     padding: 1.125rem 3rem 0.8rem;
+    border: 1px solid #25262d;
     box-shadow: 0 5px 5px 0 rgba(1, 6, 21, 0.5);
     cursor: pointer;
     position: relative;
@@ -207,7 +306,7 @@
         top: 0;
         left: 0;
         z-index: 1;
-        background: linear-gradient(0deg, rgba(186, 250, 86, 0.4) 0%, rgba(186, 250, 86, 0.05) 100%);
+        background: linear-gradient(180deg, rgba(186, 250, 86, 0.4) 0%, rgba(186, 250, 86, 0.2) 100%);
         backdrop-filter: blur(5px);
         opacity: 0;
         transition: 0.5s ease;
@@ -225,13 +324,24 @@
         box-shadow: 0 1px 5px 0 #bafa56;
         background: #bafa56;
         border-radius: 2px;
+        animation: btn-light 3s infinite;
     }
 
     &:hover {
-        background: transparent;
+        background: #000;
+
         &:before {
             opacity: 1;
         }
+    }
+}
+
+@keyframes btn-light {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
     }
 }
 
@@ -257,7 +367,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     background: #0c0d14;
     backdrop-filter: blur(4px);
     padding: 1.8rem 2rem 1.6rem;
@@ -265,8 +375,68 @@
     gap: 1rem;
 }
 
+.social__modal {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -6.5rem;
+    left: 50%;
+    width: auto;
+    height: auto;
+    gap: 2rem;
+    padding: 1rem 1.4rem;
+    background: #0c0d14;
+    backdrop-filter: blur(4px);
+    border-radius: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, 10%);
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 100;
+    pointer-events: none;
+
+    &.active {
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &:before {
+        content: "";
+        width: 21px;
+        height: 12px;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        background-image: url(../img/modal-tringle.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.social__link {
+    display: block;
+    width: auto;
+    height: 1.43rem;
+    cursor: pointer;
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.navigation__link-wrapper {
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
 .navigation__link {
     width: 4.5rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -321,8 +491,149 @@
         }
         &:after {
             opacity: 1;
+            animation: btn-light 3s infinite;
         }
     }
 
 }
 
+@media (max-width: 1480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 14px;
+    }
+    .container {
+        width: 50rem;
+    }
+    .main__wrapper {
+        margin-top: 0;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1080px) {
+    html {
+        font-size: 1.4vw;
+    }
+    .header__section-wrapper {
+        padding: 2rem 0 2rem;
+    }
+    .main__subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 1em;
+        margin-bottom: 1rem;
+    }
+    .main__title {
+        font-size: 5.5rem;
+        margin-bottom: 0.125rem;
+    }
+    .main__gamepad-link img {
+        width: 3rem;
+    }
+    .navigation__section-wrapper {
+        width: 100%;
+        padding: 0rem 0 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100vw;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 3vw;
+    }
+    .main__wrapper {
+        margin-top: -3rem;
+        z-index: auto;
+    }
+    .main__bg {
+        display: none;
+    }
+    .bg__shadow {
+        display: none;
+    }
+    .site__wrapper {
+        background-image: url(../img/mobile-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .header__right {
+        gap: 2rem;
+    }
+    .header__about-link img {
+        width: 1.85rem;
+    }
+    .user__character {
+        width: 1.85rem;
+    }
+    .logout {
+        width: 1.85rem;
+    }
+    .header__lang-flag {
+        width: 1.85rem;
+    }
+    .header__right {
+        gap: 1.5rem;
+    }
+    .main__subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 0.91em;
+        margin-bottom: 1rem;
+    }
+    .main__title {
+        font-size: 4.8rem;
+        margin-bottom: 2rem;
+    }
+    .header__section {
+        position: relative;
+        z-index: 2;
+    }
+    .lang__modal {
+        position: fixed;
+        top: 9rem;
+        right: 15px;
+        bottom: auto;
+    }
+    .navigation__section-wrapper {
+        padding: 0rem 0 2rem;
+    }
+    .navigation__section {
+        .container {
+            padding: 0;
+        }
+    }
+    .navigation {
+        width: 100%;
+    }
+    .navigation__link {
+        width: 5.2rem;
+    }
+    .social__modal {
+        left: 0;
+        transform: translate(0, 10%);
+    }
+    .social__modal.active {
+        transform: translate(0, 0);
+        left: 0;
+    }
+    .social__modal:before {
+        transform: none;
+        left: 1.6rem;
+    }
+}

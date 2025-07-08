@@ -9,14 +9,43 @@
                 <span>О токене</span>
             </a>
             <div class="header__right">
-                <a href="#" class="header__enter-link">
+                <div class="user">
+                    <img class="user__character" src="img/user-character.png" alt="">
+                    <span class="user__name">Nickname</span>
+                    <button class="logout">
+                        <img src="img/out-icon.svg" alt="">
+                    </button>
+                </div>
+                <!-- <a href="#" class="header__enter-link">
                     <span>Вхід</span>
                     <img src="img/enter-icon.svg" alt="">
-                </a>
-                <button type="button" class="header__lang">
-                    <img class="header__lang-flag" src="img/flag/ua.svg" alt="">
-                    <img src="img/arrow-icon.svg" alt="" class="header__lang-arrow">
-                </button>
+                </a> -->
+                <div class="header__lang-wrapper">
+                     <button type="button" class="header__lang">
+                        <img class="header__lang-flag" src="img/flag/ua.svg" alt="">
+                        <img src="img/arrow-icon.svg" alt="" class="header__lang-arrow">
+                    </button>
+                    <div class="lang__modal">
+                        <a href="#" class="lang__modal-btn">
+                            <img src="img/flag/ua.svg" alt="">
+                        </a>
+                        <a href="#" class="lang__modal-btn">
+                            <img src="img/flag/en.svg" alt="">
+                        </a>
+                        <a href="#" class="lang__modal-btn">
+                            <img src="img/flag/hi.svg" alt="">
+                        </a>
+                        <a href="#" class="lang__modal-btn">
+                            <img src="img/flag/id.svg" alt="">
+                        </a>
+                        <!-- <a href="#" class="lang__modal-btn">
+                            <img src="img/flag/ru.svg" alt="">
+                        </a> -->
+                        <a href="#" class="lang__modal-btn">
+                            <img src="img/flag/sp.svg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -48,15 +77,31 @@
     <div class="container">
         <div class="navigation__section-wrapper">
             <nav class="navigation">
-                <a href="#" class="navigation__link">
-                    <img src="img/nav/icon-1.svg" alt="">
-                    <span>соцмережі</span>
-                </a>
+                <div class="navigation__link-wrapper">
+                    <button type="button" class="navigation__link social__link">
+                        <img src="img/nav/icon-1.svg" alt="">
+                        <span>соцмережі</span>
+                    </button>
+                    <div class="social__modal">
+                        <a href="#" class="social__link">
+                            <img src="img/social/facebook-icon.svg" alt="">
+                        </a>
+                        <a href="#" class="social__link">
+                            <img src="img/social/insta-icon.svg" alt="">
+                        </a>
+                        <a href="#" class="social__link">
+                            <img src="img/social/tumblr-icon.svg" alt="">
+                        </a>
+                        <a href="#" class="social__link">
+                            <img src="img/social/telegram-icon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
                 <a href="#" class="navigation__link">
                     <img src="img/nav/icon-2.svg" alt="">
                     <span>підтримка</span>
                 </a>
-                <a href="#" class="navigation__link active">
+                <a href="#" class="navigation__link navigation__home active">
                     <img src="img/nav/icon-3.svg" alt="">
                     <span>Головна</span>
                 </a>
