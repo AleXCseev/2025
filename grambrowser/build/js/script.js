@@ -43,62 +43,46 @@ var landingFunctions = {
 
 	modal: function() {
 		$(".main__gamepad-link").click(function() {
-			$(".modal__overlay").fadeIn(300)
+			$(".modal__overlay").addClass("active")
 		})
 
 		$(".close__modal").click(function() {
-			$(".modal__overlay").fadeOut(300)
+			$(".modal__overlay").removeClass("active")
 		})
 
 		$(".modal__overlay").click(function(e) {
 			if (!$(e.target).hasClass("modal__overlay")) {
 				return
 			}
-			$(".modal__overlay").fadeOut(300)
+			$(".modal__overlay").removeClass("active")
 		})
 
 		var owl = $(".modal__slider").owlCarousel({
 			items: 1,
 			margin: 20,
 			dots: false,
-			nav: false,
-			loop: true,
-			mouseDrag: false,
-			touchDrag: false,
-			animateIn: 'fadeIn',
-			animateOut: 'fadeOut',
-			smartSpeed: 0,
+			nav: true,
+			// loop: true,
+			// mouseDrag: false,
+			// touchDrag: false,
+			// animateIn: 'fadeIn',
+			// animateOut: 'fadeOut',
+			smartSpeed: 100,
 		});
 
 		$(".modal__navigation-item").each(function() {
 			$(this).click(function() {
 				$(".modal__navigation-item").removeClass("active")
 				var position = $(this).data("slide") - 1
-				owl.trigger("to.owl.carousel", [position, 300])
+				owl.trigger("to.owl.carousel", [position, 100])
 				$(`[data-slide='${Number(position) + 1}']`).addClass("active")
 			})
 		})
 
-		$(".modal__nav-prev").click(function() {
-			var position = $(this).closest(".modal").find(".modal__navigation-item.active").data("slide")
-			$(this).closest(".modal").find(".modal__navigation-item.active").removeClass("active")
-			if (Number(position) - 1 !== 0) {
-				$(this).closest(".modal").find(`[data-slide='${Number(position) - 1 }']`).addClass("active")
-			} else {
-				$(this).closest(".modal").find("[data-slide='7']").addClass("active")
-			}
-			owl.trigger('prev.owl.carousel');
-		})
-
-		$(".modal__nav-next").click(function() {
-			var position = $(this).closest(".modal").find(".modal__navigation-item.active").data("slide")
-			$(this).closest(".modal").find(".modal__navigation-item.active").removeClass("active")
-			if (Number(position) + 1 > 7) {
-				$(this).closest(".modal").find(`[data-slide='1']`).addClass("active")
-			} else {
-				$(this).closest(".modal").find(`[data-slide='${Number(position) + 1 }']`).addClass("active")
-			}
-			owl.trigger('next.owl.carousel');
+		owl.on('changed.owl.carousel', function(event) {
+			var newPosition = event.item.index + 1;
+			$(this).closest(".modal").find(".modal__navigation-item").removeClass("active")
+			$(this).closest(".modal").find(`[data-slide='${String(newPosition)}']`).addClass("active")
 		})
 	},
 }

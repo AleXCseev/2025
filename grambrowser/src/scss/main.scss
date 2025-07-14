@@ -121,6 +121,10 @@ label.error {
 // 	border: 2px solid red;
 // }
 
+html, body {
+	background: #0C0D14;
+}
+
 body {
 	width: 100%;
 	height: auto;
@@ -129,7 +133,7 @@ body {
 	line-height: normal;
 	font-weight: 400;
 	color: #fff;
-	background: #020a22;
+	// background: #020a22;
 }
 
 .visually-hidden {
