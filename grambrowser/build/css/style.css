@@ -256,7 +256,7 @@ body {
 .header__section-wrapper {
   width: 100%;
   height: auto;
-  padding: 5.6rem 0 6.6rem;
+  padding: 2.6rem 0 6.6rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -493,7 +493,7 @@ body {
 }
 
 .main__wrapper {
-  margin-top: -7.6rem;
+  margin-top: -7.9rem;
   pointer-events: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -554,6 +554,8 @@ body {
   }
 }
 .main__title {
+  width: 33rem;
+  height: auto;
   font-family: "Wormbox", sans-serif;
   font-weight: 700;
   font-size: 7.5rem;
@@ -688,7 +690,7 @@ body {
 .navigation__section-wrapper {
   width: 100%;
   height: auto;
-  padding: 2.875rem 0 4.8rem;
+  padding: 2.875rem 0 1.8rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -869,7 +871,7 @@ body {
           animation: btn-light 3s infinite;
 }
 
-@media (max-width: 1480px) {
+@media (max-width: 1600px) {
   html {
     font-size: 14px;
   }
@@ -955,6 +957,7 @@ body {
     margin-bottom: 1rem;
   }
   .main__title {
+    width: 24rem;
     font-size: 4.8rem;
     margin-bottom: 2rem;
   }
