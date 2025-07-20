@@ -6,29 +6,25 @@ var landingFunctions = {
 
 	initLibraris: function() {
 		
-		// $('.review__slider').owlCarousel({
-		// 	items: 3,
-		// 	margin: 30,
-		// 	dots: true,
-		// 	dotsEach: true,
-		// 	nav: true,
-		// 	loop: true,
-		// 	autoHeight: true,
-		// 	// autoplay: true,
-		// 	// autoplayTimeout: 5000,
-		// 	// autoplayHoverPause: true,
-		// 	responsive:{
-		// 		0: {
-		// 			items: 1,
-		// 		},
-		// 		1081: {
-		// 			items: 2,
-		// 		},
-		// 		1281:{
-		// 			items: 3,
-		// 		}
-		// 	}
-		// });
+		var owl = $('.gallery__slider').owlCarousel({
+			items: 5,
+			margin: 20,
+			dots: false,
+			nav: false,
+			loop: true,
+			autoHeight: false,
+			stagePadding: 5,
+			// autoplay: true,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause: true,
+		});
+
+		$('.gallery__btn-next').click(function() {
+			owl.trigger('next.owl.carousel');
+		})
+		$('.gallery__btn-prev').click(function() {
+			owl.trigger('prev.owl.carousel');
+		})
 	
 		AOS.init({
 			disable : function() {

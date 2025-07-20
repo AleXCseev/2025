@@ -11,9 +11,9 @@
     &:before {
         content: "";
         width: 100%;
-        height: 146px;
+        height: 100px;
         position: absolute;
-        bottom: -146px;
+        bottom: -99px;
         left: 0;
         background: #111316;
         clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -879,5 +879,115 @@
     }
     .header__section {
         background-size: 1200px auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .header__section {
+        background-size: 1000px auto;
+    }
+    .header__content-wrapper {
+        padding: 50px 0 50px;
+    }
+    .container {
+        padding: 0 10px;
+        width: 100%;
+    }
+    .header__nav {
+        width: 100vw;
+        margin-left: -10px;
+    }
+    .header__content {
+        width: 100%;
+        border: none;
+        padding-left: 10px;
+    }
+    .header__item-img {
+        flex-shrink: 0;
+    }
+    .header__items {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+    .header__content-wrapper {
+        padding: 9.8vw 0 14.8vw;
+    }
+    .header__section:before {
+        height: 9vw;
+        bottom: -9vw;
+    }
+    .header__section {
+        background-image: url(../img/header-bg-mobile.jpg);
+        background-size: 140vw auto;
+        background-position: right 27.5vw;
+        background-color: #0d0e12;
+    }
+    .header__tag-title {
+        font-size: 3.2vw;
+    }
+    .header__content-tag {
+        gap: 3vw;
+        margin-bottom: 4.8vw;
+    }
+    .header__title {
+        font-size: 8vw;
+        margin-bottom: 4.8vw;
+    }
+    .header__text {
+        font-size: 4.5vw;
+        margin-bottom: 9vw;
+    }
+    .header__catalog-link {
+        padding: 4.5vw 8vw;
+        font-size: 4vw;
+    }
+    .header__section-wrapper {
+        padding: 0 0 9vw;
+    }
+    .header__items {
+        gap: 4vw;
+    }
+    .header__item {
+        gap: 6vw;
+    }
+    .header__item-img {
+        width: 28vw;
+        height: 28vw;
+    }
+    .header__item-title {
+        font-size: 4.4vw;
+        margin-bottom: 2vw;
+    }
+    .header__item-text {
+        font-size: 3.8vw;
+    }
+    .mobile__catalog-wrapper {
+        gap: 3.3vw;
+    }
+    .mobile__catalog-btn {
+        font-size: 3.8vw;
+    }
+    .mobile__catalog-list {
+        padding-left: 5.5vw;
+        margin-top: 3.3vw;
+        font-size: 3.8vw;
+    }
+    .mobile__catalog-close, .mobile__catalog-open, .close__modal {
+        padding: 3.3vw 0;
+        gap: 2vw;
+        font-size: 4.4vw;
+
+        img {
+            width: 4.7vw;
+            height: auto;
+        }
+    }
+    .nav__list {
+        gap: 4vw;
+    }
+    .nav__list-item {
+        font-size: 4.4vw;
     }
 }
