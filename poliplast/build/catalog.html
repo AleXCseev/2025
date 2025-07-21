@@ -14,10 +14,10 @@
 </head>
 <body data-path=".">
     <div class="site__wrapper">
-        <header class="header__section">
-    <div class="container">
-        <div class="header__section-wrapper">
-            <div class="header__nav">
+        <header class="header__catalog">
+            <div class="container">
+                <div class="header__catalog-wrapper header__dark">
+                    <div class="header__nav">
     <button type="button" class="mobile__catalog-open">
         <svg width="17" height="16" viewBox="0 0 17 16" fill="" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.74023 2.56008H14.2602V3.92008H2.74023V2.56008ZM5.30023 12.7201H14.2602V14.0801H5.30023V12.7201ZM2.74023 9.34408H14.2602V10.6881H2.74023V9.34408ZM5.30023 5.95208H14.2602V7.29608H5.30023V5.95208Z" fill="" />
@@ -669,346 +669,289 @@
         </div>
     </div>
 </div>
-            <div class="header__content-wrapper">
-                <div class="header__content">
-                    <div class="header__content-tag">
-                        <h3 class="header__tag-title">
-                            магазин будівельних матеріалів
-                        </h3>
-                        <div class="header__tag-line"></div>
-                    </div>
-                    <h1 class="header__title">
-                        Усе для будівництва та ремонту в одному місці
-                    </h1>
-                    <p class="header__text">
-                        Надійність, доступні ціни та професійний підхід – усе для вашого комфорту.
-                    </p>
-                    <a href="catalog.html" class="header__catalog-link">
-                        До каталогу
-                    </a>
                 </div>
             </div>
-            <div class="header__items-wrapper">
-                <div class="header__lines">
-                    <div class="header__line header__line-1"></div>
-                    <div class="header__line header__line-2"></div>
-                    <div class="header__line header__line-3"></div>
-                    <div class="header__line header__line-4"></div>
-                    <div class="header__line header__line-5">
-                        <div class="header__info active">
-                            <span class="header__info-text">Штукатурка цементна</span>
+        </header>
+        <main class="catalog">
+            <div class="container">
+                <div class="catalog__wrapper">
+                    <div class="breadcrumbs">
+                        <a href="index.html" class="breadcrumbs__link">Головна</a>
+                        <img src="img/breadcrumbs-arrow.png" alt="">
+                        <a href="catalog.html" class="breadcrumbs__link active">Каталог</a>
+                    </div>
+                    <h2 class="catalog__title">
+                        Каталог
+                    </h2>
+                    <!-- <div class="catalog__brends">
+                        <button type="button" class="catalog__brend-btn active">
+                            Усі бренди
+                        </button>
+                        <button type="button" class="catalog__brend-btn">
+                            Dops
+                        </button>
+                        <button type="button" class="catalog__brend-btn">
+                            Green Line
+                        </button>
+                        <button type="button" class="catalog__brend-btn">
+                            Поліпласт
+                        </button>
+                    </div> -->
+                    <div class="catalog__block">
+                        <div class="catalog__nav">
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn active">
+                                    <span>Усі бренди</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Клейові суміші</a></li>
+                                    <li><a href="#" data-catalog="2">Суміші клейові термостійкі</a></li>
+                                    <li><a href="#" data-catalog="3">Затирка для швів плитки</a></li>
+                                    <li><a href="#" data-catalog="4">Суміші для систем теплоизоляції</a></li>
+                                    <li><a href="#" data-catalog="5">Суміші для муровання теплоізоляційних блоків</a></li>
+                                    <li><a href="#" data-catalog="6">Суміші  для лицьового мурування (кольорові)</a></li>
+                                    <li><a href="#" data-catalog="7">Суміші  будівельні монтажні</a></li>
+                                    <li><a href="#" data-catalog="8">Суміші  для влаштування гідроізоляції</a></li>
+                                    <li><a href="#" data-catalog="9">Суміші  для влаштування підлог</a></li>
+                                    <li><a href="#" data-catalog="10">Штукатурні суміші</a></li>
+                                    <li><a href="#" data-catalog="11">Шпаклівка фасадна</a></li>
+                                    <li><a href="#" data-catalog="12">Румонтні суміші</a></li>
+                                    <li><a href="#" data-catalog="13">Дренажні суміші для систем мостіння</a></li>
+                                    <li><a href="#" data-catalog="14">Ґрунтовка і емульсії</a></li>
+                                    <li><a href="#" data-catalog="15">Спеціальні суміші</a></li>
+                                </ul>
+                            </div>
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn">
+                                    <span>Dops</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Сухі суміші</a></li>
+                                    <li><a href="#" data-catalog="2">Ґрунтовки і емульсії</a></li>
+                                </ul>
+                            </div>
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn">
+                                    <span>Green Line</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Інтер’єрні фарби</a></li>
+                                    <li><a href="#" data-catalog="2">Фасадні фарби</a></li>
+                                    <li><a href="#" data-catalog="3">Декоративні штукатурки</a></li>
+                                    <li><a href="#" data-catalog="4">Структурні фарби</a></li>
+                                    <li><a href="#" data-catalog="5">Ґрунтовки і шпаклівки</a></li>
+                                </ul>
+                            </div>
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn">
+                                    <span>Поліпласт</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Клейові суміші</a></li>
+                                    <li><a href="#" data-catalog="2">Суміші клейові термостійкі</a></li>
+                                    <li><a href="#" data-catalog="3">Затирка для швів плитки</a></li>
+                                    <li><a href="#" data-catalog="4">Суміші для систем теплоизоляції</a></li>
+                                    <li><a href="#" data-catalog="5">Суміші для муровання теплоізоляційних блоків</a></li>
+                                    <li><a href="#" data-catalog="6">Суміші  для лицьового мурування (кольорові)</a></li>
+                                    <li><a href="#" data-catalog="7">Суміші  будівельні монтажні</a></li>
+                                    <li><a href="#" data-catalog="8">Суміші  для влаштування гідроізоляції</a></li>
+                                    <li><a href="#" data-catalog="9">Суміші  для влаштування підлог</a></li>
+                                    <li><a href="#" data-catalog="10">Штукатурні суміші</a></li>
+                                    <li><a href="#" data-catalog="11">Шпаклівка фасадна</a></li>
+                                    <li><a href="#" data-catalog="12">Румонтні суміші</a></li>
+                                    <li><a href="#" data-catalog="13">Дренажні суміші для систем мостіння</a></li>
+                                    <li><a href="#" data-catalog="14">Ґрунтовка і емульсії</a></li>
+                                    <li><a href="#" data-catalog="15">Спеціальні суміші</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="catalog__items">
+                            <a a href="product.html" class="catalog__item" data-item="1">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-09 STANDARD
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш для плитки</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="2">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-010 PROFESSIONAL
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш для керамічної, керамогранітної плитки та природного каменю</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="3">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-011 GRES
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш для керамогранітної плитки (ГРЕС)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="4">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="5">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="6">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="7">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="8">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="9">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="10">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="11">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="12">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="13">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="14">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="15">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="1">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="header__items">
-                    <a href="#" class="header__item">
-                        <div class="header__item-img">
-                            <img src="img/products/prod-1.png" alt="">
+                    <div class="catalog__footer">
+                        <div class="pagination">
+                            <a href="#" class="pagination__item disabled pagination__array pagination__prev">
+                                <img src="img/gallery-arrow.png" alt="">
+                            </a>
+                            <a href="#" class="pagination__item active">1</a>
+                            <a href="#" class="pagination__item">2</a>
+                            <a href="#" class="pagination__item">3</a>
+                            <a href="#" class="pagination__item">...</a>
+                            <a href="#" class="pagination__item">11</a>
+                            <a href="#" class="pagination__item">12</a>
+                            <a href="#" class="pagination__item pagination__array pagination__next">
+                                <img src="img/gallery-arrow.png" alt="">
+                            </a>
                         </div>
-                        <div class="header__item-block">
-                            <h3 class="header__item-title">
-                                ПЦШ-008
-                            </h3>
-                            <p class="header__item-text">
-                                Штукатурка цементна
+                        <div class="catalog__info">
+                            <p class="catalog__info-text">
+                                Оздоблення інтер’єрів та фасадів плиткою – одна з найпопулярніших технологій у будівництві. Це не могло пройти повз увагу великого українського виробника будівельних матеріалів — компанії Поліпласт. Купити клей для плитки під цією маркою можна для різних видів робіт:
                             </p>
-                        </div>
-                    </a>
-                    <a href="#" class="header__item">
-                        <div class="header__item-img">
-                            <img src="img/products/prod-2.png" alt="">
-                        </div>
-                        <div class="header__item-block">
-                            <h3 class="header__item-title">
-                                ПРГ-04
-                            </h3>
-                            <p class="header__item-text">
-                                Мастика гідроізоляційна однокомпонентна «Гідростоп»
+                            <ul class="catalog__info-list">
+                                <li>у приміщеннях звичайної вологості;</li>
+                                <li>для виробничих приміщень;</li>
+                                <li>у ванних та кухнях;</li>
+                                <li>для фасадів.</li>
+                            </ul>
+                            <p class="catalog__info-text">
+                                Клей для плитки купити в Києві можна для різних видів основ – цегли, штукатурки, газобетону, гіпсокартонного листа. Всі склади розроблені з урахуванням специфіки конкретного матеріалу як стінового, так і виду плитки.
                             </p>
+                            <button type="button" class="catalog__info-btn">
+                                розгорнути
+                            </button>
                         </div>
-                    </a>
-                    <a href="#" class="header__item">
-                        <div class="header__item-img">
-                            <img src="img/products/prod-3.png" alt="">
-                        </div>
-                        <div class="header__item-block">
-                            <h3 class="header__item-title">
-                                DECOR BASE
-                            </h3>
-                            <p class="header__item-text">
-                                Декоративна акрилова штукатурка
-                            </p>
-                        </div>  
-                    </a>
-                    <a href="#" class="header__item">
-                        <div class="header__item-img">
-                            <img src="img/products/prod-4.png" alt="">
-                        </div>
-                        <div class="header__item-block">
-                            <h3 class="header__item-title">
-                                STRONG UNI FIX
-                            </h3>
-                            <p class="header__item-text">
-                                Клей монтажний високоадгезійний
-                            </p>
-                        </div>  
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-        <section class="about__section">
-    <div class="container">
-        <div class="about__section-wrapper">
-            <div class="header__content-tag">
-                <h3 class="header__tag-title">
-                    Про нас
-                </h3>
-                <div class="header__tag-line"></div>
-            </div>
-            <div class="about__header">
-                <h2 class="about__section-title">
-                    ТОВ «Виробнича компанія Поліпласт»
-                </h2>
-                <p class="about__section-text">
-                    «ВК «ПОЛІПЛАСТ» – національна виробнича компанія, яка з 1999 року спеціалізується на виробництві якісних, високотехнологічних будівельних сумішей. На сьогоднішній день в портфелі компанії три торгові марки
-                </p>
-            </div>
-            <div class="about__items">
-                <div class="about__item about__item-1">
-                    <div class="about__item-logo">
-                        <img src="img/about-logo-1.png" alt="">
-                    </div>
-                    <div class="about__item-wrapper">
-                        <h3 class="about__item-title">
-                            ТМ «Поліпласт»
-                        </h3>
-                        <p class="about__item-text">
-                            Торгова марка представлена широким вибором сухих будівельних сумішей, грунтовок і емульсій преміум-класу для різноманітних будівельних робіт.
-                        </p>
-                    </div>
-                </div>
-                <div class="about__item about__item-2">
-                    <div class="about__item-logo">
-                        <img src="img/about-logo-2.png" alt="">
-                    </div>
-                    <div class="about__item-wrapper">
-                        <h3 class="about__item-title">
-                            ТМ «Dops»
-                        </h3>
-                        <p class="about__item-text">
-                            Будівельні суміші, грунтовки, грунт-фарби ТМ DOPS —  це оптимальне рішення для ремонту та приватного будівництва, доступне кожному.
-                        </p>
-                    </div>
-                </div>  
-                <div class="about__item about__item-3">
-                    <div class="about__item-logo">
-                        <img src="img/about-logo-3.png" alt="">
-                    </div>
-                    <div class="about__item-wrapper">
-                        <h3 class="about__item-title">
-                            ТМ «Green Line»
-                        </h3>
-                        <p class="about__item-text">
-                            Лінія декоративних штукатурок, декоративних фарб для фасаду та інтер’єру. Грунтовки і шпаклівки цієї марки – оптимальна основа для нанесення декоративних матеріалів
-                        </p>
                     </div>
                 </div>
             </div>
-            <div class="about__company">
-                <div class="about__company-left">
-                    <h3 class="about__company-title">
-                        Про компанію
-                    </h3>
-                    <img src="img/about-img.jpg" alt="" class="about__img">
-                </div>
-                <div class="about__company-content">
-                    <p class="about__company-text">
-                        <span>ТОВ “ВК “Поліпласт” входить в число лідерів</span> серед вітчизняних виробників сухих будівельних сумішей. Сьогодні це – виробництво, що динамічно розвивається з сучасним обладнанням і висококваліфікованими фахівцями, власну лабораторію, на рахунку якої безліч втілених в життя ефективних розробок і ноу-хау. Крім того, за допомогою лабораторії здійснюється жорсткий контроль якості як вхідної сировини, так і готової продукції на всіх етапах її виробництва.
-                    </p>
-                    <p class="about__company-text">
-                        Саме тому стабільно-висока якість сухих будівельних сумішей – одна з головних конкурентних переваг продукції «Поліпласт».
-                    </p>
-                    <a href="#" class="header__catalog-link">
-                        Детальніше
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="advantage__section">
-    <div class="container">
-        <div class="advantage__section-wrapper">
-            <div class="advantage__left">
-                <h3 class="advantage__subtitle">
-                    магазин
-                </h3>
-                <h2 class="advantage__title">
-                    Чому «Поліпласт»
-                </h2>
-                <img src="img/avantage-img.jpg" alt="" class="advantage__img">
-            </div>
-            <div class="advantage__items">
-                <div class="advantage__item">
-                    <p class="avantage__number">
-                        01
-                    </p>
-                    <p class="advantage__text">
-                        Високоякісна сировина
-                    </p>
-                </div>
-                <div class="advantage__item">
-                    <p class="avantage__number">
-                        02
-                    </p>
-                    <p class="advantage__text">
-                        Сучасне виробництво
-                    </p>
-                </div>
-                <div class="advantage__item">
-                    <p class="avantage__number">
-                        03
-                    </p>
-                    <p class="advantage__text">
-                        Власна лабараторія
-                    </p>
-                </div>
-                <div class="advantage__item">
-                    <p class="avantage__number">
-                        04
-                    </p>
-                    <p class="advantage__text">
-                        Тестуємо на обєктах
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="gallery__section">
-    <div class="container">
-        <div class="gallery__section-wrapper">
-            <div class="header__content-tag">
-                <h3 class="header__tag-title">
-                    Бестселери
-                </h3>
-                <div class="header__tag-line"></div>
-            </div>
-            <div class="gallery__top">
-                <h2 class="gallery__title">
-                    Топ продажів
-                </h2>
-                <div class="gallery__btns">
-                    <button type="button" class="gallery__btn gallery__btn-prev">
-                        <img src="img/gallery-arrow.png" alt="">
-                    </button>
-                    <button type="button" class="gallery__btn gallery__btn-next">
-                        <img src="img/gallery-arrow.png" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="gallery__slider-wrapper">
-                <div class="gallery__slider owl-carousel">
-                    <a href="#" class="gallery__slide">
-                        <div class="gallery__slide-img">
-                            <img src="img/products/prod-1.png" alt="">
-                        </div>
-                        <h3 class="gallery__slide-title">
-                            ПРГ-04
-                        </h3>
-                        <p class="gallery__slide-text">
-                            Мастика гідроізоляційна однокомпонентна «Гідростоп»
-                        </p>
-                    </a>
-                    <a href="#" class="gallery__slide">
-                        <div class="gallery__slide-img">
-                            <img src="img/products/prod-2.png" alt="">
-                        </div>
-                        <h3 class="gallery__slide-title">
-                            STRONG UNI FIX
-                        </h3>
-                        <p class="gallery__slide-text">
-                            Клей монтажний високоадгезійний
-                        </p>
-                    </a>
-                    <a href="#" class="gallery__slide">
-                        <div class="gallery__slide-img">
-                            <img src="img/products/prod-3.png" alt="">
-                        </div>
-                        <h3 class="gallery__slide-title">
-                            DECOR BASE
-                        </h3>
-                        <p class="gallery__slide-text">
-                            Декоративна акрилова штукатурка
-                        </p>
-                    </a>
-                    <a href="#" class="gallery__slide">
-                        <div class="gallery__slide-img">
-                            <img src="img/products/prod-4.png" alt="">
-                        </div>
-                        <h3 class="gallery__slide-title">
-                            DECOR BASE
-                        </h3>
-                        <p class="gallery__slide-text">
-                            Декоративна акрилова штукатурка
-                        </p>
-                    </a>
-                    <a href="#" class="gallery__slide">
-                        <div class="gallery__slide-img">
-                            <img src="img/products/prod-1.png" alt="">
-                        </div>
-                        <h3 class="gallery__slide-title">
-                            ПРГ-04
-                        </h3>
-                        <p class="gallery__slide-text">
-                            Мастика гідроізоляційна однокомпонентна «Гідростоп»
-                        </p>
-                    </a>
-                    <a href="#" class="gallery__slide">
-                        <div class="gallery__slide-img">
-                            <img src="img/products/prod-2.png" alt="">
-                        </div>
-                        <h3 class="gallery__slide-title">
-                            STRONG UNI FIX
-                        </h3>
-                        <p class="gallery__slide-text">
-                            Клей монтажний високоадгезійний
-                        </p>
-                    </a>
-                    <a href="#" class="gallery__slide">
-                        <div class="gallery__slide-img">
-                            <img src="img/products/prod-3.png" alt="">
-                        </div>
-                        <h3 class="gallery__slide-title">
-                            DECOR BASE
-                        </h3>
-                        <p class="gallery__slide-text">
-                            Декоративна акрилова штукатурка
-                        </p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="info__section">
-    <div class="container">
-        <div class="info__section-wrapper">
-            <div class="info__line"></div>
-            <h2 class="info__title">
-                Новини будматеріалів
-            </h2>
-            <p class="info__text">
-                Актуальні тренди, нові матеріали та корисні поради для будівництва
-            </p>
-            <a href="#" class="header__catalog-link">
-                Перейти в блог
-            </a>
-        </div>
-    </div>
-</section>
+        </main>
         <footer class="footer__section">
     <div class="container">
         <div class="footer__section-wrapper">
@@ -1255,7 +1198,7 @@
             </div>
         </div>
     </div>
-</footer> 
+</footer>
     </div>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/aos.js"></script>

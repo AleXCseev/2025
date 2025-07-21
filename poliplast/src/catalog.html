@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="libs/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="libs/animations.css"> -->
+    <link rel="stylesheet" href="libs/jquery.raty.css">
+    <link rel="stylesheet" href="libs/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Купити сухі суміші від виробника - Київ, Україна | ТОВ «ВК «Поліпласт»</title>
+</head>
+<body data-path=".">
+    <div class="site__wrapper">
+        <header class="header__catalog">
+            <div class="container">
+                <div class="header__catalog-wrapper header__dark">
+                    @@include("_navigation.html")
+                </div>
+            </div>
+        </header>
+        <main class="catalog">
+            <div class="container">
+                <div class="catalog__wrapper">
+                    <div class="breadcrumbs">
+                        <a href="index.html" class="breadcrumbs__link">Головна</a>
+                        <img src="img/breadcrumbs-arrow.png" alt="">
+                        <a href="catalog.html" class="breadcrumbs__link active">Каталог</a>
+                    </div>
+                    <h2 class="catalog__title">
+                        Каталог
+                    </h2>
+                    <!-- <div class="catalog__brends">
+                        <button type="button" class="catalog__brend-btn active">
+                            Усі бренди
+                        </button>
+                        <button type="button" class="catalog__brend-btn">
+                            Dops
+                        </button>
+                        <button type="button" class="catalog__brend-btn">
+                            Green Line
+                        </button>
+                        <button type="button" class="catalog__brend-btn">
+                            Поліпласт
+                        </button>
+                    </div> -->
+                    <div class="catalog__block">
+                        <div class="catalog__nav">
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn active">
+                                    <span>Усі бренди</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Клейові суміші</a></li>
+                                    <li><a href="#" data-catalog="2">Суміші клейові термостійкі</a></li>
+                                    <li><a href="#" data-catalog="3">Затирка для швів плитки</a></li>
+                                    <li><a href="#" data-catalog="4">Суміші для систем теплоизоляції</a></li>
+                                    <li><a href="#" data-catalog="5">Суміші для муровання теплоізоляційних блоків</a></li>
+                                    <li><a href="#" data-catalog="6">Суміші  для лицьового мурування (кольорові)</a></li>
+                                    <li><a href="#" data-catalog="7">Суміші  будівельні монтажні</a></li>
+                                    <li><a href="#" data-catalog="8">Суміші  для влаштування гідроізоляції</a></li>
+                                    <li><a href="#" data-catalog="9">Суміші  для влаштування підлог</a></li>
+                                    <li><a href="#" data-catalog="10">Штукатурні суміші</a></li>
+                                    <li><a href="#" data-catalog="11">Шпаклівка фасадна</a></li>
+                                    <li><a href="#" data-catalog="12">Румонтні суміші</a></li>
+                                    <li><a href="#" data-catalog="13">Дренажні суміші для систем мостіння</a></li>
+                                    <li><a href="#" data-catalog="14">Ґрунтовка і емульсії</a></li>
+                                    <li><a href="#" data-catalog="15">Спеціальні суміші</a></li>
+                                </ul>
+                            </div>
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn">
+                                    <span>Dops</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Сухі суміші</a></li>
+                                    <li><a href="#" data-catalog="2">Ґрунтовки і емульсії</a></li>
+                                </ul>
+                            </div>
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn">
+                                    <span>Green Line</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Інтер’єрні фарби</a></li>
+                                    <li><a href="#" data-catalog="2">Фасадні фарби</a></li>
+                                    <li><a href="#" data-catalog="3">Декоративні штукатурки</a></li>
+                                    <li><a href="#" data-catalog="4">Структурні фарби</a></li>
+                                    <li><a href="#" data-catalog="5">Ґрунтовки і шпаклівки</a></li>
+                                </ul>
+                            </div>
+                            <div class="catalog__nav-item">
+                                <button type="button" class="catalog__nav-btn">
+                                    <span>Поліпласт</span>
+                                    <img src="img/catalog-nav-arrow.png" alt="">
+                                </button>
+                                <ul class="catalog__nav-list">
+                                    <li><a href="#" data-catalog="1">Клейові суміші</a></li>
+                                    <li><a href="#" data-catalog="2">Суміші клейові термостійкі</a></li>
+                                    <li><a href="#" data-catalog="3">Затирка для швів плитки</a></li>
+                                    <li><a href="#" data-catalog="4">Суміші для систем теплоизоляції</a></li>
+                                    <li><a href="#" data-catalog="5">Суміші для муровання теплоізоляційних блоків</a></li>
+                                    <li><a href="#" data-catalog="6">Суміші  для лицьового мурування (кольорові)</a></li>
+                                    <li><a href="#" data-catalog="7">Суміші  будівельні монтажні</a></li>
+                                    <li><a href="#" data-catalog="8">Суміші  для влаштування гідроізоляції</a></li>
+                                    <li><a href="#" data-catalog="9">Суміші  для влаштування підлог</a></li>
+                                    <li><a href="#" data-catalog="10">Штукатурні суміші</a></li>
+                                    <li><a href="#" data-catalog="11">Шпаклівка фасадна</a></li>
+                                    <li><a href="#" data-catalog="12">Румонтні суміші</a></li>
+                                    <li><a href="#" data-catalog="13">Дренажні суміші для систем мостіння</a></li>
+                                    <li><a href="#" data-catalog="14">Ґрунтовка і емульсії</a></li>
+                                    <li><a href="#" data-catalog="15">Спеціальні суміші</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="catalog__items">
+                            <a a href="product.html" class="catalog__item" data-item="1">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-09 STANDARD
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш для плитки</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="2">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-010 PROFESSIONAL
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш для керамічної, керамогранітної плитки та природного каменю</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="3">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-011 GRES
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш для керамогранітної плитки (ГРЕС)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="4">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="5">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="6">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                    ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="7">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="8">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="9">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="10">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="11">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="12">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="13">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-1.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="14">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-2.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-016 BLANCO ULTRA
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш тонкошарова для мармуру та мозаїки (Біла)</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="15">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-3.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-019 FLEX
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична тиксотропна армована фіброволокном</p>
+                            </a>
+                            <a a href="product.html" class="catalog__item" data-item="1">
+                                <div class="catalog__item-img">
+                                    <img src="img/products/prod-4.png" alt="">
+                                </div>
+                                <h3 class="catalog__item-title">
+                                   ПП-012 ELAST
+                                </h3>
+                                <p class="catalog__item-text">Клейова суміш еластична</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog__footer">
+                        <div class="pagination">
+                            <a href="#" class="pagination__item disabled pagination__array pagination__prev">
+                                <img src="img/gallery-arrow.png" alt="">
+                            </a>
+                            <a href="#" class="pagination__item active">1</a>
+                            <a href="#" class="pagination__item">2</a>
+                            <a href="#" class="pagination__item">3</a>
+                            <a href="#" class="pagination__item">...</a>
+                            <a href="#" class="pagination__item">11</a>
+                            <a href="#" class="pagination__item">12</a>
+                            <a href="#" class="pagination__item pagination__array pagination__next">
+                                <img src="img/gallery-arrow.png" alt="">
+                            </a>
+                        </div>
+                        <div class="catalog__info">
+                            <p class="catalog__info-text">
+                                Оздоблення інтер’єрів та фасадів плиткою – одна з найпопулярніших технологій у будівництві. Це не могло пройти повз увагу великого українського виробника будівельних матеріалів — компанії Поліпласт. Купити клей для плитки під цією маркою можна для різних видів робіт:
+                            </p>
+                            <ul class="catalog__info-list">
+                                <li>у приміщеннях звичайної вологості;</li>
+                                <li>для виробничих приміщень;</li>
+                                <li>у ванних та кухнях;</li>
+                                <li>для фасадів.</li>
+                            </ul>
+                            <p class="catalog__info-text">
+                                Клей для плитки купити в Києві можна для різних видів основ – цегли, штукатурки, газобетону, гіпсокартонного листа. Всі склади розроблені з урахуванням специфіки конкретного матеріалу як стінового, так і виду плитки.
+                            </p>
+                            <button type="button" class="catalog__info-btn">
+                                розгорнути
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include("_footer.html")
+    </div>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/aos.js"></script>
+    <script src="libs/jquery.fancybox.min.js"></script>
+    <script src="libs/owl.carousel.min.js"></script>
+    <script src="libs/jquery.raty.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -163,3 +163,54 @@
         order: 4;
     }
 }
+
+@media (max-width: 700px) {
+    .footer__column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer__section-wrapper {
+        padding: 16.7vw 0 0;
+    }
+    .footer__top {
+        gap: 8.4vw;
+        padding-bottom: 0;
+        border: none;
+    }
+    .footer__title {
+        font-size: 7.2vw;
+    }
+    .footer__item .header__content-tag {
+        margin-bottom: 4.2vw;
+    }
+    .footer__item-text {
+        font-size: 5vw;
+    }
+    .footer__brends {
+        padding: 11vw 0;
+        gap: 5vw;
+    }
+    .footer__column-title {
+        font-size: 5vw;
+    }
+    .footer__catalog-list {
+        font-size: 4vw;
+        gap: 2.5vw;
+    }
+    .footer__copyright .nav__social-links {
+        position: static;
+        transform: none;
+    }
+    .footer__copyright {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5vw;
+        padding: 5vw 0;
+    }
+    .footer__copyright-text {
+        font-size: 4.44vw;
+    }
+}

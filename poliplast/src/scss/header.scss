@@ -506,6 +506,10 @@
 .nav__social {
     width: auto;
     height: auto;
+
+    svg {
+        fill: #fff;
+    }
 }
 
 .header__content-wrapper {

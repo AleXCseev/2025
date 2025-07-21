@@ -1,7 +1,7 @@
 .gallery__section {
 }
 
-.gallery__section-wrapper {
+.gallery__section-wrapper, .catalog__wrapper {
     padding: 120px 0;
 
     .header__content-tag {
@@ -57,7 +57,7 @@
 
 
 .gallery__slider-wrapper {
-    width: 1390px;
+    width: 1670px;
     height: auto;
     margin-left: -5px;
 }
