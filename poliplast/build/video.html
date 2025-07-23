@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="libs/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/owl.carousel.min.css">
-    <!-- <link rel="stylesheet" href="libs/animations.css"> -->
-    <link rel="stylesheet" href="libs/jquery.raty.css">
     <link rel="stylesheet" href="libs/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Купити сухі суміші від виробника - Київ, Україна | ТОВ «ВК «Поліпласт»</title>
@@ -250,7 +248,7 @@
         </button>
     </div>
     <div class="nav__block">
-        <div class="nav__logo">
+        <a href="index.html" class="nav__logo">
             <svg width="164" height="29" viewBox="0 0 119 22" fill="" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.79188 12.2219V16.8342H0.860352V2.63249C0.860352 2.22649 1.07656 2.02246 1.55427 2.02246H15.0557C19.6537 2.02246 21.5192 3.44449 21.5192 6.38747V8.04032C21.5996 10.6247 19.3078 12.3002 15.2946 12.2219H5.79188ZM6.10487 4.82118V9.05223H15.0763C16.6557 9.05223 17.6832 8.51845 17.6832 7.29839V6.5915C17.6832 5.20863 16.6577 4.82118 15.0763 4.82118H6.10487Z" fill=""/>
                 <path d="M39.5737 12.3995C39.5737 15.1055 38.1138 16.8346 34.1871 16.8346H27.8677C23.9658 16.8346 22.5059 15.1055 22.5059 12.3995V10.0995C22.5059 7.41414 23.9658 5.66443 27.8677 5.66443H34.1871C38.1138 5.66443 39.5737 7.41414 39.5737 10.0995V12.3995ZM33.3964 13.5577C34.7616 13.5577 35.2393 13.1703 35.2393 11.909V10.3427C35.2393 8.99898 34.7122 8.59298 33.3964 8.59298H28.6811C27.3159 8.59298 26.8608 9.01959 26.8608 10.3427V11.909C26.8608 13.1703 27.3159 13.5577 28.6811 13.5577H33.3964Z" fill=""/>
@@ -261,14 +259,19 @@
                 <path d="M76.8053 8.43101V5.66321H89.0136C90.7371 5.66321 91.5278 6.51849 91.5278 8.04356V16.3449C91.5278 16.6705 91.3363 16.8334 90.978 16.8334H79.5109C77.6207 16.8334 76.4717 16.0605 76.4717 13.7008V12.8661C76.4717 10.7495 77.6207 9.91693 79.5109 9.91693H86.1906H87.1707C87.1707 9.28629 86.8598 8.43101 86.2606 8.43101H76.8053ZM87.1707 13.8244V12.1159H81.4732C80.8987 12.1159 80.6825 12.3591 80.6825 12.8475V13.336C80.6825 13.8038 80.8987 14.0676 81.4732 14.0676H86.9072C87.0987 14.0676 87.1707 13.9872 87.1707 13.8244Z" fill=""/>
                 <path d="M114.311 5.66409V2.02246H109.978V5.66409H96.1249C93.7301 5.66409 92.75 6.68218 92.75 8.28763V9.18207C92.75 10.7071 93.6848 11.684 95.6945 11.8262L103.857 12.4156C104.24 12.4362 104.337 12.5784 104.337 12.8835V13.1266C104.337 13.5326 104.17 13.6955 103.665 13.6955H92.9168V16.828H104.983C107.783 16.828 108.741 15.81 108.741 14.0211V13.1864C108.741 11.4367 108.094 10.602 105.868 10.4186L97.5127 9.72615C97.1297 9.68493 97.0103 9.60455 97.0103 9.23771V8.9327C97.0103 8.56585 97.1771 8.40304 97.6568 8.40304H109.978V16.826H114.311V8.46487H118.141V5.65791H114.311V5.66409Z" fill=""/>
             </svg>
-        </div>
+        </a>
         <div class="nav__wrapper">
             <ul class="nav__list">
                 <li class="nav__list-item">
                     <a href="document.html">Документи</a>
                 </li>
-                <li class="nav__list-item">
-                    <a href="about.html">Про компанію</a>
+                <li class="nav__list-item nav__drop">
+                    <span>Про компанію</span>
+                    <img src="img/naw-arrow-icon.png" alt="">
+                    <div class="nav__drop-menu">
+                        <a href="about.html">Наші об'єкти</a>
+                        <a href="news.html">Новини</a>
+                    </div>
                 </li>
                 <li class="nav__list-item">
                     <a href="video.html">Відео</a>
@@ -293,7 +296,10 @@
                         <a href="document.html">Документи</a>
                     </li>
                     <li class="nav__list-item">
-                        <a href="about.html">Про компанію</a>
+                        <a href="about.html">Наші об'єкти</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="news.html">Новини</a>
                     </li>
                     <li class="nav__list-item">
                         <a href="video.html">Відео</a>
@@ -980,7 +986,6 @@
     <script src="libs/aos.js"></script>
     <script src="libs/jquery.fancybox.min.js"></script>
     <script src="libs/owl.carousel.min.js"></script>
-    <script src="libs/jquery.raty.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

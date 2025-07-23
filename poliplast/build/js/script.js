@@ -1,12 +1,13 @@
 var landingFunctions = {
 	init: function() {
-		this.initLibraris()
+		this.initLibraries()
 		this.navigation()
 		this.catalog()
 		this.product()
+		this.document()
 	}, 
 
-	initLibraris: function() {
+	initLibraries: function() {
 		
 		var owl = $('.gallery__slider').owlCarousel({
 			items: 6,
@@ -36,6 +37,19 @@ var landingFunctions = {
 		$('.gallery__btn-prev').click(function() {
 			owl.trigger('prev.owl.carousel');
 		})
+
+		$('.news__slider').owlCarousel({
+			items: 1,
+			margin: 20,
+			dots: false,
+			nav: true,
+			loop: true,
+			autoHeight: false,
+			stagePadding: 0,
+			// autoplay: true,
+			// autoplayTimeout: 5000,
+			// autoplayHoverPause: true,
+		});
 	
 		AOS.init({
 			disable : function() {
@@ -84,6 +98,12 @@ var landingFunctions = {
 			if(key === "Escape") {
 				$(".nav__catalog").removeClass("active");
 			}
+		})
+
+		$(".nav__drop").click(function() {
+			$(this).toggleClass("active")
+
+			$(".nav__drop-menu").slideToggle()
 		})
 
 		$(".nav__brend-item").click(function() {
@@ -186,6 +206,30 @@ var landingFunctions = {
 		$(".dropdown__btn").click(function() {
 			$(this).toggleClass("active");
 			$(".drop__menu").slideToggle();
+		})
+	},
+
+	document: function() {
+		$(".document__btn").click(function() {
+			if($(this).hasClass("active")) return
+
+			$(".document__btn").removeClass("active")
+			$(this).addClass("active")
+
+			const tab = $(this).data("tab")
+			$(".document__tab").hide().removeClass("active")
+			$(`.document__tab[data-tab=${tab}]`).fadeIn(300).addClass("active")
+		})
+
+		$(".document__dropdown-btn").click(function() {
+			$(this).toggleClass("active");
+			$(this).closest(".document__dropdown").find(".document__dropdown-menu").slideToggle();
+		})
+
+		$(".document__select").on("change", function() {
+			const val = $(this).val()
+			$(".document__tab").hide().removeClass("active")
+			$(`.document__tab[data-tab=${val}]`).fadeIn(300).addClass("active")
 		})
 	}
 }

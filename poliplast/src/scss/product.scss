@@ -351,5 +351,14 @@
     }
     .product__link {
         width: 100%;
+        padding: 2.4vw;
+        gap: 2.4vw;
+        font-size: 3.8vw;
+    }
+    .product__link img {
+        width: 5vw;
+    }
+    .product__gallery {
+        padding-bottom: 0;
     }
 }

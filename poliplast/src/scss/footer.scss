@@ -29,6 +29,12 @@
     width: 352px;
     height: auto;
 
+     &:hover {
+        .footer__item-text{
+            text-decoration: underline;
+        }
+    }
+
     .header__content-tag {
         margin-bottom: 25px;
     }
@@ -46,6 +52,8 @@
     font-size: 20px;
     line-height: 1.5;
     color: #fff;
+
+   
 }
 
 .footer__brends {
@@ -91,6 +99,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer__copyright {

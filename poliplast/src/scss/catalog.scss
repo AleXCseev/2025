@@ -5,8 +5,6 @@
 
 .header__catalog-wrapper {
     padding-top: 26px;
-
-   
 }
 
 .header__dark {
@@ -42,6 +40,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -53,6 +52,10 @@
     color: #111316;
     opacity: 0.5;
     cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    } 
 
     &.active {
         opacity: 1;
