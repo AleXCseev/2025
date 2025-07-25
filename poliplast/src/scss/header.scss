@@ -115,6 +115,15 @@
     cursor: pointer;
 
     &:hover {
+        .nav__drop-menu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: none;
+        }
+        img {
+            transform: rotate(-180deg);
+        }
         &:before {
             width: 0;
         }
@@ -132,15 +141,26 @@
 }
 
 .nav__drop-menu {
-    display: none;
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 0;
     width: 100%;
     height: auto;
     background: #009fac;
     padding: 10px;
-    z-index: 5;
+    z-index: 10;
+    padding-top: 20px;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10%);
+    transition: 0.3s ease;
+
+
+    // &:hover {
+    //     display: block;
+    // }
 
     // a:hover {
     //     text-decoration: underline;
@@ -1066,5 +1086,9 @@
     }
     .nav__list-item {
         font-size: 4.4vw;
+    }
+    .nav__drop-menu {
+        top: 6vw;
+        padding-top: 2vw;
     }
 }

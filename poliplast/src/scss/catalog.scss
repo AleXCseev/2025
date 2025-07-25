@@ -73,13 +73,11 @@
 
 .catalog__brends {
     width: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;   
+    display: none;
 }
 
 .catalog__brend-btn {
+    display: inline-block;
     border-radius: 2px;
     padding: 8px;
     font-weight: 500;
@@ -87,6 +85,11 @@
     line-height: 1.14;
     color: rgba(58, 58, 58, 0.7);
     transition: 0.3s ease;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 
     &.active {
         background: #009fac;
@@ -418,13 +421,17 @@
         font-size: 3.8vw;
     }
     .catalog__brends {
+        display: block;
         margin-bottom: 8.3vw;
+    }
+    .catalog__brend-btn {
+        margin-right: 1.5vw;
     }
     .catalog__items {
         gap: 5vw 2.6vw;
     }
     .catalog__item {
-        width: calc(50% - 1.3vw);
+        width: calc(50% - 1.5vw);
     }
     .catalog__item-img {
         padding: 2.4vw;
