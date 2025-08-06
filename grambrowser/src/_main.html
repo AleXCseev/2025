@@ -5,22 +5,40 @@
 <header class="header__section">
     <div class="container">
         <div class="header__section-wrapper">
-            <a href="#" class="header__about-link">
+            <a href="#modal-about" class="header__about-link">
                 <img src="img/gram-icon.svg" alt="">
                 <span>О токене</span>
             </a>
             <div class="header__right">
-                <div class="user">
+                <!-- <div class="user">
                     <img class="user__character" src="img/user-character.png" alt="">
                     <span class="user__name">Nickname</span>
                     <button class="logout">
                         <img src="img/out-icon.svg" alt="">
                     </button>
+                </div> -->
+                <div class="header__login-wrapper">
+                    <button type="button" class="header__enter-link">
+                        <img class="user__character" src="img/user-character.png" alt="">
+                        <span>Гість, увійти?</span>
+                        <img class="header__enter-tringle" src="img/tringle.png" alt="">
+                    </button>
+                    <div class="login__drop">
+                        <a href="#" class="login__drop-link google__link">
+                            <img src="img/google-icon.png" alt="">
+                            <span>Увійти з Google</span>
+                        </a>
+                        <a href="#" class="login__drop-link x__link">
+                            <img src="img/x-icon.png" alt="">
+                            <span>Увійти з X</span>
+                        </a>
+                        <a href="#" class="login__drop-link telegram__link">
+                            <img src="img/telegram-icon.png" alt="">
+                            <span>Увійти з Telegram</span>
+                        </a>
+                    </div>
                 </div>
-                <!-- <a href="#" class="header__enter-link">
-                    <span>Вхід</span>
-                    <img src="img/enter-icon.svg" alt="">
-                </a> -->
+                
                 <div class="header__lang-wrapper">
                      <button type="button" class="header__lang">
                         <img class="header__lang-flag" src="img/flag/ua.svg" alt="">
@@ -104,11 +122,11 @@
                     <img src="img/nav/icon-3.svg" alt="">
                     <span>Головна</span>
                 </a>
-                <a href="#" class="navigation__link">
+                <a href="#" class="navigation__link disabled">
                     <img src="img/nav/icon-4.svg" alt="">
                     <span>лідери</span>
                 </a>
-                <a href="#" class="navigation__link">
+                <a href="#" class="navigation__link disabled">
                     <img src="img/nav/icon-5.svg" alt="">
                     <span>Новини</span>
                 </a>

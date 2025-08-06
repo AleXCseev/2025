@@ -10,6 +10,11 @@ var landingFunctions = {
 			$(".lang__modal").toggleClass("active")
 		})
 
+		$(".header__enter-link").click(function() {
+			$(this).toggleClass("active")
+			$(".login__drop").toggleClass("active")
+		})
+
 		$(".lang__modal-btn").click(function() {
 			const imgSrc = $(this).find("img").attr("src");
 
@@ -23,6 +28,11 @@ var landingFunctions = {
 			if (!$(e.target).closest(".header__lang-wrapper").length) {
 				$(".lang__modal").removeClass("active");
 				$(".header__lang").removeClass("active")
+			}
+
+			if (!$(e.target).closest(".header__login-wrapper").length) {
+				$(".login__drop").removeClass("active");
+				$(".header__enter-link").removeClass("active")
 			}
 		});
 
@@ -43,11 +53,28 @@ var landingFunctions = {
 
 	modal: function() {
 		$(".main__gamepad-link").click(function() {
-			$(".modal__overlay").addClass("active")
+			$("#main-modal").addClass("active")
 		})
 
-		$(".close__modal").click(function() {
+		$(".header__about-link").click(function() {
+			$("#modal-about").addClass("active")
+		})
+
+		$(".close__modal, .account__close").click(function() {
 			$(".modal__overlay").removeClass("active")
+		})
+
+		$(".account").click(function() {
+			$(".account").removeClass("active")
+			$(this).addClass("active")
+		})
+
+		$(".play").click(function() {
+			$("#modal-login").addClass("active")
+		})
+
+		$(".navigation__home").click(function() {
+			$("#modal-account").addClass("active")
 		})
 
 		$(".modal__overlay").click(function(e) {

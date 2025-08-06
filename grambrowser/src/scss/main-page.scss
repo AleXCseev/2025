@@ -50,6 +50,10 @@
         width: 1.75rem;
         height: auto;
     }
+
+    span {
+        flex-shrink: 0;
+    }
 }
 
 .header__right {
@@ -102,11 +106,111 @@
     font-weight: 400;
     font-size: 0.9rem;
     color: #fff;
+    cursor: pointer;
+
+    span {
+        flex-shrink: 0;
+        text-decoration: underline;
+    }
+
+    &.active {
+        .header__enter-tringle {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+.header__login-wrapper {
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.login__drop {
+    width: 16.25rem;
+    height: auto;
+    padding: 1.875rem 0.94rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0c0d14;
+    border-radius: 1.25rem;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10%);
+    transition: 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 100;
+        transform: translateX(-50%);
+    }
+
+    &:before {
+        content: "";
+        width: 21px;
+        height: 12px;
+        transform: translateX(-50%) rotate(180deg);
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        background-image: url(../img/modal-tringle.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.login__drop-link {
+    width: 100%;
+    height: auto;
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #0c0d14;
+    cursor: pointer;
+    font-family: "Haval", sans-serif;
 
     img {
-        width: 1.75rem;
+        width: 1.5rem;
         height: auto;
     }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.google__link {
+    background-color: #fff;
+}
+
+.x__link {
+    background: #000;
+    color: #fff;
+}
+
+.telegram__link {
+    color: #fff;
+    background: #2aabee;
+}
+
+.header__enter-tringle {
+    width: 0.875rem;
+    height: auto;
+    transition: 0.3s ease;
 }
 
 .header__lang {
@@ -207,6 +311,7 @@
     position: relative;
     z-index: 1;
     padding-bottom: 2rem;
+    pointer-events: none;
 }
 
 .main__wrapper {
@@ -288,6 +393,7 @@
     cursor: pointer;
     position: relative;
     transition: 0.3s ease;
+    pointer-events: auto;
 
     span {
         font-family: "Haval", sans-serif;
@@ -449,6 +555,11 @@
     color: #fff;
     position: relative;
 
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
     &:before {
         content: "";
         width: 6.125rem;
@@ -519,6 +630,9 @@
     }
     .main__wrapper {
         margin-top: 0;
+    }
+    .main__section-wrapper {
+        z-index: auto;
     }
 }
 
