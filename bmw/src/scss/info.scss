@@ -1,0 +1,158 @@
+.info__section {
+  padding-bottom: 70px;
+}
+
+.info__top {
+}
+
+.info__top-wrapper {
+  padding: 50px 0 30px;
+}
+
+.info__title {
+  font-weight: 900;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.info__text {
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+}
+
+.info__block {
+  background-image: url(../img/info-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info__block-wrapper {
+  padding: 38px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info__item {
+  width: 340px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info__item-opacity {
+  opacity: 0;
+}
+
+.info__item-title {
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+}
+
+.info__item-text {
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.info__link {
+  align-self: flex-end;
+}
+
+@media (max-width: 1480px) {
+  .info__item {
+    width: 280px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .info__item {
+    width: 320px;
+    height: 280px;
+  }
+  .info__item-title {
+    font-size: 24px;
+  }
+  .info__item-text {
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+  }
+  .info__item-3,
+  .info__item-6 {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .info__item-opacity {
+    display: none;
+  }
+  .info__item {
+    width: calc(50% - 10px);
+    height: 280px;
+  }
+}
+
+@media (max-width: 700px) {
+  .info__item {
+    height: 320px;
+  }
+}
+
+@media (max-width: 540px) {
+  .info__section {
+    padding-bottom: 18vw;
+  }
+  .info__block {
+    background-image: url(../img/info-bg-mobile.jpg);
+  }
+  .info__item {
+    width: 100%;
+    height: 73vw;
+    padding: 6.5vw 4.8vw;
+  }
+  .info__block-wrapper {
+    padding: 9.8vw 5vw;
+    gap: 6vw;
+  }
+  .info__item-title {
+    font-size: 6.8vw;
+  }
+  .info__item-text {
+    font-size: 4.5vw;
+  }
+  .info__item-5 {
+    order: 1;
+  }
+  .info__top-wrapper {
+    padding: 20vw 0 6.5vw;
+  }
+  .info__title {
+    font-size: 6vw;
+    margin-bottom: 1vw;
+  }
+  .info__text {
+    font-size: 5.2vw;
+  }
+  .info__link img {
+    width: 15vw;
+    height: auto;
+  }
+}

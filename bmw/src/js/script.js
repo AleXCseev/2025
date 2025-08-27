@@ -1,21 +1,32 @@
 var landingFunctions = {
 	init: function() {
 		this.initLibraris()
+		this.getPrice()
 		// this.time()
 		this.modal()
+		this.card()
 	}, 
 
+	getPrice: function() {
+		$('.new__price').each(function () {
+			var p = parseInt($(this).text());
+	        var currency = $(this).text().replace(/[0-9]/g, '');
+			p = p * 100 / 45;
+			p2 = Math.ceil(p);
+			$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
+		});
+	},
+
 	initLibraris: function() {
-		
 		$('[href*="#"]').on('click', function (e) {
-			var fixedOffset = 20;
-			var cardHeight = $(".card").outerHeight(false)
-			var windowHeight = $(window).height()
+			var fixedOffset = 0;
+			// var cardHeight = $(".card").outerHeight(false)
+			// var windowHeight = $(window).height()
 
 			$('html, body')
 			.stop()
-			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
-			// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
+			// .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
+			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
 			e.preventDefault();
 		})
 
@@ -33,7 +44,6 @@ var landingFunctions = {
 			$("body").css("overflow", "auto");
 			$(".nav__mobile").removeClass("active");
 		})
-
 
 		// $('.card__slider').owlCarousel({
 		// 	items: 1,
@@ -212,7 +222,70 @@ var landingFunctions = {
 		}
 	},
 
-	
+	card: function() {
+		$(".card__size-btn").click(function() {
+			$(this).closest(".card__size").find(".card__size-btn").removeClass("active")
+			$(this).addClass("active")
+		})
+		$(".card__tab-btn").click(function() {
+			if($(this).hasClass("active")) {
+				$(".card__tab-btn").removeClass("active")
+				$(".card__tab-btn").closest(".card__tab").find(".card__tab-content").slideUp()
+				return
+			}
+			$(".card__tab-btn").removeClass("active")
+			$(".card__tab-btn").closest(".card__tab").find(".card__tab-content").slideUp()
+			$(this).addClass("active")
+			$(this).closest(".card__tab").find(".card__tab-content").slideToggle()
+		})
+
+		const getPrice = this.getPrice
+
+		$(".card__color-btn").click(function() {
+			if($(this).hasClass("active")) return
+
+			const color = $(this).data("color")
+
+			$(this).closest(".card").find(".card__color-btn").removeClass("active")
+			$(this).addClass("active")
+			$(this).closest(".card").find(".card__gallery").removeClass("active")
+			$(this).closest(".card").find(".card__gallery." + color).addClass("active")
+
+			const id = $(this).data("id")
+			const price = $(this).data("price")
+			const currency = $(this).data("currency")
+
+			$(this).closest(".card").find(".new__price").text(price + " " + currency)
+			getPrice()
+		})
+
+		function initialize(){
+			if($(window).width() <= 1080) {
+			  	$(".card__gallery").addClass("owl-carousel").owlCarousel({
+					items: 1,
+					margin: 10,
+					dots: true,
+					dotsEach: true,
+					nav: false,
+					loop: true,
+					autoplay: true,
+					autoplayTimeout: 3000,
+					autoplayHoverPause: true
+				});
+			} else {
+				$(".card__gallery").removeClass("owl-carousel").owlCarousel('destroy');
+			}
+		}
+
+		var id;
+
+		$(window).resize( function() {
+			clearTimeout(id);
+			id = setTimeout(initialize, 500);
+		});
+
+		initialize();
+	}
 }
 
 $(document).ready(function() {
