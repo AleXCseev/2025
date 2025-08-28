@@ -1,0 +1,287 @@
+.review__section {
+  border-bottom: 2px solid #eee;
+}
+
+.review__section-wrapper {
+  padding: 70px 0 90px;
+}
+
+.review__section-title {
+  font-weight: 900;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.review__block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.review__left {
+  width: 480px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.review__left-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+.review__item {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.review__item-title {
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+
+  span {
+    font-weight: 300;
+  }
+}
+
+.review__line-block {
+  width: 100%;
+  height: 5px;
+  background: #eee;
+}
+
+.review__line {
+  height: 100%;
+  background: #e30613;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    border: 2px solid #fff;
+    background-color: #e30613;
+    z-index: 1;
+  }
+
+  &:after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    background-color: #eee;
+  }
+}
+
+.review__item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7px;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.review__slider-wrapper {
+  width: 1190px;
+  height: auto;
+  border-left: 2px solid #eee;
+  padding: 68px 0 36px;
+  flex-shrink: 0;
+}
+
+.review__slider {
+  width: 100%;
+  height: auto;
+
+  .owl-dots {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+
+    button.active {
+      background-color: #e30613 !important;
+    }
+  }
+}
+
+.review {
+  width: 380px;
+  height: 350px;
+  background: #eee;
+  padding: 35px 35px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.review__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.review__rating {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    width: 20px !important;
+    height: auto;
+    flex-shrink: 0;
+  }
+}
+
+.review__name {
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.review__text {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.review__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto;
+  font-weight: 400;
+  font-size: 12px;
+
+  img {
+    width: 16px !important;
+    height: auto;
+  }
+}
+
+@media (max-width: 1480px) {
+  .review__slider-wrapper {
+    width: 785px;
+  }
+  .review__slider {
+    .owl-dots {
+      width: calc(100% - 20px);
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .review__block {
+    gap: 40px;
+  }
+  .review__left {
+    width: 380px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .review__block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review__left {
+    width: 100%;
+  }
+  .review__slider-wrapper {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+  .review {
+    width: 100%;
+  }
+  .review__slider .owl-dots {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .review__section-wrapper {
+    padding: 18vw 0 24vw;
+  }
+  .review__section-title {
+    font-size: 6.2vw;
+    margin-bottom: 4.8vw;
+  }
+  .review__block {
+    gap: 12vw;
+  }
+  .review__left-rating {
+    gap: 2vw;
+    margin-bottom: 6.5vw;
+  }
+  .review__left-rating img {
+    width: 9.8vw;
+  }
+  .review__item {
+    margin-bottom: 3.5vw;
+  }
+  .review__item-title {
+    font-size: 4.5vw;
+    margin-bottom: 2vw;
+  }
+  .review__item-info {
+    margin-top: 1.6vw;
+    font-size: 3vw;
+  }
+  .review {
+    height: 85vw;
+    padding: 8.5vw 8.5vw 11vw;
+  }
+  .review__top {
+    gap: 4.8vw;
+    margin-bottom: 9.8vw;
+  }
+  .review__rating {
+    gap: 1.8vw;
+  }
+  .review__rating img {
+    width: 4.8vw !important;
+  }
+  .review__name {
+    font-size: 4.5vw;
+  }
+  .review__text {
+    font-size: 4.5vw;
+    margin-bottom: 4.8vw;
+  }
+  .review__info {
+    gap: 3.5vw;
+    font-size: 2.8vw;
+  }
+}
