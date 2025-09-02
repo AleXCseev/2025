@@ -1438,6 +1438,9 @@ body {
   .fancybox-slide {
     padding: 44px 10px;
   }
+  .fancybox-slide--video .fancybox-content {
+    height: 168vw !important;
+  }
 }
 .advantage__section {
   border-top: 2px solid #eee;
@@ -1820,9 +1823,14 @@ body {
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   border: 1px solid #eee;
   font-weight: 400;
   font-size: 18px;
+  line-height: 1.3;
   text-transform: capitalize;
   text-align: center;
   -webkit-transition: 0.3s ease;
@@ -1830,12 +1838,23 @@ body {
   transition: 0.3s ease;
   cursor: pointer;
 }
+.card__size-btn .size {
+  display: none;
+  font-size: 12px;
+  line-height: 1.3;
+}
 .card__size-btn.active {
   background-color: #2d2d2d;
   color: #fff;
 }
+.card__size-btn.active .size {
+  display: inline-block;
+}
 .card__size-btn:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.card__size-btn:hover .size {
+  display: inline-block;
 }
 
 .card__form {

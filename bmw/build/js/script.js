@@ -18,6 +18,16 @@ var landingFunctions = {
         .find(".old__price")
         .text(p2 + " " + currency);
     });
+    $(".card__2 .new__price").each(function () {
+      var p = parseInt($(this).text());
+      var currency = $(this).text().replace(/[0-9]/g, "");
+      p = (p * 100) / 50;
+      p2 = Math.ceil(p);
+      $(this)
+        .closest(".price")
+        .find(".old__price")
+        .text(p2 + " " + currency);
+    });
   },
 
   initLibraris: function () {

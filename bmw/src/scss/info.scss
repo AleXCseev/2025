@@ -158,4 +158,9 @@
   .fancybox-slide {
     padding: 44px 10px;
   }
+  .fancybox-slide--video {
+    .fancybox-content {
+      height: 168vw !important;
+    }
+  }
 }
