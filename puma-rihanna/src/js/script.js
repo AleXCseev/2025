@@ -4,21 +4,11 @@ var landingFunctions = {
     this.getPrice();
     // this.time()
     // this.modal();
-    this.card();
+    // this.card();
   },
 
   getPrice: function () {
     $(".new__price").each(function () {
-      var p = parseInt($(this).text());
-      var currency = $(this).text().replace(/[0-9]/g, "");
-      p = (p * 100) / 40;
-      p2 = Math.ceil(p);
-      $(this)
-        .closest(".price")
-        .find(".old__price")
-        .text(p2 + " " + currency);
-    });
-    $(".card__2 .new__price").each(function () {
       var p = parseInt($(this).text());
       var currency = $(this).text().replace(/[0-9]/g, "");
       p = (p * 100) / 50;
@@ -58,21 +48,31 @@ var landingFunctions = {
       $(".nav__mobile").removeClass("active");
     });
 
-	function initialize() {
+    function initialize() {
       if ($(window).width() <= 1080) {
-        $(".gallery").addClass("owl-carousel").owlCarousel({
-          items: 1,
-          margin: 10,
-          dots: true,
-          dotsEach: true,
-          nav: false,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-        });
+        $(".info__items")
+          .addClass("owl-carousel")
+          .owlCarousel({
+            items: 2,
+            margin: 20,
+            dots: false,
+            dotsEach: true,
+            nav: true,
+            loop: true,
+            // autoplay: true,
+            // autoplayTimeout: 3000,
+            // autoplayHoverPause: true,
+            responsive: {
+              0: {
+                items: 1,
+              },
+              541: {
+                items: 2,
+              }
+            },
+          });
       } else {
-        $(".gallery").removeClass("owl-carousel").owlCarousel("destroy");
+        $(".info__items").removeClass("owl-carousel").owlCarousel("destroy");
       }
     }
 
@@ -85,29 +85,52 @@ var landingFunctions = {
 
     initialize();
 
-    $(".review__slider").owlCarousel({
+    var show = true;
+		var countbox = ".advantage__section";
+		$(window).on("scroll load resize", function () {
+			if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+			var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+			var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+			var w_height = $(window).height(); // Высота окна браузера
+			var d_height = $(document).height(); // Высота всего документа
+			var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+			if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+				$('.advantage__item-number').css('opacity', '1');
+				$('.advantage__item-number').spincrement({
+					thousandSeparator: "",
+					duration: 2000
+				});
+				 
+				show = false;
+			}
+		});
+
+    $(".advantage__gallery").owlCarousel({
       items: 3,
-      margin: 25,
-      dots: true,
+      margin: 20,
+      dots: false,
       dotsEach: true,
-      nav: false,
+      nav: true,
       loop: true,
-      // autoHeight: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
+      autoWidth: true,
+      autoHeight: false,
+      // autoplay: true,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1,
+          autoWidth: false,
+          autoHeight: true,
         },
         1081: {
-          items: 2,
-        },
-        1481: {
           items: 3,
-        },
+          autoHeight: false,
+          autoWidth: true,
+        }
       },
     });
+
 
     AOS.init({
       disable: function () {

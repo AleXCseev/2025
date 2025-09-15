@@ -1,0 +1,268 @@
+.info__section-wrapper {
+  padding: 90px 0 83px;
+  position: relative;
+  z-index: 1;
+}
+
+.info__decor {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+  animation: rotate 60s linear infinite;
+  filter: blur(10px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info__decor-1 {
+  width: 846px;
+  top: 0px;
+  left: -826px;
+}
+
+.info__decor-2 {
+  width: 453px;
+  top: 87px;
+  right: -210px;
+  animation-direction: reverse;
+}
+
+.info__section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.info__section-title {
+  width: 852px;
+  height: auto;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.info__section-text {
+  width: 340px;
+  height: auto;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-align: right;
+  color: #fff;
+}
+
+.info__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.info__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info__item-title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 5px;
+  order: 2;
+}
+
+.info__item-text {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  order: 3;
+}
+
+.info__item-img {
+  width: 100%;
+  height: auto;
+  border-radius: 34px;
+  margin-bottom: 20px;
+  order: 1;
+}
+
+.info__item-1 {
+  padding-top: 83px;
+  .info__item-text {
+    margin-bottom: 20px;
+  }
+  .info__item-img {
+    margin-bottom: 0;
+    order: 4;
+  }
+}
+
+.info__item-1,
+.info__item-4 {
+  width: 340px;
+  flex-shrink: 0;
+}
+
+.info__item-2 {
+}
+
+.info__item-3 {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.info__item-4 {
+  padding-top: 170px;
+}
+
+.owl-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 45px;
+
+  button {
+    width: 150px;
+    height: 16px;
+    background-image: url(../img/slider-arrow.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+
+    span {
+      display: none;
+    }
+
+    &:hover {
+      background-image: url(../img/slider-arrow-hover.png) !important;
+    }
+
+    &.owl-next {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  .info__item-1,
+  .info__item-4 {
+    width: 280px;
+  }
+  .info__item-1 {
+    padding-top: 34px;
+  }
+  .info__item-4 {
+    padding-top: 126px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .info__section-title {
+    width: 650px;
+    font-size: 40px;
+  }
+  .info__item-1,
+  .info__item-4 {
+    width: 220px;
+  }
+  .info__item-3 {
+    width: 180px;
+  }
+  .info__item-title {
+    font-size: 18px;
+  }
+  .info__item-text {
+    font-size: 14px;
+  }
+  .info__item-1 {
+    padding-top: 36px;
+  }
+  .info__item-4 {
+    padding-top: 130px;
+  }
+  .info__decor-1 {
+    width: 700px;
+    top: 0px;
+    left: -660px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .info__section-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info__section-title {
+    width: 100%;
+    font-size: 42px;
+  }
+  .info__section-text {
+    display: none;
+  }
+  .info__item {
+    padding: 0;
+    width: auto;
+
+    .info__item-text {
+      margin-bottom: 20px;
+    }
+
+    .info__item-img {
+      order: 4;
+      height: 290px;
+      object-fit: cover;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .info__decor-1 {
+    display: none;
+  }
+  .info__section-wrapper {
+    padding: 24vw 0 23vw;
+  }
+  .info__section-top {
+    margin-bottom: 9.8vw;
+  }
+  .info__section-title {
+    font-size: 9.8vw;
+  }
+  .info__item-title {
+    font-size: 4.8vw;
+    margin-bottom: 2vw;
+  }
+  .info__item-text {
+    font-size: 4vw;
+    margin-bottom: 7vw;
+  }
+  .info__item-img {
+    height: 79vw !important;
+  }
+  .owl-nav button {
+    width: 36vw;
+    height: 3.7vw;
+  }
+  .owl-nav {
+    margin-top: 10vw;
+  }
+  .info__decor-2 {
+    width: 110vw;
+    top: 8vw;
+    right: -66vw;
+  }
+}
