@@ -131,6 +131,33 @@ var landingFunctions = {
       },
     });
 
+    $(".review__slider").owlCarousel({
+      items: 4,
+      margin: 20,
+      dots: false,
+      dotsEach: true,
+      nav: true,
+      loop: true,
+      stagePadding: 10,
+      // autoplay: true,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        541: {
+          items: 2,
+        },
+        1081: {
+          items: 3,
+        },
+        1481: {
+          items: 4,
+        }
+      },
+    });
+
 
     AOS.init({
       disable: function () {
