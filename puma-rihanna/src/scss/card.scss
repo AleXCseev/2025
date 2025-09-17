@@ -261,6 +261,15 @@
   }
 }
 
+.card__select select {
+    text-align: -moz-center;
+    text-align: -webkit-center;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    -webkit-text-align-last: center;
+    text-indent: 42% hanging;
+}
+
 .card__submit {
   font-family: "Unbounded", sans-serif;
   font-weight: 400;

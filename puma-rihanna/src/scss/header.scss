@@ -66,6 +66,7 @@
   width: 95px;
   height: auto;
   flex-shrink: 0;
+  margin-right: 100px;
 }
 
 .header__nav-link {
@@ -406,6 +407,9 @@
   .header__nav-wrapper {
     justify-content: space-between;
     align-items: center;
+  }
+  .header__nav-logo {
+    margin-right: 0;
   }
   .header__nav-wrapper nav {
     display: none;

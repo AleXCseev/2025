@@ -1,0 +1,252 @@
+.footer__section {
+  background-image: url(../img/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: 65% center;
+  background-size: auto 100%;
+  overflow: hidden;
+}
+
+.footer__section-wrapper {
+  padding: 35px 0 172px;
+  position: relative;
+  z-index: 1;
+
+  .order__btn {
+    margin: 0;
+    background-image: url(../img/footer-btn-bg.png);
+  }
+
+  .header__nav {
+    position: relative;
+    z-index: 1;
+  }
+
+  nav {
+    backdrop-filter: blur(5px);
+    background: #fff;
+  }
+
+  .header__nav-link {
+    color: #333;
+  }
+}
+
+.footer__girl {
+  width: 556px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 48%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.footer__content {
+  width: 806px;
+  position: relative;
+}
+
+.footer__title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 20px;
+  mix-blend-mode: overlay;
+  position: relative;
+  z-index: 1;
+}
+
+.footer__text {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 68px;
+}
+
+.footer__decor {
+  position: absolute;
+  width: 430px;
+  height: auto;
+  bottom: -40px;
+  right: -720px;
+  z-index: -1;
+}
+
+.footer__boot {
+  position: absolute;
+  bottom: -120px;
+  right: -670px;
+  width: 650px;
+  z-index: -1;
+}
+
+.footer__date {
+  width: 240px;
+  height: auto;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.footer__line-wrapper {
+  padding: 41px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__line-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.125;
+  text-align: center;
+  color: #fff;
+
+  a {
+    font-weight: 600;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1480px) {
+  .footer__section {
+    background-position: center;
+  }
+  .footer__content {
+    width: 670px;
+  }
+  .footer__title {
+    font-size: 44px;
+  }
+  .footer__boot {
+    bottom: -100px;
+    right: -610px;
+    width: 580px;
+  }
+  .footer__decor {
+    width: 400px;
+    bottom: -40px;
+    right: -665px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .footer__section-wrapper {
+    padding: 35px 0 120px;
+  }
+  .footer__content {
+    width: 650px;
+  }
+  .footer__girl {
+    width: 460px;
+    left: 50%;
+  }
+  .footer__boot {
+    bottom: -80px;
+    right: -480px;
+    width: 510px;
+  }
+  .footer__decor {
+    width: 370px;
+    bottom: -30px;
+    right: -530px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .footer__section-wrapper .header__nav {
+    margin-bottom: 30px;
+  }
+  .footer__content {
+    width: 100%;
+  }
+  .footer__title {
+    mix-blend-mode: normal;
+  }
+  .footer__decor {
+    display: none;
+  }
+  .footer__boot {
+    position: static;
+    bottom: auto;
+    right: auto;
+    z-index: 2;
+  }
+  .footer__girl {
+    z-index: -1;
+  }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__girl {
+    width: 600px;
+    left: 50%;
+  }
+  .footer__section-wrapper {
+    padding: 35px 0 60px;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer__section {
+    background-image: url(../img/footer-bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+  .footer__section-wrapper {
+    padding: 9.8vw 0 7vw;
+  }
+  .footer__section-wrapper .header__nav {
+    margin-bottom: 7vw;
+    padding: 0;
+  }
+  .footer__title {
+    font-size: 8.7vw;
+    margin-bottom: 3.5vw;
+  }
+  .footer__text {
+    width: 60vw;
+    font-weight: 500;
+    font-size: 3.8vw;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: 3.5vw;
+    align-self: flex-start;
+  }
+  .footer__girl {
+    width: 95vw;
+  }
+  .footer__boot {
+    width: 86vw;
+    align-self: flex-start;
+    margin-left: 1vw;
+    margin-bottom: -5vw;
+    pointer-events: none;
+  }
+  .footer__date {
+    font-size: 3.8vw;
+    margin-top: 3.5vw;
+  }
+  .footer__line-wrapper {
+    padding: 10vw 0;
+  }
+  .footer__line-text {
+    font-size: 3.8vw;
+  }
+}

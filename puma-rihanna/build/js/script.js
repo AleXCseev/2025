@@ -2,9 +2,7 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.getPrice();
-    // this.time()
-    // this.modal();
-    // this.card();
+    this.time();
   },
 
   getPrice: function () {
@@ -59,9 +57,9 @@ var landingFunctions = {
             dotsEach: true,
             nav: true,
             loop: true,
-            // autoplay: true,
-            // autoplayTimeout: 3000,
-            // autoplayHoverPause: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
             responsive: {
               0: {
                 items: 1,
@@ -114,9 +112,9 @@ var landingFunctions = {
       loop: true,
       autoWidth: true,
       autoHeight: false,
-      // autoplay: true,
-      // autoplayTimeout: 5000,
-      // autoplayHoverPause: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1,
@@ -139,9 +137,9 @@ var landingFunctions = {
       nav: true,
       loop: true,
       stagePadding: 10,
-      // autoplay: true,
-      // autoplayTimeout: 5000,
-      // autoplayHoverPause: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1,
@@ -159,21 +157,21 @@ var landingFunctions = {
     });
 
 
-    AOS.init({
-      disable: function () {
-        if ($(window).width() <= 1080) {
-          return true;
-        }
-        return false;
-      },
-      once: true,
-      duration: 1000,
-      offset: 0,
-    });
+    // AOS.init({
+    //   disable: function () {
+    //     if ($(window).width() <= 1080) {
+    //       return true;
+    //     }
+    //     return false;
+    //   },
+    //   once: true,
+    //   duration: 1000,
+    //   offset: 0,
+    // });
 
-    $(window).resize(function () {
-      AOS.refresh();
-    });
+    // $(window).resize(function () {
+    //   AOS.refresh();
+    // });
 
     $("[data-fancybox]").fancybox({
       loop: true,
@@ -243,151 +241,20 @@ var landingFunctions = {
       }
       monthNum += now.getMonth() + 1;
 
-      // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return (
-        dayNum +
-        "." +
-        monthNum +
-        "." +
-        String(now.getFullYear()).substr(String(now.getFullYear()).length - 2)
-      );
+      return dayNum + "." + monthNum + "." + now.getFullYear();
+      // return (
+      //   dayNum +
+      //   "." +
+      //   monthNum +
+      //   "." +
+      //   String(now.getFullYear()).substr(String(now.getFullYear()).length - 2)
+      // );
     }
 
     // $(".date__1").text(getDate(-5));
     $(".date").text(getDate(2));
   },
 
-  modal: function () {
-    $(".add__review").click(function () {
-      $(".modal__review").addClass("active");
-    });
-
-    function close() {
-      $(".modal__review").removeClass("active");
-    }
-
-    $(".modal__review").click(function (e) {
-      var target = e.target;
-      if (target.classList.contains("modal__close")) {
-        close();
-      }
-      if (target.classList.contains("modal")) {
-        close();
-      }
-    });
-
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        console.log(reader);
-        reader.onload = function (e) {
-          $(".file img").attr("src", e.target.result).css("display", "block");
-        };
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
-
-    $(".modal__review .input__file").on("change", function () {
-      readURL(this);
-    });
-
-    $(".modal__review form").submit(function (e) {
-      e.preventDefault();
-      $(this).removeClass("active");
-      $(".send__window").addClass("active");
-      $(".modal__review .name__input").val("");
-      $(".modal__review .modal__area").val("");
-      $(".modal__review .file img").attr("src", "").css("display", "none");
-      delayClose();
-    });
-    function delayClose() {
-      setTimeout(function () {
-        $(".modal__review form").addClass("active");
-        $(".send__window").removeClass("active");
-        close();
-      }, 5000);
-    }
-  },
-
-  card: function () {
-    $(".card__size-btn").click(function () {
-      $(this)
-        .closest(".card__size")
-        .find(".card__size-btn")
-        .removeClass("active");
-      $(this).addClass("active");
-    });
-    $(".card__tab-btn").click(function () {
-      if ($(this).hasClass("active")) {
-        $(".card__tab-btn").removeClass("active");
-        $(".card__tab-btn")
-          .closest(".card__tab")
-          .find(".card__tab-content")
-          .slideUp();
-        return;
-      }
-      $(".card__tab-btn").removeClass("active");
-      $(".card__tab-btn")
-        .closest(".card__tab")
-        .find(".card__tab-content")
-        .slideUp();
-      $(this).addClass("active");
-      $(this).closest(".card__tab").find(".card__tab-content").slideToggle();
-    });
-
-    const getPrice = this.getPrice;
-
-    $(".card__color-btn").click(function () {
-      if ($(this).hasClass("active")) return;
-
-      const color = $(this).data("color");
-
-      $(this).closest(".card").find(".card__color-btn").removeClass("active");
-      $(this).addClass("active");
-      $(this).closest(".card").find(".card__gallery").removeClass("active");
-      $(this)
-        .closest(".card")
-        .find(".card__gallery." + color)
-        .addClass("active");
-
-      const id = $(this).data("id");
-      const price = $(this).data("price");
-      const currency = $(this).data("currency");
-
-      $(this)
-        .closest(".card")
-        .find(".new__price")
-        .text(price + " " + currency);
-      getPrice();
-    });
-
-    function initialize() {
-      if ($(window).width() <= 1080) {
-        $(".card__gallery").addClass("owl-carousel").owlCarousel({
-          items: 1,
-          margin: 10,
-          dots: true,
-          dotsEach: true,
-          nav: false,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-        });
-      } else {
-        $(".card__gallery").removeClass("owl-carousel").owlCarousel("destroy");
-      }
-    }
-
-    var id;
-
-    $(window).resize(function () {
-      clearTimeout(id);
-      id = setTimeout(initialize, 500);
-    });
-
-    initialize();
-  },
 };
 
 $(document).ready(function () {
