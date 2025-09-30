@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="in">
+<html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="libs/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="libs/owl.carousel.min.css" />
     <link rel="stylesheet" href="libs/animations.css" />
-    <!-- <link rel="stylesheet" href="libs/jquery.raty.css"> -->
     <link rel="stylesheet" href="libs/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>ECCO Urban Energy</title>
@@ -18,55 +14,54 @@
   <body data-path=".">
     <div class="site__wrapper">
       <header class="header__section">
-    <div class="header__section-wrapper container">
-        <div class="header__top">
-            <img src="img/header-logo.png" alt="" class="header__logo">
-            <nav class="header__nav">
-                <ul>
-                    <li>
-                        <a href="#info" class="header__nav-link">Опис</a>
-                    </li>
-                    <li>
-                        <a href="#gallery" class="header__nav-link">Галерея</a>
-                    </li>
-                    <li>
-                        <a href="#review" class="header__nav-link">Відгуки</a>
-                    </li>
-                </ul>
-            </nav>
-            <a href="#card" class="header__order">
-                До Каталогу
-            </a>
-        </div>
-        <div class="header__content">
-            <h1 class="header__title">
-                Зимові черевики ECCO – новітні технології, натуральна шкіра, абсолютний комфорт
-            </h1>
-            <div class="header__name">
-                <h2>
-                    Urban Energy
-                </h2>
-                <div class="header__circle">
-                    <a data-fancybox href="https://youtu.be/9vyGu2O7xNQ?si=rjLo8svhYnILkMhA" class="header__video">
-                        Переглянути <br>
-                        <span>Відеоогляд</span>
-                    </a>
-                </div>
-            </div>
-            <a href="#card" class="order__btn">
-                Обрати свою пару
-            </a>
-        </div>
+  <div class="header__section-wrapper container">
+    <div class="header__top">
+      <img src="img/header-logo.png" alt="" class="header__logo" />
+      <nav class="header__nav">
+        <ul>
+          <li>
+            <a href="#info" class="header__nav-link">Опис</a>
+          </li>
+          <li>
+            <a href="#video" class="header__nav-link">Відео</a>
+          </li>
+          <li>
+            <a href="#review" class="header__nav-link">Відгуки</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#card" class="header__order"> До Каталогу </a>
     </div>
-</header> <section class="info__section">
+    <div class="header__content">
+      <h1 class="header__title">
+        Зимові черевики ECCO – новітні технології, натуральна шкіра, абсолютний комфорт
+      </h1>
+      <div class="header__name">
+        <h2 data-aos="fade-right">Urban Energy</h2>
+        <div class="header__circle">
+          <a
+            data-fancybox
+            href="https://youtu.be/csAuFqz5Q1c?si=WwLvVoEVkLOBZ20y"
+            class="header__video"
+          >
+            Переглянути <br />
+            <span>Відеоогляд</span>
+          </a>
+        </div>
+      </div>
+      <a href="#card" class="order__btn" data-aos="fade-left"> Обрати свою пару </a>
+    </div>
+  </div>
+</header>
+ <section class="info__section" id="info">
   <div class="info__block">
     <div class="info__block-wrapper container">
       <div class="info__block-left">
-        <div class="info__block-img"></div>
+        <div class="info__block-img" data-aos="fade-right"></div>
       </div>
       <div class="info__right">
-        <img src="img/info-2.jpg" alt="" class="info__right-img" />
-        <div class="info__items">
+        <img src="img/info-2.jpg" alt="" class="info__right-img" data-aos="fade-left" />
+        <div class="info__items" data-aos="fade-up">
           <div class="info__item info__item-1">
             <h3 class="info__item-title">Ікона комфорту</h3>
             <p class="info__item-text">
@@ -119,50 +114,49 @@
     </div>
   </div>
 </section>
-
-      <section class="advantage__section">
-    <div class="advantage__section-wrapper container">
-        <div class="advantage__left">
-            <h3 class="advantae__title">
-                RECEPTOR®
-            </h3>
-            <img src="img/info-3.jpg" alt="" class="advantage__left-img">
-            <p class="advantage__text">
-                <span>Інноваційна система</span>, що повторює природний рух стопи. Підтримує ногу на всіх етапах кроку — від удару п’ятки до відштовхування — забезпечуючи <span>стабільність, комфорт і легкість руху</span> навіть на тривалих прогулянках.
-            </p>
-            <a href="#card" class="order__btn">
-                Обрати свою пару
-            </a>
-        </div>
-        <div class="advantage__right">
-            <h3 class="advantae__title">
-                Внутрішнє наповнення
-            </h3>
-            <div class="advantage__items">
-                <div class="advantage__item advantage__item-1">
-                    <img src="img/info-4.jpg" alt="" class="advantage__img">
-                    <p class="advantage__text">
-                        <span>Натуральна підкладка</span> забезпечує оптимальний мікроклімат усередині черевиків. Вона підтримує тепло, дозволяючи ногам залишатися сухими та комфортними протягом усього дня.
-                    </p>
-                </div>
-                <div class="advantage__item advantage__item-2">
-                    <img src="img/info-5.jpg" alt="" class="advantage__img">
-                    <p class="advantage__text">
-                        <span>М’яке хутро</span> доповнює внутрішнє наповнення, додаючи відчуття затишку та легкості при кожному кроці, навіть у сильний мороз.
-                    </p>
-                </div>
-            </div>
-        </div>
+ <section class="advantage__section">
+  <div class="advantage__section-wrapper container">
+    <div class="advantage__left">
+      <h3 class="advantae__title">RECEPTOR®</h3>
+      <img src="img/info-3.jpg" alt="" class="advantage__left-img" data-aos="fade-right"/>
+      <p class="advantage__text" data-aos="fade-right">
+        <span>Інноваційна система</span>, що повторює природний рух стопи. Підтримує ногу на всіх
+        етапах кроку — від удару п’ятки до відштовхування — забезпечуючи
+        <span>стабільність, комфорт і легкість руху</span> навіть на тривалих прогулянках.
+      </p>
+      <a href="#card" class="order__btn" data-aos="fade-right"> Обрати свою пару </a>
     </div>
-</section> 
-      <section class="video__section">
+    <div class="advantage__right">
+      <h3 class="advantae__title">Внутрішнє наповнення</h3>
+      <div class="advantage__items">
+        <div class="advantage__item advantage__item-1" data-aos="fade-left">
+          <img src="img/info-4.jpg" alt="" class="advantage__img" />
+          <p class="advantage__text">
+            <span>Натуральна підкладка</span> забезпечує оптимальний мікроклімат усередині
+            черевиків. Вона підтримує тепло, дозволяючи ногам залишатися сухими та комфортними
+            протягом усього дня.
+          </p>
+        </div>
+        <div class="advantage__item advantage__item-2" data-aos="fade-left" data-aos-delay="200">
+          <img src="img/info-5.jpg" alt="" class="advantage__img" />
+          <p class="advantage__text">
+            <span>М’яке хутро</span> доповнює внутрішнє наповнення, додаючи відчуття затишку та
+            легкості при кожному кроці, навіть у сильний мороз.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="video__section" id="video">
   <div class="video__section-wrapper container">
     <div class="header__name">
-      <h2>Urban Energy</h2>
+      <h2 data-aos="fade-right">Urban Energy</h2>
       <div class="header__circle">
         <a
           data-fancybox
-          href="https://youtu.be/9vyGu2O7xNQ?si=rjLo8svhYnILkMhA"
+          href="https://youtu.be/csAuFqz5Q1c?si=WwLvVoEVkLOBZ20y"
           class="header__video"
         >
           <img src="img/video-icon.png" alt="" />
@@ -174,81 +168,80 @@
       </div>
     </div>
     <div class="video__info">
-      <p class="video__info-text">
+      <p class="video__info-text" data-aos="fade-up">
         У кожному русі — <span>амортизація, захист і тепло.</span> Достатньо одного відео, щоб
         переконатися.
       </p>
-      <p class="video__info-text">
+      <p class="video__info-text" data-aos="fade-up" data-aos-delay="200">
         <span>Urban Black Energy</span> створені, щоб крокувати легко, тепло і впевнено щодня.
       </p>
     </div>
   </div>
 </section>
-
-      <section class="card__section">
+ <section class="card__section">
   <div class="card__section-wrapper container">
     <div class="card card__1" id="card">
       <div class="card__gallery">
-        <a class="card__gallery-main" href="img/card/1/1-1000.jpg" data-fancybox="card-1">
+        <a class="card__gallery-main" href="img/card/1/1-1000.jpg" data-fancybox="card-1" data-aos="zoom-in">
           <img src="img/card/1/1.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/1/2-1000.jpg" data-fancybox="card-1">
+        <a class="card__gallery-small" href="img/card/1/2-1000.jpg" data-fancybox="card-1" data-aos="zoom-in">
           <img src="img/card/1/2.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/1/3-1000.jpg" data-fancybox="card-1">
+        <a class="card__gallery-small" href="img/card/1/3-1000.jpg" data-fancybox="card-1" data-aos="zoom-in">
           <img src="img/card/1/3.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/1/4-1000.jpg" data-fancybox="card-1">
+        <a class="card__gallery-small" href="img/card/1/4-1000.jpg" data-fancybox="card-1" data-aos="zoom-in">
           <img src="img/card/1/4.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/1/5-1000.jpg" data-fancybox="card-1">
+        <a class="card__gallery-small" href="img/card/1/5-1000.jpg" data-fancybox="card-1" data-aos="zoom-in">
           <img src="img/card/1/5.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/1/6-1000.jpg" data-fancybox="card-1">
+        <a class="card__gallery-small" href="img/card/1/6-1000.jpg" data-fancybox="card-1" data-aos="zoom-in">
           <img src="img/card/1/6.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/1/7-1000.jpg" data-fancybox="card-1">
+        <a class="card__gallery-small" href="img/card/1/7-1000.jpg" data-fancybox="card-1" data-aos="zoom-in">
           <img src="img/card/1/7.jpg" alt="" />
         </a>
       </div>
-      <div class="card__content">
+      <div class="card__content" data-aos="fade-left">
         <h2 class="card__title">Eссо urban  black  energy </h2>
-        <div class="card__info">
+        <div class="card__info card__info-1">
           <span class="card__info-text">Бренд:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Eссо</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-2">
           <span class="card__info-text">Верх:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Натуральна шкіра</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-3">
           <span class="card__info-text">Матеріал підкладки:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Натуральна шкіра, натуральне хутро</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-4">
           <span class="card__info-text">Матеріал підошви:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Поліуретан, термополіуретан</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-5">
           <span class="card__info-text">Сезон:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Осінь-зима</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-6">
           <span class="card__info-text">Вид товару:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Черевики</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-7">
           <span class="card__info-text">Країна:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Словаччина</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-8">
           <span class="card__info-text">Стиль:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Повсякденний (casual)</span>
@@ -270,12 +263,12 @@
             </div>
             <div class="card__input-wrapper card__select">
                 <select class="card__input">
-                  <option value="36">36 (23,5 cм)</option>
-                  <option value="37">37 (24 cм)</option>
-                  <option value="38">38 (24,5 cм)</option>
-                  <option value="39">39 (25 cм)</option>
-                  <option value="40">40 (25,5 cм)</option>
-                  <!-- <option value="41">41 (26 см)</option> -->
+                  <option value="40">40 (26,5 cм)</option>
+                  <option value="41">41 (27 cм)</option>
+                  <option value="42">42 (27,5 cм)</option>
+                  <option value="43">43 (28 cм)</option>
+                  <option value="44">44 (28,5 cм)</option>
+                  <option value="45">45 (29 см)</option>
                 </select>
             </div>
             <button type="submit" class="card__submit">
@@ -286,66 +279,66 @@
     </div>
     <div class="card card__2">
       <div class="card__gallery">
-        <a class="card__gallery-main" href="img/card/2/1-1000.jpg" data-fancybox="card-2">
+        <a class="card__gallery-main" href="img/card/2/1-1000.jpg" data-fancybox="card-2" data-aos="zoom-in">
           <img src="img/card/2/1.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/2/2-1000.jpg" data-fancybox="card-2">
+        <a class="card__gallery-small" href="img/card/2/2-1000.jpg" data-fancybox="card-2" data-aos="zoom-in">
           <img src="img/card/2/2.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/2/3-1000.jpg" data-fancybox="card-2">
+        <a class="card__gallery-small" href="img/card/2/3-1000.jpg" data-fancybox="card-2" data-aos="zoom-in">
           <img src="img/card/2/3.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/2/4-1000.jpg" data-fancybox="card-2">
+        <a class="card__gallery-small" href="img/card/2/4-1000.jpg" data-fancybox="card-2" data-aos="zoom-in">
           <img src="img/card/2/4.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/2/5-1000.jpg" data-fancybox="card-2">
+        <a class="card__gallery-small" href="img/card/2/5-1000.jpg" data-fancybox="card-2" data-aos="zoom-in">
           <img src="img/card/2/5.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/2/6-1000.jpg" data-fancybox="card-2">
+        <a class="card__gallery-small" href="img/card/2/6-1000.jpg" data-fancybox="card-2" data-aos="zoom-in">
           <img src="img/card/2/6.jpg" alt="" />
         </a>
-        <a class="card__gallery-small" href="img/card/2/7-1000.jpg" data-fancybox="card-2">
+        <a class="card__gallery-small" href="img/card/2/7-1000.jpg" data-fancybox="card-2" data-aos="zoom-in">
           <img src="img/card/2/7.jpg" alt="" />
         </a>
       </div>
-      <div class="card__content">
+      <div class="card__content" data-aos="fade-left">
         <h2 class="card__title">ECCO Men's Sneakers</h2>
-        <div class="card__info">
+        <div class="card__info card__info-1">
           <span class="card__info-text">Бренд:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Eссо</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-2">
           <span class="card__info-text">Верх:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Натуральна шкіра</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-3">
           <span class="card__info-text">Матеріал підкладки:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Натуральна шкіра, натуральне хутро</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-4">
           <span class="card__info-text">Матеріал підошви:</span>
           <div class="card__info-divider"></div>
-          <span class="card__info-text card__info-right">Поліуретан, термополіуретан</span>
+          <span class="card__info-text card__info-right">Термопластична гума</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-5">
           <span class="card__info-text">Сезон:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Осінь-зима</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-6">
           <span class="card__info-text">Вид товару:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Черевики</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-7">
           <span class="card__info-text">Країна:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Словаччина</span>
         </div>
-        <div class="card__info">
+        <div class="card__info card__info-8">
           <span class="card__info-text">Стиль:</span>
           <div class="card__info-divider"></div>
           <span class="card__info-text card__info-right">Повсякденний (casual)</span>
@@ -367,12 +360,12 @@
             </div>
             <div class="card__input-wrapper card__select">
                 <select class="card__input">
-                  <option value="36">36 (23,5 cм)</option>
-                  <option value="37">37 (24 cм)</option>
-                  <option value="38">38 (24,5 cм)</option>
-                  <option value="39">39 (25 cм)</option>
-                  <option value="40">40 (25,5 cм)</option>
-                  <!-- <option value="41">41 (26 см)</option> -->
+                  <option value="40">40 (26,5 cм)</option>
+                  <option value="41">41 (27 cм)</option>
+                  <option value="42">42 (27,5 cм)</option>
+                  <option value="43">43 (28 cм)</option>
+                  <option value="44">44 (28,5 cм)</option>
+                  <option value="45">45 (29 см)</option>
                 </select>
             </div>
             <button type="submit" class="card__submit">
@@ -383,102 +376,115 @@
     </div>
   </div>
 </section>
-
-      
-      
+ <section class="review__section" id="review">
+  <div class="review__section-wrapper container">
+    <div class="delivery__block" data-aos="fade-right">
+      <div class="delivery__item delivery__item-1">
+        <img src="img/delivery-icon-1.png" alt="" class="delivery__icon" />
+        <h3 class="delivery__title">Гарантія</h3>
+        <p class="delivery__text">
+          Офіційна гарантія від <span>ECCO</span>. Ми відповідаємо за якість кожної пари взуття.
+        </p>
+      </div>
+      <div class="delivery__item delivery__item-2">
+        <img src="img/delivery-icon-2.png" alt="" class="delivery__icon" />
+        <h3 class="delivery__title">Повернення</h3>
+        <p class="delivery__text">
+          14 днів на <span>обмін чи повернення.</span> Якщо розмір або модель не підійшли — без
+          проблем.
+        </p>
+      </div>
+      <div class="delivery__item delivery__item-3">
+        <img src="img/delivery-icon-3.png" alt="" class="delivery__icon" />
+        <h3 class="delivery__title">Оплата</h3>
+        <p class="delivery__text">
+          Оплачуй так, як зручно: карткою онлайн або <span>при отриманні замовлення.</span>
+        </p>
+      </div>
     </div>
-    <div class="footer__modal" id="modal-privacy">
-  <h6>Політика конфіденційності</h6>
-  <p>
-    Наш інтернет-магазин шанобливо ставиться до прав клієнта. Дотримується
-    сувора конфіденційність при оформленні замовлення. Дані надійно зберігаються
-    та захищені від передачі даних.
-  </p>
-  <p>
-    Згода на обробку даних клієнта виключно з метою надання послуг – розміщення
-    замовлення на сайті.
-  </p>
-  <p>
-    До персональних даних належить особиста інформація про клієнта: домашню
-    адресу; ім'я прізвище по батькові; відомості про народження; майновий,
-    сімейний стан; особисті контакти (телефон, електронна пошта) та інші
-    відомості, перелічені у Законі "Про персональні дані".
-  </p>
-  <p>
-    Клієнт має право відмовитися від обробки персональних даних. Нами у разі
-    гарантується видалення з сайту всіх персональних даних у триденний термін у
-    робочий час. Подібну відмову клієнт може оформити простим електронним листом
-    на адресу, вказану на сторінці нашого сайту.
-  </p>
-  <h6>Доставка і оплата</h6>
-  <p>
-    Доставка по Україні здійснюється за допомогою компанії «Нова Пошта» протягом
-    2-х днів з моменту замовлення. Вартість та деталі такої доставки різняться
-    залежно від регіону вашого проживання та розміру посилки.
-  </p>
-  <p>
-    Продавець не бере на себе жодних зобов'язань щодо відшкодування будь-яких
-    збитків Клієнта, пов'язаних з несвоєчасною доставкою замовлення, а також
-    звільняється від будь-яких можливих штрафних санкцій.
-  </p>
-  <p>
-    Клієнт, який отримав товар, повинен перевірити його щодо якості та
-    кількості.
-  </p>
-  <h6>ВІДМОВА ВІД ВІДПОВІДАЛЬНОСТІ</h6>
-  <p>
-    Інтернет-магазин залишає за собою право в будь-який час без повідомлення
-    Клієнта вносити зміни щодо товарів, матеріалів і послуг, що надаються на
-    сайті.
-  </p>
-  <p>
-    Інтернет-магазин не несе відповідальності за будь-які збитки (включаючи
-    моральну шкоду, шкоду від втрати прибутку (упущена вигода), даних або від
-    переривання ділової активності), що виник внаслідок використання або
-    неможливості використання даного сайту.
-  </p>
+    <div class="review__block">
+      <h2 class="review__title">Відгуки наших клієнтів</h2>
+      <div class="review__slider owl-carousel">
+        <div class="review">
+          <p class="review__name">Віталій, Київ</p>
+          <div class="rating">
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+          </div>
+          <div class="review__text">
+            Черевики дуже теплі й водночас легкі. У -10 ходжу без проблем, ноги сухі й у комфорті.
+            <span>Shock Thru</span> реально відчувається — спина й коліна менше втомлюються навіть
+            після довгих прогулянок.
+          </div>
+        </div>
+        <div class="review">
+          <p class="review__name">Дмитро, Харків</p>
+          <div class="rating">
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+          </div>
+          <div class="review__text">
+            ЕККО - завжди ЕККО. Купив минулої зими, тягав 2 сезони. За їхнім станом, - з листопада
+            до наступної весни вони точно протримаються, а може і довше. В ожеледь не ковзають,
+            ногам тепло і зручно. Рекомендую!
+          </div>
+        </div>
+        <div class="review">
+          <p class="review__name">Богдан, Одеса</p>
+          <div class="rating">
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+          </div>
+          <div class="review__text">
+            Чорні черевики Блек Урбан Енерджі - саме те, що я завжди хотів купити собі на зиму.
+            Вийшло тільки зараз. Замовив, прийшло швидко. Розмір підійшов. Чекаю холодів.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="footer__section">
+  <div class="footer__section-wrapper container">
+    <img src="img/footer-logo.png" alt="" class="footer__logo" />
+    <div class="footer__content">
+      <h2 class="footer__title" data-aos="fade-left">Urban Energy</h2>
+      <div class="footer__content-wrapper">
+        <p class="footer__text" data-aos="fade-left" data-aos-delay="200">
+          Останній шанс отримати стильні чоловічі черевики <span>зі знижкою!</span> <br />
+          Лише сьогодні — знижка <span>до -70% та -200 грн</span> при замовленні від 2 пар.
+        </p>
+        <a href="#card" class="order__btn" data-aos="fade-left" data-aos-delay="400"> забрати свою пару </a>
+        <p class="footer__date" data-aos="fade-left" data-aos-delay="600">Акція діє до <span class="date">04.10.2025</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer__line">
+  <div class="footer__line-wrapper container">
+    <p class="footer__line-text">
+      Розробка лендінгу <a href="https://itcreative.info/" target="_blank">itcreative.info</a>
+    </p>
+  </div>
 </div>
 
-<div class="footer__modal" id="modal-delivery">
-  <h6>Доставка і оплата</h6>
-  <p>
-    Доставка по Україні здійснюється за допомогою компанії «Нова Пошта» протягом
-    2-х днів з моменту замовлення. Вартість та деталі такої доставки різняться
-    залежно від регіону вашого проживання та розміру посилки.
-  </p>
-  <p>
-    Продавець не бере на себе жодних зобов'язань щодо відшкодування будь-яких
-    збитків Клієнта, пов'язаних з несвоєчасною доставкою замовлення, а також
-    звільняється від будь-яких можливих штрафних санкцій.
-  </p>
-  <p>
-    Клієнт, який отримав товар, повинен перевірити його щодо якості та
-    кількості.
-  </p>
-</div>
-
-<div class="footer__modal" id="modal-refusal">
-  <h6>ВІДМОВА ВІД ВІДПОВІДАЛЬНОСТІ</h6>
-  <p>
-    Інтернет-магазин залишає за собою право в будь-який час без повідомлення
-    Клієнта вносити зміни щодо товарів, матеріалів і послуг, що надаються на
-    сайті.
-  </p>
-  <p>
-    Інтернет-магазин не несе відповідальності за будь-які збитки (включаючи
-    моральну шкоду, шкоду від втрати прибутку (упущена вигода), даних або від
-    переривання ділової активності), що виник внаслідок використання або
-    неможливості використання даного сайту.
-  </p>
-</div>
-
-
+    </div>
+    
     <script src="libs/jquery.min.js"></script>
     <script src="libs/aos.js"></script>
     <script src="libs/jquery.fancybox.min.js"></script>
     <script src="libs/owl.carousel.min.js"></script>
     <script src="libs/jquery.spincrement.min.js"></script>
-    <!-- <script src="libs/jquery.raty.js"></script> -->
     <script src="js/script.js"></script>
   </body>
 </html>

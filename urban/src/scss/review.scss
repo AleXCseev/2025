@@ -1,0 +1,281 @@
+.review__section {
+}
+.review__section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 130px 0;
+}
+
+.delivery__block {
+  width: 680px;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.delivery__item {
+  width: 50%;
+  height: auto;
+  border: 1px solid #1e1e1e;
+  padding: 30px;
+}
+
+.delivery__icon {
+  width: 128px;
+  height: auto;
+  margin-bottom: 46px;
+}
+
+.delivery__title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #dc8a11;
+  margin-bottom: 10px;
+}
+
+.delivery__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #858585;
+
+  span {
+    font-weight: 700;
+    color: #1e1e1e;
+  }
+}
+
+.delivery__item-1 {
+}
+
+.delivery__item-2 {
+  border-left: none;
+}
+
+.delivery__item-3 {
+  border-top: none;
+}
+
+.review__block {
+  width: 580px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.review__title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  margin-bottom: 100px;
+}
+
+.review__slider {
+  width: 100%;
+}
+
+.owl-carousel {
+}
+
+.review {
+  border: 1px solid #858585;
+  padding: 40px;
+  height: 340px;
+}
+
+.review__name {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  margin-bottom: 5px;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    width: 16px !important;
+    height: auto;
+  }
+}
+
+.review__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #858585;
+
+  span {
+    font-weight: 700;
+    color: #1e1e1e;
+  }
+}
+
+.owl-nav {
+  width: 110px;
+  height: auto;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #858585 !important;
+    background-image: url(../img/arrow.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-image: url(../img/arrow-hover.png) !important;
+      background-color: #dc8a11 !important;
+      border-color: #dc8a11 !important;
+    }
+
+    span {
+      display: none;
+    }
+
+    &.owl-next {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  .review__block {
+    width: 490px;
+  }
+  .delivery__block {
+    width: 640px;
+  }
+  .review__title {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .review__block {
+    width: 420px;
+  }
+  .delivery__block {
+    width: 540px;
+  }
+  .delivery__icon {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  .review__title {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .review__section-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 110px;
+  }
+  .delivery__block {
+    width: 100%;
+  }
+  .review__block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .review__section-wrapper {
+    padding: 100px 0;
+  }
+  .delivery__block {
+    align-items: center;
+    justify-content: center;
+  }
+  .delivery__item {
+    width: calc(100% - 44px);
+    border: 1px solid #1e1e1e;
+    border-top: none;
+  }
+  .delivery__item-1 {
+    border-top: 1px solid #1e1e1e;
+  }
+  .delivery__icon {
+    width: 128px;
+    margin-bottom: 46px;
+  }
+}
+
+@media (max-width: 540px) {
+  .review__section-wrapper {
+    padding: 19.8vw 0 24vw;
+  }
+  .delivery__item {
+    width: calc(100% - 11vw);
+    padding: 7vw;
+  }
+  .delivery__icon {
+    width: 31vw;
+    margin-bottom: 11vw;
+  }
+  .delivery__title {
+    font-size: 4.8vw;
+    margin-bottom: 2vw;
+  }
+  .delivery__text {
+    font-size: 3.8vw;
+  }
+  .review__section-wrapper {
+    gap: 26vw;
+  }
+  .review__title {
+    font-size: 10.2vw;
+    margin-bottom: 7vw;
+  }
+  .review {
+    padding: 9.8vw;
+    height: 82vw;
+  }
+  .review__name {
+    font-size: 4.8vw;
+    margin-bottom: 1vw;
+  }
+  .rating {
+    margin-bottom: 4.8vw;
+  }
+  .rating img {
+    width: 4vw !important;
+  }
+  .review__text {
+    font-size: 4vw;
+  }
+  .owl-nav {
+    width: 27vw;
+    bottom: 4.8vw;
+    right: 4.8vw;
+  }
+  .owl-nav button {
+    width: 12vw;
+    height: 12vw;
+    background-size: 4vw auto !important;
+  }
+}

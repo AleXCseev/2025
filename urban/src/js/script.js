@@ -9,7 +9,7 @@ var landingFunctions = {
     $(".new__price").each(function () {
       var p = parseInt($(this).text());
       var currency = $(this).text().replace(/[0-9]/g, "");
-      p = (p * 100) / 50;
+      p = (p * 100) / 30;
       p2 = Math.ceil(p);
       $(this)
         .closest(".price")
@@ -21,143 +21,69 @@ var landingFunctions = {
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
       var fixedOffset = 0;
-      // var cardHeight = $(".card").outerHeight(false)
-      // var windowHeight = $(window).height()
+      var cardHeight = $(".card").outerHeight(false)
+      var windowHeight = $(window).height()
 
-      $("html, body")
-        .stop()
-        // .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
-        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
-      e.preventDefault();
+      if ($(window).width() >= 1080) {
+        $("html, body")
+          .stop()
+          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
+        e.preventDefault();
+      } else {
+        $("html, body")
+          .stop()
+          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight)}, 1000);
+        e.preventDefault();
+      }
     });
 
-
-    // function initialize() {
-    //   if ($(window).width() <= 1080) {
-    //     $(".info__items")
-    //       .addClass("owl-carousel")
-    //       .owlCarousel({
-    //         items: 2,
-    //         margin: 20,
-    //         dots: false,
-    //         dotsEach: true,
-    //         nav: true,
-    //         loop: true,
-    //         autoplay: true,
-    //         autoplayTimeout: 5000,
-    //         autoplayHoverPause: true,
-    //         responsive: {
-    //           0: {
-    //             items: 1,
-    //           },
-    //           541: {
-    //             items: 2,
-    //           }
-    //         },
-    //       });
-    //   } else {
-    //     $(".info__items").removeClass("owl-carousel").owlCarousel("destroy");
-    //   }
-    // }
-
-    // var id;
-
-    // $(window).resize(function () {
-    //   clearTimeout(id);
-    //   id = setTimeout(initialize, 500);
-    // });
-
-    // initialize();
-
     var show = true;
-		var countbox = ".info__section-wrapper";
-		$(window).on("scroll load resize", function () {
-			if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-			var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-			var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-			var w_height = $(window).height(); // Высота окна браузера
-			var d_height = $(document).height(); // Высота всего документа
-			var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-			if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-				$('.info__advantage-number').css('opacity', '1');
-				$('.info__advantage-number').spincrement({
-					thousandSeparator: "",
-					duration: 2000
-				});
-				 
-				show = false;
-			}
-		});
+    var countbox = ".info__section-wrapper";
+    $(window).on("scroll load resize", function () {
+      if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+      var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+      var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+      var w_height = $(window).height(); // Высота окна браузера
+      var d_height = $(document).height(); // Высота всего документа
+      var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+      if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+        $(".info__advantage-number").css("opacity", "1");
+        $(".info__advantage-number").spincrement({
+          thousandSeparator: "",
+          duration: 2000,
+        });
 
-    // $(".advantage__gallery").owlCarousel({
-    //   items: 3,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   autoWidth: true,
-    //   autoHeight: false,
-    //   autoplay: true,
-    //   autoplayTimeout: 5000,
-    //   autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       autoWidth: false,
-    //       autoHeight: true,
-    //     },
-    //     1081: {
-    //       items: 3,
-    //       autoHeight: false,
-    //       autoWidth: true,
-    //     }
-    //   },
-    // });
+        show = false;
+      }
+    });
 
-    // $(".review__slider").owlCarousel({
-    //   items: 4,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   stagePadding: 10,
-    //   autoplay: true,
-    //   autoplayTimeout: 5000,
-    //   autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //     },
-    //     541: {
-    //       items: 2,
-    //     },
-    //     1081: {
-    //       items: 3,
-    //     },
-    //     1481: {
-    //       items: 4,
-    //     }
-    //   },
-    // });
+    $(".review__slider").owlCarousel({
+      items: 1,
+      margin: 20,
+      dots: false,
+      dotsEach: true,
+      nav: true,
+      loop: true,
+      // autoplay: true,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
+    });
 
+    AOS.init({
+      disable: function () {
+        if ($(window).width() <= 1080) {
+          return true;
+        }
+        return false;
+      },
+      once: true,
+      duration: 1000,
+      offset: 0,
+    });
 
-    // AOS.init({
-    //   disable: function () {
-    //     if ($(window).width() <= 1080) {
-    //       return true;
-    //     }
-    //     return false;
-    //   },
-    //   once: true,
-    //   duration: 1000,
-    //   offset: 0,
-    // });
-
-    // $(window).resize(function () {
-    //   AOS.refresh();
-    // });
+    $(window).resize(function () {
+      AOS.refresh();
+    });
 
     $("[data-fancybox]").fancybox({
       loop: true,
@@ -190,12 +116,7 @@ var landingFunctions = {
     }
 
     function timer() {
-      function runMultiple(
-        hoursSelector,
-        minutesSelector,
-        secondsSelector,
-        milisecondsSelector
-      ) {
+      function runMultiple(hoursSelector, minutesSelector, secondsSelector, milisecondsSelector) {
         var d = new Date();
         var h = String(23 - d.getHours()).padStart(2, "0");
         var m = String(59 - d.getMinutes()).padStart(2, "0");
@@ -240,7 +161,6 @@ var landingFunctions = {
     // $(".date__1").text(getDate(-5));
     $(".date").text(getDate(2));
   },
-
 };
 
 $(document).ready(function () {
