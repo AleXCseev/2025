@@ -9,7 +9,7 @@ var landingFunctions = {
     $(".new__price").each(function () {
       var p = parseInt($(this).text());
       var currency = $(this).text().replace(/[0-9]/g, "");
-      p = (p * 100) / 30;
+      p = (p * 100) / 40;
       p2 = Math.ceil(p);
       $(this)
         .closest(".price")
