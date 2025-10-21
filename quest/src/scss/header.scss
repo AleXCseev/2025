@@ -1,0 +1,475 @@
+.header__section {
+  position: relative;
+  z-index: 1;
+
+  &.circle:before {
+    top: -496px;
+    left: -732px;
+  }
+}
+
+.header__man-wrapper {
+  width: 630px;
+  height: 800px;
+  background: linear-gradient(180deg, #ffaf67 0%, #fcfcfc 100%);
+  bottom: 0;
+  left: 35px;
+  position: absolute;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 435px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    z-index: 2;
+  }
+}
+
+.header__man {
+  position: absolute;
+  width: 684px;
+  height: auto;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.header__decor-2 {
+  width: 291px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: -64px;
+  z-index: 2;
+}
+
+.header__papa-logo {
+  width: 1866px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: -382px;
+}
+
+.circle {
+  &:before {
+    content: "";
+    width: 1964px;
+    height: 1964px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(64, 107, 131, 0.3) 0%, rgba(64, 107, 131, 0.3) 100%);
+    filter: blur(200px);
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.line {
+  width: 1789px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+.header__decor-line {
+  width: 671px;
+  height: auto;
+  position: absolute;
+  top: 170px;
+  left: -571px;
+  transform: rotate(120deg);
+}
+
+.header__decor-line-2 {
+  width: 661px;
+  height: auto;
+  position: absolute;
+  top: 314px;
+  right: -648px;
+  transform: scaleY(-1) rotate(-64deg);
+}
+
+.header__line {
+  width: 1485px;
+  height: auto;
+  top: -19px;
+  right: -582px;
+  z-index: -1;
+}
+
+.header__section-wrapper {
+  padding-top: 70px;
+}
+
+.header__logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.header__content {
+  width: 700px;
+  height: auto;
+  margin-left: auto;
+  padding-bottom: 239px;
+  position: relative;
+  z-index: 1;
+}
+
+.header__decor {
+  width: 184px;
+  height: auto;
+  position: absolute;
+  top: 119px;
+  right: -40px;
+  transform: rotate(-15deg);
+  z-index: -1;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 55px;
+}
+
+.header__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__btn {
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 4px 0 rgba(0, 0, 0, 0.5);
+  background: #f5ad5c;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+  transition: 0.3s ease;
+  text-align: center;
+  padding: 0 25px;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.header__btn-reverse {
+  background-color: transparent;
+  border: 2px solid #f5ad5c;
+  font-weight: 300;
+  color: #f5ad5c;
+  box-shadow: none;
+
+  &:hover {
+    background: #f5ad5c;
+    color: #000;
+  }
+}
+
+.header__links {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.header__link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid #f5ad5c;
+  transition: 0.3s ease;
+
+  svg {
+    fill: #f5ad5c;
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    border-color: #fff;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.header__logo-mobile {
+  display: none;
+}
+
+@media (max-width: 1480px) {
+  .container {
+    width: 1200px;
+  }
+  .header__content {
+    width: 600px;
+    padding-bottom: 220px;
+  }
+  .header__title {
+    font-size: 54px;
+  }
+  .header__papa-logo {
+    width: 1738px;
+    right: -638px;
+  }
+  .header__line {
+    right: -744px;
+  }
+  .header__man-wrapper {
+    width: 520px;
+    height: 710px;
+  }
+  .header__man {
+    position: absolute;
+    width: 610px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 1000px;
+  }
+  .header__content {
+    width: 500px;
+    padding-bottom: 170px;
+  }
+  .header__title {
+    font-size: 44px;
+  }
+  .header__line {
+    right: -720px;
+  }
+  .header__decor-line {
+    width: 620px;
+    top: 2px;
+    left: -536px;
+  }
+  .header__decor {
+    width: 150px;
+    top: 141px;
+    right: 70px;
+  }
+  .header__papa-logo {
+    width: 1564px;
+    right: -641px;
+  }
+  .line {
+    width: 1600px;
+  }
+  .header__man-wrapper {
+    width: 440px;
+    height: 580px;
+  }
+  .header__man {
+    position: absolute;
+    width: 500px;
+  }
+  .header__decor {
+    top: 110px;
+    right: -30px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    width: 700px;
+  }
+  .header__content {
+    width: 100%;
+    padding-bottom: 0;
+    order: 3;
+  }
+  .header__man-wrapper {
+    width: 440px;
+    height: 580px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    order: 2;
+    margin-bottom: 20px;
+  }
+  .header__section-wrapper {
+    z-index: 1;
+    padding-bottom: 116px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    order: 1;
+    margin-bottom: -70px;
+  }
+  .header__decor {
+    display: none;
+  }
+  .header__decor-line {
+    width: 670px;
+    top: 110px;
+    left: -440px;
+  }
+  .header__papa-logo {
+    width: auto;
+    height: 100%;
+    top: -37px;
+    right: auto;
+    left: -40%;
+  }
+  .header__title {
+    font-size: 62px;
+    text-align: center;
+  }
+  .header__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin-top: 40px;
+  }
+  .header__line {
+    top: 401px;
+    right: auto;
+    left: -458px;
+    transform: rotate(63deg);
+  }
+  .header__decor-line-2 {
+    display: none;
+  }
+  .header__decor-line {
+    width: 670px;
+    top: -250px;
+    left: -660px;
+    transform: rotate(180deg);
+  }
+  .header__decor-2 {
+    width: 230px;
+    right: -40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .header__section .container:before {
+    height: 123vw;
+  }
+}
+
+@media (max-width: 540px) {
+  .circle:before {
+    filter: blur(50px);
+  }
+  .header__section-wrapper {
+    padding-top: 4vw;
+    padding-bottom: 28vw;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__logo-mobile {
+    display: block;
+    width: 61vw;
+    height: auto;
+    order: 1;
+    margin-bottom: -42vw;
+    z-index: 1;
+  }
+  .header__man-wrapper {
+    width: 86vw;
+    height: 132vw;
+    margin-bottom: 6vw;
+  }
+  .header__man {
+    width: 100%;
+  }
+  .header__decor-2 {
+    width: 35vw;
+    right: -8vw;
+  }
+  .header__decor-line {
+    width: 67vw;
+    top: -24vw;
+    left: -36vw;
+    transform: rotate(150deg);
+  }
+  .header__title {
+    font-size: 9.8vw;
+    margin-bottom: 4.8vw;
+  }
+  .header__btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8vw;
+  }
+  .header__btn {
+    width: 89%;
+    height: 19.3vw;
+    font-size: 5.8vw;
+  }
+  .header__papa-logo {
+    width: auto;
+    height: calc(100% + 10vw);
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: -74%;
+  }
+  .line {
+    width: 432vw;
+  }
+  .header__line {
+    width: 272vw;
+    top: 50vw;
+    left: -25vw;
+    transform: rotate(68deg);
+  }
+  .header__links {
+    margin-top: 4.8vw;
+  }
+  .circle:before {
+    width: 316vw;
+    height: 316vw;
+  }
+  .header__section.circle:before {
+    top: -30vw;
+    left: -180vw;
+  }
+  .header__decor {
+    display: block;
+    width: 28vw;
+    height: auto;
+    top: 5vw;
+    right: 5vw;
+  }
+}

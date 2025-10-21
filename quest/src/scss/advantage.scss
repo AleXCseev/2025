@@ -1,0 +1,295 @@
+.indicator__section {
+  position: relative;
+
+  &.circle:before {
+    top: 150px;
+    left: -441px;
+  }
+
+  .tag {
+    margin-bottom: -30px;
+  }
+}
+
+.indicator__line {
+  top: -240px;
+  left: -590px;
+  transform: rotate(-140deg);
+}
+
+.indicator__section-wrapper {
+}
+
+.indicator__block {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.indicator__block-1 {
+  // z-index: 2;
+  margin-bottom: -30px;
+}
+
+.indicator__img-block {
+  position: relative;
+}
+
+.indicator__img {
+  width: 100%;
+  height: auto;
+}
+
+.indicator__img-1 {
+}
+
+.indicator__decor-1 {
+  width: 423px;
+  height: auto;
+  position: absolute;
+  top: 147px;
+  right: -50px;
+  z-index: 1;
+}
+
+.indicator__decor-2 {
+  width: 223px;
+  height: auto;
+  position: absolute;
+  bottom: -101px;
+  right: -7px;
+  z-index: 2;
+}
+
+.indicator__decor-3 {
+  position: absolute;
+  width: 195px;
+  height: auto;
+  bottom: 10px;
+  right: 2px;
+}
+
+.indicator__img-2 {
+  flex-shrink: 0;
+  width: 480px;
+}
+
+.indicator__img-3 {
+}
+.indicator__img-4 {
+}
+.indicator__img-5 {
+}
+
+.indicator__main {
+  margin-top: 50px;
+  position: relative;
+}
+
+.indicator__main-img {
+  width: 100%;
+  height: auto;
+}
+
+.indicator__decor-4 {
+  width: 331px;
+  height: auto;
+  position: absolute;
+  bottom: 137px;
+  left: -250px;
+}
+
+.indicator__decor-5 {
+  width: 388px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  right: -268px;
+  transform: translateY(-50%);
+}
+
+.indicator__logo {
+  width: 910px;
+  height: auto;
+  position: absolute;
+  top: 46%;
+  right: -430px;
+  transform: rotate(90deg) translateY(-50%);
+}
+
+.indicator__wellboy {
+  width: 613px;
+  height: auto;
+  position: absolute;
+  bottom: 24px;
+  right: 95px;
+}
+
+.indicator__line-2 {
+  top: -29px;
+  right: -764px;
+  transform: rotate(54deg);
+  z-index: auto;
+}
+
+@media (max-width: 1480px) {
+  .indicator__img-2 {
+    flex-shrink: 0;
+    width: 426px;
+  }
+  .indicator__decor-1 {
+    width: 275px;
+    top: 124px;
+    right: -62px;
+  }
+  .indicator__decor-2 {
+    width: 260px;
+    bottom: -50px;
+    right: 0;
+  }
+  .indicator__line-2 {
+    top: -29px;
+    right: -840px;
+  }
+  .indicator__wellboy {
+    width: 520px;
+    bottom: 18px;
+    right: 78px;
+  }
+  .indicator__decor-4 {
+    width: 300px;
+    bottom: 100px;
+    left: -210px;
+  }
+  .indicator__decor-5 {
+    width: 340px;
+    right: -230px;
+  }
+  .indicator__logo {
+    width: 770px;
+    right: -365px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .indicator__img-2 {
+    width: 353px;
+  }
+  .indicator__decor-1 {
+    width: 250px;
+    top: 98px;
+    right: -55px;
+  }
+  .indicator__decor-2 {
+    width: 210px;
+    bottom: -38px;
+    right: 0;
+  }
+  .indicator__decor-3 {
+    width: 135px;
+    bottom: 10px;
+    right: 2px;
+  }
+  .indicator__line-2 {
+    top: -29px;
+    right: -810px;
+  }
+  .indicator__wellboy {
+    width: 427px;
+    bottom: 18px;
+    right: 67px;
+  }
+  .indicator__decor-4 {
+    width: 250px;
+    bottom: 100px;
+    left: -170px;
+  }
+  .indicator__decor-5 {
+    width: 240px;
+    right: -150px;
+  }
+  .indicator__logo {
+    width: 650px;
+    right: -310px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .indicator__block {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .indicator__img-2 {
+    width: 100%;
+  }
+  .indicator__section .tag {
+    margin-bottom: 20px;
+  }
+  .indicator__decor-1 {
+    width: 228px;
+    top: 125px;
+    right: 18px;
+  }
+  .indicator__logo,
+  .indicator__decor-4,
+  .indicator__decor-3,
+  .indicator__decor-2,
+  .indicator__decor-5 {
+    display: none;
+  }
+  .indicator__main {
+    margin-top: 15px;
+  }
+  .indicator__wellboy {
+    width: 306px;
+    bottom: 7px;
+    right: 45px;
+  }
+  .indicator__line {
+    top: 0px;
+    left: -860px;
+  }
+  .indicator__line-2 {
+    top: 0px;
+    right: -1080px;
+    z-index: -1;
+  }
+  .indicator__section.circle:before {
+    top: auto;
+    left: -441px;
+    bottom: -330px;
+  }
+}
+
+@media (max-width: 700px) {
+  .indicator__decor-1 {
+    width: 27vw;
+    top: 19vw;
+    right: 5vw;
+  }
+  .indicator__wellboy {
+    width: 53vw;
+    bottom: -20vw;
+    right: 4vw;
+  }
+}
+
+@media (max-width: 540px) {
+  .indicator__line {
+    top: 31vw;
+    left: -306vw;
+  }
+  .indicator__line-2 {
+    top: -25vw;
+    right: -300vw;
+    z-index: -1;
+  }
+  .indicator__section.circle:before {
+    left: -110vw;
+    bottom: -80vw;
+  }
+}
