@@ -1,0 +1,279 @@
+.advantage__section {
+  border-bottom: 1px solid #2b2b2b;
+  overflow: hidden;
+}
+
+.advanatge__section-wrapper {
+}
+
+.advantage__content {
+  width: 882px;
+  height: auto;
+  position: relative;
+  padding-top: 59px;
+}
+
+.advantage__title {
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 1.1;
+  color: #2b2b2b;
+
+  .second__font {
+    font-family: "Comforter Brush", sans-serif;
+    font-size: 128px;
+    color: #3f657b;
+  }
+  .bold {
+    font-weight: 700;
+  }
+}
+
+.advantage__text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #2b2b2b;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 114px;
+}
+
+.advantages {
+  width: 720px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantage {
+  width: 360px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #3f657b;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+    .advantage__number,
+    .advantage__item-text {
+      color: #fcfdf8;
+    }
+  }
+}
+
+.advantage__1,
+.advantage__3 {
+  padding-right: 20px;
+
+  &:before {
+    width: 300%;
+  }
+}
+
+.advantage__2,
+.advantage__4 {
+  padding-left: 20px;
+}
+
+.advantage__1,
+.advantage__3 {
+  border-right: 1px solid #2b2b2b;
+}
+
+.advantage__number {
+  font-family: "Comforter Brush", sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1;
+  color: #2b2b2b;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.advantage__item-text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #616161;
+  transition: 0.3s ease;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.advantage__2,
+.advantage__4 {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 300%;
+    height: 1px;
+    background-color: #2b2b2b;
+  }
+}
+
+.advantage__1,
+.advantage__3 {
+  .advantage__number {
+    &:after {
+      content: "%";
+    }
+  }
+}
+
+.advantage__3 {
+}
+.advantage__4 {
+}
+
+.advantage__img {
+  position: absolute;
+  width: 760px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -790px;
+}
+
+@media (max-width: 1480px) {
+  .advantage__content {
+    width: 750px;
+  }
+  .advantage__title {
+    font-size: 72px;
+  }
+  .advantage__title .second__font {
+    font-size: 110px;
+  }
+  .advantage__text {
+    margin-bottom: 60px;
+  }
+  .advantage__img {
+    width: 705px;
+    right: -715px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .advantage {
+    width: 300px;
+    height: 255px;
+  }
+  .advantages {
+    width: 600px;
+  }
+  .advantage__content {
+    width: 680px;
+  }
+  .advantage__title {
+    font-size: 64px;
+  }
+  .advantage__title .second__font {
+    font-size: 96px;
+  }
+  .advantage__text {
+    font-size: 22px;
+    max-width: 600px;
+  }
+  .advantage__img {
+    width: 640px;
+    right: -620px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .advantage__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantage__img {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    top: auto;
+    transform: none;
+    right: auto;
+  }
+  .advantage__text {
+    align-self: flex-start;
+  }
+  .advantages {
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background-color: #2b2b2b;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .advantage {
+    width: 50%;
+    height: 270px;
+  }
+  .advantage__2:after,
+  .advantage__4:after {
+    width: 150vw;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .advantage__2,
+  .advantage__4 {
+    &:before {
+      width: 100vw;
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .advantage__content {
+    padding-top: 16vw;
+  }
+  .advantage__title {
+    font-size: 14vw;
+    text-align: center;
+  }
+  .advantage__title .second__font {
+    font-size: 19.5vw;
+    margin-bottom: 6vw;
+  }
+  .advantage__text {
+    font-size: 5.8vw;
+    text-align: center;
+    margin-bottom: 12vw;
+  }
+}
