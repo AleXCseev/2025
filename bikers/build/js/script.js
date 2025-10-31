@@ -1,7 +1,8 @@
 var landingFunctions = {
   init: function () {
     this.initLibraris();
-    // this.time()
+    this.time();
+    this.card();
     this.modal();
   },
 
@@ -38,49 +39,67 @@ var landingFunctions = {
       }
     });
 
-    $(".card__slider").owlCarousel({
-      items: 1,
-      margin: 0,
-      dots: true,
-      dotsEach: true,
-      nav: true,
+    const swiper = new Swiper(".swiper", {
+      // direction: "vertical",
       loop: true,
-      // autoplay: true,
-      // autoplayTimeout: 3000,
-      // autoplayHoverPause: true,
-    });
+      slidesPerView: 4,
 
-    $(".review__slider").owlCarousel({
-      items: 3,
-      margin: 30,
-      dots: true,
-      dotsEach: true,
-      nav: true,
-      loop: true,
-      autoHeight: true,
-      // autoplay: true,
-      // autoplayTimeout: 5000,
-      // autoplayHoverPause: true,
-      responsive: {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+
+      breakpoints: {
         0: {
-          items: 1,
+          slidesPerView: 1,
         },
-        1081: {
-          items: 2,
+        541: {
+          slidesPerView: 2,
         },
-        1281: {
-          items: 3,
+        1080: {
+          slidesPerView: 3,
+        },
+        1480: {
+          slidesPerView: 4,
         },
       },
     });
 
-    $.raty.path = $("body").data("path") + "/img/raty";
+    // $(".card__slider").owlCarousel({
+    //   items: 1,
+    //   margin: 0,
+    //   dots: true,
+    //   dotsEach: true,
+    //   nav: true,
+    //   loop: true,
+    //   // autoplay: true,
+    //   // autoplayTimeout: 3000,
+    //   // autoplayHoverPause: true,
+    // });
 
-    $(".modal__raiting").raty({
-      half: true,
-      space: false,
-      number: 5,
-    });
+    // $(".review__slider").owlCarousel({
+    //   items: 3,
+    //   margin: 30,
+    //   dots: true,
+    //   dotsEach: true,
+    //   nav: true,
+    //   loop: true,
+    //   autoHeight: true,
+    //   // autoplay: true,
+    //   // autoplayTimeout: 5000,
+    //   // autoplayHoverPause: true,
+    //   responsive: {
+    //     0: {
+    //       items: 1,
+    //     },
+    //     1081: {
+    //       items: 2,
+    //     },
+    //     1281: {
+    //       items: 3,
+    //     },
+    //   },
+    // });
 
     AOS.init({
       disable: function () {
@@ -161,12 +180,132 @@ var landingFunctions = {
       }
       monthNum += now.getMonth() + 1;
 
-      // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
+      return dayNum + "." + monthNum + "." + now.getFullYear();
+      // return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
     }
 
     // $(".date__1").text(getDate(-5));
     $(".date").text(getDate(2));
+  },
+
+  card: function () {
+    $(".card__size-btn").click(function () {
+      const size = $(this).data("size");
+      $(this).closest(".card").find(".card__size-btn").removeClass("active");
+      $(this).addClass("active");
+      $(this).closest(".card").find(".card__size-info").text(size);
+    });
+
+    if ($(window).width() <= 1080) {
+      $(".card__title").each(function() {
+        const title = $(this).clone()
+        console.log(title)
+        $(this).closest(".card").find(".card__gallery").append(title)
+        $(this).hide()
+      })
+    }
+
+    const cardSwiper1 = new Swiper(".card__1 .card__swiper", {
+      direction: "vertical",
+      loop: true,
+      slidesPerView: "auto",
+      autoHeight: true,
+      spaceBetween: 10,
+
+      navigation: {
+        nextEl: ".card__1 .button__next",
+        prevEl: ".card__1 .button__prev",
+      },
+
+      pagination: {
+        el: ".card__1 .swiper-pagination",
+        clickable: true,
+      },
+
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+
+      breakpoints: {
+        0: {
+          direction: "horizontal",
+          autoHeight: false,
+        },
+        1081: {
+          direction: "vertical",
+          autoHeight: true,
+        },
+      },
+    });
+
+    const cardSwiper2 = new Swiper(".card__2 .card__swiper", {
+      direction: "vertical",
+      loop: true,
+      slidesPerView: "auto",
+      autoHeight: true,
+      spaceBetween: 10,
+
+      navigation: {
+        nextEl: ".card__2 .button__next",
+        prevEl: ".card__2 .button__prev",
+      },
+
+      pagination: {
+        el: ".card__2 .swiper-pagination",
+        clickable: true,
+      },
+
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+
+      breakpoints: {
+        0: {
+          direction: "horizontal",
+          autoHeight: false,
+        },
+        1081: {
+          direction: "vertical",
+          autoHeight: true,
+        },
+      },
+    });
+
+    const cardSwiper3 = new Swiper(".card__3 .card__swiper", {
+      direction: "vertical",
+      loop: true,
+      slidesPerView: "auto",
+      autoHeight: true,
+      spaceBetween: 10,
+
+      navigation: {
+        nextEl: ".card__3 .button__next",
+        prevEl: ".card__3 .button__prev",
+      },
+
+      pagination: {
+        el: ".card__3 .swiper-pagination",
+        clickable: true,
+      },
+
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+
+      breakpoints: {
+        0: {
+          direction: "horizontal",
+          autoHeight: false,
+        },
+        1081: {
+          direction: "vertical",
+          autoHeight: true,
+        },
+      },
+    });
   },
 
   modal: function () {

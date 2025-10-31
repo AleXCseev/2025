@@ -276,4 +276,38 @@
     text-align: center;
     margin-bottom: 12vw;
   }
+  .advantage {
+    width: 100%;
+    height: auto;
+    border: none;
+    position: relative;
+    padding: 9.8vw 0 !important;
+
+    &:after {
+      content: "";
+      width: 100vw;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2b2b2b;
+    }
+
+    &:before {
+      width: 100vw;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  }
+  .advantage__number {
+    font-size: 23vw;
+    text-align: center;
+    margin-bottom: 4.5vw;
+  }
+  .advantage__item-text {
+    font-size: 4.5vw;
+    text-align: center;
+  }
 }
