@@ -65,6 +65,32 @@ var landingFunctions = {
       },
     });
 
+    //  const reviewSwiper = new Swiper(".review__swiper", {
+    //   loop: true,
+    //   slidesPerView: 4,
+    //   spaceBetween: 40,
+
+    //   // autoplay: {
+    //   //   delay: 2500,
+    //   //   disableOnInteraction: false,
+    //   // },
+
+    //   // breakpoints: {
+    //   //   0: {
+    //   //     slidesPerView: 1,
+    //   //   },
+    //   //   541: {
+    //   //     slidesPerView: 2,
+    //   //   },
+    //   //   1080: {
+    //   //     slidesPerView: 3,
+    //   //   },
+    //   //   1480: {
+    //   //     slidesPerView: 4,
+    //   //   },
+    //   // },
+    // });
+
     // $(".card__slider").owlCarousel({
     //   items: 1,
     //   margin: 0,
@@ -77,29 +103,36 @@ var landingFunctions = {
     //   // autoplayHoverPause: true,
     // });
 
-    // $(".review__slider").owlCarousel({
-    //   items: 3,
-    //   margin: 30,
-    //   dots: true,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   autoHeight: true,
-    //   // autoplay: true,
-    //   // autoplayTimeout: 5000,
-    //   // autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //     },
-    //     1081: {
-    //       items: 2,
-    //     },
-    //     1281: {
-    //       items: 3,
-    //     },
-    //   },
-    // });
+    $(".review__slider").owlCarousel({
+      items: 4,
+      margin: 40,
+      dots: false,
+      dotsEach: true,
+      nav: true,
+      loop: true,
+      autoHeight: false,
+      // autoplay: true,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 20,
+        },
+        701: {
+          items: 2,
+          margin: 40,
+        },
+        1081: {
+          items: 3,
+          margin: 40,
+        },
+        1481: {
+          items: 4,
+          margin: 40,
+        }
+      },
+    });
 
     AOS.init({
       disable: function () {
