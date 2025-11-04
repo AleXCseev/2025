@@ -260,6 +260,7 @@
 
 .card__size-info {
   font-weight: 600 !important;
+  flex-shrink: 0;
 }
 
 .card__form {
@@ -291,6 +292,7 @@
   font-size: 18px;
   color: #616161;
   border: 1px solid #adacb1;
+  border-radius: 0;
 }
 
 .card__submit {

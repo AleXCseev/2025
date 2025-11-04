@@ -8,14 +8,14 @@ var landingFunctions = {
 
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
-      var fixedOffset = 20;
-      var cardHeight = $(".card").outerHeight(false);
-      var windowHeight = $(window).height();
+      var fixedOffset = 0;
+      // var cardHeight = $(".card").outerHeight(false);
+      // var windowHeight = $(window).height();
 
       $("html, body")
         .stop()
-        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
-      // .animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
+        // .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
+      .animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
       e.preventDefault();
     });
 
@@ -40,7 +40,6 @@ var landingFunctions = {
     });
 
     const swiper = new Swiper(".swiper", {
-      // direction: "vertical",
       loop: true,
       slidesPerView: 4,
 
@@ -64,44 +63,6 @@ var landingFunctions = {
         },
       },
     });
-
-    //  const reviewSwiper = new Swiper(".review__swiper", {
-    //   loop: true,
-    //   slidesPerView: 4,
-    //   spaceBetween: 40,
-
-    //   // autoplay: {
-    //   //   delay: 2500,
-    //   //   disableOnInteraction: false,
-    //   // },
-
-    //   // breakpoints: {
-    //   //   0: {
-    //   //     slidesPerView: 1,
-    //   //   },
-    //   //   541: {
-    //   //     slidesPerView: 2,
-    //   //   },
-    //   //   1080: {
-    //   //     slidesPerView: 3,
-    //   //   },
-    //   //   1480: {
-    //   //     slidesPerView: 4,
-    //   //   },
-    //   // },
-    // });
-
-    // $(".card__slider").owlCarousel({
-    //   items: 1,
-    //   margin: 0,
-    //   dots: true,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   // autoplay: true,
-    //   // autoplayTimeout: 3000,
-    //   // autoplayHoverPause: true,
-    // });
 
     $(".review__slider").owlCarousel({
       items: 4,
