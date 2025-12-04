@@ -1,0 +1,126 @@
+.card {
+  padding-bottom: 55px;
+  border-bottom: 1px solid #365398;
+  .bg {
+    background-color: var(--grey-color);
+    gap: 30px;
+
+    .bg__content {
+      align-items: flex-start;
+
+      img {
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+.card__block {
+  background: var(--card-bg-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 50px 30px;
+  border-radius: 30px;
+}
+
+.card__block-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--white-color);
+  margin-bottom: 3px;
+  padding: 0 20px;
+}
+
+.card__block-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 38px;
+  margin-bottom: 20px;
+}
+
+.card__prod {
+  width: 173px;
+  height: auto;
+}
+
+.card__list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--white-color);
+  list-style-type: decimal;
+}
+
+.card__form {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.card__input-wrapper {
+  margin-bottom: 10px;
+}
+
+.card__input {
+  width: 100%;
+  height: auto;
+  background: var(--white-color);
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  color: #333;
+  padding: 19px;
+  text-align: center;
+}
+
+.card__submit {
+  width: 100%;
+  display: inline-block;
+  background: linear-gradient(180deg, #ffc72c 0%, #d36600 100%);
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 19px;
+}
+
+@media (max-width: 540px) {
+  .card__block {
+    padding: 7vw 8vw;
+    border-radius: 7vw;
+  }
+  .card__block-title {
+    font-size: 5vw;
+    margin-bottom: 3vw;
+    padding: 0;
+  }
+  .card__block-info {
+    gap: 5vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__prod {
+    width: 40vw;
+    height: auto;
+    margin-right: 12vw;
+  }
+  .card__list {
+    font-size: 4vw;
+    padding-left: 5vw;
+  }
+  .card__form {
+    max-width: 100%;
+  }
+  .card__input, .card__submit {
+    border-radius: 8vw;
+    font-size: 3.6vw;
+    padding: 4vw;
+  }
+}
