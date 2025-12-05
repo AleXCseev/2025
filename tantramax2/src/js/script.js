@@ -1,186 +1,228 @@
 var landingFunctions = {
-	init: function() {
-		this.initLibraries()
-		this.time()
-		// this.modal()
-	}, 
+  init: function () {
+    this.initLibraries();
+    this.time();
+    this.review();
+  },
 
-	initLibraries: function() {
-		
-		$('[href*="#"]').on('click', function (e) {
-			var fixedOffset = 0;
+  initLibraries: function () {
+    $('[href*="#"]').on("click", function (e) {
+      var fixedOffset = 0;
 
-			// if($(window).width() <= 540) {
-			// 	fixedOffset = 140;
-			// }
+      $("html, body")
+        .stop()
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
+      e.preventDefault();
+    });
 
-			$('html, body')
-			.stop()
-			.animate({ scrollTop: $(this.hash).offset().top + fixedOffset}, 1000);
-			e.preventDefault();
-		})
+    // $('[data-fancybox]').fancybox({
+    // 	loop: true,
+    // 	infobar: false,
+    // 	animationEffect: false,
+    // 	backFocus: false,
+    // 	hash: false,
+    // });
+  },
 
-		// $(window).on("scroll", function(e) {
-		// 	const height = $(document).outerHeight(true)
-		// 	if(height - 2000 < $(window).scrollTop()) {
-		// 		$(".fixed__btn").fadeOut(300)
-		// 	} else {
-		// 		$(".fixed__btn").fadeIn(300)
-		// 	}
-		// })
+  time: function () {
+    Date.prototype.daysInMonth = function () {
+      return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
+    };
 
-		// function showBtn() {
-		// 	var $element = $('.card__section');
+    if (!String.prototype.padStart) {
+      String.prototype.padStart = function padStart(targetLength, padString) {
+        targetLength = targetLength >> 0; //truncate if number or convert non-number to 0;
+        padString = String(typeof padString !== "undefined" ? padString : " ");
+        if (this.length > targetLength) {
+          return String(this);
+        } else {
+          targetLength = targetLength - this.length;
+          if (targetLength > padString.length) {
+            padString += padString.repeat(targetLength / padString.length);
+          }
+          return padString.slice(0, targetLength) + String(this);
+        }
+      };
+    }
 
-		// 	$(window).scroll(function() {
-		// 		var scroll = $(window).scrollTop() + $(window).height();
-		// 		var offset = $element.offset().top + $element.height();
-		// 		var bodyOffset = $("body").offset().top + $("body").height();
+    // function timer () {
+    // 	function runMultiple(hoursSelector, minutesSelector, secondsSelector, milisecondsSelector) {
+    // 		var d = new Date();
+    // 		var h = String(23 - d.getHours()).padStart(2, "0");
+    // 		var m = String(59 - d.getMinutes()).padStart(2, "0");
+    // 		var s = String(60 - d.getSeconds()).padStart(2, "0");
+    // 		// var ms = String(1000 - d.getMilliseconds()).padStart(3, "0");
+    // 		$(hoursSelector).text(h)
+    // 		$(minutesSelector).text(m)
+    // 		$(secondsSelector).text(s)
+    // 		// $(milisecondsSelector).text(ms)
+    // 	}
+    // 	setInterval(function () {
+    // 		runMultiple(".hours", ".minutes", ".seconds")
+    // 	}, 1000);
+    // }
 
-		// 		if ((scroll > offset + 400 || scroll < offset - $element.height() - 200)) {
-		// 			if(scroll + 800 > bodyOffset) {
-		// 				$(".fixed__btn").hide();
-		// 			} else {
-		// 				$(".fixed__btn").show()
-		// 			}
-		// 		} else {
-		// 			$(".fixed__btn").hide()
-		// 		}
+    // timer()
 
-		// 	});
-		// }
+    function getDate(plusDays) {
+      var now = new Date();
+      now.setDate(now.getDate() + plusDays);
+      var dayNum = "";
+      if (now.getDate() < 10) {
+        dayNum = "0";
+      }
+      dayNum += now.getDate();
+      var monthNum = "";
+      if (now.getMonth() + 1 < 10) {
+        monthNum = "0";
+      }
+      monthNum += now.getMonth() + 1;
 
-		// showBtn()
+      // return dayNum + "." + monthNum + "." + now.getFullYear();
+      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
+    }
 
-		// $('[data-fancybox]').fancybox({
-		// 	loop: true,
-		// 	infobar: false,
-		// 	animationEffect: false,
-		// 	backFocus: false,
-		// 	hash: false,
-		// });
-	},
+    $(".date").text(getDate(2));
 
-	time: function() {
-		Date.prototype.daysInMonth = function () {
-			return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
-		};
-		
-		if (!String.prototype.padStart) {
-			String.prototype.padStart = function padStart(targetLength, padString) {
-				targetLength = targetLength >> 0; //truncate if number or convert non-number to 0;
-				padString = String((typeof padString !== 'undefined' ? padString : ' '));
-				if (this.length > targetLength) {
-					return String(this);
-				}
-				else {
-					targetLength = targetLength - this.length;
-					if (targetLength > padString.length) {
-						padString += padString.repeat(targetLength / padString.length);
-					}
-					return padString.slice(0, targetLength) + String(this);
-				}
-			};
+    $(".date-1").text(getDate(0));
+    $(".date-2").text(getDate(-1));
+    $(".date-3").text(getDate(-2));
+  },
+
+  review: function () {
+
+	function endDifDate(countDays) {
+		if (countDays || countDays === 0) {
+
+			countDays = parseInt(countDays);
+
+			const date = new Date(Date.now() - (86400000 * countDays));
+			return pad(date.getDate()) + "." + pad(date.getMonth() + 1) + "." + date.getFullYear();
 		}
+	}
 
-		// function timer () {
-		// 	function runMultiple(hoursSelector, minutesSelector, secondsSelector, milisecondsSelector) {
-		// 		var d = new Date();
-		// 		var h = String(23 - d.getHours()).padStart(2, "0");
-		// 		var m = String(59 - d.getMinutes()).padStart(2, "0");
-		// 		var s = String(60 - d.getSeconds()).padStart(2, "0");
-		// 		// var ms = String(1000 - d.getMilliseconds()).padStart(3, "0");
-		// 		$(hoursSelector).text(h)
-		// 		$(minutesSelector).text(m)
-		// 		$(secondsSelector).text(s)
-		// 		// $(milisecondsSelector).text(ms)
-		// 	}
-		// 	setInterval(function () {
-		// 		runMultiple(".hours", ".minutes", ".seconds")
-		// 	}, 1000);
-		// }
-	
-		// timer()
+	function pad(num) {
+		return ("0" + num).substr(-2);
+	}
 
-		function getDate(plusDays) {
-			var now = new Date;
-			now.setDate(now.getDate() + plusDays);
-			var dayNum = "";
-			if (now.getDate() < 10) {
-				dayNum = "0"
-			}
-			dayNum += now.getDate();
-			var monthNum = "";
-			if (now.getMonth() + 1 < 10) {
-				monthNum = "0"
-			}
-			monthNum += now.getMonth() + 1;
-			
-			// return dayNum + "." + monthNum + "." + now.getFullYear();
-			return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
-		}
+	function getDocumentScrollTop() {
+		return $(document.scrollingElement || document.documentElement).scrollTop();
+	}
 
-    	$(".date").text(getDate(2));
+	var $path = $('body').data("path");
 
-		$(".date-1").text(getDate(0));
-		$(".date-2").text(getDate(-1));
-		$(".date-3").text(getDate(-2));
-	},
+	$(".data-date").each(function (index, item) {
+		// console.log(item)
+        var $countDays = $(item).data("date");
+		// console.log($countDays)
+        var currentDate = new Date().getTime() - (86400000 * $countDays);
+        var newDate = new Date(currentDate);
+        var dateStr = pad(newDate.getDate()) + "."
+            + pad((newDate.getMonth() + 1)) + "."
+            + newDate.getFullYear();
+        $(item).html(dateStr);
+    })
 
-	modal: function() {
-		$(".add__review").click(function () {
-			$(".modal__review").addClass("active")
-		})
+    $(".js-actual-date").each(function (index, item) {
+        $(item).html(endDifDate($(item).data("dateEnd")));
+		console.log(item)
+    });
 
-		function close() {
-			$(".modal__review").removeClass("active")
-		}
+	function handleReviewScroll() {
+		const offset = $(window).height() / 3;
+		const $holder = $(".reviews");
 
-		$(".modal__review").click( function(e) {
-			var target = e.target;
-			if(target.classList.contains("modal__close")) {
-				close()
-			}
-			if(target.classList.contains("modal")) {
-				close()
-			}
-		})
+		$(".review").eq(0).hide()
 
-		function readURL(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-				console.log(reader)
-				reader.onload = function (e) {
-					$('.file img').attr('src', e.target.result).css("display", "block");
-				};
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-
-		$(".modal__review .input__file").on("change", function () {
-			readURL(this);
-		});
-
-		$(".modal__review form").submit(function (e) {
-			e.preventDefault()
-			$(this).removeClass("active");
-			$(".send__window").addClass("active");
-			$(".modal__review .name__input").val("")
-			$(".modal__review .modal__area").val("")
-			$(".modal__review .file img").attr("src", "").css("display", "none")
-			delayClose()
-		})
-		function delayClose() {
+		if (getDocumentScrollTop() + $(window).height() >= $holder.offset().top) {
 			setTimeout(function () {
-				$(".modal__review form").addClass("active");
-				$(".send__window").removeClass("active");
-				close();
-			}, 5000);
+				$(".review").eq(0).fadeIn(320);
+			}, 640)
+
+			window.removeEventListener('scroll', handleReviewScroll);
 		}
-	},
-}
+	}
 
-$(document).ready(function() {
-	landingFunctions.init();
+    $(".review").eq(0).hide();
+    handleReviewScroll();
+    window.addEventListener("scroll", handleReviewScroll);
+
+    $(".form-reviews button").click(function (event) {
+      var commentName = $(this).closest(".form-reviews").find("input").val();
+      var commentText = $(this).closest(".form-reviews").find("textarea").val();
+      var commentNamePlaseholder = $(this)
+        .closest(".form-reviews")
+        .find(".form-comment--name input")
+        .attr("placeholder");
+
+      if ($(this).closest(".form-reviews").find("textarea").val().length > 0) {
+        if (commentName === "") {
+          commentName = commentNamePlaseholder;
+        }
+
+        var el =
+          '<div class="review">\n' +
+          '       <div class="review-photo">\n' +
+          '          <img src="' +
+          $path +
+          '/img/default-avatar.jpg" alt="img">\n' +
+          "       </div>\n" +
+          '       <div class="review-body">\n' +
+          '          <div class="user-name"> ' +
+          commentName +
+          " </div>\n" +
+          '          <div class="review-inner">' +
+          commentText +
+          "</div>\n" +
+          '          <div class="rating">\n' +
+          '             <p class="add-like">எனக்கு அது பிடிக்கும்</p>\n' +
+          '             <span class="separator-point">‧</span>\n' +
+          '             <a class="review-link js-scroll" href="#card">தயவுசெய்து பதில் சொல்லுங்கள்</a>\n' +
+          '             <span class="separator-point">‧</span>\n' +
+          '             <div class="rating-like">\n' +
+          '                <img src="' +
+          $path +
+          '/img/like-btn.png" alt=""><div class="count">0</div>\n' +
+          "             </div>\n" +
+          "          </div>\n" +
+          "       </div>\n" +
+          " </div>";
+
+        $(".reviews").prepend(el);
+        scroll();
+        $(this).closest(".form-reviews").find("input").val("");
+        $(this).closest(".form-reviews").find("textarea").val("");
+      }
+    });
+
+    $("body").click(function (e) {
+      if ($(e.target).is("p.add-like")) {
+        var $currentTarget = $(e.target).is("p.add-like");
+
+        var countReviewLike = parseInt($(e.target).closest(".review").find(".rating-like .count").html());
+        var reviewRatingCount = $(e.target).closest(".review").find(".rating-like .count");
+        if ($(e.target).hasClass("active")) {
+          $(e.target).removeClass("active");
+          $(e.target).closest(".review").find(".rating-like");
+          reviewRatingCount.eq(0).html(countReviewLike - 1);
+        } else {
+          $(e.target).addClass("active");
+          reviewRatingCount.eq(0).html(countReviewLike + 1);
+        }
+      }
+
+      // scroll
+
+      // if ($(e.target).is("a.js-scroll") || $(e.target).closest(".js-scroll").length > 0) {
+      //     var item = $(e.target).closest(".js-scroll").attr('href'),
+      //         item_offset = $(item).offset().top;
+
+      //     $('html, body').animate({scrollTop: item_offset}, 800);
+      // }
+    });
+  },
+};
+
+$(document).ready(function () {
+  landingFunctions.init();
 });
-
